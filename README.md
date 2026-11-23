@@ -1,6 +1,6 @@
 # Apologetics Boot Camp
 
-A Claude skill that trains a Christian, from beginner up, to bring members of a specific false religion or cult to Christ. It explains the method, teaches a beginner each part before testing it, drills in spoken role-play, coaches after each conversation, and keeps going until the trainee can do it himself and teach someone else.
+A Claude skill that trains a Christian, from beginner up, to bring Muslims, Jehovah's Witnesses, Jewish people, atheists, or members of any false religion or cult, to Christ. It explains the method, teaches a beginner each part before testing it, drills in spoken role-play, coaches after each conversation, and keeps going until the trainee can do it himself and teach someone else.
 
 Everything the skill needs is in this repo: the skill itself, the SOPs it trains from, and the writing-and-thinking rule skills it applies when it coaches.
 
@@ -56,7 +56,7 @@ Claude syncs this repo for you, so there is nothing to upload. Plugins need a pa
 
 ## Changing the skills
 
-This repo is the source. Make every change here, as a commit to `main`, and Claude picks it up at its next sync. Don't edit the installed copies in Claude: a sync would replace them.
+This repo is the source. Make every change here, as a commit to `main`, and Claude picks it up at its next sync. Don't edit the installed copies in Claude: a sync would replace them. Two other copies are kept in step with the repo, your saved copy of each skill and the *Apologetics SOPs* doc; `CLAUDE.md` tells Claude to update both whenever it pushes a change.
 
 `plugin.json` has no `version` on purpose. Without one, each commit counts as a new version; with a fixed one, installed copies stay as they are until it's raised.
 
@@ -66,14 +66,14 @@ Start a chat and ask for it, for example:
 
 > Train me to talk with Jehovah's Witnesses.
 
-The coach asks which group, whether you're a beginner with it, and whether you'll train by voice. Then it explains the method, gives the argument in a sentence, says why this approach was chosen over others, and tells you what the training will involve.
+The coach asks only what it doesn't already know: which group, whether you're a beginner with it, and whether you'll train by voice. Then it reads your newest training card for that group. If you're new to the group, it explains the method, gives the argument in a sentence, says why this approach was chosen over others, and tells you what the training will involve. If you've trained with that group before, it skips this introduction.
 
 - **Beginners are taught before they're tested.** You can start with background on the group. You can learn by plain teaching (the default) or by dialogue: you talk with a member of the group, played by the coach, to understand their view, then the coach sums it up and gives the verses.
 - **Not a beginner?** You go straight into practice conversations and are taught only what you miss.
 - **Practice goes where you struggle.** The coach marks each moment that called for one of Koukl's tactics, finds the ones you miss most, and drills them one at a time, in the order of his book.
 - **Use voice mode for practice.** Role-play is the heart of the training and works best spoken.
 - **Groups covered so far:** Muslims, Jehovah's Witnesses, Jewish people, and atheists. For any other group the coach will offer to draft a new SOP in the same template for your approval before training from it.
-- **Training log.** At the end of each session the coach writes a short card in plain words: what you learned, how you did, your count on each tactic, what's next, and verses to review. It adds the card to the Training log tab of the *Apologetics SOPs* doc every time, without asking, and reads your latest card there before each session starts.
+- **Training log.** The coach keeps a short card for each session in plain words: what you learned, how you did, your count on each tactic, your hard tactics, what's next, and verses to review. It saves the card to the Training log tab of the *Apologetics SOPs* doc after each drill or conversation, without asking, so a call that ends early loses nothing, and reads your newest card there as soon as it knows the group. A tactic you find hard stays on your list until you clear it.
 
 ## The training path
 
@@ -86,4 +86,4 @@ You pass each drill on its tactic and on knowledge, wisdom and character, three 
 
 ## Editing the SOPs
 
-The files in `skills/apologetics-boot-camp/sops/` are exported from the *Apologetics SOPs* doc. If you keep that doc as the working copy, export its tabs again as Markdown after changes and replace these files, so the repo stays current. Every SOP follows the template in `00-overview-and-template.md`; add a new group as a new file in that same form and list it in the overview's index.
+The files in `skills/apologetics-boot-camp/sops/` are the true copy. The *Apologetics SOPs* doc keeps a copy of each as a tab, for reading and comments; after a change here, update its tab there (`CLAUDE.md` says how). Every SOP follows the template in `00-overview-and-template.md` and quotes Scripture from the King James Version; add a new group as a new file in that same form and list it in the overview's index.

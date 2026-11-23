@@ -7,7 +7,7 @@ Isaiah foretold a servant of the LORD who would be pierced for the transgression
 | SOP name | The Suffering Servant |
 | Group | Jewish people, religious and secular (the method uses only the Tanakh, the Hebrew Bible) |
 | Main sources | Isaiah 52:13–53:12; [Jews for Jesus](https://jewsforjesus.org/answers/isaiah-53) and [ONE FOR ISRAEL](https://www.oneforisrael.org/isaiah-53-about-the-people-of-israel-or-messiah-of-israel/) for the case; [Jews for Judaism](https://www.jewsforjudaism.org/knowledge/videos/who-does-god-say-is-his-servant) and [Outreach Judaism](https://outreachjudaism.org/tag/isaiah-53/) for the objections |
-| Editions quoted | Bible: ESV. Where he has one, read from his own Jewish translation (JPS) |
+| Editions quoted | Bible: KJV. Where he has one, read from his own Jewish translation (JPS) |
 | Last reviewed | 2026-11-22 |
 
 ## Short version
@@ -34,11 +34,11 @@ Learn this before the conversation. It explains every step of the short version 
 
 ### A. Foundation
 
-The gospel is "to the Jew first" (Rom. 1:16, ESV), and Paul's "heart's desire and prayer to God for them is that they may be saved" (Rom. 10:1, ESV). Christ opened Moses and the Prophets to show that "the Christ should suffer these things and enter into his glory" (Luke 24:26, ESV; 24:44–47), and Philip, "beginning with this Scripture," Isaiah 53, "told him the good news about Jesus" (Acts 8:35, ESV).
+The gospel is "to the Jew first" (Rom. 1:16), and Paul's "heart's desire and prayer to God for Israel is, that they might be saved" (Rom. 10:1). Christ opened Moses and the Prophets to show that Christ ought "to have suffered these things, and to enter into his glory" (Luke 24:26; 24:44–47), and Philip "began at the same scripture," Isaiah 53, "and preached unto him Jesus" (Acts 8:35).
 
-**Why this passage.** The prophets foretold "the sufferings of Christ and the subsequent glories" (1 Pet. 1:10–11, ESV), and the New Testament reads Isaiah 53 of Jesus again and again (Matt. 8:17; Luke 22:37; John 12:38; Acts 8:32–35; 1 Pet. 2:22–25).
+**Why this passage.** The prophets foretold "the sufferings of Christ, and the glory that should follow" (1 Pet. 1:10–11), and the New Testament reads Isaiah 53 of Jesus again and again (Matt. 8:17; Luke 22:37; John 12:38; Acts 8:32–35; 1 Pet. 2:22–25).
 
-**How we carry ourselves.** We come as debtors: "salvation is from the Jews" (John 4:22), and the Christ is theirs "according to the flesh" (Rom. 9:4–5). Gentiles are warned not to boast against the natural branches (Rom. 11:18–20). Christians have wronged Jewish people, often in Jesus' name; own it without excuse.
+**How we carry ourselves.** We come as debtors: "salvation is of the Jews" (John 4:22), and the Christ is theirs "as concerning the flesh" (Rom. 9:4–5). Gentiles are warned not to boast against the natural branches (Rom. 11:18–20). Christians have wronged Jewish people, often in Jesus' name; own it without excuse.
 
 - Default to gentleness (2 Tim. 2:24–25; 1 Pet. 3:15).
 - Expect it to cost him: following Yeshua may divide his family (Matt. 10:34–37). Be patient.
@@ -84,15 +84,15 @@ The argument has three premises. Read every verse from the text itself, one prem
 
 #### Premise 1: The servant is innocent and suffers for the sins of others
 
-- "He was pierced for our transgressions; he was crushed for our iniquities" (Isa. 53:5, ESV). "The LORD has laid on him the iniquity of us all" (53:6).
-- "He had done no violence, and there was no deceit in his mouth" (53:9, ESV).
-- His soul "makes an offering for guilt" (53:10), and "he bore the sin of many" (53:12). The guilt offering had to be "without blemish" (Lev. 5:15, 18).
+- "He was wounded for our transgressions, he was bruised for our iniquities" (Isa. 53:5). "The LORD hath laid on him the iniquity of us all" (53:6).
+- "He had done no violence, neither was any deceit in his mouth" (53:9).
+- His soul is made "an offering for sin" (53:10), in Hebrew the *asham*, the guilt or trespass offering, and "he bare the sin of many" (53:12). That offering had to be "without blemish" (Lev. 5:15, 18).
 
 #### Premise 2: The servant is not the nation of Israel
 
-- He is "stricken for the transgression of my people" (53:8). Just before, God calls Israel "my people" (52:4–6; also 51:16).
-- Israel is not innocent: "Ah, sinful nation, a people laden with iniquity" (1:4); "all we like sheep have gone astray" (53:6); "there is not a righteous man on earth who does good and never sins" (Eccl. 7:20, ESV).
-- The servant's task is "to bring Jacob back to him" and "to raise up the tribes of Jacob" (49:5–6), so he is distinct from the Israel he restores.
+- "For the transgression of my people was he stricken" (53:8). Just before, God calls Israel "my people" (52:4–6; also 51:16).
+- Israel is not innocent: "Ah sinful nation, a people laden with iniquity" (1:4); "all we like sheep have gone astray" (53:6); "there is not a just man upon earth, that doeth good, and sinneth not" (Eccl. 7:20).
+- The servant's task is "to bring Jacob again to him" and "to raise up the tribes of Jacob" (49:5–6), so he is distinct from the Israel he restores.
 - He is cut off, dies and is buried (53:8–9), yet "he shall prolong his days" (53:10): one person's death and life after it.
 
 #### Premise 3: Yeshua is the servant
@@ -134,7 +134,7 @@ Ask these last, after he has read the passage and stated his view, then wait in 
 
 | Question | It sets against each other | Every answer costs |
 | --- | --- | --- |
-| **Sibling Rivalry.** **"Verse 8 says he was 'stricken for the transgression of my people.' Whom does God call 'my people' in 52:4–6?"** | 53:8 and the Israel reading | *Israel:* then the servant suffers for Israel and is not Israel. *Recorded escape,* "the kings are speaking, so 'my people' are the nations" (Jews for Judaism): ask who says "my servant" in 53:11 (God) and whom God calls "my people" two verses before the passage begins. |
+| **Sibling Rivalry.** **"Verse 8 says, 'for the transgression of my people was he stricken.' Whom does God call 'my people' in 52:4–6?"** | 53:8 and the Israel reading | *Israel:* then the servant suffers for Israel and is not Israel. *Recorded escape,* "the kings are speaking, so 'my people' are the nations" (Jews for Judaism): ask who says "my servant" in 53:11 (God) and whom God calls "my people" two verses before the passage begins. |
 | **Sibling Rivalry.** **"The servant did no violence and spoke no deceit (53:9), and his life was a guilt offering, which had to be without blemish (Lev. 5:15). Is Israel without blemish?"** | 53:9–10 and Israel's sin (1:4; 53:6) | *Yes:* then why does Israel confess its sins every Yom Kippur (Lev. 16:21)? *No:* the servant is not Israel. *Recorded escape,* "the righteous remnant" (Tovia Singer, citing Zeph. 3:12–13): "Is the remnant sinless?" (Eccl. 7:20). |
 | **Sibling Rivalry.** **"The Targum reads 52:13 'my servant the Messiah,' and the Talmud calls the Messiah 'the leper scholar' from 53:4. Were the sages wrong?"** | His tradition and the Israel reading | *Yes:* the Israel reading is not the oldest Jewish tradition. *No:* a suffering Messiah who bears others' sickness is Jewish teaching. *Recorded escape,* "that's midrash, not the plain sense": "Then where in the plain text does the one servant become the nation?" |
 
@@ -147,7 +147,7 @@ Each answer either fails against the text or leaves the servant suffering innoce
 | **"Isaiah calls Israel the servant (41:8; 44:1; 49:3)."** | He does, and then narrows the servant to one who restores Israel and is "a covenant for the people." The one who bears Israel's sin cannot be the Israel who sinned. | Isa. 42:6; 49:3, 5–6; 53:8 |
 | **"The kings of the nations are speaking (52:15)."** | The kings are struck silent (52:15). The report of 53:1 is the message Israel's prophets bring, and Paul reads it of Israel's unbelief. Whoever speaks, the servant is innocent and dies for others, which no nation's history fits. | Isa. 52:15; 53:1, 9; Rom. 10:16 |
 | **"53:8 says *lamo*, 'to them': the servant is plural."** | *Lamo* can refer to one: Isaiah 44:15 uses it of a single idol. Everywhere else the servant is "he." | Isa. 44:15; 53:2–12; Eitan Bar's reply to Tovia Singer |
-| **"He 'shall see offspring' (53:10); Jesus had no children."** | "Offspring" is often figurative in Isaiah ("offspring of evildoers," 1:4; 57:4). A man cut off and buried who then sees offspring and prolongs his days has risen. | Isa. 1:4; 57:4; 53:8–10 |
+| **"He 'shall see his seed' (53:10); Jesus had no children."** | "Seed" is often figurative in Isaiah ("a seed of evildoers," 1:4; "a seed of falsehood," 57:4). A man cut off and buried who then sees his seed and prolongs his days has risen. | Isa. 1:4; 57:4; 53:8–10 |
 | **"No one can die for another's sin" (Ezek. 18:20; Deut. 24:16).** | Those verses govern each man's own guilt and human courts. Isaiah says God himself laid our iniquity on the servant. The Torah's sacrifices were substitutes, and a ram died in Isaac's place. The Israel reading has the same problem: innocent Israel suffering for the nations. | Isa. 53:6, 10; Lev. 17:11; Gen. 22:13 |
 | **"Rashi and the great commentators say it is Israel."** | Rashi wrote a thousand years after Jesus. The Targum and the Talmud read the Messiah here. | Targum Jonathan on 52:13; Sanhedrin 98b |
 | **"Jesus didn't bring peace or rebuild the Temple."** | Isaiah 53 puts the suffering and death before the exaltation. Daniel has the anointed one "cut off" before the city and sanctuary are destroyed, which happened in AD 70. | Isa. 52:13–53:12; Dan. 9:26; Luke 24:26 |
@@ -168,7 +168,7 @@ The passage ends in the servant's victory, and so should the conversation.
 
 1. **Bridge from the flaw.** *If he concedes:* "If the servant isn't Israel, who is he?" It is the eunuch's question (Acts 8:34); answer it as Philip did, beginning at this scripture. *If he dodges:* park the point and give the reason for your hope (Methodology, "The bridge to Christ").
 2. **Read the fulfillment.** Read Luke 23–24, or Acts 8:26–39, where a reader of Isaiah 53 meets Yeshua.
-3. **Show the guilt offering.** "Behold, the Lamb of God, who takes away the sin of the world!" (John 1:29, ESV). By one offering he has perfected for all time those who are being sanctified (Heb. 10:14).
-4. **Atonement with no temple.** The Torah ties atonement to blood on the altar (Lev. 17:11), and there has been no altar since AD 70. Yeshua entered the holy places "by means of his own blood, thus securing an eternal redemption" (Heb. 9:12, ESV).
+3. **Show the guilt offering.** "Behold the Lamb of God, which taketh away the sin of the world" (John 1:29). "By one offering he hath perfected for ever them that are sanctified" (Heb. 10:14).
+4. **Atonement with no temple.** The Torah ties atonement to blood on the altar (Lev. 17:11), and there has been no altar since AD 70. Yeshua "by his own blood… entered in once into the holy place, having obtained eternal redemption for us" (Heb. 9:12).
 5. **Count the cost together.** Yeshua warned that following him may divide families, and promised a hundredfold now (Matt. 10:34–37; Mark 10:29–30).
 6. **Keep at it in love.** Pray for him by name (Rom. 10:1). Leave him a copy of Isaiah 53 and the Gospel of Luke. God gives the growth (1 Cor. 3:6–7).

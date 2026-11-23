@@ -1,13 +1,13 @@
 # Jehovah's Witnesses
 
-Christ says that without eating his flesh and drinking his blood "you have no life in you" (John 6:53, ESV), and at the Supper he told all his disciples to drink. Yet at the 2025 Memorial only 24,576 of 20,635,015 attendees ate, about 1 in 840. This SOP presses that gap from John 6 and the Supper texts, then offers the person the table they have been told is not for them.
+Christ says that without eating his flesh and drinking his blood "ye have no life in you" (John 6:53), and at the Supper he told all his disciples to drink. Yet at the 2025 Memorial only 24,576 of 20,635,015 attendees ate, about 1 in 840. This SOP presses that gap from John 6 and the Supper texts, then offers the person the table they have been told is not for them.
 
 | Field | Entry |
 | --- | --- |
 | SOP name | The Bread of Life |
 | Group | Jehovah's Witnesses |
 | Main source | [The Communion Denial](https://jw-apologetics.app/arguments/communion-denial/), *Responding to Jehovah's Witnesses* (jw-apologetics.app) |
-| Editions quoted | Bible: ESV. At the door, have them read from their own New World Translation (NWT) |
+| Editions quoted | Bible: KJV. At the door, have them read from their own New World Translation (NWT) |
 | Last reviewed | Nov 22, 2026 |
 
 ## Short version
@@ -23,7 +23,7 @@ Christ says that without eating his flesh and drinking his blood "you have no li
 3. "In John 6:53, what does Jesus say about life for someone who does not eat and drink?"
 4. "What does eating mean there?" Their literature says it means faith.
 5. **Sibling Rivalry:** "If eating means believing, and you believe, what keeps you from eating at the Memorial?"
-6. "Jesus says, 'Whoever comes to me I will never cast out' (John 6:37). If he invites you, who has the right to tell you no?"
+6. "Jesus says, 'Him that cometh to me I will in no wise cast out' (John 6:37). If he invites you, who has the right to tell you no?"
 
 **Avoid:** mocking the Memorial, which many attend reverently; debating the 144,000 before this lands. Keep to one question: did Jesus restrict who may eat and drink? The long version answers every objection.
 
@@ -35,9 +35,9 @@ Learn this before the conversation. It explains every step of the short version 
 
 ### A. Foundation
 
-The Lord's table belongs to Christ, and he set it for all his people. "Drink of it, all of you" (Matt. 26:27, ESV). "We who are many are one body, for we all partake of the one bread" (1 Cor. 10:17, ESV). "As often as you eat this bread and drink the cup, you proclaim the Lord's death until he comes" (1 Cor. 11:26, ESV).
+The Lord's table belongs to Christ, and he set it for all his people. "Drink ye all of it" (Matt. 26:27). "We being many are one bread, and one body: for we are all partakers of that one bread" (1 Cor. 10:17). "As often as ye eat this bread, and drink this cup, ye do shew the Lord's death till he come" (1 Cor. 11:26).
 
-**The name.** Jesus says, "I am the bread of life; whoever comes to me shall not hunger" (John 6:35, ESV), and the bread he gives "for the life of the world is my flesh" (6:51). The name is safe to say at the door: the Watchtower itself once titled an article "'Bread of Life' Available for All" ([w86](https://wol.jw.org/en/wol/d/r1/lp-e/1986125)). Scripture does warn against human rules that say "Do not taste" (Col. 2:20–23) and against shutting the kingdom in people's faces (Matt. 23:13); that warning judges the teaching, not the people.
+**The name.** Jesus says, "I am the bread of life: he that cometh to me shall never hunger" (John 6:35), and the bread he gives is "my flesh, which I will give for the life of the world" (6:51). The name is safe to say at the door: the Watchtower itself once titled an article "'Bread of Life' Available for All" ([w86](https://wol.jw.org/en/wol/d/r1/lp-e/1986125)). Scripture does warn against human rules that say "taste not" (Col. 2:20–23) and against shutting the kingdom in people's faces (Matt. 23:13); that warning judges the teaching, not the people.
 
 **How we carry ourselves.** Most Witnesses attend the Memorial with real reverence and have a zeal for God that lacks knowledge (Rom. 10:2).
 
@@ -52,7 +52,7 @@ A Witness believes only 144,000 "anointed" Christians go to heaven and may eat a
 **Background for beginners.** What a newcomer should know about Jehovah's Witnesses, as it bears on this approach:
 
 - **Who they are.** The movement grew from Charles Taze Russell's Bible Students in the 1870s and took the name Jehovah's Witnesses in 1931 (from Isa. 43:10). In 2025 about 9.2 million were active in preaching.
-- **Who decides what the Bible means.** A small Governing Body at their headquarters, which since 2013 they identify as "the faithful and discreet slave" (Matt. 24:45). Ask what the Bible says, not what the leaders say.
+- **Who decides what the Bible means.** A small Governing Body at their headquarters, which since 2013 they identify as "the faithful and discreet slave" (Matt. 24:45, NWT). Ask what the Bible says, not what the leaders say.
 - **Their Bible.** The New World Translation. Read John 6 and Matthew 26 from it with them.
 - **Beliefs you will hear.** Jehovah alone is God. Jesus is his first creation, Michael the archangel before he came to earth; there is no Trinity. Only 144,000 go to heaven; most hope to live forever on a paradise earth.
 - **Practice.** Meetings twice a week at a Kingdom Hall; preaching door to door and at literature carts, usually in pairs; and the yearly Memorial, the most important night of their year, to which they invite the public.
@@ -96,23 +96,23 @@ The argument has three premises. John 6 carries the weight; the Supper texts sho
 
 #### Premise 1: Feeding on Christ's flesh and blood is necessary for everyone's life
 
-- "Unless you eat the flesh of the Son of Man and drink his blood, you have no life in you" (John 6:53, ESV).
-- "Whoever feeds on my flesh and drinks my blood has eternal life, and I will raise him up on the last day" (John 6:54, ESV); such a one "abides in me, and I in him" (John 6:56).
-- "The bread that I will give for the life of the world is my flesh" (John 6:51, ESV). It is for the world, not a class.
+- "Except ye eat the flesh of the Son of man, and drink his blood, ye have no life in you" (John 6:53).
+- "Whoso eateth my flesh, and drinketh my blood, hath eternal life; and I will raise him up at the last day" (John 6:54); such a one "dwelleth in me, and I in him" (John 6:56).
+- "The bread that I will give is my flesh, which I will give for the life of the world" (John 6:51). It is for the world, not a class.
 - The Watchtower agrees the life Jesus speaks of in John 6 is open to everyone who gains everlasting life ([w24 December](https://www.jw.org/en/library/magazines/watchtower-study-december-2024/Everlasting-Life-for-You-But-How)).
 
 #### Premise 2: At his table Christ gives his body and blood to all his disciples and tells them all to eat and drink
 
-- "Take, eat; this is my body… Drink of it, all of you, for this is my blood of the covenant, which is poured out for many for the forgiveness of sins" (Matt. 26:26–28, ESV).
-- "Do this in remembrance of me" (Luke 22:19); the cup is "the new covenant in my blood" (Luke 22:20).
-- The cup and the bread are "a participation in the blood of Christ" and "in the body of Christ" (1 Cor. 10:16, ESV), and "we all partake of the one bread" (1 Cor. 10:17).
+- "Take, eat; this is my body… Drink ye all of it; for this is my blood of the new testament, which is shed for many for the remission of sins" (Matt. 26:26–28).
+- "This do in remembrance of me" (Luke 22:19); the cup is "the new testament in my blood" (Luke 22:20), that is, the new covenant.
+- The cup and the bread are "the communion of the blood of Christ" and "the communion of the body of Christ" (1 Cor. 10:16), and "we are all partakers of that one bread" (1 Cor. 10:17).
 - The same words join John 6 to the Supper: eat and drink, flesh (body) and blood, given *for* others. In John 6:51 Jesus says he *will give* his flesh; at the Supper he gives it.
 
 This premise does not depend on John 6 being a description of the Supper. Even if John 6 speaks of feeding on Christ by faith, the table is where Christ gives every disciple the sign of that feeding.
 
 #### Premise 3: The Watchtower forbids nearly every Witness to eat and drink
 
-In 2025, 20,610,439 of 20,635,015 attendees passed the emblems on, about 99.88% ([2025 report](https://wol.jw.org/en/wol/d/r1/lp-e/1102025416)). Their own teaching says the cup stands for a share in the new covenant. So by refusing it, a Witness declares he has no part in the covenant whose blood is poured out "for the forgiveness of sins" (Matt. 26:28; Heb. 8:12).
+In 2025, 20,610,439 of 20,635,015 attendees passed the emblems on, about 99.88% ([2025 report](https://wol.jw.org/en/wol/d/r1/lp-e/1102025416)). Their own teaching says the cup stands for a share in the new covenant. So by refusing it, a Witness declares he has no part in the covenant whose blood is poured out "for the remission of sins" (Matt. 26:28; Heb. 8:12).
 
 #### Conclusion
 
@@ -121,8 +121,8 @@ The Watchtower keeps millions from the table where Christ gives what he says all
 **Supporting texts**
 
 - **One body:** all partake of one bread (1 Cor. 10:17); one flock, one shepherd (John 10:16; Eph. 2:14–16).
-- **One covenant for all:** "they shall all know me, from the least of them to the greatest" (Jer. 31:34; Heb. 8:11).
-- **How, not whether:** "Let a person examine himself, then, and so eat" (1 Cor. 11:28, ESV).
+- **One covenant for all:** "they shall all know me, from the least of them unto the greatest of them" (Jer. 31:34; Heb. 8:11).
+- **How, not whether:** "Let a man examine himself, and so let him eat of that bread, and drink of that cup" (1 Cor. 11:28).
 - **The early church:** the only boundary at the table was baptized faith. The *Didache* (9.5) bars only the unbaptized, and Justin Martyr says every believer present received the bread and cup, with portions carried to the absent (*First Apology* 65–66).
 
 #### Question plan
@@ -150,9 +150,9 @@ Ask these last, after the Witness has read the texts and stated his view. Every 
 
 | Question | It sets against each other | Every answer costs |
 | --- | --- | --- |
-| **Sibling Rivalry.** **"Jesus says, 'Unless you eat the flesh of the Son of Man and drink his blood, you have no life in you.' Your Watchtower says that life is for everyone. So must you eat, or do you have life without it?"** | John 6:53 and the w24 article against the Memorial practice | *Must eat:* the practice is wrong. *Life without eating:* Jesus is contradicted. |
-| **Sibling Rivalry.** **"At the Supper Jesus said, 'Drink of it, all of you.' At your last Memorial, who told you not to?"** | Christ's command (Matt. 26:27) and the Watchtower's rule | Any answer names an authority other than Christ overruling Christ. |
-| **Sibling Rivalry.** **"The cup is 'my blood of the covenant, poured out for the forgiveness of sins.' If you're not in that covenant, by what blood are your sins forgiven?"** | Matt. 26:28 and the teaching that the other sheep are outside the covenant (w88) yet forgiven by its blood (w98) | *By the covenant blood:* then he belongs at its table. *By other blood:* there is none (Heb. 9:22; 10:12). |
+| **Sibling Rivalry.** **"Jesus says, 'Except ye eat the flesh of the Son of man, and drink his blood, ye have no life in you.' Your Watchtower says that life is for everyone. So must you eat, or do you have life without it?"** | John 6:53 and the w24 article against the Memorial practice | *Must eat:* the practice is wrong. *Life without eating:* Jesus is contradicted. |
+| **Sibling Rivalry.** **"At the Supper Jesus said, 'Drink ye all of it.' At your last Memorial, who told you not to?"** | Christ's command (Matt. 26:27) and the Watchtower's rule | Any answer names an authority other than Christ overruling Christ. |
+| **Sibling Rivalry.** **"The cup is 'my blood of the new testament,' the new covenant, 'which is shed for many for the remission of sins.' If you're not in that covenant, by what blood are your sins forgiven?"** | Matt. 26:28 and the teaching that the other sheep are outside the covenant (w88) yet forgiven by its blood (w98) | *By the covenant blood:* then he belongs at its table. *By other blood:* there is none (Heb. 9:22; 10:12). |
 | **Just the Facts.** **"Before 1935 almost everyone at the Memorial ate. In 1935, did the Bible change, or the teaching?"** | The practice before and after 1935 | *The teaching:* men changed who may eat. *The Bible:* it did not. |
 
 ### B′. Their answers
@@ -161,7 +161,7 @@ Each answer either fails against the text or admits that John 6's life is for ev
 
 | They say | Reply | Support |
 | --- | --- | --- |
-| **"The emblems are only for the 144,000."** | No text limits the table. Jesus said "all of you," and the covenant in the cup is for all God's people, least to greatest. To be outside the covenant is to be outside its forgiveness. | Matt. 26:27; Jer. 31:34; Heb. 8:11–12 |
+| **"The emblems are only for the 144,000."** | No text limits the table. Jesus said "Drink ye all of it," and the covenant in the cup is for all God's people, least to greatest. To be outside the covenant is to be outside its forgiveness. | Matt. 26:27; Jer. 31:34; Heb. 8:11–12 |
 | **"John 6 was spoken a year earlier to a crowd in Galilee, so it isn't about the Memorial"** (w24 December). | The same article grants that the life in John 6 is for everyone. Jesus said he *will give* his flesh (John 6:51) and gave it at the Supper. And Premise 2 stands without John 6: Christ told every disciple to eat and drink. | John 6:51, 53–54; Matt. 26:26–28; 1 Cor. 10:16 |
 | **"John 6 means faith, not literal eating."** | We agree we feed on Christ by faith. But faith obeys: "Do this." And Paul says we proclaim his death by eating and drinking. | Luke 22:19; 1 Cor. 11:26 |
 | **"I'm not worthy"** (1 Cor. 11:27–29). | Paul warns about the manner of eating and assumes everyone eats. The cure for unworthiness is examining yourself and repenting, "and so eat." | 1 Cor. 11:27–28 |
@@ -185,8 +185,8 @@ Each answer either fails against the text or admits that John 6's life is for ev
 Most Witnesses have been taught for years that the bread and cup are not for them. The Gospel is the invitation they were told they don't have.
 
 1. **Bridge from the flaw.** *If he concedes:* "If no one has the right to keep you from the table, may I show you why I'm sure Jesus invites you?" *If he dodges:* park the point and give the reason for your hope (Methodology, "The bridge to Christ").
-2. **Read his welcome.** "I am the bread of life; whoever comes to me shall not hunger… whoever comes to me I will never cast out" (John 6:35, 37, ESV).
-3. **Show that sonship comes by faith, not class.** "To all who did receive him, who believed in his name, he gave the right to become children of God" (John 1:12, ESV; Gal. 3:26).
+2. **Read his welcome.** "I am the bread of life: he that cometh to me shall never hunger… him that cometh to me I will in no wise cast out" (John 6:35, 37).
+3. **Show that sonship comes by faith, not class.** "As many as received him, to them gave he power to become the sons of God, even to them that believe on his name" (John 1:12; Gal. 3:26).
 4. **Point to the covenant's gift.** Forgiveness is promised to everyone in the new covenant, from the least to the greatest (Heb. 8:11–12).
 5. **Ask the question he must answer before God.** "If Christ invites you, who has the right to tell you no?"
 6. **Keep at it in love.** Leave a Gospel of John. Pray for him by name (Rom. 10:1). Expect the conversation to take many visits; God gives the growth (1 Cor. 3:6–7).

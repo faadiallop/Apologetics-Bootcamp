@@ -7,7 +7,7 @@ The Qur'an claims to confirm the Torah and Gospel that Jews and Christians held 
 | Group | Muslims, Sunni and Shia alike (the method uses only the Qur'an, which all accept) |
 | SOP name | The Islamic Dilemma |
 | Main source | Christopher W. Frost, *The Islamic Dilemma* (2026) |
-| Editions quoted | Bible: ESV. Qur'an: M. H. Shakir, as in Frost |
+| Editions quoted | Bible: KJV. Qur'an: M. H. Shakir, as in Frost |
 | Last reviewed | Nov 22, 2026 |
 
 ## Short version
@@ -34,12 +34,12 @@ Learn this before the conversation. It explains every step of the short version 
 
 ### A. Foundation
 
-Islam honors Jesus as Messiah but denies the Father and the Son, and Scripture names that denial plainly: "This is the antichrist, he who denies the Father and the Son. No one who denies the Son has the Father" (1 John 2:22–23, ESV). The Qur'an makes both denials (Q 5:18; 9:30; 4:171).
+Islam honors Jesus as Messiah but denies the Father and the Son, and Scripture names that denial plainly: "He is antichrist, that denieth the Father and the Son. Whosoever denieth the Son, the same hath not the Father" (1 John 2:22–23). The Qur'an makes both denials (Q 5:18; 9:30; 4:171).
 
 **A later word is tested by the earlier.** God does not contradict himself (Num. 23:19; Titus 1:2; Ps. 119:160). So any message that claims to come from him is judged by what he has already said:
 
-- "To the teaching and to the testimony! If they will not speak according to this word, it is because they have no dawn" (Isa. 8:20, ESV).
-- "Even if we or an angel from heaven should preach to you a gospel contrary to the one we preached to you, let him be accursed" (Gal. 1:8, ESV). Islam's message claims to have come through an angel.
+- "To the law and to the testimony: if they speak not according to this word, it is because there is no light in them" (Isa. 8:20).
+- "Though we, or an angel from heaven, preach any other gospel unto you than that which we have preached unto you, let him be accursed" (Gal. 1:8). Islam's message claims to have come through an angel.
 - The Bereans tested even Paul's preaching against the Scriptures (Acts 17:11).
 
 This is why the Islamic Dilemma works. It is not neutral logic. It is God's own test of a prophet, and the Qur'an has agreed to be tested this way. It claims to confirm the earlier books (Q 3:3) and says a book not from God would contain much contradiction (Q 4:82).
@@ -105,15 +105,15 @@ Those books were the Torah and the four Gospels. Manuscripts from before Muhamma
 
 #### Premise 2: The Qur'an contradicts those same books
 
-| Teaching | Qur'an | Torah and Gospel (ESV) |
+| Teaching | Qur'an | Torah and Gospel (KJV) |
 | --- | --- | --- |
 | Jesus was crucified | Denied: "they did not kill him nor did they crucify him" (4:157) | Matt. 27:35; Mark 15:24; Luke 23:33; John 19:18 |
 | Jesus is the Son of God | Denied (9:30; 4:171; 19:88–92) | Matt. 3:17; Mark 14:61–62; John 1:14 |
 | Jesus is God | Denied (5:72; 5:116) | John 1:1; John 20:28 |
 | God is Father to his people | Denied: punishment proves he is not their father (5:18) | Deut. 8:5; 32:6; Matt. 6:9 |
-| Muhammad is foretold | Claimed (7:157) | No illiterate or Gentile prophet is foretold. The prophet like Moses comes "from your brothers" (Deut. 18:15); the promised Helper is the Holy Spirit (John 14:26) |
-| The Gospel commands holy war | Claimed (9:111) | "All who take the sword will perish by the sword" (Matt. 26:52); "My kingdom is not of this world" (John 18:36) |
-| Marriage continues in paradise | Taught (2:25; 36:55–56) | "In the resurrection they neither marry nor are given in marriage" (Matt. 22:30) |
+| Muhammad is foretold | Claimed (7:157) | No illiterate or Gentile prophet is foretold. The prophet like Moses comes "of thy brethren" (Deut. 18:15); the promised Helper is the Holy Spirit (John 14:26) |
+| The Gospel commands holy war | Claimed (9:111) | "All they that take the sword shall perish with the sword" (Matt. 26:52); "My kingdom is not of this world" (John 18:36) |
+| Marriage continues in paradise | Taught (2:25; 36:55–56) | "In the resurrection they neither marry, nor are given in marriage" (Matt. 22:30) |
 
 #### Conclusion: the dilemma
 
@@ -184,8 +184,8 @@ Every common escape route either fails against the Qur'an's own words or makes t
 The Qur'an itself sends the Muslim to the Gospel, so take him there. The dilemma clears the ground; the Gospel is what we came to give.
 
 1. **Bridge from the flaw: use the door the Qur'an opens.** *If he concedes:* "Your book says to ask those who read the Book before you (Q 10:94) and to judge by the Injil (Q 5:47). May I show you what the Injil says about how God forgives? Shall we read it together?" *If he dodges:* park the point and give the reason for your hope (Methodology, "The bridge to Christ").
-2. **Start where he is at home.** Luke opens with Zechariah and Mary, both familiar from Q 3 and 19. John states its purpose: "that you may believe that Jesus is the Christ, the Son of God, and that by believing you may have life in his name" (John 20:31, ESV).
+2. **Start where he is at home.** Luke opens with Zechariah and Mary, both familiar from Q 3 and 19. John states its purpose: "that ye might believe that Jesus is the Christ, the Son of God; and that believing ye might have life through his name" (John 20:31).
 3. **Let him meet Jesus there.** Jesus forgives sins on his own authority (Mark 2:5–12). He lays down his life and takes it up again (John 10:17–18). Thomas calls him "My Lord and my God" (John 20:28).
-4. **Show the Father who gives his Son.** The Qur'an says God is no one's father and does not love unbelievers (Q 5:18; 3:32). The Gospel says, "For God so loved the world, that he gave his only Son" (John 3:16, ESV), and "while we were still sinners, Christ died for us" (Rom. 5:8, ESV; Luke 6:35).
-5. **Offer assurance instead of the scales.** The Qur'an weighs deeds on scales at the judgment (Q 7:8–9; 21:47). In Christ, God is both just and the justifier (Rom. 3:26), so salvation is a gift, not a wage (Eph. 2:8–9): "that you may know that you have eternal life" (1 John 5:13, ESV).
+4. **Show the Father who gives his Son.** The Qur'an says God is no one's father and does not love unbelievers (Q 5:18; 3:32). The Gospel says, "For God so loved the world, that he gave his only begotten Son" (John 3:16), and "while we were yet sinners, Christ died for us" (Rom. 5:8; Luke 6:35).
+5. **Offer assurance instead of the scales.** The Qur'an weighs deeds on scales at the judgment (Q 7:8–9; 21:47). In Christ, God is both just and the justifier (Rom. 3:26), so salvation is a gift, not a wage (Eph. 2:8–9): "that ye may know that ye have eternal life" (1 John 5:13).
 6. **Keep at it in love.** Pray for him (Rom. 10:1). Stay his friend after the argument. One plants, another waters, and God gives the growth (1 Cor. 3:6–7; 2 Tim. 2:25).

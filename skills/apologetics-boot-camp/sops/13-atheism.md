@@ -7,7 +7,7 @@ To argue that there is no God, the atheist has to use logic, trust his own mind,
 | Group | Atheists: those who believe there is no God, and those who say they simply lack belief in one. Much of it also serves agnostics and "nothing in particular" |
 | SOP name | Borrowed Ground |
 | Main source | Greg L. Bahnsen, *Always Ready* (1996), and his debate with Gordon Stein, "The Great Debate: Does God Exist?" (UC Irvine, Feb. 11, 1985; transcript, Covenant Media Foundation) |
-| Editions quoted | Bible: ESV. Other writers: as cited |
+| Editions quoted | Bible: KJV. Other writers: as cited |
 | Last reviewed | Nov 23, 2026 |
 
 ## Short version
@@ -38,17 +38,17 @@ Learn this before the conversation. It explains every step of the short version 
 
 ### A. Foundation
 
-Scripture never treats God's existence as an open question. It begins with him: "In the beginning, God" (Gen. 1:1), and "whoever would draw near to God must believe that he exists" (Heb. 11:6, ESV). It calls the denial folly: "The fool says in his heart, 'There is no God'" (Ps. 14:1; 53:1, ESV). Scripture's folly is a matter of the heart, not of intelligence; "the fear of the LORD is the beginning of knowledge" (Prov. 1:7; Ps. 111:10).
+Scripture never treats God's existence as an open question. It begins with him: "In the beginning God" (Gen. 1:1), and "he that cometh to God must believe that he is" (Heb. 11:6). It calls the denial folly: "The fool hath said in his heart, There is no God" (Ps. 14:1; 53:1). Scripture's folly is a matter of the heart, not of intelligence; "the fear of the LORD is the beginning of knowledge" (Prov. 1:7; Ps. 111:10).
 
 **The atheist already knows God.** This is the ground the whole method stands on.
 
-- God's invisible attributes "have been clearly perceived, ever since the creation of the world," so men are "without excuse"; they "knew God" but did not honor him, and "by their unrighteousness suppress the truth" (Rom. 1:18–21, ESV).
-- "The heavens declare the glory of God… There is no speech, nor are there words… Their voice goes out through all the earth" (Ps. 19:1–4, ESV). God "did not leave himself without witness" (Acts 14:17).
+- "The invisible things of him from the creation of the world are clearly seen," so men are "without excuse"; "when they knew God, they glorified him not as God," and they "hold the truth in unrighteousness" (Rom. 1:18–21).
+- "The heavens declare the glory of God… There is no speech nor language, where their voice is not heard. Their line is gone out through all the earth" (Ps. 19:1–4). God "left not himself without witness" (Acts 14:17).
 - Calvin: a sense of deity is engraved on every mind, so that no one can plead ignorance (*Institutes* 1.3.1). Aquinas: to know in a general and confused way that God exists is implanted in us by nature (*Summa Theologiae* I, q. 2, a. 1, ad 1).
 
-So there is no neutral ground. We don't treat God as a hypothesis the atheist may judge by his own standard. All the treasures of wisdom and knowledge are hidden in Christ (Col. 2:3), and "in him we live and move and have our being" (Acts 17:28). The atheist reasons with a mind God made, in a world God orders, by laws that reflect God's own mind. That is the borrowed ground.
+So there is no neutral ground. We don't treat God as a hypothesis the atheist may judge by his own standard. All the treasures of wisdom and knowledge are hidden in Christ (Col. 2:3), and "in him we live, and move, and have our being" (Acts 17:28). The atheist reasons with a mind God made, in a world God orders, by laws that reflect God's own mind. That is the borrowed ground.
 
-**Answering a fool according to his folly.** "Answer not a fool according to his folly, lest you be like him yourself. Answer a fool according to his folly, lest he be wise in his own eyes" (Prov. 26:4–5, ESV). We don't adopt his standard as if it were neutral (verse 4). We do follow his standard to its end, to show it cannot carry the weight he puts on it (verse 5). Bahnsen built his method on these two verses (*Always Ready*), and Paul did the same at Athens, starting from their own altar and poets (Acts 17:22–28).
+**Answering a fool according to his folly.** "Answer not a fool according to his folly, lest thou also be like unto him. Answer a fool according to his folly, lest he be wise in his own conceit" (Prov. 26:4–5). We don't adopt his standard as if it were neutral (verse 4). We do follow his standard to its end, to show it cannot carry the weight he puts on it (verse 5). Bahnsen built his method on these two verses (*Always Ready*), and Paul did the same at Athens, starting from their own altar and poets (Acts 17:22–28).
 
 **How we carry ourselves.** Many atheists are honest, kind and thoughtful. Many were raised in a church and left it hurt; about two in three American "nones" were raised in a religion (Pew Research Center, Dec. 2025).
 
@@ -200,8 +200,8 @@ Every common escape either uses the very thing it tries to explain away, or leav
 The flaw shows that he stands on God's ground. The Gospel tells him who that God is and how he came looking for him.
 
 1. **Bridge from the flaw.** *If he concedes* ("I can't account for it"): "Scripture says the reason we can think at all is that a God who thinks made us, and that we know him and push him away (Rom. 1:19–21). May I tell you what he did about that?" *If he dodges:* park the point and give the reason for your hope (Methodology, "The bridge to Christ").
-2. **The Logos became flesh.** The Word behind all reason "was God… and the Word became flesh and dwelt among us" (John 1:1, 14, ESV). Augustine found in the philosophers that the Word was God, but not that the Word became flesh (*Confessions* 7.9). Logic can point to the Word; only the Gospel tells of him coming among us.
-3. **Name the real problem, gently.** It is not too little evidence but our sin: "people loved the darkness rather than the light" (John 3:19, ESV; Rom. 3:10–11, 23). This is true of you as well as of him.
-4. **The cross and the empty tomb.** "Christ died for our sins… he was buried… he was raised on the third day" (1 Cor. 15:3–4, ESV), before many witnesses (1 Cor. 15:5–8). God "has given assurance to all by raising him from the dead" (Acts 17:31, ESV).
-5. **The call.** God "commands all people everywhere to repent" (Acts 17:30, ESV). "Be reconciled to God" (2 Cor. 5:20). The restless heart finds its rest in him (Augustine, *Confessions* 1.1; Matt. 11:28).
+2. **The Logos became flesh.** The Word behind all reason "was God… And the Word was made flesh, and dwelt among us" (John 1:1, 14). Augustine found in the philosophers that the Word was God, but not that the Word became flesh (*Confessions* 7.9). Logic can point to the Word; only the Gospel tells of him coming among us.
+3. **Name the real problem, gently.** It is not too little evidence but our sin: "men loved darkness rather than light" (John 3:19; Rom. 3:10–11, 23). This is true of you as well as of him.
+4. **The cross and the empty tomb.** "Christ died for our sins… he was buried, and… he rose again the third day" (1 Cor. 15:3–4), before many witnesses (1 Cor. 15:5–8). God "hath given assurance unto all men, in that he hath raised him from the dead" (Acts 17:31).
+5. **The call.** God "commandeth all men every where to repent" (Acts 17:30). "Be ye reconciled to God" (2 Cor. 5:20). The restless heart finds its rest in him (Augustine, *Confessions* 1.1; Matt. 11:28).
 6. **Keep at it in love.** Leave him a Gospel of John and offer to read it together. Pray for him (Rom. 10:1). Stay his friend after the argument. One plants, another waters, and God gives the growth (1 Cor. 3:6–7; 2 Tim. 2:25).

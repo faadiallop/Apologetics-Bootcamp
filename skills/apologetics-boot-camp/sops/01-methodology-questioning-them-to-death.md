@@ -4,18 +4,18 @@
 
 Questioning Them to Death is how every SOP is carried out: we lead with questions instead of statements until the false view gives way under its own weight. It is drawn from Gregory Koukl's *Tactics* (2009). Each group's SOP supplies the content; this tab supplies the method.
 
-**The name.** What dies is the error, not the person. Christ questioned his opponents about David's son until "no one was able to answer him a word, nor from that day did anyone dare to ask him any more questions" (Matt. 22:41–46, ESV). Koukl warns that these tactics are not tricks to embarrass people. They expose bad thinking so the person can be led to the truth.
+**The name.** What dies is the error, not the person. Christ questioned his opponents about David's son until "no man was able to answer him a word, neither durst any man from that day forth ask him any more questions" (Matt. 22:41–46). Koukl warns that these tactics are not tricks to embarrass people. They expose bad thinking so the person can be led to the truth.
 
 **The weapon in the war.** Koukl calls his approach diplomacy, not D-Day. Scripture holds both: Paul wages war on arguments (2 Cor. 10:3–5) as an ambassador (2 Cor. 5:20; Eph. 6:20). In these SOPs, questions are the weapon, arguments are the target, and the person is the captive we want freed (2 Tim. 2:25–26). A question that exposes a flaw is a blow aimed at a stronghold, never at the man.
 
 **Why questions.** Scripture shows this method again and again:
 
-- "The purpose in a man's heart is like deep water, but a man of understanding will draw it out" (Prov. 20:5, ESV).
-- "The one who states his case first seems right, until the other comes and examines him" (Prov. 18:17, ESV).
-- Christ asked questions to silence and to teach: "Which is easier…?" (Mark 2:9); "Was the baptism of John from heaven or from man?" (Luke 20:4); "Whose likeness and inscription does it have?" (Luke 20:24).
-- Paul "reasoned with them from the Scriptures" (Acts 17:2–3).
+- "Counsel in the heart of man is like deep water; but a man of understanding will draw it out" (Prov. 20:5).
+- "He that is first in his own cause seemeth just; but his neighbour cometh and searcheth him" (Prov. 18:17).
+- Christ asked questions to silence and to teach: "Whether is it easier…?" (Mark 2:9); "The baptism of John, was it from heaven, or of men?" (Luke 20:4); "Whose image and superscription hath it?" (Luke 20:24).
+- Paul "reasoned with them out of the scriptures" (Acts 17:2–3).
 
-**The posture.** Be "wise as serpents and innocent as doves" (Matt. 10:16, ESV). Let speech be gracious and seasoned with salt (Col. 4:6). Koukl's rule: if anyone in the conversation gets angry, you lose. Make sure it is your ideas that offend, not you.
+**The posture.** Be "wise as serpents, and harmless as doves" (Matt. 10:16). Let speech be gracious and seasoned with salt (Col. 4:6). Koukl's rule: if anyone in the conversation gets angry, you lose. Make sure it is your ideas that offend, not you.
 
 **The modest goal.** Aim to put a stone in the person's shoe: one question they cannot stop thinking about. Only the Father draws anyone to Christ (John 6:44). We plant and water; God gives the growth (1 Cor. 3:6–7). Koukl calls this "100% God and 100% man": we answer for faithfulness, God for results.
 
@@ -51,7 +51,7 @@ Once step 2 has the person's reasons on the table, look for one of these flaws. 
 | **Rhodes Scholar** | An appeal to experts without their reasons | "What reasons does that scholar give?" | "Christian scholars say the Bible is corrupted" |
 | **Just the Facts** | A claim built on wrong facts | "What exactly is the claim? Is it accurate?" | Manuscripts before Muhammad match the Torah and Gospels we have |
 
-**Taking the Roof Off, step by step.** (1) State their claim and check you have it right. (2) Test-drive it: follow it consistently to see where it leads. (3) If it ends in absurdity, show them and invite them to reconsider where they started. Christ did this with "If Satan casts out Satan…" (Matt. 12:24–28).
+**Taking the Roof Off, step by step.** (1) State their claim and check you have it right. (2) Test-drive it: follow it consistently to see where it leads. (3) If it ends in absurdity, show them and invite them to reconsider where they started. Christ did this with "If Satan cast out Satan…" (Matt. 12:24–28).
 
 **Just the Facts.** Ask first whether the claim looks unlikely on its face, then check it. Precise figures persuade more than general ones.
 
@@ -75,7 +75,7 @@ Each SOP lists the questions that expose its group's flaws, each named by its ta
 
 ### The bridge to Christ
 
-Exposing the flaw is not the end. Let it raise the question the gospel answers, and cross at once. Philip took the eunuch's question on Isaiah 53, "of whom speaketh the prophet this?", "and began at the same scripture, and preached unto him Jesus" (Acts 8:34–35, KJV). Paul began from the Athenians' own altar (Acts 17:23), and Christ turned the Samaritan woman's question about the mountain to himself (John 4:19–26).
+Exposing the flaw is not the end. Let it raise the question the gospel answers, and cross at once. Philip took the eunuch's question on Isaiah 53, "of whom speaketh the prophet this?", "and began at the same scripture, and preached unto him Jesus" (Acts 8:34–35). Paul began from the Athenians' own altar (Acts 17:23), and Christ turned the Samaritan woman's question about the mountain to himself (John 4:19–26).
 
 - **If they give the costly answer,** ask the bridge question in Section A′ of the SOP. It names the need the flaw has uncovered and offers what Christ gives for it.
 - **If they dodge,** don't press the point again. Park it, and give a reason for the hope that is in you (1 Pet. 3:15): "Can I tell you why this matters so much to me?" Then tell the gospel as what Christ has done for you, as Paul did before Agrippa (Acts 26:9–23) and the man born blind before the Pharisees (John 9:25).
@@ -114,4 +114,4 @@ We take Koukl's method but correct one point where it leans toward neutral groun
 
 **Where we agree.** Koukl grants that there is no neutral ground on truth and tolerance. With Francis Schaeffer, he holds that every unbeliever must live in God's world and is caught between what he says and what he knows. Scripture says the same: all men know God and suppress that knowledge (Rom. 1:18–21). That is why questions work: they bring up what the person already knows.
 
-**Where we correct him.** Koukl calls the mind, not the Bible, our first line of defense against error. He means first in the order of knowing, not in authority. The mind is God's gift and must be used (Mark 12:30). But it is fallen and must be renewed and ruled by his Word (Rom. 12:2; Prov. 3:5–7). Every thought is taken captive to obey Christ (2 Cor. 10:5), and every teaching is tested "to the teaching and to the testimony" (Isa. 8:20). So our questions serve Scripture; they do not stand on neutral reason.
+**Where we correct him.** Koukl calls the mind, not the Bible, our first line of defense against error. He means first in the order of knowing, not in authority. The mind is God's gift and must be used (Mark 12:30). But it is fallen and must be renewed and ruled by his Word (Rom. 12:2; Prov. 3:5–7). Every thought is taken captive to obey Christ (2 Cor. 10:5), and every teaching is tested "to the law and to the testimony" (Isa. 8:20). So our questions serve Scripture; they do not stand on neutral reason.
