@@ -23,7 +23,7 @@ Each tab is a standard operating procedure (SOP) for answering one religion or c
 | Short version | Field orders |
 | A. Foundation | Rules of engagement: who the enemy is, which weapons we use |
 | B. Know them | Intelligence on the stronghold |
-| C. The method and killer questions | The assault on the stronghold's arguments |
+| C. The method and finding the flaws | The assault on the stronghold's arguments |
 | B′. Their answers | Counterattacks, and how to stand (Eph. 6:13) |
 | A′. Turn to Christ | Terms of peace: the call to be reconciled |
 | Response Bank | Intelligence on their tactics, "not ignorant of his designs" (2 Cor. 2:11) |
@@ -44,7 +44,7 @@ Every SOP opens with a header and a short version. The long version then runs th
 | Part | What it holds | Rule |
 | --- | --- | --- |
 | Header | SOP name, group, main sources, editions quoted, last reviewed | One block at the top |
-| Short version | The argument in one sentence, a prayer before engaging, the questions to ask in order (ending with the killer question), and what to avoid | One phone screen; nothing the long version doesn't support |
+| Short version | The argument in one sentence, a prayer before engaging, the questions to ask in order (ending with the question that exposes the flaw), and what to avoid | One phone screen; nothing the long version doesn't support |
 | A. Foundation | What Scripture says about this group's error and how we should carry ourselves toward them | Scripture only, quoted in the ESV |
 | B. Know them | Background for beginners, their beliefs, final authority, view of the Bible, and terms they use differently | Stated as they would state it |
 | C. The method | Why this approach was chosen, the argument as numbered premises, the witnesses for each, the conversation steps, ground rules, and a question plan using the Questioning Them to Death method | Each premise has two or three witnesses, from their own authority where the method is internal |

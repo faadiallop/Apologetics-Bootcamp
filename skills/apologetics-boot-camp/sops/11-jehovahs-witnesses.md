@@ -16,13 +16,13 @@ Christ says that without eating his flesh and drinking his blood "you have no li
 
 **Before you go: pray.** Pray for the Witnesses by name, that God would open their eyes and grant repentance, and for clear and bold words for yourself (Eph. 6:18–20; 2 Tim. 2:25–26; Col. 4:3–4).
 
-**Ask, in order.** Have them read from their own Bible, and wait in silence after the killer question.
+**Ask, in order.** Have them read from their own Bible, and wait in silence after the question that exposes the flaw.
 
 1. "At the Memorial, did you eat the bread and drink the wine? Why not?"
 2. "In Matthew 26:27, who is the 'all'? Did Jesus add a condition?"
 3. "In John 6:53, what does Jesus say about life for someone who does not eat and drink?"
 4. "What does eating mean there?" Their literature says it means faith.
-5. **Killer question:** "If eating means believing, and you believe, what keeps you from eating at the Memorial?"
+5. **Sibling Rivalry:** "If eating means believing, and you believe, what keeps you from eating at the Memorial?"
 6. "Jesus says, 'Whoever comes to me I will never cast out' (John 6:37). If he invites you, who has the right to tell you no?"
 
 **Avoid:** mocking the Memorial, which many attend reverently; debating the 144,000 before this lands. Keep to one question: did Jesus restrict who may eat and drink? The long version answers every objection.
@@ -144,16 +144,16 @@ Run it as questions, following Methodology: Questioning Them to Death.
 - **Unfalsifiable claim:** falling partaker numbers were said to confirm the doctrine (w96); rising numbers are put down to mistakes or emotional problems (w20). No result could count against it.
 - **Just the Facts:** the practice before 1935.
 
-#### Killer questions
+#### Exposing the flaws
 
-Ask these last, after the Witness has read the texts and stated his view. Every answer concedes the contradiction. Then wait in silence.
+Ask these last, after the Witness has read the texts and stated his view. Every answer costs him. Then wait in silence.
 
-| Killer question | It sets against each other | Every answer costs |
+| Question | It sets against each other | Every answer costs |
 | --- | --- | --- |
-| **K1. "Jesus says, 'Unless you eat the flesh of the Son of Man and drink his blood, you have no life in you.' Your Watchtower says that life is for everyone. So must you eat, or do you have life without it?"** | John 6:53 and the w24 article against the Memorial practice | *Must eat:* the practice is wrong. *Life without eating:* Jesus is contradicted. |
-| **K2. "At the Supper Jesus said, 'Drink of it, all of you.' At your last Memorial, who told you not to?"** | Christ's command (Matt. 26:27) and the Watchtower's rule | Any answer names an authority other than Christ overruling Christ. |
-| **K3. "The cup is 'my blood of the covenant, poured out for the forgiveness of sins.' If you're not in that covenant, by what blood are your sins forgiven?"** | Matt. 26:28 and the teaching that the other sheep are outside the covenant (w88) yet forgiven by its blood (w98) | *By the covenant blood:* then he belongs at its table. *By other blood:* there is none (Heb. 9:22; 10:12). |
-| **K4. "Before 1935 almost everyone at the Memorial ate. In 1935, did the Bible change, or the teaching?"** | The practice before and after 1935 | *The teaching:* men changed who may eat. *The Bible:* it did not. |
+| **Sibling Rivalry.** **"Jesus says, 'Unless you eat the flesh of the Son of Man and drink his blood, you have no life in you.' Your Watchtower says that life is for everyone. So must you eat, or do you have life without it?"** | John 6:53 and the w24 article against the Memorial practice | *Must eat:* the practice is wrong. *Life without eating:* Jesus is contradicted. |
+| **Sibling Rivalry.** **"At the Supper Jesus said, 'Drink of it, all of you.' At your last Memorial, who told you not to?"** | Christ's command (Matt. 26:27) and the Watchtower's rule | Any answer names an authority other than Christ overruling Christ. |
+| **Sibling Rivalry.** **"The cup is 'my blood of the covenant, poured out for the forgiveness of sins.' If you're not in that covenant, by what blood are your sins forgiven?"** | Matt. 26:28 and the teaching that the other sheep are outside the covenant (w88) yet forgiven by its blood (w98) | *By the covenant blood:* then he belongs at its table. *By other blood:* there is none (Heb. 9:22; 10:12). |
+| **Just the Facts.** **"Before 1935 almost everyone at the Memorial ate. In 1935, did the Bible change, or the teaching?"** | The practice before and after 1935 | *The teaching:* men changed who may eat. *The Bible:* it did not. |
 
 ### B′. Their answers
 

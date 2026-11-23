@@ -16,12 +16,12 @@ Isaiah foretold a servant of the LORD who would be pierced for the transgression
 
 **Before you go: pray.** Pray for him by name, that the veil be lifted when he reads (2 Cor. 3:14–16), and for humble, clear words for yourself (Eph. 6:19; Rom. 10:1).
 
-**Ask, in order.** Read Isaiah 52:13–53:12 together, and wait in silence after the killer question.
+**Ask, in order.** Read Isaiah 52:13–53:12 together, and wait in silence after the question that exposes the flaw.
 
 1. "Who do you think this passage describes? Who taught you that?"
 2. "Why did he suffer? What do verses 5 and 6 say?"
 3. "Verse 9 says he did no violence and spoke no deceit. Isaiah 1:4 calls Israel 'a sinful nation.' Which one is the servant?"
-4. **Killer question:** "Verse 8 says he was 'stricken for the transgression of my people.' Just before, God calls Israel 'my people' (52:4–6). If he suffers for Israel, how can he be Israel?"
+4. **Sibling Rivalry:** "Verse 8 says he was 'stricken for the transgression of my people.' Just before, God calls Israel 'my people' (52:4–6). If he suffers for Israel, how can he be Israel?"
 5. "He is cut off and buried, yet 'he shall prolong his days' (53:8–10). Would you read one Gospel with me to see whether Yeshua fits?"
 
 **Avoid:** calling Isaiah 53 "the forbidden chapter" (see B′); blaming "the Jews" for the cross; starting with the Trinity; contempt for the rabbis. The long version answers every objection.
@@ -128,15 +128,15 @@ The servant is an innocent individual who dies for Israel's sins and lives again
 - **Taking the Roof Off:** if Israel's sufferings atoned for the nations, then the nations that persecuted Jews were forgiven by that persecution. Ask gently whether he believes that.
 - **Just the Facts:** "*lamo* in 53:8 must be plural." Isaiah 44:15 uses *lamo* of a single idol.
 
-#### Killer questions
+#### Exposing the flaws
 
 Ask these last, after he has read the passage and stated his view, then wait in silence. Each has an escape that counter-missionaries teach; it is recorded beside it so you are ready for it.
 
-| Killer question | It sets against each other | Every answer costs |
+| Question | It sets against each other | Every answer costs |
 | --- | --- | --- |
-| **K1. "Verse 8 says he was 'stricken for the transgression of my people.' Whom does God call 'my people' in 52:4–6?"** | 53:8 and the Israel reading | *Israel:* then the servant suffers for Israel and is not Israel. *Recorded escape,* "the kings are speaking, so 'my people' are the nations" (Jews for Judaism): ask who says "my servant" in 53:11 (God) and whom God calls "my people" two verses before the passage begins. |
-| **K2. "The servant did no violence and spoke no deceit (53:9), and his life was a guilt offering, which had to be without blemish (Lev. 5:15). Is Israel without blemish?"** | 53:9–10 and Israel's sin (1:4; 53:6) | *Yes:* then why does Israel confess its sins every Yom Kippur (Lev. 16:21)? *No:* the servant is not Israel. *Recorded escape,* "the righteous remnant" (Tovia Singer, citing Zeph. 3:12–13): "Is the remnant sinless?" (Eccl. 7:20). |
-| **K3. "The Targum reads 52:13 'my servant the Messiah,' and the Talmud calls the Messiah 'the leper scholar' from 53:4. Were the sages wrong?"** | His tradition and the Israel reading | *Yes:* the Israel reading is not the oldest Jewish tradition. *No:* a suffering Messiah who bears others' sickness is Jewish teaching. *Recorded escape,* "that's midrash, not the plain sense": "Then where in the plain text does the one servant become the nation?" |
+| **Sibling Rivalry.** **"Verse 8 says he was 'stricken for the transgression of my people.' Whom does God call 'my people' in 52:4–6?"** | 53:8 and the Israel reading | *Israel:* then the servant suffers for Israel and is not Israel. *Recorded escape,* "the kings are speaking, so 'my people' are the nations" (Jews for Judaism): ask who says "my servant" in 53:11 (God) and whom God calls "my people" two verses before the passage begins. |
+| **Sibling Rivalry.** **"The servant did no violence and spoke no deceit (53:9), and his life was a guilt offering, which had to be without blemish (Lev. 5:15). Is Israel without blemish?"** | 53:9–10 and Israel's sin (1:4; 53:6) | *Yes:* then why does Israel confess its sins every Yom Kippur (Lev. 16:21)? *No:* the servant is not Israel. *Recorded escape,* "the righteous remnant" (Tovia Singer, citing Zeph. 3:12–13): "Is the remnant sinless?" (Eccl. 7:20). |
+| **Sibling Rivalry.** **"The Targum reads 52:13 'my servant the Messiah,' and the Talmud calls the Messiah 'the leper scholar' from 53:4. Were the sages wrong?"** | His tradition and the Israel reading | *Yes:* the Israel reading is not the oldest Jewish tradition. *No:* a suffering Messiah who bears others' sickness is Jewish teaching. *Recorded escape,* "that's midrash, not the plain sense": "Then where in the plain text does the one servant become the nation?" |
 
 ### B′. Their answers
 

@@ -16,12 +16,12 @@ The Qur'an claims to confirm the Torah and Gospel that Jews and Christians held 
 
 **Before you go: pray.** Pray for the person by name, that God would open his eyes and grant repentance, and for clear and bold words for yourself (Eph. 6:18–20; 2 Tim. 2:25–26; Col. 4:3–4).
 
-**Ask, in order.** Wait in silence after the killer question.
+**Ask, in order.** Wait in silence after the question that exposes the flaw.
 
 1. "When Q 5:68 tells the Jews and Christians of Muhammad's day to keep up the Tawrat and the Injil, which books did they have?"
 2. "What do the Gospels say happened to Jesus? What does the Qur'an say?" (Mark 15:24; Q 4:157)
 3. "Can a book confirm another book and deny its central event?"
-4. **Killer question:** "Were the Torah and Gospel corrupted before Muhammad, after him, or never?" *Before:* the Qur'an told them to keep corrupted books. *After:* the copies made before him read as ours do. *Never:* the cross stands.
+4. **Sibling Rivalry:** "Were the Torah and Gospel corrupted before Muhammad, after him, or never?" *Before:* the Qur'an told them to keep corrupted books. *After:* the copies made before him read as ours do. *Never:* the cross stands.
 5. "Your book tells the doubter to ask those who read the Book before (Q 10:94). Will you read Luke with me?"
 
 **Avoid:** hadith debates; debating Bible manuscripts (only their date matters here); the Trinity before the dilemma lands; saying "the Bible" when you mean Tawrat or Injil; contempt. The long version answers every objection.
@@ -145,16 +145,16 @@ Run the dilemma as questions, following the three steps of Methodology: Question
 
 If he says the Qur'an only confirms the true parts, ask how he knows which parts are true without assuming the Qur'an is right. That is the very question at issue.
 
-#### Killer questions
+#### Exposing the flaws
 
-Ask these last, after the Muslim has affirmed both premises. Every answer concedes the dilemma. Then wait in silence.
+Ask these last, after the Muslim has affirmed both premises. Every answer costs him. Then wait in silence.
 
-| Killer question | It sets against each other | Every answer costs |
+| Question | It sets against each other | Every answer costs |
 | --- | --- | --- |
-| **K1. "Q 5:47 tells the Christians of Muhammad's day to judge by the Injil. Was the Injil they had then reliable, or corrupted?"** | Q 5:47 (judge by it) and Q 4:157 (no crucifixion) | *Reliable:* it records the crucifixion, so the Qur'an denies what it confirmed. *Corrupted:* Allah commanded judging by a corrupt book, and the Qur'an confirmed it. *"The lost original":* then the command could not be obeyed. |
-| **K2. "Did the Gospels Christians held before Muhammad say Jesus was crucified?"** | The Qur'an's confirmation (Q 3:3; 5:46) and the manuscripts | *Yes:* the Qur'an confirmed books that teach the cross. *No:* Codex Sinaiticus (4th century) says otherwise. |
-| **K3. "If the Qur'an confirms only the true parts, how do you know which parts are true without first assuming the Qur'an is right?"** | General confirmation and the question at issue | Any answer either names no test or assumes what is being tested. |
-| **K4. "Q 10:94 sends Muhammad, if in doubt, to those who read the Book before him. Would Allah send his prophet to a corrupted book for reassurance?"** | Q 10:94 and the corruption claim | *Yes:* Allah sends his prophet to falsehood. *No:* the Book they read was sound. |
+| **Sibling Rivalry.** **"Q 5:47 tells the Christians of Muhammad's day to judge by the Injil. Was the Injil they had then reliable, or corrupted?"** | Q 5:47 (judge by it) and Q 4:157 (no crucifixion) | *Reliable:* it records the crucifixion, so the Qur'an denies what it confirmed. *Corrupted:* Allah commanded judging by a corrupt book, and the Qur'an confirmed it. *"The lost original":* then the command could not be obeyed. |
+| **Just the Facts.** **"Did the Gospels Christians held before Muhammad say Jesus was crucified?"** | The Qur'an's confirmation (Q 3:3; 5:46) and the manuscripts | *Yes:* the Qur'an confirmed books that teach the cross. *No:* Codex Sinaiticus (4th century) says otherwise. |
+| **Burden of proof (Columbo, step 2).** **"If the Qur'an confirms only the true parts, how do you know which parts are true without first assuming the Qur'an is right?"** | General confirmation and the question at issue | Any answer either names no test or assumes what is being tested. |
+| **Sibling Rivalry.** **"Q 10:94 sends Muhammad, if in doubt, to those who read the Book before him. Would Allah send his prophet to a corrupted book for reassurance?"** | Q 10:94 and the corruption claim | *Yes:* Allah sends his prophet to falsehood. *No:* the Book they read was sound. |
 
 ### B′. Their answers
 

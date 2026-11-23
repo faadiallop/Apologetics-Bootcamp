@@ -6,7 +6,7 @@ Questioning Them to Death is how every SOP is carried out: we lead with question
 
 **The name.** What dies is the error, not the person. Christ questioned his opponents about David's son until "no one was able to answer him a word, nor from that day did anyone dare to ask him any more questions" (Matt. 22:41–46, ESV). Koukl warns that these tactics are not tricks to embarrass people. They expose bad thinking so the person can be led to the truth.
 
-**The weapon in the war.** Koukl calls his approach diplomacy, not D-Day. Scripture holds both: Paul wages war on arguments (2 Cor. 10:3–5) as an ambassador (2 Cor. 5:20; Eph. 6:20). In these SOPs, questions are the weapon, arguments are the target, and the person is the captive we want freed (2 Tim. 2:25–26). A killer question is a blow aimed at a stronghold, never at the man.
+**The weapon in the war.** Koukl calls his approach diplomacy, not D-Day. Scripture holds both: Paul wages war on arguments (2 Cor. 10:3–5) as an ambassador (2 Cor. 5:20; Eph. 6:20). In these SOPs, questions are the weapon, arguments are the target, and the person is the captive we want freed (2 Tim. 2:25–26). A question that exposes a flaw is a blow aimed at a stronghold, never at the man.
 
 **Why questions.** Scripture shows this method again and again:
 
@@ -37,24 +37,6 @@ Never make a statement, at least at first, when a question will do the job. Kouk
 
 **Narrate the debate.** When someone dodges, step back and describe what happened: "I asked about your claim, and we've moved to another topic. Could we finish the first one?"
 
-### Killer questions
-
-A killer question is the sharpest form of step 3. It sets two things the person already holds side by side, so that every answer concedes the contradiction. Each SOP marks its killer questions.
-
-**What makes a question a killer question**
-
-1. **Built only from their own commitments.** Both halves are things they have already affirmed in steps 1 and 2, or things their own scripture or publications say. Nothing in it is ours to defend.
-2. **Every answer costs them.** "Yes" concedes one side of the contradiction and "no" concedes the other. Map every answer before you ask.
-3. **One point, short.** It can be asked in one breath and answered in one word.
-4. **Asked last.** Pin down their view and reasons first (steps 1 and 2), so they cannot say "that's not what I believe."
-
-**How to deliver it**
-
-- Ask it once, plainly and gently, then stop talking. Koukl waited in silence rather than let the person off the hook.
-- If they dodge, narrate the debate: "I asked whether…; we've moved to another subject. Could you answer that first?"
-- Don't answer it for them, and don't gloat. The aim is a stone in the shoe that stays there.
-- If they give the costly answer, follow at once with the turn to Christ (Section A′ of the SOP).
-
 ## Finding the flaws
 
 Once step 2 has the person's reasons on the table, look for one of these flaws. Then point it out with a question (step 3), not a statement.
@@ -72,6 +54,24 @@ Once step 2 has the person's reasons on the table, look for one of these flaws. 
 **Taking the Roof Off, step by step.** (1) State their claim and check you have it right. (2) Test-drive it: follow it consistently to see where it leads. (3) If it ends in absurdity, show them and invite them to reconsider where they started. Christ did this with "If Satan casts out Satan…" (Matt. 12:24–28).
 
 **Just the Facts.** Ask first whether the claim looks unlikely on its face, then check it. Precise figures persuade more than general ones.
+
+### Asking the question that exposes the flaw
+
+Each SOP lists the questions that expose its group's flaws, each named by its tactic.
+
+**What makes a good one**
+
+1. **Built from their own commitments,** or, for Just the Facts, from facts anyone can check. Both halves are things they have affirmed in steps 1 and 2, or things their own scripture or publications say.
+2. **Every answer costs them.** Map every answer before you ask.
+3. **One point, short.** It can be asked in one breath and answered in one word.
+4. **Asked last.** Pin down their view and reasons first (steps 1 and 2), so they cannot say "that's not what I believe."
+
+**How to deliver it**
+
+- Ask it once, plainly and gently, then stop talking. Koukl waited in silence rather than let the person off the hook.
+- If they dodge, narrate the debate: "I asked whether…; we've moved to another subject. Could you answer that first?"
+- Don't answer it for them, and don't gloat. The aim is a stone in the shoe that stays there.
+- If they give the costly answer, follow at once with the turn to Christ (Section A′ of the SOP).
 
 ## Staying in control and preparing
 

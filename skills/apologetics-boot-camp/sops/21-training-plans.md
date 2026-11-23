@@ -51,7 +51,7 @@ Source SOP: Islam. Bank rows refer to the Islamic Dilemma table in the Response 
 | 7. Keep control | Steamroller; hot seat; narrate | Opponent interrupts, piles on, or outclasses; trainee uses stop, shame, leave; "let me think about it"; narrates the dodge | Street apologist (steamrolls); Academic (rows 6, 10) | Composure kept; no burden taken on; graceful exit when needed |
 | 8. Full conversations | All | 15–20 turns, from opener to A′ (offer to read a Gospel together) | Layperson, then Street apologist, then Academic | Pass on the rubric with each persona |
 
-**Killer questions (K1–K4, SOP Section C).** In Stage 1 the trainee maps every answer to each killer question and what it costs. From Stage 5 on, every round must end with one killer question, asked only after the view is pinned down, followed by silence. The coach marks *wisdom* down if it comes too early or the trainee answers it himself. The opponent must answer as real people do: concede, dodge, or change the subject. Never invent an escape the bank doesn't record.
+**Exposing the flaws (SOP Section C).** In Stage 1 the trainee maps every answer to each question in the SOP's "Exposing the flaws" table and what it costs. From Stage 5 on, every round must end with one of those questions, asked only after the view is pinned down, followed by silence. The coach marks *wisdom* down if it comes too early or the trainee answers it himself. The opponent must answer as real people do: concede, dodge, or change the subject. Never invent an escape the bank doesn't record.
 
 **After passing.** Run one full conversation a month with a random persona, and add every new response you meet to the bank.
 
@@ -70,7 +70,7 @@ Source SOP: Jehovah's Witnesses. Bank rows refer to the Bread of Life table in t
 | 7. Keep control | Steamroller; redirect; exit | Senior partner tries to end the visit (row 14); elder steers to the 144,000 (row 13). Trainee redirects to "who may eat," speaks gently to the newer Witness, and leaves a Gospel of John | Senior publisher; Elder | Kept to the one question; parted on good terms |
 | 8. Full conversations | All | 15–20 turns, doorstep opener to A′ ("Whoever comes to me I will never cast out") | New publisher, then a publisher pair, then an Elder | Pass on the rubric with each persona |
 
-**Killer questions (K1–K4, SOP Section C).** In Stage 1 the trainee maps every answer to each killer question and what it costs. From Stage 5 on, every round must end with one killer question, asked only after the view is pinned down, followed by silence. The coach marks *wisdom* down if it comes too early or the trainee answers it himself. The opponent must answer as real people do: concede, dodge, or change the subject. Never invent an escape the bank doesn't record.
+**Exposing the flaws (SOP Section C).** In Stage 1 the trainee maps every answer to each question in the SOP's "Exposing the flaws" table and what it costs. From Stage 5 on, every round must end with one of those questions, asked only after the view is pinned down, followed by silence. The coach marks *wisdom* down if it comes too early or the trainee answers it himself. The opponent must answer as real people do: concede, dodge, or change the subject. Never invent an escape the bank doesn't record.
 
 **After passing.** Run one full conversation before each Memorial season, when Witnesses invite the public, and add every new response you meet to the bank.
 
@@ -89,6 +89,6 @@ Source SOP: Jewish people. Bank rows refer to the Suffering Servant table in the
 | 7. Keep control | Steamroller; hot seat | A counter-missionary-trained opponent piles on Hebrew points; trainee asks him to slow down, takes notes, says "Let me think about it" | Counter-missionary student; rows 3, 4, 5 | Composure kept; no burden taken on |
 | 8. Full conversations | All | 15–20 turns, opener to A′ (read Luke 24 or Acts 8 together) | Secular Jew, then Traditional Jew, then Counter-missionary student | Pass on the rubric with each persona |
 
-**Killer questions (K1–K3, SOP Section C).** Each has a recorded escape, listed in the SOP. From Stage 5 on, every round ends with one killer question, then silence; the opponent uses the recorded escape the first time, and the trainee must answer it with the follow-up question.
+**Exposing the flaws (SOP Section C).** Each question has a recorded escape, listed in the SOP. From Stage 5 on, every round ends with one of those questions, then silence; the opponent uses the recorded escape the first time, and the trainee must answer it with the follow-up question.
 
 **After passing.** Run one full conversation a month with a random persona, and add every new response you meet to the bank.

@@ -86,7 +86,7 @@ Hold fast what is good (1 Thess. 5:21), and test every teacher by the Word (Acts
 3. What the group believes on this topic, until he can say it so a member would answer, "Yes, that's what I believe" (Peterson, *12 Rules for Life*, rule 9).
 4. The argument: the one sentence, the questions in order, and the verses it stands on.
 5. Their usual answers, and the replies.
-6. Where their view self-destructs, in the forms Koukl names in *Tactics*: suicide (the claim refutes itself), practical suicide (it can't be lived out), sibling rivalry (two of its claims contradict each other) and infanticide (it depends on the very thing it denies). Teach the questions that bring each one to light, and the escapes people actually use.
+6. Finding the flaws, in Koukl's terms from *Tactics*: where their view self-destructs (suicide: the claim refutes itself; practical suicide: it can't be lived out; sibling rivalry: two of its claims contradict each other; infanticide: it depends on the very thing it denies), where it ends in absurdity when followed through (taking the roof off), or where it rests on wrong facts (just the facts). Teach the questions that expose each flaw, and the escapes people actually use.
 
 Then the drills in the group's training plan: asking, spotting flaws, keeping control and staying on topic, and full conversations; then the field, and teaching another.
 
@@ -154,7 +154,7 @@ Score each conversation on knowledge, wisdom and character, 0–2 each (the rubr
 ## B′. Recording: his log and the material
 
 - End each session with a short card in plain words: what he learned, how he did, what's next, and verses to review. With the user's leave, keep it in a "Training log" tab of the doc, or in a `training-log.md` file in his working folder; otherwise in chat. Read it first next time.
-- Add every new objection or escape he meets, with where it was seen, to the Response Bank. Count a question as showing that the view self-destructs only if it holds against every recorded escape.
+- Add every new objection or escape he meets, with where it was seen, to the Response Bank. Count a question as exposing a flaw only if it holds against every recorded escape.
 
 ## A′. Sending
 
