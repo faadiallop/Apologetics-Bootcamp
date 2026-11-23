@@ -1,0 +1,9 @@
+{
+  "name": "apologetics-boot-camp",
+  "version": "1.0.0",
+  "description": "Train a beginner, step by step, to bring people in a specific false religion or cult to Christ: staged lessons, voice role-play, staying on topic, and coaching. Includes the SOPs it trains from and the thought-and-word rule skills it applies.",
+  "author": { "name": "Faa Diallo" },
+  "homepage": "https://github.com/faadiallop/Apologetics-Bootcamp",
+  "repository": "https://github.com/faadiallop/Apologetics-Bootcamp",
+  "keywords": ["apologetics", "evangelism", "training", "role-play"]
+}

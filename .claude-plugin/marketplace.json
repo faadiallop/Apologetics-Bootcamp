@@ -1,0 +1,11 @@
+{
+  "name": "apologetics-bootcamp",
+  "owner": { "name": "Faa Diallo" },
+  "plugins": [
+    {
+      "name": "apologetics-boot-camp",
+      "source": "./",
+      "description": "Apologetics boot camp skill, its SOPs, and the thought-and-word rule skills it applies."
+    }
+  ]
+}

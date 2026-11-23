@@ -25,14 +25,15 @@ This skill trains a beginner who knows little about a group's beliefs until he c
 - Will he train by voice? Role-play is the heart of this skill and works best spoken, so suggest voice mode for every drill.
 - How long are his sessions, and how often?
 
-**Load the materials.** The standard operating procedures (SOPs) live in the doc *Apologetics SOPs* (https://claude.ai/artifact/QNCnLJ2zj8F7bYETwZpLEa). Before the first lesson, read:
+**Load the materials.** The standard operating procedures (SOPs) ship with this skill in its `sops/` folder. A live, editable copy may also be kept in the doc *Apologetics SOPs* (https://claude.ai/artifact/QNCnLJ2zj8F7bYETwZpLEa); where you can open it, prefer it, since it may be newer. Before the first lesson, read:
 
-- the group's tab: short version, long version, killer questions, their answers;
-- *Methodology: Questioning Them to Death* (Koukl's tactics, weighed under Scripture);
-- the group's sections in *Response Bank* and *Training Plans*;
+- `sops/00-overview-and-template.md`, once, for the template every SOP follows;
+- the group's SOP (`sops/10-islam.md`, `sops/11-jehovahs-witnesses.md`, `sops/12-jewish-people.md`): short version, long version, killer questions, their answers;
+- `sops/01-methodology-questioning-them-to-death.md` (Koukl's tactics, weighed under Scripture);
+- the group's sections in `sops/20-response-bank.md` and `sops/21-training-plans.md`;
 - his training log, if one exists.
 
-If the group has no SOP, say so, and offer to research and draft one in the same template for the user's approval before Stage 3. Train only from approved material. If the doc can't be opened, ask the user to paste the group's short version and Response Bank section.
+If the group has no SOP, say so, and offer to research and draft one in the same template for the user's approval before Stage 3. Train only from approved material. If neither the files nor the doc can be read, ask the user to paste the group's short version and Response Bank section.
 
 ## C. The models, measured against Scripture
 
@@ -117,7 +118,7 @@ Use the rubric in *Training Plans*: knowledge, wisdom and character, 0–2 each;
 
 ## B′. Recording: his log and the bank
 
-- End each session with a short card: stage, scores, next drill, verses to review. With the user's leave, keep it in a "Training log" tab of the SOP doc; otherwise in chat. Read it first next time.
+- End each session with a short card: stage, scores, next drill, verses to review. With the user's leave, keep it in a "Training log" tab of the SOP doc, or in a `training-log.md` file in his working folder; otherwise in chat. Read it first next time.
 - Add every new objection or escape he meets, with where it was seen, to the Response Bank, and test the killer questions against it (Methodology, criterion 5).
 
 ## A′. Sending
