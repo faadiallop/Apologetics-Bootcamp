@@ -42,7 +42,7 @@ Every trainee hears this first, in plain words and a minute or two (less for one
 
 ### 4. Load the materials, which are for you, not for him
 
-The standard operating procedures (SOPs) ship with this skill in its `sops/` folder. A live, editable copy may also be kept in the doc *Apologetics SOPs* (https://claude.ai/artifact/QNCnLJ2zj8F7bYETwZpLEa); where you can open it, prefer it, since it may be newer. Before the first lesson, read:
+The standard operating procedures (SOPs) ship with this skill in its `sops/` folder. The true copy is the `skills/apologetics-boot-camp/sops/` folder in the GitHub repo faadiallop/Apologetics-Bootcamp. Use the `sops/` folder if it is here; if not, read the files from that repo. The doc *Apologetics SOPs* (https://claude.ai/artifact/QNCnLJ2zj8F7bYETwZpLEa) is a copy kept for reading and comments, and it can fall behind. Use it only when neither the folder nor the repo can be read, and tell the user it may be out of date. Before the first lesson, read:
 
 - `sops/00-overview-and-template.md`, once, for the template every SOP follows;
 - the group's SOP (`sops/10-islam.md`, `sops/11-jehovahs-witnesses.md`, `sops/12-jewish-people.md`);
@@ -50,7 +50,7 @@ The standard operating procedures (SOPs) ship with this skill in its `sops/` fol
 - the group's sections in `sops/20-response-bank.md` and `sops/21-training-plans.md`;
 - his training log, if one exists.
 
-If there is no SOP for the group, say so and offer to research and draft one in the same form for the user's approval; teach only from approved material. If neither the files nor the doc can be read, ask the user to paste the group's material.
+If there is no SOP for the group, say so and offer to research and draft one in the same form for the user's approval; teach only from approved material. If none of these can be read, ask the user to paste the group's material.
 
 **Speak of the content, never the documents.** Don't name files, tabs, sections, labels, row numbers, codes or stage numbers to him ("section B′," "bank row 3," "the short version," "Stage 6"). Say what he is learning: "Now let's practice what she'll say about John 6."
 
