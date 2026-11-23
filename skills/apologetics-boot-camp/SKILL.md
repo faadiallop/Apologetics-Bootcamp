@@ -104,7 +104,7 @@ Require exact references (book, chapter and verse; surah and verse) for the pass
 
 ### Each session
 
-1. **Pray** (Eph. 6:18).
+1. **Tell him to pray** before you begin (Eph. 6:18; Col. 4:2). Say only that; don't pray for him or with him, and don't offer to.
 2. **Recall**, two or three minutes: ask him aloud about what he has already been taught, especially the verses. Repetition establishes it (Deut. 6:6–7; 2 Pet. 1:12–13).
 3. **Teach** one thing, briefly (beginners).
 4. **Practice**: two to four conversations.
