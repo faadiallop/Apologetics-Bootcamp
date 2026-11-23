@@ -8,8 +8,8 @@ Everything the skill needs is in this repo: the skill itself, the SOPs it trains
 
 ```
 .claude-plugin/
-  plugin.json              Plugin manifest (Claude Code)
-  marketplace.json         Lets Claude Code install this repo as a plugin
+  plugin.json              Plugin manifest
+  marketplace.json         Lets Claude and Claude Code install this repo as a plugin
 skills/
   apologetics-boot-camp/
     SKILL.md               The boot camp: paths, lessons, role-play, scoring
@@ -42,18 +42,22 @@ In Claude Code, run:
 /plugin install apologetics-boot-camp@apologetics-bootcamp
 ```
 
-This installs all eight skills together. Update later with `/plugin marketplace update apologetics-bootcamp`.
+This installs all nine skills together. To get changes as they land, open `/plugin`, go to **Marketplaces**, select this one, and choose **Enable auto-update**; or update by hand with `/plugin marketplace update apologetics-bootcamp`.
 
-### Claude.ai or the Claude desktop app
+### Claude on the web, the desktop app, or Cowork
 
-Each skill is uploaded on its own.
+Claude syncs this repo for you, so there is nothing to upload. Plugins need a paid plan.
 
-1. Download this repo (**Code → Download ZIP**) and unzip it.
-2. For each folder under `skills/`, zip that folder by itself (for example, `apologetics-boot-camp.zip` containing the `apologetics-boot-camp` folder, with `SKILL.md` and `sops/` inside).
-3. In Claude, open **Settings → Capabilities → Skills**, choose **Upload skill**, and upload each zip.
-4. Make sure each skill is turned on.
+1. Open **Customize → Plugins**, click **Add**, choose **Add marketplace → Add from a repository**, and enter `faadiallop/Apologetics-Bootcamp`.
+2. Turn on **Sync automatically** for that marketplace.
+3. Install **apologetics-boot-camp** from it. The plugin is saved to your account, so its skills work in chat, Cowork and Claude Code.
+4. If you uploaded any of these skills by hand before, remove those copies so only the repo's versions load.
 
-Upload `apologetics-boot-camp` first. The rule skills are optional but recommended: the boot camp tells Claude to apply them when it coaches.
+## Changing the skills
+
+This repo is the source. Make every change here, as a commit to `main`, and Claude picks it up at its next sync. Don't edit the installed copies in Claude: a sync would replace them.
+
+`plugin.json` has no `version` on purpose. Without one, each commit counts as a new version; with a fixed one, installed copies stay as they are until it's raised.
 
 ## Use
 
