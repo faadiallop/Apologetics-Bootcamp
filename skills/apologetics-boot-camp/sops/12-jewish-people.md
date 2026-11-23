@@ -166,8 +166,9 @@ Each answer either fails against the text or leaves the servant suffering innoce
 
 The passage ends in the servant's victory, and so should the conversation.
 
-1. **Read the fulfillment.** Read Luke 23–24, or Acts 8:26–39, where a reader of Isaiah 53 meets Yeshua.
-2. **Show the guilt offering.** "Behold, the Lamb of God, who takes away the sin of the world!" (John 1:29, ESV). By one offering he has perfected for all time those who are being sanctified (Heb. 10:14).
-3. **Atonement with no temple.** The Torah ties atonement to blood on the altar (Lev. 17:11), and there has been no altar since AD 70. Yeshua entered the holy places "by means of his own blood, thus securing an eternal redemption" (Heb. 9:12, ESV).
-4. **Count the cost together.** Yeshua warned that following him may divide families, and promised a hundredfold now (Matt. 10:34–37; Mark 10:29–30).
-5. **Keep at it in love.** Pray for him by name (Rom. 10:1). Leave him a copy of Isaiah 53 and the Gospel of Luke. God gives the growth (1 Cor. 3:6–7).
+1. **Bridge from the flaw.** *If he concedes:* "If the servant isn't Israel, who is he?" It is the eunuch's question (Acts 8:34); answer it as Philip did, beginning at this scripture. *If he dodges:* park the point and give the reason for your hope (Methodology, "The bridge to Christ").
+2. **Read the fulfillment.** Read Luke 23–24, or Acts 8:26–39, where a reader of Isaiah 53 meets Yeshua.
+3. **Show the guilt offering.** "Behold, the Lamb of God, who takes away the sin of the world!" (John 1:29, ESV). By one offering he has perfected for all time those who are being sanctified (Heb. 10:14).
+4. **Atonement with no temple.** The Torah ties atonement to blood on the altar (Lev. 17:11), and there has been no altar since AD 70. Yeshua entered the holy places "by means of his own blood, thus securing an eternal redemption" (Heb. 9:12, ESV).
+5. **Count the cost together.** Yeshua warned that following him may divide families, and promised a hundredfold now (Matt. 10:34–37; Mark 10:29–30).
+6. **Keep at it in love.** Pray for him by name (Rom. 10:1). Leave him a copy of Isaiah 53 and the Gospel of Luke. God gives the growth (1 Cor. 3:6–7).

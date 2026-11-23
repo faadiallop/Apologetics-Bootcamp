@@ -184,8 +184,9 @@ Each answer either fails against the text or admits that John 6's life is for ev
 
 Most Witnesses have been taught for years that the bread and cup are not for them. The Gospel is the invitation they were told they don't have.
 
-1. **Read his welcome.** "I am the bread of life; whoever comes to me shall not hunger… whoever comes to me I will never cast out" (John 6:35, 37, ESV).
-2. **Show that sonship comes by faith, not class.** "To all who did receive him, who believed in his name, he gave the right to become children of God" (John 1:12, ESV; Gal. 3:26).
-3. **Point to the covenant's gift.** Forgiveness is promised to everyone in the new covenant, from the least to the greatest (Heb. 8:11–12).
-4. **Ask the question he must answer before God.** "If Christ invites you, who has the right to tell you no?"
-5. **Keep at it in love.** Leave a Gospel of John. Pray for him by name (Rom. 10:1). Expect the conversation to take many visits; God gives the growth (1 Cor. 3:6–7).
+1. **Bridge from the flaw.** *If he concedes:* "If no one has the right to keep you from the table, may I show you why I'm sure Jesus invites you?" *If he dodges:* park the point and give the reason for your hope (Methodology, "The bridge to Christ").
+2. **Read his welcome.** "I am the bread of life; whoever comes to me shall not hunger… whoever comes to me I will never cast out" (John 6:35, 37, ESV).
+3. **Show that sonship comes by faith, not class.** "To all who did receive him, who believed in his name, he gave the right to become children of God" (John 1:12, ESV; Gal. 3:26).
+4. **Point to the covenant's gift.** Forgiveness is promised to everyone in the new covenant, from the least to the greatest (Heb. 8:11–12).
+5. **Ask the question he must answer before God.** "If Christ invites you, who has the right to tell you no?"
+6. **Keep at it in love.** Leave a Gospel of John. Pray for him by name (Rom. 10:1). Expect the conversation to take many visits; God gives the growth (1 Cor. 3:6–7).

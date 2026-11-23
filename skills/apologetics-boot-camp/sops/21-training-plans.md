@@ -53,6 +53,8 @@ Source SOP: Islam. Bank rows refer to the Islamic Dilemma table in the Response 
 
 **Exposing the flaws (SOP Section C).** In Stage 1 the trainee maps every answer to each question in the SOP's "Exposing the flaws" table and what it costs. From Stage 5 on, every round must end with one of those questions, asked only after the view is pinned down, followed by silence. The coach marks *wisdom* down if it comes too early or the trainee answers it himself. The opponent must answer as real people do: concede, dodge, or change the subject. Never invent an escape the bank doesn't record.
 
+**The bridge to Christ (SOP Section A′).** From Stage 5 on, after the question that exposes the flaw, the opponent either gives the costly answer or dodges; the coach varies it. The trainee crosses to Christ within two turns: after a concession, with the SOP's bridge question; after a dodge, by parking the point and giving the reason for his hope. The coach marks *wisdom* down if he keeps arguing instead of crossing, and *knowledge* down if the gospel he tells leaves out who Jesus is, sin, the cross and resurrection, or the call to repent and believe. Pass: crossed within two turns, 4 of 5 rounds.
+
 **After passing.** Run one full conversation a month with a random persona, and add every new response you meet to the bank.
 
 ## Training plan: The Bread of Life
@@ -72,6 +74,8 @@ Source SOP: Jehovah's Witnesses. Bank rows refer to the Bread of Life table in t
 
 **Exposing the flaws (SOP Section C).** In Stage 1 the trainee maps every answer to each question in the SOP's "Exposing the flaws" table and what it costs. From Stage 5 on, every round must end with one of those questions, asked only after the view is pinned down, followed by silence. The coach marks *wisdom* down if it comes too early or the trainee answers it himself. The opponent must answer as real people do: concede, dodge, or change the subject. Never invent an escape the bank doesn't record.
 
+**The bridge to Christ (SOP Section A′).** From Stage 5 on, after the question that exposes the flaw, the opponent either gives the costly answer or dodges; the coach varies it. The trainee crosses to Christ within two turns: after a concession, with the SOP's bridge question; after a dodge, by parking the point and giving the reason for his hope. The coach marks *wisdom* down if he keeps arguing instead of crossing, and *knowledge* down if the gospel he tells leaves out who Jesus is, sin, the cross and resurrection, or the call to repent and believe. Pass: crossed within two turns, 4 of 5 rounds.
+
 **After passing.** Run one full conversation before each Memorial season, when Witnesses invite the public, and add every new response you meet to the bank.
 
 ## Training plan: The Suffering Servant
@@ -90,5 +94,7 @@ Source SOP: Jewish people. Bank rows refer to the Suffering Servant table in the
 | 8. Full conversations | All | 15–20 turns, opener to A′ (read Luke 24 or Acts 8 together) | Secular Jew, then Traditional Jew, then Counter-missionary student | Pass on the rubric with each persona |
 
 **Exposing the flaws (SOP Section C).** Each question has a recorded escape, listed in the SOP. From Stage 5 on, every round ends with one of those questions, then silence; the opponent uses the recorded escape the first time, and the trainee must answer it with the follow-up question.
+
+**The bridge to Christ (SOP Section A′).** From Stage 5 on, after the question that exposes the flaw, the opponent either gives the costly answer or dodges; the coach varies it. The trainee crosses to Christ within two turns: after a concession, with the SOP's bridge question; after a dodge, by parking the point and giving the reason for his hope. The coach marks *wisdom* down if he keeps arguing instead of crossing, and *knowledge* down if the gospel he tells leaves out who Jesus is, sin, the cross and resurrection, or the call to repent and believe. Pass: crossed within two turns, 4 of 5 rounds.
 
 **After passing.** Run one full conversation a month with a random persona, and add every new response you meet to the bank.

@@ -87,6 +87,7 @@ Hold fast what is good (1 Thess. 5:21), and test every teacher by the Word (Acts
 4. The argument: the one sentence, the questions in order, and the verses it stands on.
 5. Their usual answers, and the replies.
 6. Finding the flaws, in Koukl's terms from *Tactics*: where their view self-destructs (suicide: the claim refutes itself; practical suicide: it can't be lived out; sibling rivalry: two of its claims contradict each other; infanticide: it depends on the very thing it denies), where it ends in absurdity when followed through (taking the roof off), or where it rests on wrong facts (just the facts). Teach the questions that expose each flaw, and the escapes people actually use.
+7. The bridge to Christ: how to cross from the flaw to the whole gospel, whether he concedes or dodges.
 
 Then the drills in the group's training plan: asking, spotting flaws, keeping control and staying on topic, and full conversations; then the field, and teaching another.
 

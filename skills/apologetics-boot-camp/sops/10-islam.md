@@ -183,7 +183,7 @@ Every common escape route either fails against the Qur'an's own words or makes t
 
 The Qur'an itself sends the Muslim to the Gospel, so take him there. The dilemma clears the ground; the Gospel is what we came to give.
 
-1. **Use the door the Qur'an opens.** "Your book says to ask those who read the Book before you (Q 10:94) and to judge by the Injil (Q 5:47). Shall we read it together?"
+1. **Bridge from the flaw: use the door the Qur'an opens.** *If he concedes:* "Your book says to ask those who read the Book before you (Q 10:94) and to judge by the Injil (Q 5:47). May I show you what the Injil says about how God forgives? Shall we read it together?" *If he dodges:* park the point and give the reason for your hope (Methodology, "The bridge to Christ").
 2. **Start where he is at home.** Luke opens with Zechariah and Mary, both familiar from Q 3 and 19. John states its purpose: "that you may believe that Jesus is the Christ, the Son of God, and that by believing you may have life in his name" (John 20:31, ESV).
 3. **Let him meet Jesus there.** Jesus forgives sins on his own authority (Mark 2:5–12). He lays down his life and takes it up again (John 10:17–18). Thomas calls him "My Lord and my God" (John 20:28).
 4. **Show the Father who gives his Son.** The Qur'an says God is no one's father and does not love unbelievers (Q 5:18; 3:32). The Gospel says, "For God so loved the world, that he gave his only Son" (John 3:16, ESV), and "while we were still sinners, Christ died for us" (Rom. 5:8, ESV; Luke 6:35).

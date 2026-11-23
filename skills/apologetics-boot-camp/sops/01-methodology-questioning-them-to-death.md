@@ -71,7 +71,16 @@ Each SOP lists the questions that expose its group's flaws, each named by its ta
 - Ask it once, plainly and gently, then stop talking. Koukl waited in silence rather than let the person off the hook.
 - If they dodge, narrate the debate: "I asked whether…; we've moved to another subject. Could you answer that first?"
 - Don't answer it for them, and don't gloat. The aim is a stone in the shoe that stays there.
-- If they give the costly answer, follow at once with the turn to Christ (Section A′ of the SOP).
+- Then cross to Christ, whether they give the costly answer or dodge (below).
+
+### The bridge to Christ
+
+Exposing the flaw is not the end. Let it raise the question the gospel answers, and cross at once. Philip took the eunuch's question on Isaiah 53, "of whom speaketh the prophet this?", "and began at the same scripture, and preached unto him Jesus" (Acts 8:34–35, KJV). Paul began from the Athenians' own altar (Acts 17:23), and Christ turned the Samaritan woman's question about the mountain to himself (John 4:19–26).
+
+- **If they give the costly answer,** ask the bridge question in Section A′ of the SOP. It names the need the flaw has uncovered and offers what Christ gives for it.
+- **If they dodge,** don't press the point again. Park it, and give a reason for the hope that is in you (1 Pet. 3:15): "Can I tell you why this matters so much to me?" Then tell the gospel as what Christ has done for you, as Paul did before Agrippa (Acts 26:9–23) and the man born blind before the Pharisees (John 9:25).
+- **Either way, tell the whole gospel,** not only the part this topic touches: who Jesus is, our sin, his death for sinners and his rising, and the call to repent and believe (1 Cor. 15:3–4; Mark 1:15; Acts 20:21, 27).
+- **Ask, don't announce.** "May I show you…?" keeps it a conversation.
 
 ## Staying in control and preparing
 
