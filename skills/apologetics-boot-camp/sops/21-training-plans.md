@@ -98,3 +98,26 @@ Source SOP: Jewish people. Bank rows refer to the Suffering Servant table in the
 **The bridge to Christ (SOP Section A′).** From Stage 6 on, after the question that exposes the flaw, the opponent either gives the costly answer or dodges; the coach varies it. The trainee crosses to Christ within two turns: after a concession, with the SOP's bridge question; after a dodge, by parking the point and giving the reason for his hope. The coach marks *wisdom* down if he keeps arguing instead of crossing, and *knowledge* down if the gospel he tells leaves out who Jesus is, sin, the cross and resurrection, or the call to repent and believe. Pass: crossed within two turns, 4 of 5 rounds.
 
 **After passing.** Run one full conversation a month with a random persona, and add every new response you meet to the bank.
+
+## Training plan: Borrowed Ground
+
+Source SOP: Atheists. Bank rows refer to the Borrowed Ground table in the Response Bank.
+
+| Stage | Skill | Drill | Opponent | Pass when |
+| --- | --- | --- | --- | --- |
+| 1. Foundation | Knowledge | Coach teaches, then checks: the argument in one sentence; why no neutral ground (Rom. 1:18–21; Ps. 19:1–4); Prov. 26:4–5; why we don't call him a fool (Matt. 5:22) | None | Verse references exact; other facts right in substance |
+| 2. Premises | Knowledge | Learn, then recite the four things he uses (logic, reason, order of nature, morality), with two witnesses each for Premise 2 (his view can't account for it) and two verses each for Premise 3 (God does) | None | Two correct witnesses for every point, references exact, from memory |
+| 3. Gather | Columbo step 1 (ch. 4) | "What do you mean by atheist? What's ultimately real? Where do right and wrong come from?" Questions only, five turns | Casual unbeliever; rows 1, 20 | His view restated accurately ("So everything is matter and energy…"), with no statements made |
+| 4. Burden of proof | Columbo step 2 (ch. 5) | "How did you come to that conclusion? What would count as evidence for God?" Refuse to carry the whole burden for "lack of belief" | Online atheist; rows 1, 13, 14 | Burden stays on whoever made the claim every time |
+| 5. Rescues | Professor's ploy; hot seat; narrate (ch. 6) | Philosophy student piles on rows 5, 7, 10 and 11; trainee switches to fact-finding and says "Let me think about it." Online atheist drifts to Christian wars, hell or Bible "contradictions"; trainee honors it, parks it, and returns to the one question | Philosophy student; Online atheist | No burden taken on; composure kept; back on the question within two turns |
+| 6. Lead | Columbo step 3 (ch. 7) | Run one line of the Question plan in SOP Section C (logic, reason, order of nature or morality) to its end; the coach varies which | Casual unbeliever, then Philosophy student | He says in his own words that he uses the thing and his view doesn't supply it, or gives one of the recorded escapes |
+| 7. Find the flaw | Suicide; Sibling Rivalry; Infanticide; Roof; Steamroller; Facts (chs. 10–16) | Opponent fires one response; trainee names the flaw to the coach, then asks the exposing question. When the online atheist steamrolls, he uses stop, shame, leave | Any persona; rows 13 (Suicide), 18 and 20 (Sibling Rivalry), 2 and 12 (Infanticide), 4 and 7 (Roof), 8 (Facts) | Right flaw named and exposed by a question, 4 of 5; composure kept |
+| 8. Full conversations | All | 15–20 turns, opener to A′ (offer to read John 1 together) | Casual unbeliever, then Online atheist, then Philosophy student, then Ex-Christian | Pass on the rubric with each persona |
+
+**Exposing the flaws (SOP Section C).** In Stage 1 the trainee maps every answer to each question in the SOP's "Exposing the flaws" table and what it costs. From Stage 6 on, every round must end with one of those questions, asked only after the view is pinned down, followed by silence. The coach marks *wisdom* down if it comes too early, if the trainee answers it himself, or if he runs more than one of the four lines in a round. The opponent must answer as real people do: concede, dodge, or change the subject. Never invent an escape the bank doesn't record.
+
+**The ex-Christian.** With this persona, the coach marks *character* down if the trainee argues before asking what happened, or answers grief with an argument (Rom. 12:15). The argument still comes, but after listening.
+
+**The bridge to Christ (SOP Section A′).** From Stage 6 on, after the question that exposes the flaw, the opponent either gives the costly answer or dodges; the coach varies it. The trainee crosses to Christ within two turns: after a concession, with the SOP's bridge question; after a dodge, by parking the point and giving the reason for his hope. The coach marks *wisdom* down if he keeps arguing instead of crossing, or stops at "some god exists," and *knowledge* down if the gospel he tells leaves out who Jesus is, sin, the cross and resurrection, or the call to repent and believe. Pass: crossed within two turns, 4 of 5 rounds.
+
+**After passing.** Run one full conversation a month with a random persona, and add every new response you meet to the bank.

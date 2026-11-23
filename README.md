@@ -19,6 +19,7 @@ skills/
       10-islam.md                    The Islamic Dilemma
       11-jehovahs-witnesses.md       The Bread of Life
       12-jewish-people.md            The Suffering Servant
+      13-atheism.md                  Borrowed Ground
       20-response-bank.md            What members actually say, for role-play
       21-training-plans.md           Stage-by-stage drills and pass lines
   thought-and-word-rules/  Index of the rules below and how they fit together
@@ -71,7 +72,7 @@ The coach asks which group, whether you're a beginner with it, and whether you'l
 - **Not a beginner?** You go straight into practice conversations and are taught only what you miss.
 - **Practice goes where you struggle.** The coach marks each moment that called for one of Koukl's tactics, finds the ones you miss most, and drills them one at a time, in the order of his book.
 - **Use voice mode for practice.** Role-play is the heart of the training and works best spoken.
-- **Groups covered so far:** Muslims, Jehovah's Witnesses, and Jewish people. For any other group the coach will offer to draft a new SOP in the same template for your approval before training from it.
+- **Groups covered so far:** Muslims, Jehovah's Witnesses, Jewish people, and atheists. For any other group the coach will offer to draft a new SOP in the same template for your approval before training from it.
 - **Training log.** At the end of each session the coach writes a short card in plain words: what you learned, how you did, your count on each tactic, what's next, and verses to review. It adds the card to the Training log tab of the *Apologetics SOPs* doc every time, without asking, and reads your latest card there before each session starts.
 
 ## The training path

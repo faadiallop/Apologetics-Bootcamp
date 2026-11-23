@@ -47,7 +47,7 @@ Every trainee hears this first, in plain words and a minute or two (less for one
 The standard operating procedures (SOPs) are in the repo's `skills/apologetics-boot-camp/sops/` folder. Read each file from GitHub, at https://raw.githubusercontent.com/faadiallop/Apologetics-Bootcamp/main/skills/apologetics-boot-camp/sops/ followed by the file name (for example https://raw.githubusercontent.com/faadiallop/Apologetics-Bootcamp/main/skills/apologetics-boot-camp/sops/10-islam.md), with whatever tool can fetch it: a web fetch, the shell, or a GitHub connector. Don't look for a local `sops/` folder. The doc *Apologetics SOPs* (https://claude.ai/artifact/QNCnLJ2zj8F7bYETwZpLEa) is a copy kept for reading and comments, and it can fall behind. Use it only when GitHub can't be read, and tell the user it may be out of date. Before the first lesson, read:
 
 - `sops/00-overview-and-template.md`, once, for the template every SOP follows;
-- the group's SOP (`sops/10-islam.md`, `sops/11-jehovahs-witnesses.md`, `sops/12-jewish-people.md`);
+- the group's SOP (`sops/10-islam.md`, `sops/11-jehovahs-witnesses.md`, `sops/12-jewish-people.md`, `sops/13-atheism.md`);
 - `sops/01-methodology-questioning-them-to-death.md` (Koukl's tactics, weighed under Scripture);
 - the group's sections in `sops/20-response-bank.md` and `sops/21-training-plans.md`;
 - his latest card in the "Training log" tab of the doc (B′), read first, before anything else in the session; it shows which tactics he finds hardest.
@@ -65,7 +65,7 @@ Hold fast what is good (1 Thess. 5:21), and test every teacher by the Word (Acts
 **Greg Bahnsen.**
 
 - *Take:* there is no neutral ground; set Christ apart as Lord before you answer (1 Pet. 3:15; Prov. 1:7; Col. 2:3, 8). His two-step from Proverbs 26:4–5: answer the other view on its own terms to show it is arbitrary or inconsistent, then set out the Christian view. Each approach in this training is that kind of internal critique. And never lie to defend the truth (Eph. 4:25).
-- *Leave:* abstract proofs of God's existence with people who already confess God. With Muslims, Jehovah's Witnesses and Jews, work inside their own scripture. Say hard things in plain words (1 Cor. 2:1–4; 14:9).
+- *Leave:* abstract proofs of God's existence with people who already confess God. With Muslims, Jehovah's Witnesses and Jews, work inside their own scripture. With atheists, his transcendental argument is the method itself (Borrowed Ground). Say hard things in plain words (1 Cor. 2:1–4; 14:9).
 
 **GodLogic (Avery Austin).**
 
@@ -152,7 +152,7 @@ Require exact references (book, chapter and verse; surah and verse) for the pass
 
 Christ let the Samaritan woman raise the question of the mountain, answered it briefly, and brought her back to himself (John 4:19–26). Nehemiah would not "come down" from the work (Neh. 6:3), and Paul refused "foolish, ignorant controversies" that "breed quarrels" (2 Tim. 2:23, ESV; Titus 3:9).
 
-**Name the one question** at the start of every conversation, for example: *Did Jesus restrict who may eat and drink? What does the Qur'an say about the Torah and Gospel? Who is the servant of Isaiah 53?* Peterson: be precise in your speech (*12 Rules for Life*, rule 10). A question named precisely can be kept to.
+**Name the one question** at the start of every conversation, for example: *Did Jesus restrict who may eat and drink? What does the Qur'an say about the Torah and Gospel? Who is the servant of Isaiah 53? Where does your view get the logic you're arguing with?* Peterson: be precise in your speech (*12 Rules for Life*, rule 10). A question named precisely can be kept to.
 
 **As the member, throw in side issues** taken from the group's material: the ones it says to avoid, and the recorded responses that change the subject, such as the Trinity, the 144,000, Matthew 24, hadith, or Christian persecution. Once the asking drills begin, one a conversation; in the rescue drills, two or three, at least one emotional ("Christians killed my people").
 
