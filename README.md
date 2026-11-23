@@ -69,18 +69,19 @@ The coach asks which group, whether you're a beginner with it, and whether you'l
 
 - **Beginners are taught before they're tested.** You can start with background on the group. You can learn by plain teaching (the default) or by dialogue: you talk with a member of the group, played by the coach, to understand their view, then the coach sums it up and gives the verses.
 - **Not a beginner?** You go straight into practice conversations and are taught only what you miss.
+- **Practice goes where you struggle.** The coach marks each moment that called for one of Koukl's tactics, finds the ones you miss most, and drills them one at a time, in the order of his book.
 - **Use voice mode for practice.** Role-play is the heart of the training and works best spoken.
 - **Groups covered so far:** Muslims, Jehovah's Witnesses, and Jewish people. For any other group the coach will offer to draft a new SOP in the same template for your approval before training from it.
-- **Training log.** At the end of each session the coach writes a short card in plain words: what you learned, how you did, what's next, and verses to review. Keep it somewhere it can read next time, such as a `training-log.md` file in your working folder.
+- **Training log.** At the end of each session the coach writes a short card in plain words: what you learned, how you did, your count on each tactic, what's next, and verses to review. Keep it somewhere it can read next time, such as a `training-log.md` file in your working folder.
 
 ## The training path
 
 | Path | What happens |
 | --- | --- |
-| Beginner | Background on the group (if you want it), the gospel in your own words, what the group believes, the argument and its verses, their usual answers, and how to expose the flaws in their view; then practice: asking questions, spotting flaws, staying in control and on topic, and full conversations; then real conversations, each debriefed; and last, teaching someone else |
-| Not a beginner | A practice conversation first, then lessons and drills only where you need them, then the field and teaching someone else |
+| Beginner | In the order of the SOP: the gospel in your own words; background on the group (if you want it) and what it believes; the argument and its verses, then Koukl's tactics in the order of his book, with the questions that expose each flaw; their usual answers; and the bridge to Christ. Then practice in the same order, with most of the time on what you find hardest: asking questions, the rescues and staying on topic, leading, finding the flaws, and full conversations; then real conversations, each debriefed; and last, teaching someone else |
+| Not a beginner | One or two practice conversations to find what you find hardest, then drills on those in the book's order, then the field and teaching someone else |
 
-You pass each drill on knowledge, wisdom and character, three conversations in a row. Verse references must be exact; figures and dates need only be roughly right. A conversation fails on character, however well argued, if you mock or anger the person.
+You pass each drill on its tactic and on knowledge, wisdom and character, three conversations in a row. Verse references must be exact; figures and dates need only be roughly right. A conversation fails on character, however well argued, if you mock or anger the person.
 
 ## Editing the SOPs
 
