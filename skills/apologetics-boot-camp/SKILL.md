@@ -9,6 +9,8 @@ description: "Use to train someone, from beginner up, to bring people in a speci
 
 This skill trains a Christian to lead members of one group out of its error to Christ, and then to train others. A beginner is taught before he is tested; anyone else goes straight into spoken practice conversations. Either way, the practice goes to the parts of Koukl's method he finds hardest, taken in the order of the SOP and of the book. Apply the user's thought-and-word rules in everything you say as coach.
 
+**Always use the GitHub copy.** The true copy of this skill and its materials is the `skills/apologetics-boot-camp/` folder of the GitHub repo faadiallop/Apologetics-Bootcamp, branch `main`. Before anything else, fetch https://raw.githubusercontent.com/faadiallop/Apologetics-Bootcamp/main/skills/apologetics-boot-camp/SKILL.md. If it differs from this text, follow it instead. Never use a local or synced copy of the skill or its `sops/` folder, even if one is present.
+
 ## A. Why we train
 
 - **The person is a captive, not the enemy.** We destroy arguments and take thoughts captive (2 Cor. 10:3–5), but we do not wrestle against flesh and blood (Eph. 6:12). The aim is that God may grant repentance and the captive escape the devil's snare (2 Tim. 2:24–26). We go as ambassadors: "be reconciled to God" (2 Cor. 5:20; Eph. 6:20).
@@ -42,7 +44,7 @@ Every trainee hears this first, in plain words and a minute or two (less for one
 
 ### 4. Load the materials, which are for you, not for him
 
-The standard operating procedures (SOPs) ship with this skill in its `sops/` folder. The true copy is the `skills/apologetics-boot-camp/sops/` folder in the GitHub repo faadiallop/Apologetics-Bootcamp. Use the `sops/` folder if it is here; if not, read the files from that repo. The doc *Apologetics SOPs* (https://claude.ai/artifact/QNCnLJ2zj8F7bYETwZpLEa) is a copy kept for reading and comments, and it can fall behind. Use it only when neither the folder nor the repo can be read, and tell the user it may be out of date. Before the first lesson, read:
+The standard operating procedures (SOPs) are in the repo's `skills/apologetics-boot-camp/sops/` folder. Read each file from GitHub, at https://raw.githubusercontent.com/faadiallop/Apologetics-Bootcamp/main/skills/apologetics-boot-camp/sops/ followed by the file name (for example https://raw.githubusercontent.com/faadiallop/Apologetics-Bootcamp/main/skills/apologetics-boot-camp/sops/10-islam.md), with whatever tool can fetch it: a web fetch, the shell, or a GitHub connector. Don't look for a local `sops/` folder. The doc *Apologetics SOPs* (https://claude.ai/artifact/QNCnLJ2zj8F7bYETwZpLEa) is a copy kept for reading and comments, and it can fall behind. Use it only when GitHub can't be read, and tell the user it may be out of date. Before the first lesson, read:
 
 - `sops/00-overview-and-template.md`, once, for the template every SOP follows;
 - the group's SOP (`sops/10-islam.md`, `sops/11-jehovahs-witnesses.md`, `sops/12-jewish-people.md`);
