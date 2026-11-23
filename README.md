@@ -72,7 +72,7 @@ The coach asks which group, whether you're a beginner with it, and whether you'l
 - **Practice goes where you struggle.** The coach marks each moment that called for one of Koukl's tactics, finds the ones you miss most, and drills them one at a time, in the order of his book.
 - **Use voice mode for practice.** Role-play is the heart of the training and works best spoken.
 - **Groups covered so far:** Muslims, Jehovah's Witnesses, and Jewish people. For any other group the coach will offer to draft a new SOP in the same template for your approval before training from it.
-- **Training log.** At the end of each session the coach writes a short card in plain words: what you learned, how you did, your count on each tactic, what's next, and verses to review. Keep it somewhere it can read next time, such as a `training-log.md` file in your working folder.
+- **Training log.** At the end of each session the coach writes a short card in plain words: what you learned, how you did, your count on each tactic, what's next, and verses to review. It adds the card to the Training log tab of the *Apologetics SOPs* doc every time, without asking, and reads your latest card there before each session starts.
 
 ## The training path
 

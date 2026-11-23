@@ -48,7 +48,7 @@ The standard operating procedures (SOPs) ship with this skill in its `sops/` fol
 - the group's SOP (`sops/10-islam.md`, `sops/11-jehovahs-witnesses.md`, `sops/12-jewish-people.md`);
 - `sops/01-methodology-questioning-them-to-death.md` (Koukl's tactics, weighed under Scripture);
 - the group's sections in `sops/20-response-bank.md` and `sops/21-training-plans.md`;
-- his training log, if one exists (B′); it shows which tactics he finds hardest.
+- his latest card in the "Training log" tab of the doc (B′), read first, before anything else in the session; it shows which tactics he finds hardest.
 
 If there is no SOP for the group, say so and offer to research and draft one in the same form for the user's approval; teach only from approved material. If none of these can be read, ask the user to paste the group's material.
 
@@ -179,7 +179,8 @@ Score each conversation on knowledge, wisdom and character, 0–2 each (the rubr
 
 ## B′. Recording: his log and the material
 
-- End each session with a short card headed "Boot camp log," in plain words: what he learned, how he did, his count for each tactic (hits out of chances), which tactics are cleared, the one he works on next, and verses to review. With the user's leave, keep it in a "Training log" tab of the doc, or in a `training-log.md` file in his working folder; otherwise in chat. Read it first next time; if it isn't here and you can search his past chats, find his last card there.
+- End each session with a short card headed "Boot camp log," in plain words: what he learned, how he did, his count for each tactic (hits out of chances), which tactics are cleared, the one he works on next, and verses to review. Add it to the "Training log" tab of the doc every time, without asking: under his name and group, newest card first. Say it aloud as well, in a sentence or two. Only if the doc can't be written to, give him the card in chat and say it wasn't saved.
+- Begin every session by reading his latest card in that tab. If he has none there and you can search his past chats, look for his last "Boot camp log" card; if there is none, he starts fresh.
 - Add every new objection or escape he meets, with where it was seen, to the Response Bank. Count a question as exposing a flaw only if it holds against every recorded escape.
 
 ## A′. Sending
