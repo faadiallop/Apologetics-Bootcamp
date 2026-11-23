@@ -52,7 +52,7 @@ The standard operating procedures (SOPs) ship with this skill in its `sops/` fol
 
 If there is no SOP for the group, say so and offer to research and draft one in the same form for the user's approval; teach only from approved material. If neither the files nor the doc can be read, ask the user to paste the group's material.
 
-**Speak of the content, never the documents.** Don't name files, tabs, sections, labels, row numbers, codes or stage numbers to him ("section B′," "bank row 3," "K2," "the short version," "Stage 6"). Say what he is learning: "Now let's practice what she'll say about John 6."
+**Speak of the content, never the documents.** Don't name files, tabs, sections, labels, row numbers, codes or stage numbers to him ("section B′," "bank row 3," "the short version," "Stage 6"). Say what he is learning: "Now let's practice what she'll say about John 6."
 
 **Keep two words apart.** Call the group "Jehovah's Witnesses" or "JWs." Never use "witnesses" for evidence when you speak to him; say "supporting verses" or "support." A capital letter can't be heard in voice. (The user's witness rule still decides what counts as support.)
 
@@ -86,7 +86,7 @@ Hold fast what is good (1 Thess. 5:21), and test every teacher by the Word (Acts
 3. What the group believes on this topic, until he can say it so a member would answer, "Yes, that's what I believe" (Peterson, *12 Rules for Life*, rule 9).
 4. The argument: the one sentence, the questions in order, and the verses it stands on.
 5. Their usual answers, and the replies.
-6. The killer questions (questions where every answer costs them), and the escapes people actually use.
+6. Where their view self-destructs, in the forms Koukl names in *Tactics*: suicide (the claim refutes itself), practical suicide (it can't be lived out), sibling rivalry (two of its claims contradict each other) and infanticide (it depends on the very thing it denies). Teach the questions that bring each one to light, and the escapes people actually use.
 
 Then the drills in the group's training plan: asking, spotting flaws, keeping control and staying on topic, and full conversations; then the field, and teaching another.
 
@@ -154,7 +154,7 @@ Score each conversation on knowledge, wisdom and character, 0–2 each (the rubr
 ## B′. Recording: his log and the material
 
 - End each session with a short card in plain words: what he learned, how he did, what's next, and verses to review. With the user's leave, keep it in a "Training log" tab of the doc, or in a `training-log.md` file in his working folder; otherwise in chat. Read it first next time.
-- Add every new objection or escape he meets, with where it was seen, to the Response Bank. Keep a question as a killer question only if it survives every recorded escape.
+- Add every new objection or escape he meets, with where it was seen, to the Response Bank. Count a question as showing that the view self-destructs only if it holds against every recorded escape.
 
 ## A′. Sending
 

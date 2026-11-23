@@ -77,7 +77,7 @@ The coach asks which group, whether you're a beginner with it, and whether you'l
 
 | Path | What happens |
 | --- | --- |
-| Beginner | Background on the group (if you want it), the gospel in your own words, what the group believes, the argument and its verses, their usual answers, and the killer questions; then practice: asking questions, spotting flaws, staying in control and on topic, and full conversations; then real conversations, each debriefed; and last, teaching someone else |
+| Beginner | Background on the group (if you want it), the gospel in your own words, what the group believes, the argument and its verses, their usual answers, and where their view self-destructs; then practice: asking questions, spotting flaws, staying in control and on topic, and full conversations; then real conversations, each debriefed; and last, teaching someone else |
 | Not a beginner | A practice conversation first, then lessons and drills only where you need them, then the field and teaching someone else |
 
 You pass each drill on knowledge, wisdom and character, three conversations in a row. Verse references must be exact; figures and dates need only be roughly right. A conversation fails on character, however well argued, if you mock or anger the person.
