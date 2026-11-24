@@ -96,7 +96,7 @@ Hold fast that which is good (1 Thess. 5:21), and test every teacher by the Word
 | The flaws (10–13): Suicide, Practical Suicide, Sibling Rivalry, Infanticide, Taking the Roof Off | says what refutes itself or can't be lived out, holds two claims that contradict each other or one that depends on what it denies, or holds a view that ends in absurdity when followed through | not seeing it in time; naming it as a charge ("That's a contradiction") instead of asking the question that shows it |
 | Steamroller (14) | interrupts or piles on | giving way, or getting heated, instead of Koukl's stop, shame, leave |
 | The flaws (15–16): Rhodes Scholar, Just the Facts | leans on experts without their reasons, or rests on wrong facts | as for the other flaws |
-| The bridge to Christ (A′) | has given the costly answer, or dodged | arguing on instead of crossing within two turns |
+| The bridge to Christ (A′) | has given the costly answer, or dodged; then gives him room for the gospel, or closes the door | arguing on instead of crossing within two turns; with room, leaving part of the gospel out; pressing it after the door has closed |
 
 ### Two paths
 
@@ -106,7 +106,7 @@ Hold fast that which is good (1 Thess. 5:21), and test every teacher by the Word
 2. **Know them.** Who the group is, if he chose the background; then what it believes on this topic, until he can say it so a member would answer, "Yes, that's what I believe" (Peterson, *12 Rules for Life*, rule 9).
 3. **The method.** The argument: the one sentence, the questions in order, and the verses it stands on. Then each tactic in the table, in order, with the group's own questions for it; for the flaws, the questions that expose each one, and the escapes people actually use.
 4. **Their answers.** Their usual answers, and the replies.
-5. **Turn to Christ.** The bridge: how to cross from the flaw to the whole gospel, whether he concedes or dodges.
+5. **Turn to Christ.** The bridge: how to cross from the flaw to Christ, whether he concedes or dodges; then all of the gospel when he gives room, and otherwise the part the moment opens, with the door left open.
 
 Then the drills in the group's training plan, in their order, and full conversations; then the field, and teaching another.
 
