@@ -7,8 +7,9 @@ To argue that there is no God, the atheist has to use logic, trust his own mind,
 | Group | Atheists: those who believe there is no God, and those who say they simply lack belief in one. Much of it also serves agnostics and "nothing in particular" |
 | SOP name | Borrowed Ground |
 | Main source | Greg L. Bahnsen, *Always Ready* (1996), and his debate with Gordon Stein, "The Great Debate: Does God Exist?" (UC Irvine, Feb. 11, 1985; transcript, Covenant Media Foundation) |
+| Debates drawn on | Bahnsen vs Stein (1985); Eli Ayala vs Dan Barker, "Does the God of the Bible Exist?" (The Gospel Truth conference, Feb. 6, 2026); James White and Jeff Durbin vs Greg Clark and Dan Ellis (Univ. of Utah, Oct. 3, 2019) and vs Deen Chatterjee and Jared Anderson (Univ. of Utah, Apr. 1, 2023). Their lines are gathered in the Response Bank |
 | Editions quoted | Bible: KJV. Other writers: as cited |
-| Last reviewed | Nov 23, 2026 |
+| Last reviewed | Nov 25, 2026 |
 
 ## Short version
 
