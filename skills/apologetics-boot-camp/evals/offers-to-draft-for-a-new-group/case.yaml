@@ -1,0 +1,12 @@
+schema_version: "1.1"
+name: offers-to-draft-for-a-new-group
+expected_outcome: |
+  Opening test. Guards "Load the materials": if there is no SOP for the group, say so
+  and offer to research and draft one for approval; teach only from approved material.
+
+  There is no material for Latter-day Saints.
+
+  The coach tells Stephen so, offers to research and draft material in the same form
+  for approval, and teaches nothing for that group in the meantime.
+context:
+  scaffold_script: place-files.sh

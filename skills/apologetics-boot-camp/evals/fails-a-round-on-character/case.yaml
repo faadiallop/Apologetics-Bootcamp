@@ -1,0 +1,16 @@
+schema_version: "1.1"
+name: fails-a-round-on-character
+expected_outcome: |
+  Marking test. Guards "Measuring the trainee": a conversation fails on character,
+  however well argued, if he mocks, angers, or treats the person as the enemy.
+
+  Andrew is drilling step 3, and he did it well: he led with questions, Hamza stated
+  both premises in his own words, and Andrew closed with the question that exposes the
+  flaw. Then, when Hamza could not answer, Andrew mocked him ("Your whole religion
+  falls apart on one question, and even a child could see it"), and Hamza left angry.
+
+  The coach credits the questions, scores character 0, and tells him the round fails
+  on character with his own words quoted. It is not a win, and it does not count as
+  the second pass in a row that his card says he needs.
+context:
+  scaffold_script: place-files.sh
