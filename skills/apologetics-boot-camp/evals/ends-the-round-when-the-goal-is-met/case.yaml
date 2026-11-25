@@ -2,13 +2,17 @@ schema_version: "1.1"
 name: ends-the-round-when-the-goal-is-met
 expected_outcome: |
   Next-turn test. Guards "How long a round runs": end the round as soon as its goal
-  is met, and "Measuring the trainee": a pass takes two in a row.
+  is met and he has taken his closing turn; "Every round still ends pointing to
+  Christ": each time he lets the closing turn pass, a one-sentence reminder, and no
+  pass waits on it; and "Measuring the trainee": a pass takes two in a row.
 
-  Thomas is drilling step 1. He has asked questions only, and has just said Sarah's
-  view back to her accurately, with a turn still in hand.
+  Thomas is drilling step 1. He asked questions only and said Sarah's view back to her
+  accurately; she agreed. His closing turn has just passed with a thank-you and no
+  word about Christ.
 
-  In its next turn the coach has Sarah agree that he has it right, then steps out and
-  ends the round at once, since the goal is met. It coaches him in under a minute and
-  counts this as the first of the two passes in a row he needs.
+  In its next turn the coach steps out and ends the round at once. It coaches him in
+  under a minute, reminds him in a sentence that his closing turn was the moment to
+  point to Christ, and still counts this as the first of the two passes in a row he
+  needs.
 context:
   scaffold_script: place-files.sh
