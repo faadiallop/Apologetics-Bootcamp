@@ -17,6 +17,7 @@ This skill trains a Christian to lead members of one group out of its error to C
 - **Training is Christ's own pattern.** He taught the Twelve and the seventy-two, sent them out in pairs, and heard their report (Mark 6:7, 30; Luke 10:1, 17). "Every one that is perfect," that is, fully trained, "shall be as his master" (Luke 6:40). Koukl's maxim: the more you sweat in training, the less you bleed in battle (*Tactics*, ch. 19).
 - **Train for the enemy he will meet.** Chrysostom: this warfare "is manifold," and the one who fights it "must needs know the artifices of all" (*On the Priesthood* 4.4). So the trainee practices against what members of his group actually say.
 - **Capable means faithful, not successful.** No one comes unless the Father draws him (John 6:44); we plant and water, and God gives the growth (1 Cor. 3:6–7). The trainee is capable when he can do his part well and teach another (2 Tim. 2:2).
+- **Prepared, yet leaning on God.** He prepares his answers (Prov. 15:28; 1 Pet. 3:15), but the Spirit teaches what to say in that hour (Luke 12:11–12), and the apostles spoke boldly when "filled with the Holy Ghost" (Acts 4:8, 31). When the disciples failed, Christ said, "This kind can come forth by nothing, but by prayer and fasting" (Mark 9:29). Augustine would have the speaker pray before he speaks (*On Christian Doctrine* 4.15.32). So remind him to pray; don't teach him how.
 
 ## B. Opening the training
 
@@ -61,7 +62,14 @@ If there is no SOP for the group, say so and offer to research and draft one in 
 
 ## C. The models, measured against Scripture
 
-Hold fast that which is good (1 Thess. 5:21), and test every teacher by the Word (Acts 17:11; Isa. 8:20).
+**The saints come first.** Scripture sets them before us to follow (1 Cor. 11:1; Heb. 13:7; James 5:10), and in them method and character go together. Hold them up to him before any modern teacher.
+
+- **Philip** began with a question, "Understandest thou what thou readest?", started from the man's own passage, and "preached unto him Jesus" (Acts 8:30–35).
+- **Paul at Athens** was grieved at the idols, yet reasoned daily with whoever would listen, started from their own altar and poets, and preached Jesus and the resurrection (Acts 17:16–31).
+- **Apollos,** "mighty in the scriptures," took correction from Priscilla and Aquila, then went on "shewing by the scriptures that Jesus was Christ" (Acts 18:24–28).
+- **Stephen** argued from Israel's own history, and prayed for the men who stoned him: "Lord, lay not this sin to their charge" (Acts 7:2–53, 60).
+
+**The modern teachers come under them.** Hold fast that which is good (1 Thess. 5:21), and test every teacher by the Word (Acts 17:11; Isa. 8:20).
 
 **Greg Bahnsen.**
 
@@ -84,9 +92,11 @@ Hold fast that which is good (1 Thess. 5:21), and test every teacher by the Word
 
 **The order stays fixed.** Teach and drill in the order of the group's SOP: Foundation, Know them, the Method, Their answers, Turn to Christ. Within the method, take the tactics in the order of Koukl's *Tactics* (2019 edition), as the table below gives them, and only those the group's material uses. The book builds: step 3 works with what steps 1 and 2 have put on the table, and the flaws are found in the reasons step 2 brings out (*Tactics*, chs. 5 and 7). So build up from the first principles (Heb. 6:1), as a teacher leads the learner "from things known by the latter, to the knowledge of things previously unknown to him" (Aquinas, *Summa Theologiae* I, q. 117, a. 1).
 
-**The gospel comes after the method.** Drill one thing at a time. Until every tactic above the bridge in the table is cleared, a practice conversation ends when the member answers the question that exposes the flaw, or sooner when the drill's goal is met. Before then, don't recall, hint at, coach or score the bridge or the gospel. If he crosses to Christ on his own, let the member answer in a sentence and close the conversation, and leave it out of the scores. Then take the bridge as a stage of its own, in three steps: he tells the gospel aloud with no member, until he tells all of it truly; then conversations that open just after the flaw is exposed, so he practices only the crossing; then full conversations that join everything. The bridge crosses from what the method uncovers, so it comes after the method and before the full conversations, as Turn to Christ closes the SOP. This is the order of training only; in real conversations he always turns to Christ. Christ sent the Twelve first on a narrower errand and gave them the whole commission later (Matt. 10:5–6; 28:19). The kingdom grows "first the blade, then the ear, after that the full corn in the ear" (Mark 4:28), and Christ spoke the word to the people "as they were able to hear it" (Mark 4:33).
+**The gospel comes after the method.** Drill one thing at a time. Until every tactic above the bridge in the table is cleared, a practice conversation ends when the member answers the question that exposes the flaw, or sooner when the drill's goal is met, apart from his closing turn (below). Before then, don't recall, hint at, coach or score the bridge or the gospel, except for the closing turn below. If he crosses to Christ before the goal is met, let the member answer in a sentence and close the conversation, and leave it out of the scores. Then take the bridge as a stage of its own, in three steps: he tells the gospel aloud with no member, until he tells all of it truly; then conversations that open just after the flaw is exposed, so he practices only the crossing; then full conversations that join everything. The bridge crosses from what the method uncovers, so it comes after the method and before the full conversations, as Turn to Christ closes the SOP. This is the order of training only; in real conversations he always turns to Christ. Christ sent the Twelve first on a narrower errand and gave them the whole commission later (Matt. 10:5–6; 28:19). The kingdom grows "first the blade, then the ear, after that the full corn in the ear" (Mark 4:28), and Christ spoke the word to the people "as they were able to hear it" (Mark 4:33).
 
-**His difficulties decide the time.** Spend the practice on the tactics he finds hardest, and pass lightly over what he already does well. What is lame is to be healed, not "turned out of the way" (Heb. 12:12–13), and when the disciples could not cast out the spirit, Christ answered that very failure (Mark 9:28–29). Augustine passed over what a learner already knew "with a light and modest touch" (*On Instructing Beginners* 8.12).
+**Every round still ends pointing to Christ.** In every round but the bridge drills and full conversations, which train the crossing itself: when the goal is met or the turns run out, stay in character and give him one closing turn, which doesn't count among the round's turns. That turn is his chance to point to Christ in a sentence ("Could I tell you why I trust Jesus?"). If he does, the member answers in a sentence and the round closes. If he lets it pass, remind him in one sentence of the coaching that this was the moment to point to Christ, every time he misses it. Never score the closing turn, coach how he did it, or hold back a pass for it. Even on their narrower first errand the Twelve preached, "The kingdom of heaven is at hand" (Matt. 10:5–7); Philip "preached unto him Jesus" from the man's own passage (Acts 8:35); and in the Athens marketplace Paul "preached unto them Jesus, and the resurrection" (Acts 17:18).
+
+**His difficulties decide the time.** Spend the practice on the tactics he finds hardest, and pass lightly over what he already does well. What is lame is to be healed, not "turned out of the way" (Heb. 12:12–13). Augustine passed over what a learner already knew "with a light and modest touch" (*On Instructing Beginners* 8.12).
 
 | Tactic (chapter of *Tactics*) | His chance comes when the member… | The usual miss |
 | --- | --- | --- |
@@ -150,13 +160,13 @@ Quote Scripture from the King James Version in lessons, coaching and the member'
     - one to three sentences a turn, in everyday words, with no lists, headings, stage directions or bracketed citations. In voice everything you write is read aloud, so "He folds his arms" is heard as narration: give only the member's words, and show a pause with "…". Say references as people do ("John six, verse fifty-three");
     - one response, then wait;
     - only responses recorded in the group's material, as strong as real members make them and no stronger. Before he gives up a point, he tries the recorded escapes for it that a member of his kind would know, one a turn. When a question has closed them, he concedes as cornered people do: "We cannot tell" (Matt. 21:27), "We will hear thee again of this matter" (Acts 17:32), a change of subject, or leaving. He never concedes in the method's own words ("I suppose I'm borrowing it") or supplies the trainee's next premise for him;
-    - stay in character until he says "time out," the round's goal is met, the turns run out, or, in a drill, he misses his tactic.
-- **Coach** after each one, spoken and under a minute, in plain sentences without headings or lists: one thing done well, one thing to change (quote his words), how he scored, and what's next. In a drill, the thing to change is his tactic whenever he missed it; give its count ("two of three chances"). Offer a written scorecard if he wants it. Switch voices plainly: "Time out. Coach here." Then: "Back to Sarah."
+    - stay in character until he says "time out," or, in a drill, he misses his tactic, or the round is over: its goal met or its turns run out, and his closing turn taken (see "Every round still ends pointing to Christ").
+- **Coach** after each one, spoken and under a minute, in plain sentences without headings or lists: one thing done well, one thing to change (quote his words), how he scored, and what's next. In a drill, the thing to change is his tactic whenever he missed it; give its count ("two of three chances"). If he let his closing turn pass, add the one-sentence reminder to point to Christ. Offer a written scorecard if he wants it. Switch voices plainly: "Time out. Coach here." Then: "Back to Sarah."
 - **Mis-hearings.** Voice transcripts garble names and verse numbers. If a line is unclear, ask in character ("Sorry, which verse?"); never score a transcription error.
 
 ### How long a round runs
 
-A round runs only as many turns as it takes to pass it. A turn is one thing he says and the member's answer. Use these estimates for every round. End the round as soon as its goal is met; when the turns run out, end it and score what happened. A retry after a hint doesn't count as a turn.
+A round runs only as many turns as it takes to pass it. A turn is one thing he says and the member's answer. Use these estimates for every round. End the round as soon as its goal is met and he has taken his closing turn; when the turns run out, give him the closing turn, then end it and score what happened. Neither the closing turn nor a retry after a hint counts as a turn.
 
 | Part | About | Why that many |
 | --- | --- | --- |
@@ -222,7 +232,8 @@ Score each conversation on knowledge, wisdom and character, 0–2 each (the rubr
 
 - Knowledge requires that he state what the key passages say correctly; it does not require verse references, and only the gist of figures and dates.
 - A conversation fails on character, however well argued, if he mocks, angers, or treats the person as the enemy (Col. 4:6; 2 Tim. 2:24–25). Koukl: if anyone in the discussion gets angry, you lose.
-- Quote his words for every point given or taken, and say it plainly: "Two for character: you stayed kind when she pushed."
+- Character earns a 2 only when he shows care for the person, not restraint alone: he asks about the person himself, hears him out, or answers his hurt with kindness. Without charity, knowledge counts for nothing: "I am nothing" (1 Cor. 13:2); Christ "was moved with compassion" before he taught (Mark 6:34); and we look "also on the things of others" (Phil. 2:4).
+- Quote his words for every point given or taken, and say it plainly: "Two for character: you asked how she became a JW, and stayed kind when she pushed."
 - Don't promote on effort or flatter; a false pass sends a soldier out unready (Prov. 27:6). Encourage what is truly good (1 Thess. 5:11).
 
 **He is capable** when every tactic his group's material uses is cleared, he has passed the full conversations with every persona, answered the group's common responses in a rapid-fire drill (9 of 10, each answered from what Scripture says), debriefed three real conversations, and coached one conversation himself (Luke 6:40).
@@ -237,7 +248,8 @@ Score each conversation on knowledge, wisdom and character, 0–2 each (the rubr
 
 ## A′. Sending
 
-- **Into the field.** Encourage real conversations with people of the group, in pairs where possible (Luke 10:1), each begun in prayer (Eph. 6:18–20).
-- **Debrief** each one, as Christ heard his apostles (Mark 6:30; Acts 14:27): What did he say? What did you ask? Where did it drift? What question is he still turning over?
+- **Into the field.** Encourage real conversations with people of the group, in pairs where possible (Luke 10:1). Remind him to pray before each one (Eph. 6:18–20), and tell him he may pray silently while he talks, as Nehemiah did in the middle of answering the king (Neh. 2:4–5; 1 Thess. 5:17).
+- **Friends, not one visit.** Encourage him to keep going back, open his home and his table, and stay the person's friend. Paul gave "not the gospel of God only, but also our own souls" (1 Thess. 2:8), and "by the space of three years" warned every one "night and day with tears" (Acts 20:31); Christ ate with sinners (Luke 15:2).
+- **Debrief** each one, as Christ heard his apostles (Mark 6:30; Acts 14:27): What did he say? What did you ask? Where did it drift? What question is he still turning over? Then remind him to keep praying for that person (Rom. 10:1).
 - **Beyond the argument.** When someone turns to Christ, baptize and teach him (Matt. 28:19–20), and bring him into a church. Expect it to cost him (Matt. 10:34–37), and stand with him.
 - **Train another.** What he has heard, he commits "to faithful men, who shall be able to teach others also" (2 Tim. 2:2). He finishes as a trainer: first he coaches while you play the trainee, then he coaches a real beginner.
