@@ -28,7 +28,7 @@ Every plan runs the same loop: learn the material, drill one skill at a time aga
 
 | Skill | 2 = pass | 0 = fail sign |
 | --- | --- | --- |
-| **Knowledge** | States the premises and their supporting verses correctly; cites each verse or Qur'an passage exactly | Gets a verse reference wrong or a fact badly wrong; argues beyond the evidence |
+| **Knowledge** | States the premises and what their supporting passages say, correctly (references not required) | Misstates what a passage says, or gets a fact badly wrong; argues beyond the evidence |
 | **Wisdom** | Asks before telling; keeps the burden on whoever made the claim; names and exposes the flaw with a question | Lectures; accepts a burden for a claim not made; chases a side issue |
 | **Character** | Calm, gracious, fair to their view; ends with an invitation or a Gospel to read | Gets angry, mocks, or interrupts; wins the point and loses the person |
 
@@ -42,8 +42,8 @@ Source SOP: Islam. Bank rows refer to the Islamic Dilemma table in the Response 
 
 | Stage | Skill | Drill | Opponent | Pass when |
 | --- | --- | --- | --- | --- |
-| 1. Foundation | Knowledge | Coach teaches, then checks: the argument in one sentence; why Tawrat and Injil, not "Bible"; the Scripture test of a later word (Isa. 8:20; Gal. 1:8) | None | Verse references exact; other facts right in substance |
-| 2. Premises | Knowledge | Learn, then recite Premise 1 (the five ways the Qur'an affirms the books) and Premise 2 (three contradictions), with two supporting verses each | None | Two correct supporting verses for every point, references exact, from memory |
+| 1. Foundation | Knowledge | Coach teaches, then checks: the argument in one sentence; why Tawrat and Injil, not "Bible"; the Scripture test of a later word (Isa. 8:20; Gal. 1:8) | None | What the passages say, and other facts, right in substance |
+| 2. Premises | Knowledge | Learn, then recite Premise 1 (the five ways the Qur'an affirms the books) and Premise 2 (three contradictions), with two supporting verses each | None | Two supporting passages for every point, said correctly from memory (references not required) |
 | 3. Gather | Columbo step 1 (ch. 4) | Ask only questions for five turns; feed back their view ("Let me see if I understand…") | Layperson; bank rows 1, 2, 4 | Three or more clarifying questions; no statements; view restated accurately |
 | 4. Burden of proof | Columbo step 2 (ch. 5) | Ask for reasons; test each story (possible, plausible, probable) | Street apologist; rows 1, 4, 15 | Burden stays on the claimant every time, and he asks for the reasons behind each main claim (not every passing remark) |
 | 5. Rescues | Professor's ploy; hot seat; narrate (ch. 6) | Opponent shifts the burden onto him, outclasses him, or drifts to a side issue; trainee refuses any burden he didn't take on, switches to fact-finding and says "Let me think about it," and narrates the dodge | Street apologist (row 12); Academic (rows 6, 10) | No burden taken on; composure kept; back on the question within two turns |
@@ -63,8 +63,8 @@ Source SOP: Jehovah's Witnesses. Bank rows refer to the Bread of Life table in t
 
 | Stage | Skill | Drill | Opponent | Pass when |
 | --- | --- | --- | --- | --- |
-| 1. Foundation | Knowledge | Coach teaches, then checks: the argument in one sentence; the terms; roughly how few eat today (about 1 in 840 at the Memorial) and that nearly all ate before 1935 | None | Verse references exact; figures and dates roughly right |
-| 2. Premises | Knowledge | Learn, then recite Premise 1 (John 6:51, 53–54, 56), Premise 2 (Matt. 26:26–28; Luke 22:19–20; 1 Cor. 10:16–17) and Premise 3 (the figures and their covenant teaching) | None | Every premise with two correct supporting verses, references exact, from memory |
+| 1. Foundation | Knowledge | Coach teaches, then checks: the argument in one sentence; the terms; roughly how few eat today (about 1 in 840 at the Memorial) and that nearly all ate before 1935 | None | What the passages say right in substance; figures and dates roughly right |
+| 2. Premises | Knowledge | Learn, then recite Premise 1 (John 6:51, 53–54, 56), Premise 2 (Matt. 26:26–28; Luke 22:19–20; 1 Cor. 10:16–17) and Premise 3 (the figures and their covenant teaching) | None | Every premise with two supporting passages, said correctly from memory (references not required) |
 | 3. Gather | Columbo step 1 (ch. 4) | "What happens at the Memorial? Did you eat? What would it mean if you did?" Questions only, five turns | New publisher | Their view restated accurately, with no statements made |
 | 4. Burden of proof | Columbo step 2 (ch. 5) | "Where does Jesus or Paul limit who may eat?" "How do you know you're not anointed?" | Senior publisher; rows 1, 3, 9, 10 | Burden stays on the claimant every time, and he asks for the reasons behind each main claim (not every passing remark) |
 | 5. Rescues | Hot seat; narrate (ch. 6) | Elder steers to the 144,000 (row 13) or presses the Watchtower's arguments (rows 1, 3, 4). Trainee honors the side issue in a sentence, parks it and returns to "who may eat," narrating if it drifts again; when outclassed, he switches to fact-finding and says "Let me think about it" | Elder | Back on "who may eat" within two turns every time; no burden taken on |
@@ -84,8 +84,8 @@ Source SOP: Jewish people. Bank rows refer to the Suffering Servant table in the
 
 | Stage | Skill | Drill | Opponent | Pass when |
 | --- | --- | --- | --- | --- |
-| 1. Foundation | Knowledge | Coach teaches, then checks: the argument in one sentence; why Rom. 1:16 and Luke 24:26; the Targum and Sanhedrin 98b; why we avoid "forbidden chapter" | None | Verse references exact; other facts right in substance |
-| 2. Premises | Knowledge | Learn, then recite the three premises, two supporting verses each, from memory | None | Two correct supporting verses for every point, references exact |
+| 1. Foundation | Knowledge | Coach teaches, then checks: the argument in one sentence; why Rom. 1:16 and Luke 24:26; the Targum and Sanhedrin 98b; why we avoid "forbidden chapter" | None | What the passages say, and other facts, right in substance |
+| 2. Premises | Knowledge | Learn, then recite the three premises, two supporting verses each, from memory | None | Two supporting passages for every point, said correctly (references not required) |
 | 3. Gather | Columbo step 1 (ch. 4) | "Have you read Isaiah 53? Who is it about? Who taught you that?" Questions only, five turns | Secular Jew | Their view restated accurately, with no statements made |
 | 4. Burden of proof | Columbo step 2 (ch. 5) | "What in the text shows the servant is Israel?" | Traditional Jew; rows 1, 2, 8 | Burden stays on the claimant every time, and he asks for the reasons behind each main claim (not every passing remark) |
 | 5. Rescues | Hot seat; narrate (ch. 6) | A counter-missionary-trained opponent piles on Hebrew points (rows 3, 4, 5); trainee asks him to slow down, takes notes, and says "Let me think about it." When the talk turns to Christian persecution, or to why Jesus didn't bring peace (SOP B′), he honors it, parks it, and returns to Isaiah 53 | Counter-missionary student; Traditional Jew | Composure kept; no burden taken on; back on Isaiah 53 within two turns |
@@ -105,8 +105,8 @@ Source SOP: Atheists. Bank rows refer to the Borrowed Ground table in the Respon
 
 | Stage | Skill | Drill | Opponent | Pass when |
 | --- | --- | --- | --- | --- |
-| 1. Foundation | Knowledge | Coach teaches, then checks: the argument in one sentence; why no neutral ground (Rom. 1:18–21; Ps. 19:1–4); Prov. 26:4–5; why we don't call him a fool (Matt. 5:22) | None | Verse references exact; other facts right in substance |
-| 2. Premises | Knowledge | Learn, then recite the four things he uses (logic, reason, order of nature, morality), with two witnesses each for Premise 2 (his view can't account for it) and two verses each for Premise 3 (God does) | None | Two correct witnesses for every point, references exact, from memory |
+| 1. Foundation | Knowledge | Coach teaches, then checks: the argument in one sentence; why no neutral ground (Rom. 1:18–21; Ps. 19:1–4); Prov. 26:4–5; why we don't call him a fool (Matt. 5:22) | None | What the passages say, and other facts, right in substance |
+| 2. Premises | Knowledge | Learn, then recite the four things he uses (logic, reason, order of nature, morality), with two witnesses each for Premise 2 (his view can't account for it) and two verses each for Premise 3 (God does) | None | Two correct witnesses for every point, from memory (references not required) |
 | 3. Gather | Columbo step 1 (ch. 4) | "What do you mean by atheist? What's ultimately real? Where do right and wrong come from?" Questions only, five turns | Casual unbeliever; rows 1, 20 | His view restated accurately ("So everything is matter and energy…"), with no statements made |
 | 4. Burden of proof | Columbo step 2 (ch. 5) | "How did you come to that conclusion? What would count as evidence for God?" Refuse to carry the whole burden for "lack of belief" | Online atheist; rows 1, 13, 14 | Burden stays on whoever made the claim every time, and he asks for the reasons behind each main claim (not every passing remark) |
 | 5. Rescues | Professor's ploy; hot seat; narrate (ch. 6) | Philosophy student piles on rows 5, 7, 10 and 11; trainee switches to fact-finding and says "Let me think about it." Online atheist drifts to Christian wars, hell or Bible "contradictions"; trainee honors it, parks it, and returns to the one question | Philosophy student; Online atheist | No burden taken on; composure kept; back on the question within two turns |
