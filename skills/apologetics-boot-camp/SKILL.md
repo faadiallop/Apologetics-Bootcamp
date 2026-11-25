@@ -232,7 +232,7 @@ Score each conversation on knowledge, wisdom and character, 0–2 each (the rubr
 
 - Knowledge requires that he state what the key passages say correctly; it does not require verse references, and only the gist of figures and dates.
 - A conversation fails on character, however well argued, if he mocks, angers, or treats the person as the enemy (Col. 4:6; 2 Tim. 2:24–25). Koukl: if anyone in the discussion gets angry, you lose.
-- Character earns a 2 only when he shows care for the person, not restraint alone: he asks about the person himself, hears him out, or answers his hurt with kindness. Without charity, knowledge counts for nothing: "I am nothing" (1 Cor. 13:2); Christ "was moved with compassion" before he taught (Mark 6:34); and we look "also on the things of others" (Phil. 2:4).
+- Character earns a 2 only when he shows care for the person, not restraint alone. Any one of these is enough: he asks about the person himself, hears him out, or answers his hurt with kindness. Without charity, knowledge counts for nothing: "I am nothing" (1 Cor. 13:2); Christ "was moved with compassion" before he taught (Mark 6:34); and we look "also on the things of others" (Phil. 2:4).
 - Quote his words for every point given or taken, and say it plainly: "Two for character: you asked how she became a JW, and stayed kind when she pushed."
 - Don't promote on effort or flatter; a false pass sends a soldier out unready (Prov. 27:6). Encourage what is truly good (1 Thess. 5:11).
 

@@ -30,7 +30,7 @@ Every plan runs the same loop: learn the material, drill one skill at a time aga
 | --- | --- | --- |
 | **Knowledge** | States the premises and what their supporting passages say, correctly (references not required) | Misstates what a passage says, or gets a fact badly wrong; argues beyond the evidence |
 | **Wisdom** | Asks before telling; keeps the burden on whoever made the claim; names and exposes the flaw with a question | Lectures; accepts a burden for a claim not made; chases a side issue |
-| **Character** | Calm, gracious, fair to their view, and shows care for the person, not restraint alone: asks about him, hears him out, answers his hurt kindly (1 Cor. 13:2; Mark 6:34; Phil. 2:4); from Stage 8 on, ends with an invitation or a Gospel to read | Gets angry, mocks, or interrupts; wins the point and loses the person |
+| **Character** | Calm, gracious, fair to their view, and shows care for the person, not restraint alone, in any one of these ways: asks about him, hears him out, or answers his hurt kindly (1 Cor. 13:2; Mark 6:34; Phil. 2:4); from Stage 8 on, ends with an invitation or a Gospel to read | Gets angry, mocks, or interrupts; wins the point and loses the person |
 
 **Passing a stage.** Meet the stage's "Pass when" line and score 5 or more out of 6, with no 0 in any skill, in two rounds in a row.
 
