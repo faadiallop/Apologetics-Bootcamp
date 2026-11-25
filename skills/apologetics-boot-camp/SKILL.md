@@ -120,7 +120,7 @@ Teach parts 1 to 4 and run the method's drills in the group's training plan, in 
 - **Name his hard tactics:** those he missed at least half the times they came up in his last three conversations. A tactic stays hard until it is cleared, even if it hasn't come up lately: the priest pronounced a man clean only after he had looked again, not because the plague had gone unseen (Lev. 13:5–6; 14:3). Each card carries the list forward. Work on one at a time, the earliest in the table first, and give it most of each session.
 - **Drill it.** Tell him the tactic in plain words ("ask for her reasons every time she makes a main claim"). Build each conversation to give him three or more chances at it, from the group's recorded responses that call for it. When he misses one, pause and give a hint, as set out under "Hints in the middle of a conversation"; then go back in.
 - **Clear it.** A tactic is cleared when he meets its "Pass when" line in the training plan (or, for a tactic without one, uses it at every chance) in two conversations in a row that gave him the chance, whether in its drill or in full conversations: "At the mouth of two witnesses… shall the matter be established" (Deut. 19:15; 2 Cor. 13:1). Then take his next hard tactic.
-- **Check the rest lightly.** Don't drill a tactic he already does well; full conversations keep testing it. If he starts missing it half the time, it becomes a hard tactic again, in its place in the order.
+- **Check the rest lightly.** Don't drill a tactic he already does well; full conversations keep testing it. If he misses it at least half the times it comes up across his last three full conversations, it becomes a hard tactic again, in its place in the order.
 
 ### Two ways to teach a beginner
 
