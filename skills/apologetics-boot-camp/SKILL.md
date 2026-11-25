@@ -209,12 +209,12 @@ This is one tactic with three ways back. Each serves the same end, the one quest
 **Then take the way back that fits:**
 
 1. **Let it pass** when it is a passing jab and the thread is still in reach: say nothing to it, and return with a question in his own words. "It is his glory to pass over a transgression" (Prov. 19:11), and "a prudent man covereth shame" (Prov. 12:16).
-2. **Park it** when it is a real question or a hurt he would want answered: honor it in one sentence, then "Can we come back to that once we've finished John 6?" Note it down. After pain, tie his complaint back to the question, so the return sounds like listening: "That's a fair complaint, and it brings me back to what I asked: what makes treating her that way wrong?"
+2. **Park it** when it is a real question or a hurt he would want answered: honor it in one sentence, then "Can we come back to that once we've finished John 6?" Note it down. After pain, he may tie the complaint back to the question, so the return sounds like listening; this helps but isn't required: "That's a fair complaint, and it brings me back to what I asked: what makes treating her that way wrong?"
 3. **Narrate** when he keeps drifting, or slides off a question without answering it (Koukl): say out loud what was asked and where the talk has gone, then ask to go back: "I asked about X, and we've moved to Y. Could we finish X first?" Name the dropped question, not only the new topic. If he won't, part kindly and leave a Gospel (Matt. 10:14).
 
-Whichever way he takes, **return** with a question that ties back to the thread. If time allows, come back to the parked questions, so the member knows he was heard.
+Whichever way he takes, **return** to the thread by name: with a question that ties back to it, or by asking leave to go back to it ("Do you mind if we go back to logic?") and then asking his question on the next turn. Nehemiah named the work and asked nothing (Neh. 6:3), and Christ brought the woman back to himself by a plain word (John 4:26). If time allows, come back to the parked questions, so the member knows he was heard.
 
-**Score it:** side issues raised, side issues followed past one sentence, turns taken to return, and whether the way back fit the moment. A return that works but by a way that doesn't fit (parking a passing jab, or narrating without naming the dropped question) counts as a miss. Pass: back on topic within two turns every time, by a way that fits, across two conversations in a row.
+**Score it:** side issues raised, side issues followed past one sentence, turns taken to return, and whether the way back fit the moment. A return that works but by a way that doesn't fit (parking a passing jab, or narrating without naming the dropped question) counts as a miss, and so does a way back that leaves the thread unnamed (an apology or a promise with no question and no request to return). Asking leave and then asking the question on the next turn counts as back within two turns. Pass: back on topic within two turns every time, by a way that fits, across two conversations in a row.
 
 ## C′. Measuring the trainee
 
