@@ -82,7 +82,7 @@ The coach asks only what it doesn't already know: which group, whether you're a 
 | Beginner | In the order of the SOP: the gospel in your own words; background on the group (if you want it) and what it believes; the argument and its verses, then Koukl's tactics in the order of his book, with the questions that expose each flaw; their usual answers; and the bridge to Christ. Then practice in the same order, with most of the time on what you find hardest: asking questions, the rescues and staying on topic, leading, finding the flaws, and full conversations; then real conversations, each debriefed; and last, teaching someone else |
 | Not a beginner | One or two practice conversations to find what you find hardest, then drills on those in the book's order, then the field and teaching someone else |
 
-You pass each drill on its tactic and on knowledge, wisdom and character, three conversations in a row. Verse references must be exact; figures and dates need only be roughly right. A conversation fails on character, however well argued, if you mock or anger the person.
+You pass each drill on its tactic and on knowledge, wisdom and character, two conversations in a row. Verse references must be exact; figures and dates need only be roughly right. A conversation fails on character, however well argued, if you mock or anger the person.
 
 ## Editing the SOPs
 

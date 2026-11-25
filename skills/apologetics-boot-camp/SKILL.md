@@ -116,8 +116,8 @@ Then the drills in the group's training plan, in their order, and full conversat
 
 - **Mark every chance.** After each conversation, find each moment that called for a tactic in the table, and mark it a hit or a miss, with his words. Know the state of the flock (Prov. 27:23); the pastor needs "a myriad eyes to observe on every side the habit of the soul" (Chrysostom, *On the Priesthood* 2.4). Keep the counts in his log.
 - **Name his hard tactics:** those he missed at least half the times they came up in his last three conversations. A tactic stays hard until it is cleared, even if it hasn't come up lately: the priest pronounced a man clean only after he had looked again, not because the plague had gone unseen (Lev. 13:5–6; 14:3). Each card carries the list forward. Work on one at a time, the earliest in the table first, and give it most of each session.
-- **Drill it.** Tell him the tactic in plain words ("ask for her reasons every time she makes a claim"). Build each conversation to give him three or more chances at it, from the group's recorded responses that call for it. When he misses one, pause and give a hint, as set out under "Hints in the middle of a conversation"; then go back in.
-- **Clear it.** A tactic is cleared when he meets its "Pass when" line in the training plan (or, for a tactic without one, uses it at every chance) in three conversations in a row that gave him the chance, whether in its drill or in full conversations. Then take his next hard tactic.
+- **Drill it.** Tell him the tactic in plain words ("ask for her reasons every time she makes a main claim"). Build each conversation to give him three or more chances at it, from the group's recorded responses that call for it. When he misses one, pause and give a hint, as set out under "Hints in the middle of a conversation"; then go back in.
+- **Clear it.** A tactic is cleared when he meets its "Pass when" line in the training plan (or, for a tactic without one, uses it at every chance) in two conversations in a row that gave him the chance, whether in its drill or in full conversations: "At the mouth of two witnesses… shall the matter be established" (Deut. 19:15; 2 Cor. 13:1). Then take his next hard tactic.
 - **Check the rest lightly.** Don't drill a tactic he already does well; full conversations keep testing it. If he starts missing it half the time, it becomes a hard tactic again, in its place in the order.
 
 ### Two ways to teach a beginner
@@ -192,11 +192,11 @@ Christ let the Samaritan woman raise the question of the mountain, answered it b
 
 If time allows, come back to the parked questions, so the member knows he was heard.
 
-**Score it:** side issues raised, side issues followed past one sentence, and turns taken to return. Pass: back on topic within two turns every time, across three conversations.
+**Score it:** side issues raised, side issues followed past one sentence, and turns taken to return. Pass: back on topic within two turns every time, across two conversations in a row.
 
 ## C′. Measuring the trainee
 
-Score each conversation on knowledge, wisdom and character, 0–2 each (the rubric is in the Training Plans), and count the hits and chances for each tactic. He passes a drill when he meets its "Pass when" line and scores 5 or more of 6 with no 0, three conversations in a row; good scores with the drilled tactic missed are not a pass. Add the on-topic score once the asking drills begin.
+Score each conversation on knowledge, wisdom and character, 0–2 each (the rubric is in the Training Plans), and count the hits and chances for each tactic. He passes a drill when he meets its "Pass when" line and scores 5 or more of 6 with no 0, two conversations in a row; good scores with the drilled tactic missed are not a pass. Add the on-topic score once the asking drills begin.
 
 - Knowledge requires exact verse references and only the gist of figures and dates.
 - A conversation fails on character, however well argued, if he mocks, angers, or treats the person as the enemy (Col. 4:6; 2 Tim. 2:24–25). Koukl: if anyone in the discussion gets angry, you lose.
