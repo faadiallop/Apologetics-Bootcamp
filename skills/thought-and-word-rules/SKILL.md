@@ -103,6 +103,7 @@ When rules pull against each other, truth outranks form: change the structure ra
 
 ## Adding or changing a rule
 
-- Each rule is its own skill, with its working form above. When the user and you finish a new rule, save it as a skill and add its working form above, under Thought or Word, in the same save. When a rule changes, update its working form in the same save as the skill.
+- These rule skills, with apologetics-boot-camp and writing-dialogue, live in the GitHub repo faadiallop/Apologetics-Bootcamp under `skills/`, and that copy is the true one. Make every change to them as a commit to that repo, then propose the same change to the saved copy.
+- Each rule is its own skill, with its working form above. When the user and you finish a new rule, add it to the repo as a skill and add its working form above, under Thought or Word, in the same commit. When a rule changes, update its working form in the same commit as the skill.
 - A rule's own claims follow the witness rule, including the search for counter-witnesses. Test each rule against Scripture before saving it. The Psalms corrected two early drafts of the chiasm rule: one said every return must advance (Ps. 67:3, 5 repeat word for word), and one required a center (Ps. 1:6 and 19:1 have none).
 - Don't agree with a proposed change before testing it. Check the witnesses first, then answer.
