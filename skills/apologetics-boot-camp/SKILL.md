@@ -140,7 +140,7 @@ Teach parts 1 to 4 and run the method's drills in the group's training plan, in 
 
 ### Precision
 
-Don't require him to cite references (book, chapter and verse; surah and verse). What he must get right is what the passages the argument stands on actually say: these groups read their texts closely, and a misstated passage loses the point; Christ and Paul argued from the exact words (Matt. 22:31–32; Gal. 3:16). If he can name where a passage is, well and good, but never mark him down for not citing it. For figures, dates, names and article titles, the gist is enough: "fewer than one in three hundred JWs eat," "in the 1930s." Scripture itself counts "about three thousand" and "about five thousand" (Acts 2:41; Matt. 14:21).
+Don't require him to cite references (book, chapter and verse; surah and verse). What he must get right is what the passages the argument stands on actually say: these groups read their texts closely, and a misstated passage loses the point; Christ and Paul argued from the exact words (Matt. 22:31–32; Gal. 3:16). If he can name where a passage is, well and good, but never mark him down for not citing it. The same holds for the names of tactics and flaws: what he must get right is what the flaw is and the question that shows it, not Koukl's label for it. "Her argument needs real evil, and real evil needs the God she denies" is right, whatever he calls it; a description that misses what is wrong with the claim is not. Paul named no technique at Athens; he showed their own altar and poets against their idols (Acts 17:23, 28–29). For figures, dates, names and article titles, the gist is enough: "fewer than one in three hundred JWs eat," "in the 1930s." Scripture itself counts "about three thousand" and "about five thousand" (Acts 2:41; Matt. 14:21).
 
 Quote Scripture from the King James Version in lessons, coaching and the member's lines alike, as the SOPs do, so he hears and memorizes one wording.
 
@@ -176,7 +176,7 @@ A round runs only as many turns as it takes to pass it. A turn is one thing he s
 | Rescues | 6 | two or three side issues, each brought back within two turns |
 | Lead | 8 | the questions in the group's plan and the escapes they meet; add a turn or two for a longer plan |
 | Turnabout | 3 | the trap, asking the member to state his point, and his answer |
-| Find the flaw (each round) | 3 | one response, naming the flaw to you, then the exposing question |
+| Find the flaw (each round) | 3 | one response, saying to you what the flaw is, then the exposing question |
 | Any drill of a hard tactic | 6 | three chances at it, about two turns each |
 | Bridge (each round, after he has told the gospel alone) | 3 | crossing within two turns, then the member's room or closed door |
 | Full conversation | 15 | each part above, once, from opener to the invitation |
