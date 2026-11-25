@@ -92,7 +92,8 @@ Hold fast that which is good (1 Thess. 5:21), and test every teacher by the Word
 | --- | --- | --- |
 | Step 1, gather: "What do you mean by that?" (4) | uses a loaded word or states his view loosely | answering before he understands (Prov. 18:13); restating the view in words that aren't the member's |
 | Step 2, burden of proof: "How did you come to that conclusion?" (5) | makes a claim | arguing against it himself, or a soft "Are you sure?" that asks for no reasons |
-| The rescues (6): the professor's ploy, the hot seat, narrating | shifts the burden onto him, outclasses him, or slides off the question | taking up a burden he never claimed; bluffing or giving up instead of fact-finding and "Let me think about it"; following the side issue |
+| The rescues (6): the professor's ploy, the hot seat | shifts the burden onto him, or outclasses him | taking up a burden he never claimed; bluffing or giving up instead of fact-finding and "Let me think about it" |
+| Staying on topic (6): let it pass, park it, or narrate | raises a side issue, or slides off the question | following the side issue; a way back that doesn't fit the moment (parking a passing jab, or a narration that doesn't name the dropped question) |
 | Step 3, questions that make the point (7) | has stated his view and his reasons | making the point as a statement; a question that leaves the member room; never reaching the question that exposes the flaw; breaking the silence after it |
 | Turnabout (9) | leads him with questions, or makes a claim in the form of a question | answering the trap instead of asking the member to state his point |
 | The flaws (10–13): Suicide, Practical Suicide, Sibling Rivalry, Infanticide, Taking the Roof Off | says what refutes itself or can't be lived out, holds two claims that contradict each other or one that depends on what it denies, or holds a view that ends in absurdity when followed through | not seeing it in time; naming it as a charge ("That's a contradiction") instead of asking the question that shows it |
@@ -201,17 +202,19 @@ Christ let the Samaritan woman raise the question of the mountain, answered it b
 
 **As the member, throw in side issues** taken from the group's material: the ones it says to avoid, and the recorded responses that change the subject, such as the Trinity, the 144,000, Matthew 24, hadith, or Christian persecution. Once the asking drills begin, one a conversation; in the rescue drills, two or three, at least one emotional ("Christians killed my people").
 
-**The trainee's five moves:**
+This is one tactic with three ways back. Each serves the same end, the one question, and the skill is choosing the way that fits the moment.
 
-1. **Notice** whether it leads toward the one question or away from it.
-2. **Honor** it in one sentence; it is often a real question.
-3. **Park** it: "Can we come back to that once we've finished John 6?" Note it down.
-4. **Return** with a question that ties back to the thread.
-5. **Narrate** if the member drifts again (Koukl): "I asked about X, and we've moved to Y. Could we finish X first?" If he won't, part kindly and leave a Gospel (Matt. 10:14).
+**First, notice** whether what he said leads toward the one question or away from it. If it leads toward it, follow it.
 
-If time allows, come back to the parked questions, so the member knows he was heard.
+**Then take the way back that fits:**
 
-**Score it:** side issues raised, side issues followed past one sentence, and turns taken to return. Pass: back on topic within two turns every time, across two conversations in a row.
+1. **Let it pass** when it is a passing jab and the thread is still in reach: say nothing to it, and return with a question in his own words. "It is his glory to pass over a transgression" (Prov. 19:11), and "a prudent man covereth shame" (Prov. 12:16).
+2. **Park it** when it is a real question or a hurt he would want answered: honor it in one sentence, then "Can we come back to that once we've finished John 6?" Note it down. After pain, tie his complaint back to the question, so the return sounds like listening: "That's a fair complaint, and it brings me back to what I asked: what makes treating her that way wrong?"
+3. **Narrate** when he keeps drifting, or slides off a question without answering it (Koukl): say out loud what was asked and where the talk has gone, then ask to go back: "I asked about X, and we've moved to Y. Could we finish X first?" Name the dropped question, not only the new topic. If he won't, part kindly and leave a Gospel (Matt. 10:14).
+
+Whichever way he takes, **return** with a question that ties back to the thread. If time allows, come back to the parked questions, so the member knows he was heard.
+
+**Score it:** side issues raised, side issues followed past one sentence, turns taken to return, and whether the way back fit the moment. A return that works but by a way that doesn't fit (parking a passing jab, or narrating without naming the dropped question) counts as a miss. Pass: back on topic within two turns every time, by a way that fits, across two conversations in a row.
 
 ## C′. Measuring the trainee
 
