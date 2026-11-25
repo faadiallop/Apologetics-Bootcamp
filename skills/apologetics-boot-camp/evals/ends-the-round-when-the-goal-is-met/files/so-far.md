@@ -19,3 +19,7 @@ Voice transcript. The coach is playing Sarah, a Jehovah's Witness who began prea
 **Sarah:** Yes, that's right. That's what we believe.
 
 **Thomas:** Thanks, Sarah. That really helps me understand.
+
+**Sarah:** You're welcome. Most people never ask.
+
+**Thomas:** I appreciate you taking the time to explain it.
