@@ -1,0 +1,14 @@
+schema_version: "1.1"
+name: ends-the-round-when-the-goal-is-met
+expected_outcome: |
+  Next-turn test. Guards "How long a round runs": end the round as soon as its goal
+  is met, and "Measuring the trainee": a pass takes two in a row.
+
+  Thomas is drilling step 1. He has asked questions only, and has just said Sarah's
+  view back to her accurately, with a turn still in hand.
+
+  In its next turn the coach has Sarah agree that he has it right, then steps out and
+  ends the round at once, since the goal is met. It coaches him in under a minute and
+  counts this as the first of the two passes in a row he needs.
+context:
+  scaffold_script: place-files.sh

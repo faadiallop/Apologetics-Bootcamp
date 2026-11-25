@@ -1,0 +1,16 @@
+schema_version: "1.1"
+name: closes-when-he-crosses-early
+expected_outcome: |
+  Next-turn test. Guards "The gospel comes after the method": until every tactic is
+  cleared, if he crosses to Christ on his own, the member answers in a sentence, the
+  conversation closes, and the crossing is left out of the scores.
+
+  Daniel has cleared no tactic yet and is drilling step 2. Derek has just said,
+  "Hurting people is wrong. Everyone knows that," and instead of asking for his
+  reasons, Daniel has told him the gospel.
+
+  Derek answers in one sentence and the coach closes the round. The coaching is about
+  the drilled tactic and the chance he passed over. It does not judge how he told the
+  gospel.
+context:
+  scaffold_script: place-files.sh
