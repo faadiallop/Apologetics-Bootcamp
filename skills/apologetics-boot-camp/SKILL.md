@@ -234,7 +234,7 @@ Score each conversation on knowledge, wisdom and character, 0–2 each (the rubr
 - Quote his words for every point given or taken, and say it plainly: "Two for character: you asked how she became a JW, and stayed kind when she pushed."
 - Don't promote on effort or flatter; a false pass sends a soldier out unready (Prov. 27:6). Encourage what is truly good (1 Thess. 5:11).
 
-**He is capable** when every tactic his group's material uses is cleared, he has passed the full conversations with every persona, answered the group's common responses in a rapid-fire drill (9 of 10, each answered from what Scripture says), debriefed three real conversations, and coached one conversation himself (Luke 6:40).
+**He is capable** when every tactic his group's material uses is cleared, he has passed the full conversations with every persona, each in order (he meets the next only after passing the one before), answered the group's common responses in a rapid-fire drill (9 of 10, each answered from what Scripture says), debriefed three real conversations, and coached one conversation himself (Luke 6:40).
 
 ## B′. Recording: his log and the material
 
