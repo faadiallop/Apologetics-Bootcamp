@@ -1,0 +1,69 @@
+name: Fetch transcript
+
+# Downloads the English captions of one YouTube video and keeps the cleaned
+# text as a workflow artifact for three days. The repo is public, so the
+# transcript is never committed.
+
+on:
+  workflow_dispatch:
+    inputs:
+      video:
+        description: "YouTube video ID or link"
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Get the video ID
+        id: id
+        env:
+          VIDEO: ${{ inputs.video }}
+        run: |
+          python - <<'PY' >> "$GITHUB_OUTPUT"
+          import os, re, sys
+          v = os.environ["VIDEO"].strip()
+          m = re.search(r"(?:v=|youtu\.be/|shorts/|embed/)([A-Za-z0-9_-]{11})", v) \
+              or re.fullmatch(r"([A-Za-z0-9_-]{11})", v)
+          if not m:
+              sys.exit("Not a YouTube video ID or link")
+          print(f"vid={m.group(1)}")
+          PY
+
+      - name: Install yt-dlp
+        run: pip install --upgrade yt-dlp
+
+      - name: Download captions
+        env:
+          VID: ${{ steps.id.outputs.vid }}
+        run: |
+          mkdir -p captions
+          yt-dlp --skip-download --write-subs --write-auto-subs \
+            --sub-langs "en.*" --sub-format vtt \
+            -o "captions/%(id)s" "https://www.youtube.com/watch?v=${VID}"
+          ls captions
+          ls captions/*.vtt >/dev/null 2>&1 || { echo "No English captions found"; exit 1; }
+
+      - name: Clean captions
+        env:
+          VID: ${{ steps.id.outputs.vid }}
+        run: |
+          f=$(ls captions/*.vtt | head -n 1)
+          python .github/scripts/clean_vtt.py "$f" "transcript-${VID}.txt"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: transcript-${{ steps.id.outputs.vid }}
+          path: transcript-${{ steps.id.outputs.vid }}.txt
+          retention-days: 3
