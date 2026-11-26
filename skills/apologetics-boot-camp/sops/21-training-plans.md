@@ -18,7 +18,7 @@ Every plan runs the same loop: learn the material, drill one skill at a time aga
 
 1. The coach names the stage, the persona and the goal.
 2. The opponent opens with a response from the bank.
-3. The trainee and opponent talk only as many turns as it takes to pass the round, about the number estimated for the stage (four for Gather, about fifteen for a full conversation; the boot camp skill gives the rest). The round ends as soon as its goal is met or its turns run out, once the trainee has had up to two closing turns, unannounced: in every round but Stage 8 and the full conversations, the trainee may point to Christ in a sentence, and once he does, the opponent answers in a sentence and the round closes. The closing turns are not among the round's turns and are never scored, and a pass never waits on them, but each time he lets both pass, or takes them without naming Christ, the coach reminds him in a sentence that this was the moment to point to Christ (Matt. 10:7; Acts 8:35; Acts 17:18; 1 Cor. 2:2).
+3. The trainee and opponent talk only as many turns as it takes to pass the round, about the number estimated for the stage (four for Gather, about fifteen for a full conversation; the boot camp skill gives the rest). The round ends as soon as its goal is met or its turns run out, once the trainee has had up to two closing turns, unannounced: in every round but Stage 9 and the full conversations, the trainee may point to Christ in a sentence, and once he does, the opponent answers in a sentence and the round closes. The closing turns are not among the round's turns and are never scored, and a pass never waits on them, but each time he lets both pass, or takes them without naming Christ, the coach reminds him in a sentence that this was the moment to point to Christ (Matt. 10:7; Acts 8:35; Acts 17:18; 1 Cor. 2:2).
 4. The coach scores the round on the rubric below, quoting the turns that earned or lost each point, and counts the chances and hits for each tactic that came up.
 5. The trainee writes one thing to do differently, and adds any new challenge to the Response Bank.
 
@@ -30,7 +30,7 @@ Every plan runs the same loop: learn the material, drill one skill at a time aga
 | --- | --- | --- |
 | **Knowledge** | States the premises and what their supporting passages say, correctly (references not required) | Misstates what a passage says, or gets a fact badly wrong; argues beyond the evidence |
 | **Wisdom** | Asks before telling; keeps the burden on whoever made the claim; names and exposes the flaw with a question | Lectures; accepts a burden for a claim not made; chases a side issue |
-| **Character** | Calm, gracious, fair to their view, and shows care for the person, not restraint alone, in any one of these ways: asks about him, hears him out, or answers his hurt kindly (1 Cor. 13:2; Mark 6:34; Phil. 2:4); from Stage 8 on, ends with an invitation or a Gospel to read | Gets angry, mocks, or interrupts; wins the point and loses the person |
+| **Character** | Calm, gracious, fair to their view, and shows care for the person, not restraint alone, in any one of these ways: asks about him, hears him out, or answers his hurt kindly (1 Cor. 13:2; Mark 6:34; Phil. 2:4); from Stage 9 on, ends with an invitation or a Gospel to read | Gets angry, mocks, or interrupts; wins the point and loses the person |
 
 **Passing a stage.** Meet the stage's "Pass when" line and score 5 or more out of 6, with no 0 in any skill, in two rounds in a row; Stage 6, Lead (Columbo step 3), takes three rounds in a row.
 
