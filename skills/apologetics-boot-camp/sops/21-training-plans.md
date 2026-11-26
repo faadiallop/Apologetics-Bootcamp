@@ -32,7 +32,7 @@ Every plan runs the same loop: learn the material, drill one skill at a time aga
 | **Wisdom** | Asks before telling; keeps the burden on whoever made the claim; names and exposes the flaw with a question | Lectures; accepts a burden for a claim not made; chases a side issue |
 | **Character** | Calm, gracious, fair to their view, and shows care for the person, not restraint alone, in any one of these ways: asks about him, hears him out, or answers his hurt kindly (1 Cor. 13:2; Mark 6:34; Phil. 2:4); from Stage 8 on, ends with an invitation or a Gospel to read | Gets angry, mocks, or interrupts; wins the point and loses the person |
 
-**Passing a stage.** Meet the stage's "Pass when" line and score 5 or more out of 6, with no 0 in any skill, in two rounds in a row.
+**Passing a stage.** Meet the stage's "Pass when" line and score 5 or more out of 6, with no 0 in any skill, in two rounds in a row; Stage 6, Lead (Columbo step 3), takes three rounds in a row.
 
 **Ground rule for every round.** The goal is a stone in the shoe, not a knockout (1 Cor. 3:6–7). A round where the trainee "wins" but scores 0 on character fails.
 
