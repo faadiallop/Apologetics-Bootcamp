@@ -1,6 +1,6 @@
 # Improvement loop journal
 
-The record of the twice-weekly runs that test the boot camp skill against the measure and make at most one improvement. Each run reads this first; it has no other memory of earlier runs. Newest entry at the bottom.
+The record of the weekly runs that test the boot camp skill against the measure and make at most one improvement. Each run reads this first; it has no other memory of earlier runs. Newest entry at the bottom.
 
 ## 2026-11-25: first run (baseline, no change)
 
