@@ -100,3 +100,13 @@ Two changes, made after reviewing Anthropic's guidance on writing skills (keep S
 
 No conversation test was run on these changes. The next run's baseline is the first on this layout, and the first on main since the changes of Nov 25.
 
+
+## 2026-11-26: author's changes to the Gather pass line and to role-play voice (made by hand, not by the loop)
+
+Faa made two changes on Nov 26, 2026. Neither was tested by a conversation test.
+
+**The Gather pass line (Columbo step 1).** Stage 3 of all four training plans now passes on "Enough questions to pin down the view; no statements; its core restated in his own words and confirmed by him." Before, the Islam plan asked for three or more questions and the other three for a view "restated accurately." No fixed count of questions, and the restatement need not cover every detail, but it must keep the core claim that will be pressed later; if that is left out, the conversation tends to drift from the point it has to reach. The member's own "yes" is the test. Grounds: Prov. 18:13 ("He that answereth a matter before he heareth it, it is folly and shame unto him"), and Peterson, *12 Rules for Life*, rule 9 (restate his view until he says, in effect, "Yes, that's what I believe"). SKILL.md's turn table gives the Gather reason to match: "questions enough to pin down the view, then restating its core." Stamp now `7a5acc0e`.
+
+**No name before the member's lines in role-play.** SKILL.md, under "Play the member as real people talk": name him once when setting up the conversation, then give each turn as his words alone, with no "Khalid:" label, since a name before every line breaks the scene; after a time out, "Back to Khalid" is enough. This went in with `b895c8a`, before this entry; it is recorded here.
+
+**Script checks after the changes:** all pass except `saved-skills`, which differs until the author saves the proposed update to his saved boot camp skill.

@@ -9,7 +9,7 @@ description: "Use for the apologetics boot camp (bootcamp), apologetics training
 
 This skill trains a Christian to lead members of one group out of its error to Christ, and then to train others. A beginner is taught before he is tested; anyone else goes straight into spoken practice conversations. Either way, the practice goes to the parts of Koukl's method he finds hardest, taken in the order of the SOP and of the book. Apply the user's thought-and-word rules in everything you say as coach.
 
-**Always use the GitHub copy.** The true copy of this skill and its materials is the `skills/apologetics-boot-camp/` folder of the GitHub repo faadiallop/Apologetics-Bootcamp, branch `main`. This copy's stamp is `89770646`. Before anything else, fetch https://raw.githubusercontent.com/faadiallop/Apologetics-Bootcamp/main/skills/apologetics-boot-camp/VERSION, a single line that holds the true copy's stamp. If the two stamps match, this text is current: go on, and don't fetch SKILL.md. If they differ, or VERSION can't be read, fetch https://raw.githubusercontent.com/faadiallop/Apologetics-Bootcamp/main/skills/apologetics-boot-camp/SKILL.md and follow it instead (a copy just fetched from GitHub is current). If neither can be read, go on with this text and tell the user it may be out of date. Never use a local or synced copy of the `sops/` folder, even if one is present.
+**Always use the GitHub copy.** The true copy of this skill and its materials is the `skills/apologetics-boot-camp/` folder of the GitHub repo faadiallop/Apologetics-Bootcamp, branch `main`. This copy's stamp is `7a5acc0e`. Before anything else, fetch https://raw.githubusercontent.com/faadiallop/Apologetics-Bootcamp/main/skills/apologetics-boot-camp/VERSION, a single line that holds the true copy's stamp. If the two stamps match, this text is current: go on, and don't fetch SKILL.md. If they differ, or VERSION can't be read, fetch https://raw.githubusercontent.com/faadiallop/Apologetics-Bootcamp/main/skills/apologetics-boot-camp/SKILL.md and follow it instead (a copy just fetched from GitHub is current). If neither can be read, go on with this text and tell the user it may be out of date. Never use a local or synced copy of the `sops/` folder, even if one is present.
 
 ## A. Why we train
 
@@ -171,7 +171,7 @@ A round runs only as many turns as it takes to pass it. A turn is one thing he s
 | Part | About | Why that many |
 | --- | --- | --- |
 | First conversation, for one who is not a beginner | 10 | a chance at each of several tactics |
-| Gather | 4 | three questions, then restating the member's view |
+| Gather | 4 | questions enough to pin down the view, then restating its core |
 | Burden of proof | 5 | three main claims to ask reasons for, and an escape or two |
 | Rescues | 6 | two or three side issues, each brought back within two turns |
 | Lead | 8 | the questions in the group's plan and the escapes they meet; add a turn or two for a longer plan |
