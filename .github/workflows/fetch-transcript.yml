@@ -1,8 +1,9 @@
 name: Fetch transcript
 
-# Downloads the English captions of one YouTube video and keeps the cleaned
-# text as a workflow artifact for three days. The repo is public, so the
-# transcript is never committed.
+# Gets one YouTube video's transcript through a free transcript site, using a
+# headless browser (YouTube refuses direct downloads from GitHub's servers).
+# The text is kept as a workflow artifact for three days and never committed:
+# the repo is public.
 
 on:
   workflow_dispatch:
@@ -41,29 +42,25 @@ jobs:
           print(f"vid={m.group(1)}")
           PY
 
-      - name: Install yt-dlp
-        run: pip install --upgrade yt-dlp
+      - name: Install browser
+        run: pip install playwright && playwright install --with-deps chromium
 
-      - name: Download captions
+      - name: Fetch transcript
         env:
           VID: ${{ steps.id.outputs.vid }}
-        run: |
-          mkdir -p captions
-          yt-dlp --skip-download --write-subs --write-auto-subs \
-            --sub-langs "en.*" --sub-format vtt \
-            -o "captions/%(id)s" "https://www.youtube.com/watch?v=${VID}"
-          ls captions
-          ls captions/*.vtt >/dev/null 2>&1 || { echo "No English captions found"; exit 1; }
-
-      - name: Clean captions
-        env:
-          VID: ${{ steps.id.outputs.vid }}
-        run: |
-          f=$(ls captions/*.vtt | head -n 1)
-          python .github/scripts/clean_vtt.py "$f" "transcript-${VID}.txt"
+        run: python .github/scripts/fetch_transcript.py "transcript-${VID}.txt"
 
       - uses: actions/upload-artifact@v4
+        if: success()
         with:
           name: transcript-${{ steps.id.outputs.vid }}
           path: transcript-${{ steps.id.outputs.vid }}.txt
+          retention-days: 3
+
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: failure-screenshot
+          path: failure.png
+          if-no-files-found: ignore
           retention-days: 3
