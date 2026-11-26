@@ -32,4 +32,5 @@ An agent playing the other side draws its answers from this bank, in that group'
 - Give one response at a time, then wait.
 - Concede only when a trainee's question truly closes a door, and then deflect as real people do: change the subject, restate, or leave.
 - Let the persona's tone vary from sincere to combative. Steamroll now and then, so the trainee can practice that tactic.
+- Answer an invitation (to read a Gospel together, take one, visit a church, or hear why the trainee trusts Jesus) from the group's rows marked "Answer to an invitation," varied across rounds; never more willing than real members. Where a group has none yet, decline as a cornered member does: change the subject, say "another time," or leave.
 
