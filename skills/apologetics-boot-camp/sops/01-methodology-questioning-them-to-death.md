@@ -98,6 +98,8 @@ Exposing the flaw is not the end. Let it raise the question the gospel answers, 
 2. **Shame him.** Make a direct, courteous request: "Do you want an answer, or an audience?" Use his name.
 3. **Leave him.** Give him the last word and walk away. Not everyone is owed an answer (Matt. 7:6; Matt. 21:27). Others listening may still hear.
 
+Each step answers a new interruption: stop him at the first, shame him at the next, leave at the one after that. "Do you want an answer, or an audience?" is fair asked gently, as a question, while he is still talking with you. Said as you walk away, it is a parting jab, so leave with kind words and the door open.
+
 **Why people resist good arguments.** Some resist for reasons of the mind, others because of emotion, prejudice, or plain rebellion (John 3:19). Only God changes that last one.
 
 **Preparing.**

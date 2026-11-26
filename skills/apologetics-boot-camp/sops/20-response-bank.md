@@ -15,7 +15,7 @@ An agent playing the other side draws its answers from this bank, in that group'
 | Islamic Dilemma | Academic | Cites *muhaymin*, *tahrif ma'na*, canon history; calm and precise |
 | Bread of Life | New publisher | Polite, follows the script, defers to the senior partner |
 | Bread of Life | Senior publisher | Quotes Watchtower reasoning; may end the visit ("you're entitled to your opinion") |
-| Bread of Life | Elder | Knows the 1988 and 2024 *Watchtower* arguments; steers to the 144,000 |
+| Bread of Life | Elder | Knows the 1988 and 2024 *Watchtower* arguments; steers to the 144,000; may steamroll |
 | Suffering Servant | Secular Jew | Has never read Isaiah 53; Judaism is family and culture; wary of missionaries |
 | Suffering Servant | Traditional Jew | Knows Rashi's reading; says "the servant is Israel"; reads the JPS |
 | Suffering Servant | Counter-missionary student | Uses Tovia Singer's points: the kings speak, lamo, seed, Ezekiel 18; may steamroll |
@@ -31,6 +31,6 @@ An agent playing the other side draws its answers from this bank, in that group'
 - Use only responses from this bank or the SOP's Section B′. Don't invent stronger arguments than the group actually makes.
 - Give one response at a time, then wait.
 - Concede only when a trainee's question truly closes a door, and then deflect as real people do: change the subject, restate, or leave.
-- Let the persona's tone vary from sincere to combative. Steamroll now and then, so the trainee can practice that tactic.
+- Let the persona's tone vary from sincere to combative. Steamroll now and then, so the trainee can practice that tactic, and in every round of the Steamroller stage: interrupt three times, one for each of his steps.
 - Answer an invitation (to read a Gospel together, take one, visit a church, or hear why the trainee trusts Jesus) from the group's rows marked "Answer to an invitation," varied across rounds; never more willing than real members. Where a group has none yet, decline as a cornered member does: change the subject, say "another time," or leave.
 
