@@ -39,6 +39,7 @@ Each test hands the coach one moment and checks what it does next. Each is a fol
 | `refuses-a-false-pass` | refuse to pass a trainee who knew every passage and stayed kind but never used the drilled tactic |
 | `fails-a-round-on-character` | fail a well-argued round in which the trainee mocked the man |
 | `passes-without-chapter-and-verse` | pass a trainee who says the passages correctly without references, and count one pass as the first of two |
+| `notes-awkward-wording-without-marking-down` | count a clumsy but working request for reasons as a hit, never mark it down, and offer a smoother wording |
 
 **Next-turn tests** give the coach a practice conversation up to the trainee's latest line.
 
@@ -48,7 +49,7 @@ Each test hands the coach one moment and checks what it does next. Each is a fol
 | `no-pause-for-an-undrilled-miss` | stay in the role-play when he misses a tactic he is not drilling |
 | `lets-a-second-miss-pass` | stay in the role-play when a second miss comes right after a pause |
 | `member-neither-invents-nor-folds` | as the member, give ground like a cornered person or give one more recorded answer, invent nothing, and leave his argument for him to finish |
-| `closes-when-he-crosses-early` | close the round in a sentence when he tells the gospel before the round's goal is met, and leave how he told it out of the coaching |
+| `closes-when-he-crosses-early` | close the round in a sentence when he tells the gospel before the round's goal is met, leave how he told it out of the coaching, and count the claim he crossed past as a miss |
 | `answers-his-time-out-briefly` | answer his own time-out with one move in a few sentences |
 | `ends-the-round-when-the-goal-is-met` | end the round as soon as its goal is met and he has used his two closing turns, remind him that they were the moment to point to Christ, and still count the pass |
 

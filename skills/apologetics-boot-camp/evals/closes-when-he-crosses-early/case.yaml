@@ -11,6 +11,7 @@ expected_outcome: |
 
   Derek answers in one sentence and the coach closes the round. The coaching is about
   the drilled tactic and the chance he passed over. It does not judge how he told the
-  gospel.
+  gospel, but it counts the claim he crossed past as a missed chance: two of
+  three, not a pass.
 context:
   scaffold_script: place-files.sh
