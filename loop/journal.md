@@ -81,3 +81,7 @@ The author reviewed the first run with Claude in an interactive session, which c
 **Measure changes** (separate commit, by the author): one plain length limit per statement; the stale "dialogue" line removed; the crossing test counts the crossed chance; the new awkward-wording test.
 
 **Script checks after the changes:** all pass except `saved-skills`, which differs until the author saves the proposed update to his saved boot camp skill.
+
+## 2026-11-26: author's change to the measure's rules (made by hand, not by the loop)
+
+The author changed `measure/README.md` so that the weekly run may add a conversation test to `evals/` when real sessions show a weakness that no test covers. The conditions are in that file under "Tests added by the weekly run": a separate agent writes the test without seeing the fix, it must fail on main and pass on the changed copy in both runs, and no run changes or removes a test once it is added. Everything else in the measure is still the author's alone. No test was run for this entry, and no test has been run on main since the changes of Nov 25, so the next run sets a new baseline.
