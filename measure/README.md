@@ -40,6 +40,7 @@ Each test hands the coach one moment and checks what it does next. Each is a fol
 | `fails-a-round-on-character` | fail a well-argued round in which the trainee mocked the man |
 | `passes-without-chapter-and-verse` | pass a trainee who says the passages correctly without references, and count one pass as the first of two |
 | `notes-awkward-wording-without-marking-down` | count a clumsy but working request for reasons as a hit, never mark it down, and offer a smoother wording |
+| `notes-a-clumsy-way-back-without-marking-down` | the same for a clumsy but working way back to the topic, so the note is tested beyond requests for reasons |
 
 **Next-turn tests** give the coach a practice conversation up to the trainee's latest line.
 
