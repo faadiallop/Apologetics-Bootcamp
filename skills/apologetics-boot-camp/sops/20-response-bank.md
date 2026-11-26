@@ -85,6 +85,7 @@ An agent playing the other side draws its answers from this bank, in that group'
 | 13 | "Revelation 7 and 14 say 144,000." | Watchtower teaching generally | Don't debate the number. Return to who Jesus told to eat (Matt. 26:27). |
 | 14 | "You're entitled to your opinion, and we're entitled to ours." (They leave.) | Koukl, *Tactics*, ch. 14 | "We can't both be right." Then let them go with a Gospel of John (Steamroller step 3). |
 | 15 | "Drinking the cup means you're determined to suffer with Jesus till death (Mark 10:39). That's for the anointed." | The Watchtower, Feb. 15, 1952 (wol.jw.org) | Every disciple is called to take up his cross daily (Luke 9:23), and all who live godly lives will suffer (2 Tim. 3:12). "Which disciple is exempt?" (Taking the Roof Off) |
+| 16 | Of the great crowd of Rev. 7:9: they stand *before* the throne, not in heaven. "If you're standing before McDonald's, right, that means you're not in it." | An inactive Witness on a Christian host's livestream, undated, in substance ([~39:47](https://www.youtube.com/watch?v=FmiVGmBDqOQ&t=2387s)). Seen once | Rev. 7:15 says they "serve him day and night in his temple," and Rev. 11:19 says "the temple of God was opened in heaven." Rev. 19:1 hears "a great voice of much people in heaven." But don't stay on where they will live (SOP pitfall); return to whom Jesus told to drink (Matt. 26:27). (Just the Facts; Staying on topic) |
 
 ## The Suffering Servant: Jewish responses
 
