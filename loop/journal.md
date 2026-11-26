@@ -85,3 +85,18 @@ The author reviewed the first run with Claude in an interactive session, which c
 ## 2026-11-26: author's change to the measure's rules (made by hand, not by the loop)
 
 The author changed `measure/README.md` so that the weekly run may add a conversation test to `evals/` when real sessions show a weakness that no test covers. The conditions are in that file under "Tests added by the weekly run": a separate agent writes the test without seeing the fix, it must fail on main and pass on the changed copy in both runs, and no run changes or removes a test once it is added. Everything else in the measure is still the author's alone. No test was run for this entry, and no test has been run on main since the changes of Nov 25, so the next run sets a new baseline.
+
+## 2026-11-26: author's changes to cut what a session loads (made by hand, not by the loop)
+
+Two changes, made after reviewing Anthropic's guidance on writing skills (keep SKILL.md lean; load only what the task needs). Neither changes what the coach is told to do in a round.
+
+**The response bank and the training plans are split by group.** `sops/20-response-bank.md` now holds only what every group shares (the personas and the rules for playing a member), and each group's responses are in a file of their own, named after its SOP: `20-response-bank-islam.md`, `-jehovahs-witnesses.md`, `-jewish-people.md`, `-atheism.md`. The training plans are split the same way. No text changed: joined in that order, the files are identical to the old ones. A session now loads its own group's files and no other's, where before it loaded all four. Row numbers are unchanged.
+
+**SKILL.md carries a stamp.** The coach used to fetch the whole of SKILL.md from GitHub at the start of every session to compare it with the saved copy. Now it fetches `skills/apologetics-boot-camp/VERSION`, one line, and fetches SKILL.md only if the stamps differ. After any change to SKILL.md, `python3 measure/checks.py --stamp` sets the stamp in both files, and the new `skill-stamp` check fails if they fall behind.
+
+**Measure changes** (separate commit): `checks.py` reads the split files as one text, and has the `skill-stamp` check and the `--stamp` flag.
+
+**Script checks after the changes:** all pass except `saved-skills`, which differs until the author saves the proposed update to his saved boot camp skill.
+
+No conversation test was run on these changes. The next run's baseline is the first on this layout, and the first on main since the changes of Nov 25.
+
