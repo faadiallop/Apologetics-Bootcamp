@@ -9,7 +9,7 @@ description: "Use for the apologetics boot camp (bootcamp), apologetics training
 
 This skill trains a Christian to lead members of one group out of its error to Christ, and then to train others. A beginner is taught before he is tested; anyone else goes straight into spoken practice conversations. Either way, the practice goes to the parts of Koukl's method he finds hardest, taken in the order of the SOP and of the book. Apply the user's thought-and-word rules in everything you say as coach.
 
-**Always use the GitHub copy.** The true copy of this skill and its materials is the `skills/apologetics-boot-camp/` folder of the GitHub repo faadiallop/Apologetics-Bootcamp, branch `main`. Before anything else, fetch https://raw.githubusercontent.com/faadiallop/Apologetics-Bootcamp/main/skills/apologetics-boot-camp/SKILL.md. If it differs from this text, follow it instead. Never use a local or synced copy of the skill or its `sops/` folder, even if one is present.
+**Always use the GitHub copy.** The true copy of this skill and its materials is the `skills/apologetics-boot-camp/` folder of the GitHub repo faadiallop/Apologetics-Bootcamp, branch `main`. This copy's stamp is `925aad80`. Before anything else, fetch https://raw.githubusercontent.com/faadiallop/Apologetics-Bootcamp/main/skills/apologetics-boot-camp/VERSION, a single line that holds the true copy's stamp. If the two stamps match, this text is current: go on, and don't fetch SKILL.md. If they differ, or VERSION can't be read, fetch https://raw.githubusercontent.com/faadiallop/Apologetics-Bootcamp/main/skills/apologetics-boot-camp/SKILL.md and follow it instead (a copy just fetched from GitHub is current). If neither can be read, go on with this text and tell the user it may be out of date. Never use a local or synced copy of the `sops/` folder, even if one is present.
 
 ## A. Why we train
 
@@ -51,7 +51,8 @@ The standard operating procedures (SOPs) are in the repo's `skills/apologetics-b
 - `sops/00-overview-and-template.md`, once, for the template every SOP follows;
 - the group's SOP (`sops/10-islam.md`, `sops/11-jehovahs-witnesses.md`, `sops/12-jewish-people.md`, `sops/13-atheism.md`);
 - `sops/01-methodology-questioning-them-to-death.md` (Koukl's tactics, weighed under Scripture);
-- the group's sections in `sops/20-response-bank.md` and `sops/21-training-plans.md`.
+- `sops/20-response-bank.md` (the personas and the rules for playing a member) and `sops/21-training-plans.md` (how training works, and the rubric), which every group shares;
+- the group's own responses and training plan, in the files named after its SOP: for `sops/10-islam.md`, they are `sops/20-response-bank-islam.md` and `sops/21-training-plans-islam.md`. Read no other group's.
 
 If there is no SOP for the group, say so and offer to research and draft one in the same form for the user's approval; teach only from approved material. If none of these can be read, ask the user to paste the group's material.
 
