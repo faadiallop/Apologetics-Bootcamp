@@ -40,10 +40,9 @@ A trainee new to this group hears this first, in plain words and a minute or two
 - **Why this approach rather than others** for this group, from the reasons in the group's material.
 - **What will happen:** short lessons (for a beginner), practice conversations in which you play a member of the group, quick coaching after each; once the method is sure, the gospel and how to cross to it; then real conversations, and at the end he teaches someone else. Most of the practice goes to the parts of the method he finds hardest, taken in the order Koukl teaches them.
 
-### 3. Give a beginner two choices
+### 3. Offer a beginner background first
 
-- **Background first?** If he knows little about the group, offer to begin with who they are: general facts, but only those that bear on this approach.
-- **How to learn:** by facts, the default, or by dialogue (D).
+If he knows little about the group, offer to begin with who they are: general facts, but only those that bear on this approach.
 
 ### 4. Load the materials, which are for you, not for him
 
@@ -133,10 +132,9 @@ Teach parts 1 to 4 and run the method's drills in the group's training plan, in 
 - **Clear it.** A tactic is cleared when he meets its "Pass when" line in the training plan (or, for a tactic without one, uses it at every chance) in two conversations in a row that gave him the chance, whether in its drill or in full conversations: "At the mouth of two witnesses… shall the matter be established" (Deut. 19:15; 2 Cor. 13:1). Then take his next hard tactic.
 - **Check the rest lightly.** Don't drill a tactic he already does well; full conversations keep testing it. If he misses it at least half the times it comes up across his last three full conversations, it becomes a hard tactic again, in its place in the order.
 
-### Two ways to teach a beginner
+### How to teach a beginner
 
-- **Facts (the default).** Teach in short spoken pieces, two or three sentences and one idea at a time, reading each verse aloud. Then ask one question about it.
-- **Dialogue (if he chooses).** First he has the kind of conversation a believer would have with a member of the group to understand his view on this topic. You play the member and answer only from the group's recorded beliefs; he asks questions to understand before he answers anything (Prov. 18:13). If he stalls, step out and suggest a question ("Try asking her what happens at the Memorial"). Then step out as coach, sum up what he learned in three or four points, fill the gaps, and give the verses. Christ often taught by question and answer (Matt. 16:13–17; Luke 10:25–37).
+Teach in short spoken pieces, two or three sentences and one idea at a time, reading each verse aloud. Then ask one question about it.
 
 ### Precision
 

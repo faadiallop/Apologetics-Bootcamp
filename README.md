@@ -70,7 +70,7 @@ Start a chat and ask for it, for example:
 
 The coach asks only what it doesn't already know: which group, whether you're a beginner with it, and whether you'll train by voice. Then it reads your newest training card for that group. If you're new to the group, it explains the method, gives the argument in a sentence, says why this approach was chosen over others, and tells you what the training will involve. If you've trained with that group before, it skips this introduction.
 
-- **Beginners are taught before they're tested.** You can start with background on the group. You can learn by plain teaching (the default) or by dialogue: you talk with a member of the group, played by the coach, to understand their view, then the coach sums it up and gives the verses.
+- **Beginners are taught before they're tested.** You can start with background on the group. Lessons come in short spoken pieces, each followed by a question.
 - **Not a beginner?** You go straight into practice conversations and are taught only what you miss.
 - **Practice goes where you struggle.** The coach marks each moment that called for one of Koukl's tactics, finds the ones you miss most, and drills them one at a time, in the order of his book.
 - **Use voice mode for practice.** Role-play is the heart of the training and works best spoken.

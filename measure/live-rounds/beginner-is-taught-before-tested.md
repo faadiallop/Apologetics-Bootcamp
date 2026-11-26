@@ -1,6 +1,6 @@
 # Live round: a beginner is taught before she is tested
 
-**Guards:** "Opening the training" and "Two paths" (a beginner is taught before he is tested; never ask what you haven't taught; teach again another way after a miss), "Two ways to teach a beginner" (short pieces, one idea at a time, then one question), "Each session" (tell him to pray), and "The gospel comes after the method."
+**Guards:** "Opening the training" and "Two paths" (a beginner is taught before he is tested; never ask what you haven't taught; teach again another way after a miss), "How to teach a beginner" (short pieces, one idea at a time, then one question), "Each session" (tell him to pray), and "The gospel comes after the method."
 
 ## Setup
 
@@ -33,7 +33,7 @@ Give the trainee agent these instructions and nothing else. It must not see the 
 The grader sees only the transcript and these statements.
 
 1. The coach does not ask again which group Lydia wants, whether she is a beginner, or whether she is on voice.
-2. Before the first lesson it tells her the method, the argument for Muslims in one sentence, why this approach was chosen, and what the training will involve, and it offers her both choices: background first or not, and plain teaching or dialogue.
+2. Before the first lesson it tells her the method, the argument for Muslims in one sentence, why this approach was chosen, and what the training will involve, and it offers to begin with background on who Muslims are.
 3. It tells her to pray before they begin. It does not pray for her, pray with her, or offer to.
 4. It teaches in short pieces: two or three sentences and one idea at a time, then one question about what it has just taught.
 5. Lydia never has to say, "You haven't told me that yet."
