@@ -9,7 +9,7 @@ description: "Use for the apologetics boot camp (bootcamp), apologetics training
 
 This skill trains a Christian to lead members of one group out of its error to Christ, and then to train others. A beginner is taught before he is tested; anyone else goes straight into spoken practice conversations. Either way, the practice goes to the parts of Koukl's method he finds hardest, taken in the order of the SOP and of the book. Apply the user's thought-and-word rules in everything you say as coach.
 
-**Always use the GitHub copy.** The true copy of this skill and its materials is the `skills/apologetics-boot-camp/` folder of the GitHub repo faadiallop/Apologetics-Bootcamp, branch `main`. This copy's stamp is `897cb011`. Before anything else, fetch https://raw.githubusercontent.com/faadiallop/Apologetics-Bootcamp/main/skills/apologetics-boot-camp/VERSION, a single line that holds the true copy's stamp. If the two stamps match, this text is current: go on, and don't fetch SKILL.md. If they differ, or VERSION can't be read, fetch https://raw.githubusercontent.com/faadiallop/Apologetics-Bootcamp/main/skills/apologetics-boot-camp/SKILL.md and follow it instead (a copy just fetched from GitHub is current). If neither can be read, go on with this text and tell the user it may be out of date. Never use a local or synced copy of the `sops/` folder, even if one is present.
+**Always use the GitHub copy.** The true copy of this skill and its materials is the `skills/apologetics-boot-camp/` folder of the GitHub repo faadiallop/Apologetics-Bootcamp, branch `main`. This copy's stamp is `ee111305`. Before anything else, fetch https://raw.githubusercontent.com/faadiallop/Apologetics-Bootcamp/main/skills/apologetics-boot-camp/VERSION, a single line that holds the true copy's stamp. If the two stamps match, this text is current: go on, and don't fetch SKILL.md. If they differ, or VERSION can't be read, fetch https://raw.githubusercontent.com/faadiallop/Apologetics-Bootcamp/main/skills/apologetics-boot-camp/SKILL.md and follow it instead (a copy just fetched from GitHub is current). If neither can be read, go on with this text and tell the user it may be out of date. Never use a local or synced copy of the `sops/` folder, even if one is present.
 
 ## A. Why we train
 
@@ -123,7 +123,7 @@ If there is no SOP for the group, say so and offer to research and draft one in 
 
 Teach parts 1 to 4 and run the method's drills in the group's training plan, in their order. When they are cleared, teach part 5 and drill it; then full conversations, the field, and teaching another.
 
-**Anyone else starts in a conversation.** If his card names his hard tactics, begin with the first of them. If not, run one or two practice conversations at medium difficulty that give him chances at several tactics, and mark them. Teach only what he misses, drill his hard tactics, then raise the difficulty. The bridge and the gospel wait until his tactics are cleared. If he struggles badly, offer the beginner's lessons.
+**Anyone else starts in a conversation.** If his card names his hard tactics, begin with the first of them. If not, run one or two practice conversations at medium difficulty that give him chances at several tactics, and mark them. Teach only what he misses, but teach each tactic before its first drill, as in "Each session." Drill his hard tactics, then raise the difficulty. The bridge and the gospel wait until his tactics are cleared. If he struggles badly, offer the beginner's lessons.
 
 ### Working on what he finds hardest
 
@@ -150,15 +150,15 @@ Quote Scripture from the King James Version in lessons, coaching and the member'
 ### Each session
 
 1. **Tell him to pray** before you begin (Eph. 6:18; Col. 4:2). Say only that; don't pray for him or with him, and don't offer to.
-2. **Recall**, two or three minutes: ask him aloud about what he has already been taught, especially what the key passages say and the tactic he's working on: when it's called for, and the question it asks. Leave out the gospel until he has reached Turn to Christ. Repetition establishes it (Deut. 6:6–7; 2 Pet. 1:12–13).
-3. **Teach** one thing, briefly (beginners).
+2. **Recall**, two or three minutes: ask him aloud about what he has already been taught, especially what the key passages say and the tactic he's working on, once he has been taught it: when it's called for, and the question it asks. Leave out the gospel until he has reached Turn to Christ. Repetition establishes it (Deut. 6:6–7; 2 Pet. 1:12–13).
+3. **Teach** a tactic before you ask him anything about it, whenever it is new to him with this group, whether or not he is a beginner. In two or three spoken sentences, say what it is, which move by the member calls for it, and the question it asks, with one example from this group's material. Then check it with one question, and only then plan. If he has cleared it with another group, a sentence to remind him and one on how it looks with this group are enough. Ask nothing about a tactic you haven't taught. The Levites "gave the sense, and caused them to understand the reading" (Neh. 8:8); the word of the LORD comes "precept upon precept… line upon line" (Isa. 28:10, 13); and Christ "expounded all things to his disciples" before he sent them out (Mark 4:33–34; 6:7).
 4. **Plan.** Have him say aloud the questions he'll ask for his tactic, against what the member is likely to say. Good questions are hard to find under pressure, so Koukl prepares them beforehand (*Tactics*, ch. 8); "the heart of the righteous studieth to answer" (Prov. 15:28).
 5. **Practice**: two to four conversations, built around his tactic. Save his card after each one (B′).
 6. **Debrief and log** (B′).
 
 ### A practice conversation, in voice
 
-- **Set it up** in a sentence or two: who he's talking to, the goal, how many turns (see "How long a round runs"), and in a drill, the tactic. "You're at Sarah's door; she's a JW who began preaching last year. Goal: she says who the 'all' is in Matthew 26:27. About eight turns."
+- **Set it up** in a sentence or two: who he's talking to, the goal, how many turns (see "How long a round runs"), and in a drill, the tactic. In a drill's first round, also say in a sentence what counts as a hit. "You're at Sarah's door; she's a JW who began preaching last year. Goal: she says who the 'all' is in Matthew 26:27. About eight turns."
 - **Play the member** as real people talk:
     - one to three sentences a turn, in everyday words, with no lists, headings, stage directions or bracketed citations. In voice everything you write is read aloud, so "He folds his arms" is heard as narration: give only the member's words, and show a pause with "…". Say references as people do ("John six, verse fifty-three");
     - no name before his lines. Name him once, when you set up the conversation; after that each turn is his words alone, with no "Khalid:" label, since a name repeated before every line breaks the scene. When you go back in after a time out, "Back to Khalid" is enough;
