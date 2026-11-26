@@ -55,7 +55,7 @@ Every SOP opens with a header and a short version. The long version then runs th
 
 ## Index of groups
 
-Four SOPs are drafted so far. Further groups are added as new tabs in this same form.
+Five SOPs are drafted so far. Further groups are added as new tabs in this same form.
 
 | SOP name | Group | Core argument | Main source | Status | Tab |
 | --- | --- | --- | --- | --- | --- |
@@ -63,5 +63,6 @@ Four SOPs are drafted so far. Further groups are added as new tabs in this same 
 | The Bread of Life | Jehovah's Witnesses | From John 6, everyone at the Memorial should eat | [The Communion Denial](https://jw-apologetics.app/arguments/communion-denial/), jw-apologetics.app | Draft | Jehovah's Witnesses |
 | The Suffering Servant | Jewish people | Isaiah's innocent servant dies for Israel's sins, so he is not Israel; Yeshua fits | Isaiah 52:13–53:12; Jews for Jesus; ONE FOR ISRAEL | Draft | Jewish people |
 | Borrowed Ground | Atheists | To argue against God he must use logic, reason, the order of nature and morality, which only God accounts for | Greg L. Bahnsen, *Always Ready* (1996); Bahnsen–Stein debate (1985) | Draft | Atheists |
+| Thou Shalt Not Bow Down | Eastern Orthodox Christians | The commandment forbids the very bow (*proskynesis*) their council gives icons; calling it veneration, not worship, does not change the act | Joshua Schooping, *Disillusioned* (2022); Martin Chemnitz, *Examination of the Council of Trent*, Part IV | Draft | Eastern Orthodoxy |
 
 For agents: each SOP also has a section in Response Bank (role-play), which records the responses found online, and in Training Plans (role-play), which takes a trainee through the argument and Koukl's tactics stage by stage.
