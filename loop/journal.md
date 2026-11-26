@@ -74,7 +74,7 @@ The author reviewed the first run with Claude in an interactive session, which c
 
 **Skill changes** (one commit): coaching is about 150 words, with fuller reasons left for the card; after a first pass, the same drill again; a time-out gives the reply the material records; an early crossing to the gospel still counts the chance he crossed past as a miss; a move that does the tactic's job is a hit whatever its words; awkward wording gets one sentence with a smoother version and is never scored.
 
-**The author's flag of Nov 25.** **Handled** by the skill changes above, and by the new test `notes-awkward-wording-without-marking-down`. Later runs should skip it.
+**The author's flag of Nov 25.** **Handled** by the skill changes above, and by the new tests `notes-awkward-wording-without-marking-down` and `notes-a-clumsy-way-back-without-marking-down`. The note covers anything he says, question or statement, on any tactic. Later runs should skip it.
 
 **SOP fixes:** Mark 10:18 and John 10:16 now in King James wording; the JW full conversations name the Senior publisher; the atheist full conversations add the Humanist chaplain and the Seasoned debater.
 
