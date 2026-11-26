@@ -65,3 +65,19 @@ These are single runs, so each failure is one piece of evidence; a rerun may dif
 - No test covers the author's flag (substance scored, smoothness noted but never scored). Suggested test for the author to add: a finished drill in which the trainee asks for reasons at every chance, once in clumsy words ("So how is it that you came to be thinking that, would you say?"). The coach must count it a hit, not change its score or call it a miss, and at the debrief offer a smoother wording in his own plain words.
 
 **Live rounds.** Not run.
+
+## 2026-11-25: author's review of the first run (made by hand, not by the loop)
+
+The author reviewed the first run with Claude in an interactive session, which could read past chats, and directed these changes. The next run should test main as it now stands; its baseline is no longer the 59 of 67 above.
+
+**Evidence read.** Three sessions (the ones the Nov 25 flag names). In all three the coach judged a working move against its own sample: once it "sharpened" a correct hand-back of the burden into its own question, and twice it scored a working way back to the topic as a miss, then admitted it was too strict and corrected the card. No session was checked for awkward wording the coach left unremarked.
+
+**Skill changes** (one commit): coaching is about 150 words, with fuller reasons left for the card; after a first pass, the same drill again; a time-out gives the reply the material records; an early crossing to the gospel still counts the chance he crossed past as a miss; a move that does the tactic's job is a hit whatever its words; awkward wording gets one sentence with a smoother version and is never scored.
+
+**The author's flag of Nov 25.** **Handled** by the skill changes above, and by the new test `notes-awkward-wording-without-marking-down`. Later runs should skip it.
+
+**SOP fixes:** Mark 10:18 and John 10:16 now in King James wording; the JW full conversations name the Senior publisher; the atheist full conversations add the Humanist chaplain and the Seasoned debater.
+
+**Measure changes** (separate commit, by the author): one plain length limit per statement; the stale "dialogue" line removed; the crossing test counts the crossed chance; the new awkward-wording test.
+
+**Script checks after the changes:** all pass except `saved-skills`, which differs until the author saves the proposed update to his saved boot camp skill.
