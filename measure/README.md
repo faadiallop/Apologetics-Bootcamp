@@ -23,6 +23,7 @@ What a script can settle. Run `python3 measure/checks.py` from the repo. It repo
 | `named-files` | Every file the skill, the README and CLAUDE.md name exists, and every SOP has its table in the response bank and its plan in the training plans |
 | `bank-rows` | Every bank row a training plan names is in the response bank. Opponents the bank does not define are listed for a person to look at |
 | `saved-skills` | The saved copy of each skill matches GitHub. Skipped on a machine with no saved copies |
+| `skill-stamp` | The stamp in SKILL.md and in `VERSION` matches the skill's text, so a saved copy can tell from one line whether it is current. After any change to SKILL.md, `python3 measure/checks.py --stamp` sets both |
 | `skill-length` | SKILL.md is under 500 lines |
 
 One check is left to the run that syncs the *Apologetics SOPs* doc: that each tab matches its file (CLAUDE.md).

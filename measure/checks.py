@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Script checks for the boot camp measure.
 
-Run from anywhere:  python3 measure/checks.py [--json] [--saved DIR] [--kjv FILE]
+Run from anywhere:  python3 measure/checks.py [--json] [--saved DIR] [--kjv FILE] [--stamp]
 
 Each check reads the repo as it stands and reports PASS, FAIL, INSPECT or SKIP.
 FAIL means something is wrong and the run exits with status 1. INSPECT lists
@@ -94,6 +94,14 @@ def read(path):
 
 def rel(path):
     return os.path.relpath(path, ROOT)
+
+
+def read_split(stem):
+    """The response bank and the training plans are each kept as one shared file
+    (`stem.md`) and one file for each group (`stem-<group>.md`), so that a
+    session loads only its own group's. Read them as one text, the shared file first."""
+    parts = sorted(glob.glob(os.path.join(SOPS, stem + "-*.md")))
+    return "\n".join(read(p) for p in [os.path.join(SOPS, stem + ".md")] + parts)
 
 
 def body_of(text):
@@ -274,8 +282,8 @@ def check_named_files(report):
     index_rows = re.findall(r"^\| (?!SOP name|---)([^|]+) \|", overview[overview.find("## Index of groups"):], flags=re.M)
     if len(index_rows) != len(groups):
         bad.append(f"the overview's index lists {len(index_rows)} SOPs, but there are {len(groups)} group files")
-    bank = read(os.path.join(SOPS, "20-response-bank.md"))
-    plans = read(os.path.join(SOPS, "21-training-plans.md"))
+    bank = read_split("20-response-bank")
+    plans = read_split("21-training-plans")
     for sop in (r.strip() for r in index_rows):
         short = re.sub(r"^The ", "", sop)
         if not re.search(r"^## .*" + re.escape(short), bank, flags=re.M):
@@ -298,8 +306,8 @@ def sections(text, heading_re):
 
 
 def check_rows_and_personas(report):
-    bank = read(os.path.join(SOPS, "20-response-bank.md"))
-    plans = read(os.path.join(SOPS, "21-training-plans.md"))
+    bank = read_split("20-response-bank")
+    plans = read_split("21-training-plans")
     bank_tables = sections(bank, r"(?:The )?(.+?):")
     plan_tables = sections(plans, r"Training plan: (?:The )?(.+)")
     personas = {}
@@ -373,6 +381,47 @@ def check_saved_skills(report, saved_dir):
         report.add("INSPECT", "saved-skills", "skills in the repo with no saved copy here", notes)
 
 
+# The stamp lets a saved copy of the skill tell, from one short line on GitHub,
+# whether it is still current, without fetching the whole of SKILL.md again.
+STAMP_RE = re.compile(r"(This copy's stamp is `)([0-9a-f]{8})(`)")
+VERSION_FILE = os.path.join(SKILL, "VERSION")
+
+
+def stamp_of(text):
+    """The stamp a SKILL.md should carry: the first eight hex digits of the
+    SHA-256 of its body, read with the stamp itself set to zeros."""
+    body = STAMP_RE.sub(lambda m: m.group(1) + "0" * 8 + m.group(3), body_of(text)).strip()
+    return hashlib.sha256(body.encode("utf-8")).hexdigest()[:8]
+
+
+def write_stamp():
+    """Set the stamp in SKILL.md and in VERSION to match the skill's text."""
+    path = os.path.join(SKILL, "SKILL.md")
+    text = read(path)
+    want = stamp_of(text)
+    with open(path, "w", encoding="utf-8") as f:
+        f.write(STAMP_RE.sub(lambda m: m.group(1) + want + m.group(3), text))
+    with open(VERSION_FILE, "w", encoding="utf-8") as f:
+        f.write(want + "\n")
+    return want
+
+
+def check_stamp(report):
+    text = read(os.path.join(SKILL, "SKILL.md"))
+    want, found, bad = stamp_of(text), STAMP_RE.search(text), []
+    if not found:
+        bad.append("SKILL.md carries no stamp")
+    elif found.group(2) != want:
+        bad.append(f"SKILL.md carries the stamp {found.group(2)}, but its text now gives {want}")
+    if not os.path.exists(VERSION_FILE):
+        bad.append("skills/apologetics-boot-camp/VERSION is missing")
+    elif read(VERSION_FILE).strip() != want:
+        bad.append(f"VERSION holds {read(VERSION_FILE).strip()}, but the skill's text gives {want}")
+    detail = (f"the stamp {want} is in SKILL.md and in VERSION" if not bad
+              else "the stamp is out of date; run python3 measure/checks.py --stamp")
+    report.add("FAIL" if bad else "PASS", "skill-stamp", detail, bad)
+
+
 def check_length(report):
     lines = read(os.path.join(SKILL, "SKILL.md")).count("\n")
     report.add("FAIL" if lines > 500 else "PASS", "skill-length",
@@ -384,7 +433,11 @@ def main():
     parser.add_argument("--json", action="store_true", help="print the report as JSON")
     parser.add_argument("--saved", help="folder holding the saved copies of the skills")
     parser.add_argument("--kjv", help="a local copy of the King James text (same file as the fixed version)")
+    parser.add_argument("--stamp", action="store_true",
+                        help="first set the stamp in SKILL.md and in VERSION to match the skill's text")
     args = parser.parse_args()
+    if args.stamp:
+        write_stamp()
 
     report = Report()
     try:
@@ -398,6 +451,7 @@ def main():
     check_named_files(report)
     check_rows_and_personas(report)
     check_saved_skills(report, args.saved)
+    check_stamp(report)
     check_length(report)
 
     if args.json:
