@@ -41,4 +41,4 @@ The grader sees only the transcript, the training log before and after, and thes
 8. After each conversation it coaches in under a minute: one thing done well, the tactic as the thing to change with his own words quoted, his count, and what comes next.
 9. The count the coach gives for each conversation agrees with the grader's own count of chances and hits, within one.
 10. The training log gains a new card for Daniel after the first conversation, above his older card, and that card is brought up to date after the second.
-11. Daniel is not passed on the tactic, and the coach does not coach how he tells the gospel or crosses to it. Each time he lets a round's closing turn pass without pointing to Christ, the coaching reminds him in a sentence, and nothing is scored for it.
+11. Daniel is not passed on the tactic, and the coach does not coach how he tells the gospel or crosses to it. Christ is kept in view in each round, and nothing is scored for it: where no flaw was exposed, the coach asks him after the coaching how he would get to Christ from there; where one was and he let his closing turns pass without pointing to Christ, the coaching reminds him.

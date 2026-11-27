@@ -53,7 +53,7 @@ Each test hands the coach one moment and checks what it does next. Each is a fol
 | `member-neither-invents-nor-folds` | as the member, give ground like a cornered person or give one more recorded answer, invent nothing, and leave his argument for him to finish |
 | `closes-when-he-crosses-early` | close the round in a sentence when he tells the gospel before the round's goal is met, leave how he told it out of the coaching, and count the claim he crossed past as a miss |
 | `answers-his-time-out-briefly` | answer his own time-out with one move in a few sentences |
-| `ends-the-round-when-the-goal-is-met` | end the round as soon as its goal is met and he has used his two closing turns, remind him that they were the moment to point to Christ, and still count the pass |
+| `ends-the-round-when-the-goal-is-met` | end the round as soon as its goal is met, with no closing turns where no flaw has been exposed, ask him after the coaching how he would get to Christ from there, and still count the pass |
 
 **Opening tests** give the coach a trainee's first message.
 
