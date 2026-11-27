@@ -159,3 +159,5 @@ The author gave a written plan: fix the tests, then find why the skill fails the
 **Not run:** Opus on the changed skill, a second Sonnet run, and the live rounds.
 
 **Script checks after the changes:** all pass except `saved-skills`, which differs until the author saves the proposed update to his saved boot camp skill.
+
+**Later the same day, at the author's direction:** the fixed line that ends a session ("To save on usage, start a new chat next time…") no longer counts toward the 150 words after a round, in SKILL.md (stamp `1bc0cfbd`) and in the seven "spoken and short" statements, in separate commits. It alone put `passes-without-chapter-and-verse/06` over the limit in the quick check (157 words; about 138 without it). Not rerun.
