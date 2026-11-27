@@ -16,6 +16,10 @@ Voice transcript. The coach is playing Sarah, a Jehovah's Witness who began prea
 
 **Thomas:** Let me see if I understand you. The bread and wine are for the anointed, the 144,000 who will rule with Christ in heaven. You aren't one of them, so you pass them on. Is that right?
 
-**Sarah:** Yes, that's right. That's what we believe.
+**Sarah:** Yes, that's right. That's what we believe. Well, I'd better get on to the next house.
 
 **Thomas:** Thanks, Sarah. That really helps me understand.
+
+**Sarah:** You're welcome. Most people never ask.
+
+**Thomas:** I appreciate you taking the time to explain it.
