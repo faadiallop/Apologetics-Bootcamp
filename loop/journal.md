@@ -167,3 +167,30 @@ The author gave a written plan: fix the tests, then find why the skill fails the
 **Later the same day, at the author's direction:** scores move from 0–2 on each skill (out of 6) to out of 10 on each skill, with an overall score that is the average of the three. The bands keep the old meaning: 8–10 is a pass (the old 2), 5–7 falls short (the old 1), 0–4 is a fail sign (the old 0). A round passes at 8 or more overall with no skill below 5, in place of 5 of 6 with no 0. One difference from the old line: a round strong on one skill and middling on two (10, 7, 7) now passes where 2, 1, 1 did not. The thing to change is now named below 8 on any skill. SKILL.md stamp `2fe20f2d`; the rubric in `21-training-plans.md` changed with it; five statements and one case that named the old numbers changed to match, in their own commit. Not rerun.
 
 **The same change, finished:** two lines of "Measuring the trainee" still used the old scale ("Character earns a 2", "Two for character"), and `passes-without-chapter-and-verse/case.yaml` still said "full marks". Changed to the scale out of 10. SKILL.md stamp `760dc9fe`.
+
+## 2026-11-27: the opening's limit and the chance count, tested with the measure's three runs (at the author's direction, not by the loop)
+
+The author gave a written plan: fix the two statements that failed in every run so far. A quick check showed four other statements failing, so the author asked for the measure's three runs before the change went in.
+
+**Skill changes** (one commit, stamp `eae53073`, on top of the change to scores out of 10). No new rule, so no new Scripture; each makes an existing rule plain.
+
+1. *The opening ran long* (`opens-for-a-beginner/10`: 379, 357 and 367 words in three runs, against 350). "Introduce the training" said only "a minute or two," which gave the coach nothing to count against. It now says 350 words at most for everything he hears in that first reply, the offer of background included, counted before it is sent, and what to cut first: whatever is not one of the four parts or the offer, then the length of each part.
+2. *Step 3 chances were over-counted* (`refuses-a-false-pass/07`: five chances where Peter spoke four times, on Nov 27 and in the quick check). "Mark every chance" now says a chance is one of his turns, the turn after a member's line that called for the tactic; a round never has more chances than he took turns; and for step 3, each of his turns after the member has stated his view and reasons is one chance, his closing turns none.
+
+**Measure change** (its own commit, at the author's direction): `opens-for-a-beginner/10` now says the whole first reply counts, the offer of background included. The grader could not tell whether "the introduction" meant the whole reply or only part of it; the author ruled the whole.
+
+**Quick check first** (one Sonnet run on stamp `fee52e63`, the same edits on the 0–2 scale; graded blind by Opus): 100 of 104. Both targets passed, but four statements that had passed before failed: `answers-his-time-out-briefly/04`, `lets-a-second-miss-pass/03`, `member-neither-invents-nor-folds/02`, `teaches-a-new-tactic-first/02`. None of those tests reaches the changed text, and a rerun of the four on the unchanged skill passed all four. One run each way could not tell a slip from a cause, so the author asked for the three runs.
+
+**Three runs on `eae53073`** (rule 7: two Sonnet, one Opus, all 17 tests; graded blind by Opus under labels that hid the model):
+
+- Sonnet run 1: 101 of 104. Sonnet run 2: 99 of 104. Opus: 103 of 104.
+- Both targets passed in all three runs. The openings were 291, 289 and 326 words. Peter's cards counted 3 or 4 chances.
+- The four statements from the quick check: `lets-a-second-miss-pass/03` and `teaches-a-new-tactic-first/02` passed all three; `answers-his-time-out-briefly/04` and `member-neither-invents-nor-folds/02` failed once each (Sonnet), so they are unsteady, not failing.
+- **Failed in two runs:** `ends-the-round-when-the-goal-is-met/03` (Sonnet run 1 and Opus). Thomas passed with every score 8 or more, and both coaches gave a "smoother wording" note on his double question in his first turn ("ask one question at a time"); the graders read it as a thing to change. The skill allows that note when there is no thing to change, so the skill and the statement read differently here. Neither edit touches the coaching, and this statement passed in the quick check on the old scale. **For the author to decide**: whether a note on a working but clumsy question counts as a thing to change in this test.
+- Unsteady (failed once, Sonnet run 2): `closes-when-he-crosses-early/03` (the wisdom score cited his crossing line), `marks-missed-requests-for-reasons/03` (never said "not a pass" aloud), `opens-for-a-beginner/02` (the argument in three sentences), `teaches-a-new-tactic-first/03` (did not say "main claim"); and (Sonnet run 1) `no-pause-for-an-undrilled-miss/03` ("religion has hurt more people than it's helped" is not in the bank).
+
+**Kept on `main`**, at the author's direction: the targets pass, and nothing that failed in the quick check fails under the measure.
+
+**Not run:** the live rounds. The runs used the response bank as it stood before `25b6719`, which added rows for every group while they ran.
+
+**Script checks after the changes:** all pass except `saved-skills`, which differs until the author saves the proposed copy.
