@@ -81,12 +81,12 @@ Start a chat and ask for it, for example:
 
 > Train me to talk with Jehovah's Witnesses.
 
-The coach asks only what it doesn't already know: which group, whether you're a beginner with it, and whether you'll train by voice. Then it reads your newest training card for that group. If you're new to the group, it explains the method, gives the argument in a sentence, says why this approach was chosen over others, and tells you what the training will involve. If you've trained with that group before, it skips this introduction.
+The training is by voice only: you speak, and the coach answers aloud. The coach asks only what it doesn't already know: which group, and whether you're a beginner with it. Then it reads your newest training card for that group. If you're new to the group, it explains the method, gives the argument in a sentence, says why this approach was chosen over others, and tells you what the training will involve. If you've trained with that group before, it skips this introduction.
 
 - **Beginners are taught before they're tested.** You can start with background on the group. Lessons come in short spoken pieces, each followed by a question.
 - **Not a beginner?** You go straight into practice conversations and are taught only what you miss.
 - **Practice goes where you struggle.** The coach marks each moment that called for one of Koukl's tactics, finds the ones you miss most, and drills them one at a time, in the order of his book, except that the steamroller is drilled with the rescues, since both keep control of the conversation.
-- **Use voice mode for practice.** Role-play is the heart of the training and works best spoken.
+- **Voice only.** Start it in voice mode. Nothing is taught or practised in writing, because the conversations it trains for are spoken.
 - **Groups covered so far:** Muslims, Jehovah's Witnesses, Jewish people, and atheists. For any other group the coach will offer to draft a new SOP in the same template for your approval before training from it.
 - **Training log.** The coach keeps a short card for each session in plain words: what you learned, how you did, your count on each tactic, your hard tactics, what's next, and passages to review. It saves the card to your training log after each drill or conversation, without asking, so a call that ends early loses nothing, and reads your newest card there as soon as it knows the group. The author's log is the Training log tab of the *Apologetics SOPs* doc; anyone else's is a doc of his own, titled "Boot camp training log," which the coach creates with the first card. New objections you meet go on your card, and you can send them to the author as an issue on this repo. A tactic you find hard stays on your list until you clear it.
 
