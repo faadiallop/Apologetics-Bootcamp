@@ -23,6 +23,7 @@ if os.name == "nt" and not ROOT.startswith("\\\\"):
     ROOT = "\\\\?\\" + ROOT
 SKILL = os.path.join(ROOT, "skills", "apologetics-boot-camp")
 SOPS = os.path.join(SKILL, "sops")
+FIXED = os.path.join(SKILL, "fixed")
 HERE = os.path.join(ROOT, "measure")
 
 # The King James text the quotations are checked against: one fixed version of a
@@ -70,7 +71,7 @@ def build_book_regex():
 
 BOOK_NAMES, BOOK_RE = build_book_regex()
 VERSES = r"\d+(?:[–-]\d+)?(?:,\s*\d+(?:[–-]\d+)?)*"
-PART = r"\d+(?::\d+[–-]\d+:\d+|:" + VERSES + r")?"
+PART = r"\d+(?!,\d{3}\b)(?::\d+[–-]\d+:\d+|:" + VERSES + r")?"
 REF_RE = re.compile(BOOK_RE + r"\s+(?P<list>" + PART + r"(?:;\s*\d+:(?:\d+[–-]\d+:\d+|" + VERSES + r"))*)")
 
 
@@ -148,17 +149,90 @@ def whole_text(kjv):
     return " ".join(norm(re.sub(r"[{}]", "", v)) for full, _ in BOOKS for ch in kjv[full] for v in ch)
 
 
+
+# ---------------------------------------------------------------- spoken references
+
+# The fixed pieces are read aloud, so they give references as people say them
+# ("Isaiah eight, verse twenty"). These are turned into figures before the
+# quotation and reference checks read them, so the same checks cover them.
+SMALL = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten",
+         "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen",
+         "eighteen", "nineteen"]
+TENS = ["twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"]
+_small = "|".join(sorted(SMALL[1:], key=len, reverse=True))
+_tens = "(?:" + "|".join(TENS) + r")(?:-(?:" + "|".join(SMALL[1:10]) + "))?"
+_under100 = "(?:" + _tens + "|" + _small + ")"
+NUM = r"(?:(?:a|one) hundred(?:(?: and)? " + _under100 + ")?|" + _under100 + ")"
+ORDINAL = {"First": "1", "Second": "2", "Third": "3"}
+
+
+def number(phrase):
+    """'one hundred and nineteen' -> 119"""
+    total = 0
+    for w in phrase.replace("-", " ").split():
+        if w == "and":
+            continue
+        if w == "a":
+            total += 1
+        elif w == "hundred":
+            total *= 100
+        elif w in TENS:
+            total += 20 + 10 * TENS.index(w)
+        else:
+            total += SMALL.index(w)
+    return total
+
+
+def build_spoken_regex():
+    names = set()
+    for full, _ in BOOKS:
+        m = re.match(r"([123]) (.+)", full)
+        names.add(("(?:First|Second|Third) " + re.escape(m.group(2))) if m else re.escape(full))
+    names.add("Psalm")
+    book = "(?P<book>" + "|".join(sorted(names, key=len, reverse=True)) + ")"
+    verses = (r"(?:,|:)? verses? (?P<v1>" + NUM + r")(?:(?P<join>,? and | to | through )(?P<v2>" + NUM + "))?")
+    return re.compile(r"\b" + book + r"(?: chapter)? (?P<ch>" + NUM + r")\b(?:" + verses + r")?(?![\w-])")
+
+
+SPOKEN_RE = build_spoken_regex()
+
+
+def figures(text):
+    """Write each spoken reference in text as figures, keeping the line breaks."""
+    def sub(m):
+        book = m.group("book")
+        first = book.split(" ", 1)[0]
+        if first in ORDINAL:
+            book = ORDINAL[first] + " " + book.split(" ", 1)[1]
+        ref = f"{book} {number(m.group('ch'))}"
+        if m.group("v1"):
+            ref += f":{number(m.group('v1'))}"
+            if m.group("v2"):
+                sep = ", " if "and" in m.group("join") else "–"
+                ref += sep + str(number(m.group("v2")))
+        return ref
+    return SPOKEN_RE.sub(sub, text)
+
 # ---------------------------------------------------------------- the files
 
 def prose_files():
     """Every file whose Scripture is meant to be King James."""
     files = sorted(glob.glob(os.path.join(ROOT, "skills", "*", "SKILL.md")))
     files += sorted(glob.glob(os.path.join(SOPS, "*.md")))
+    files += sorted(glob.glob(os.path.join(FIXED, "*.md")))
+    files += sorted(glob.glob(os.path.join(ROOT, "site", "prompts", "*.md")))
     for name in ("README.md", "CLAUDE.md", os.path.join("measure", "README.md")):
         path = os.path.join(ROOT, name)
         if os.path.exists(path):
             files.append(path)
     return files
+
+
+def read_prose(path):
+    """A file's text as the checks read it: the fixed pieces with their spoken
+    references written as figures."""
+    text = read(path)
+    return figures(text) if os.path.dirname(os.path.abspath(path)) == os.path.abspath(FIXED) else text
 
 
 def allowed_strings():
@@ -186,7 +260,7 @@ def check_quotations(report, kjv):
         return bool(parts) and all(p in whole for p in parts)
 
     for path in prose_files():
-        text = read(path)
+        text = read_prose(path)
         for m in re.finditer(r'"([^"\n]{6,400})"', text):
             quote = m.group(1)
             line = text.count("\n", 0, m.start()) + 1
@@ -246,7 +320,7 @@ def parse_list(book, text):
 def check_references(report, kjv):
     total, bad = 0, []
     for path in prose_files():
-        text = read(path)
+        text = read_prose(path)
         for m in REF_RE.finditer(text):
             book = BOOK_NAMES[m.group("book")]
             for chapter, verse in parse_list(book, m.group("list")):
@@ -426,6 +500,24 @@ def check_stamp(report):
     report.add("FAIL" if bad else "PASS", "skill-stamp", detail, bad)
 
 
+def check_fixed(report):
+    """The fixed pieces, against the layout in fixed/README.md (fixed_pieces.py)."""
+    import fixed_pieces
+    stamp = read(VERSION_FILE).strip() if os.path.exists(VERSION_FILE) else ""
+    total, errors, notes = 0, [], []
+    paths = [p for p in sorted(glob.glob(os.path.join(FIXED, "*.md")))
+             if os.path.basename(p) not in ("README.md", "TO-CHECK.md")]
+    for path in paths:
+        count, errs, nts = fixed_pieces.check_file(path, stamp)
+        total += count
+        errors += [f"{os.path.basename(path)}: {e}" for e in errs]
+        notes += [f"{os.path.basename(path)}: {n}" for n in nts]
+    report.add("FAIL" if errors else "PASS", "fixed-pieces",
+               f"{len(paths)} files, {total} pieces; {len(errors)} could not be used", errors)
+    if notes:
+        report.add("INSPECT", "fixed-pieces", "written from an older copy of the skill", notes)
+
+
 def check_length(report):
     lines = read(os.path.join(SKILL, "SKILL.md")).count("\n")
     report.add("FAIL" if lines > 500 else "PASS", "skill-length",
@@ -456,6 +548,7 @@ def main():
     check_rows_and_personas(report)
     check_saved_skills(report, args.saved)
     check_stamp(report)
+    check_fixed(report)
     check_length(report)
 
     if args.json:

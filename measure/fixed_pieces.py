@@ -1,19 +1,10 @@
-#!/usr/bin/env python3
-"""Check the fixed-piece files against the layout in README.md.
+"""Check the fixed-piece files against the layout in their README.
 
-Run from anywhere: python3 skills/apologetics-boot-camp/fixed/check.py
-It reads each group's file the way a program would, and reports what could not
-be used. It does not judge whether a piece is true or well put.
+Used by measure/checks.py, as its fixed-pieces check. It reads each group's file
+the way a program would, and reports what could not be used. It does not judge
+whether a piece is true or well put.
 """
-import glob
-import os
 import re
-import sys
-
-HERE = os.path.dirname(os.path.abspath(__file__))
-if os.name == "nt" and not HERE.startswith("\\\\"):
-    HERE = "\\\\?\\" + HERE  # paths over 260 characters need this on Windows
-VERSION = os.path.join(os.path.dirname(HERE), "VERSION")
 
 PARTS = ["opening", "background", "foundation", "know-them", "argument",
          "tactic", "their-answers", "gospel", "bridge"]
@@ -123,23 +114,3 @@ def check_file(path, stamp):
         if part == "tactic" and words(found["say"]) > 100:
             errors.append("%s teaches in %d words; the limit is 100" % (name, words(found["say"])))
     return len(pieces), errors, notes
-
-
-def main():
-    stamp = open(VERSION, encoding="utf-8").read().strip() if os.path.exists(VERSION) else ""
-    failed = False
-    for path in sorted(glob.glob(os.path.join(HERE, "*.md"))):
-        if os.path.basename(path) in ("README.md", "TO-CHECK.md"):
-            continue
-        count, errors, notes = check_file(path, stamp)
-        print("%s  %s: %d pieces" % ("FAIL" if errors else "PASS", os.path.basename(path), count))
-        for e in errors:
-            print("        - " + e)
-        for n in notes:
-            print("        note: " + n)
-        failed = failed or bool(errors)
-    return 1 if failed else 0
-
-
-if __name__ == "__main__":
-    sys.exit(main())

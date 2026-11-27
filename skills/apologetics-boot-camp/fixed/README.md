@@ -43,13 +43,13 @@ expect: <what a right answer holds, for whoever judges his answer; he never hear
 
 Each of `say`, `check` and `expect` is one line, with a blank line between them, so that the file reads well on GitHub and a few lines of code can read it.
 
-**Why Markdown, and not JSON or YAML.** The author reads and approves every piece, and a change shows as a plain diff. The pieces are full of quotation marks and colons, which JSON and YAML would need escaped or quoted, and a slip there breaks the whole file. Here a slip breaks one piece, and `check.py` names it.
+**Why Markdown, and not JSON or YAML.** The author reads and approves every piece, and a change shows as a plain diff. The pieces are full of quotation marks and colons, which JSON and YAML would need escaped or quoted, and a slip there breaks the whole file. Here a slip breaks one piece, and the check names it.
 
 **Piece names,** in the order they are served: `opening-beginner`, `opening-not-beginner`, `background-N`, `foundation-N`, `know-them-N`, `argument-N`, `tactic-<name>`, `their-answers-N`, `gospel-N`, `bridge-N`. Numbers run from 1 with none skipped.
 
 **Tactic names** are fixed, so the piece for the tactic on a trainee's card can be found by name. A group has a piece only for the tactics its material uses, in this order: `gather`, `burden-of-proof`, `rescues` (or, where the material has an example of each, `rescues-professors-ploy` and `rescues-hot-seat`), `staying-on-topic`, `steamroller`, `lead`, `turnabout`, `suicide`, `practical-suicide`, `sibling-rivalry`, `infanticide`, `taking-the-roof-off`, `unfalsifiable`, `rhodes-scholar`, `just-the-facts`.
 
-**Check a file** with `python3 skills/apologetics-boot-camp/fixed/check.py`. It reads every group's file as a program would and reports any piece that could not be used: a name the layout doesn't allow, a piece out of order, a missing or doubled field, an opening over 350 words, a tactic taught in more than 100, or markup that would be read aloud. It also notes a file whose stamp is behind the skill's. It does not judge whether a piece is true.
+**Check the files** with `python3 measure/checks.py`, whose `fixed-pieces` check reads every group's file as a program would and reports any piece that could not be used: a name the layout doesn't allow, a piece out of order, a missing or doubled field, an opening over 350 words, a tactic taught in more than 100, or markup that would be read aloud. It also notes a file whose stamp is behind the skill's. It does not judge whether a piece is true.
 
 ## Rules for every piece
 
