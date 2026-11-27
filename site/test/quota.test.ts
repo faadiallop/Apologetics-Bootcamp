@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { check, daysLeftInMonth, limitsFromEnv, siteDailyAllowance, usd } from "../src/quota";
+import { check, daysLeftInMonth, limitsFromEnv, nearing, siteDailyAllowance, usd } from "../src/quota";
 import type { Spend } from "../src/quota";
 
 const limits = limitsFromEnv({});
@@ -50,5 +50,21 @@ describe("daysLeftInMonth", () => {
     expect(daysLeftInMonth(new Date("2026-11-27T12:00:00Z"))).toBe(4);
     expect(daysLeftInMonth(new Date("2026-11-30T23:59:00Z"))).toBe(1);
     expect(daysLeftInMonth(new Date("2028-02-01T00:00:00Z"))).toBe(29);
+  });
+});
+
+describe("the heads-up before an allowance runs out", () => {
+  const at = (spend: Partial<Spend>): Spend => ({ ...none, ...spend });
+  it("says nothing while there is plenty left", () =>
+    expect(nearing(limits, at({ userDay: usd(0.1) }), at({ userDay: usd(0.2) }))).toBeNull());
+  it("speaks on the turn that passes four fifths of the day", () =>
+    expect(nearing(limits, at({ userDay: usd(0.39) }), at({ userDay: usd(0.41) }))).toContain("today"));
+  it("does not repeat itself on later turns", () =>
+    expect(nearing(limits, at({ userDay: usd(0.41) }), at({ userDay: usd(0.45) }))).toBeNull());
+  it("speaks of the month when the month is nearly used", () =>
+    expect(nearing(limits, at({ userMonth: usd(2.79) }), at({ userMonth: usd(2.81) }))).toContain("month"));
+  it("speaks of the session when its turns or its spending run low", () => {
+    expect(nearing(limits, at({ sessionTurns: 31 }), at({ sessionTurns: 32 }))).toContain("session");
+    expect(nearing(limits, at({ sessionSpend: usd(0.47) }), at({ sessionSpend: usd(0.49) }))).toContain("session");
   });
 });

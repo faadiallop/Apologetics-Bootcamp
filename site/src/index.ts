@@ -9,7 +9,7 @@ import type { Session } from "./engine";
 import { GROUPS } from "./materials";
 import { costMicros } from "./pricing";
 import type { Usage } from "./pricing";
-import { check, daysLeftInMonth, limitsFromEnv, siteDailyAllowance } from "./quota";
+import { check, daysLeftInMonth, limitsFromEnv, nearing, siteDailyAllowance } from "./quota";
 import type { Spend } from "./quota";
 
 export interface Env {
@@ -162,7 +162,8 @@ async function turn(request: Request, env: Env, user: User): Promise<Response> {
   }
 
   const limits = limitsFromEnv(env as Record<string, string | undefined>);
-  const verdict = check(limits, await spendSoFar(env, user.id, now, { cost, turns }), daysLeftInMonth(now));
+  const before = await spendSoFar(env, user.id, now, { cost, turns });
+  const verdict = check(limits, before, daysLeftInMonth(now));
   if (!verdict.ok) {
     console.warn(JSON.stringify({ event: "limit reached", user: user.id, reason: verdict.reason }));
     return json({ error: verdict.message, reason: verdict.reason, session_id: body?.session_id }, 429);
@@ -235,6 +236,14 @@ async function turn(request: Request, env: Env, user: User): Promise<Response> {
     in_round: session.roundStart !== null,
     route: result.route?.route,
     cost_usd: spent / 1_000_000,
+    // Said aloud after the reply, once, when this turn used up most of an allowance.
+    warning: nearing(limits, before, {
+      ...before,
+      userDay: before.userDay + spent,
+      userMonth: before.userMonth + spent,
+      sessionSpend: before.sessionSpend + spent,
+      sessionTurns: before.sessionTurns + 1,
+    }),
   });
 }
 
