@@ -1,8 +1,8 @@
 # Fixed pieces
 
-Text the website serves word for word, with no model call. Each group has one file here. The pieces are drafts until the author approves them; the site serves only a file whose first line after the title reads `Status: approved`.
+Text that is said word for word, the same to every trainee, so it need not be composed afresh each time. It belongs to the skill, not to any one place the skill runs: the coach can read a piece aloud as it stands, and an app built on the skill can serve it with no model call. Each group has one file here, and `TO-CHECK.md` lists what the writers of the drafts ask the author to look at before approving. The pieces are drafts until the author approves them; only a file whose first line after the title reads `Status: approved` is to be used with trainees.
 
-The skill (`skills/apologetics-boot-camp/SKILL.md`) and the group's SOP files are the source. A piece says nothing they don't say. When the skill or an SOP changes, the group's file here is checked against it.
+The skill (`../SKILL.md`) and the group's SOP files (`../sops/`) are the source. A piece says nothing they don't say. When the skill or an SOP changes, the group's file here is checked against it.
 
 ## What is fixed, and what is not
 
@@ -13,7 +13,7 @@ Fixed: what every trainee of a group hears the same way the first time.
 - the first telling of each lesson piece, with its check question;
 - the first teaching of each tactic, with its check question.
 
-Not fixed: anything that answers what he said. A second telling after a missed check, the role-play, hints, coaching, scores and the card all come from a model.
+Not fixed: anything that answers what he said. A second telling after a missed check, the role-play, hints, coaching, scores and the card are composed for him each time.
 
 ## Layout of a group's file
 
@@ -38,7 +38,7 @@ say: <what he hears>
 
 check: <one question or request about what was just said>
 
-expect: <what a right answer holds, for the model that judges his answer; he never hears this>
+expect: <what a right answer holds, for whoever judges his answer; he never hears this>
 ```
 
 Each of `say`, `check` and `expect` is one line, with a blank line between them, so that the file reads well on GitHub and a few lines of code can read it.
@@ -47,9 +47,9 @@ Each of `say`, `check` and `expect` is one line, with a blank line between them,
 
 **Piece names,** in the order they are served: `opening-beginner`, `opening-not-beginner`, `background-N`, `foundation-N`, `know-them-N`, `argument-N`, `tactic-<name>`, `their-answers-N`, `gospel-N`, `bridge-N`. Numbers run from 1 with none skipped.
 
-**Tactic names** are fixed, so the site can find the piece for the tactic on a trainee's card. A group has a piece only for the tactics its material uses, in this order: `gather`, `burden-of-proof`, `rescues` (or, where the material has an example of each, `rescues-professors-ploy` and `rescues-hot-seat`), `staying-on-topic`, `steamroller`, `lead`, `turnabout`, `suicide`, `practical-suicide`, `sibling-rivalry`, `infanticide`, `taking-the-roof-off`, `unfalsifiable`, `rhodes-scholar`, `just-the-facts`.
+**Tactic names** are fixed, so the piece for the tactic on a trainee's card can be found by name. A group has a piece only for the tactics its material uses, in this order: `gather`, `burden-of-proof`, `rescues` (or, where the material has an example of each, `rescues-professors-ploy` and `rescues-hot-seat`), `staying-on-topic`, `steamroller`, `lead`, `turnabout`, `suicide`, `practical-suicide`, `sibling-rivalry`, `infanticide`, `taking-the-roof-off`, `unfalsifiable`, `rhodes-scholar`, `just-the-facts`.
 
-**Check a file** with `python3 site/fixed/check.py`. It reads every group's file as the site will and reports any piece the site could not serve: a name the layout doesn't allow, a piece out of order, a missing or doubled field, an opening over 350 words, a tactic taught in more than 100, or markup that would be read aloud. It also notes a file whose stamp is behind the skill's. It does not judge whether a piece is true.
+**Check a file** with `python3 skills/apologetics-boot-camp/fixed/check.py`. It reads every group's file as a program would and reports any piece that could not be used: a name the layout doesn't allow, a piece out of order, a missing or doubled field, an opening over 350 words, a tactic taught in more than 100, or markup that would be read aloud. It also notes a file whose stamp is behind the skill's. It does not judge whether a piece is true.
 
 ## Rules for every piece
 
@@ -61,3 +61,7 @@ Each of `say`, `check` and `expect` is one line, with a blank line between them,
 6. **The opening reminds him to pray** in one sentence; it does not pray for him.
 7. **Nothing addressed to one trainee.** No names, no "as you said."
 8. **The author's thought-and-word rules apply** (`skills/thought-and-word-rules/`).
+
+## Not yet used by the skill
+
+`SKILL.md` does not name these files yet, so the coach still composes its openings and lessons. Once a group's file is approved, the author decides whether the skill tells the coach to say its pieces as written.

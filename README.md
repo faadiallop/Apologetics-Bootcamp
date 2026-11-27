@@ -35,6 +35,7 @@ skills/
       21-training-plans-jewish-people.md
       21-training-plans-atheism.md
       21-training-plans-icon-veneration.md
+    fixed/                 Drafts of what every trainee hears the same way (openings, lessons), one file for each group; not yet used by SKILL.md
     VERSION                The stamp of SKILL.md, so a saved copy can tell whether it is current
   thought-and-word-rules/  Index of the rules below and how they fit together
   presupposition-rule/     Reason from Scripture; no neutral ground

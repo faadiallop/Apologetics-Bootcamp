@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """Check the fixed-piece files against the layout in README.md.
 
-Run from anywhere: python3 site/fixed/check.py
-It reads each group's file the way the site will, and reports what the site
-could not serve. It does not judge whether a piece is true or well put.
+Run from anywhere: python3 skills/apologetics-boot-camp/fixed/check.py
+It reads each group's file the way a program would, and reports what could not
+be used. It does not judge whether a piece is true or well put.
 """
 import glob
 import os
@@ -13,7 +13,7 @@ import sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 if os.name == "nt" and not HERE.startswith("\\\\"):
     HERE = "\\\\?\\" + HERE  # paths over 260 characters need this on Windows
-VERSION = os.path.join(HERE, "..", "..", "skills", "apologetics-boot-camp", "VERSION")
+VERSION = os.path.join(os.path.dirname(HERE), "VERSION")
 
 PARTS = ["opening", "background", "foundation", "know-them", "argument",
          "tactic", "their-answers", "gospel", "bridge"]
@@ -129,7 +129,7 @@ def main():
     stamp = open(VERSION, encoding="utf-8").read().strip() if os.path.exists(VERSION) else ""
     failed = False
     for path in sorted(glob.glob(os.path.join(HERE, "*.md"))):
-        if os.path.basename(path) == "README.md":
+        if os.path.basename(path) in ("README.md", "TO-CHECK.md"):
             continue
         count, errors, notes = check_file(path, stamp)
         print("%s  %s: %d pieces" % ("FAIL" if errors else "PASS", os.path.basename(path), count))
