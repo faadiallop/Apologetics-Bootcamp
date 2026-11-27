@@ -19,7 +19,7 @@ The Qur'an claims to confirm the Torah and Gospel that Jews and Christians held 
 **Ask, in order.** Wait in silence after the question that exposes the flaw.
 
 1. "When Q 5:68 tells the Jews and Christians of Muhammad's day to keep up the Tawrat and the Injil, which books did they have?"
-2. "What do the Gospels say happened to Jesus? What does the Qur'an say?" (Mark 15:24; Q 4:157)
+2. "What do the Gospels say happened to Jesus? What does the Qur'an say?" (Mark 15:24, 37; Q 4:157)
 3. "Can a book confirm another book and deny its central event?"
 4. **Sibling Rivalry:** "Were the Torah and Gospel corrupted before Muhammad, after him, or never?" *Before:* the Qur'an told them to keep corrupted books. *After:* the copies made before him read as ours do. *Never:* the cross stands.
 5. "Your book tells the doubter to ask those who read the Book before (Q 10:94). Will you read Luke with me?"
@@ -107,7 +107,7 @@ Those books were the Torah and the four Gospels. Manuscripts from before Muhamma
 
 | Teaching | Qur'an | Torah and Gospel (KJV) |
 | --- | --- | --- |
-| Jesus was crucified | Denied: "they did not kill him nor did they crucify him" (4:157) | Matt. 27:35; Mark 15:24; Luke 23:33; John 19:18 |
+| Jesus was crucified and died on the cross | Denied: "they did not kill him nor did they crucify him" (4:157) | Matt. 27:35; Mark 15:24, 37; Luke 23:33, 46; John 19:18, 30 |
 | Jesus is the Son of God | Denied (9:30; 4:171; 19:88–92) | Matt. 3:17; Mark 14:61–62; John 1:14 |
 | Jesus is God | Denied (5:72; 5:116) | John 1:1; John 20:28 |
 | God is Father to his people | Denied: punishment proves he is not their father (5:18) | Deut. 8:5; 32:6; Matt. 6:9 |
@@ -129,6 +129,7 @@ Frost presents this as an argument to the best explanation: the most likely acco
 - **Choose clear examples.** The crucifixion is plain in all four Gospels and needs no theology to explain.
 - **One premise at a time.** Don't argue too broadly. Win agreement on Premise 1 before Premise 2.
 - **Ask, don't only tell.** "What books did the Christians of Muhammad's day have when Q 5:47 told them to judge by the Injil?"
+- **If he won't hear the Qur'an quoted,** don't quote it (a mosque leader forbade it; Response Bank row 40). Ask what his book says about the Injil and let him say it. If he won't, speak of Jesus from the Injil itself, as Philip preached Jesus from the scripture the man already had (Acts 8:35). Walk "in wisdom toward them that are without" (Col. 4:5–6), "in meekness instructing those that oppose themselves" (2 Tim. 2:24–25).
 
 #### Question plan
 
@@ -151,9 +152,9 @@ Ask these last, after the Muslim has affirmed both premises. Every answer costs 
 
 | Question | It sets against each other | Every answer costs |
 | --- | --- | --- |
-| **Sibling Rivalry.** **"Q 5:47 tells the Christians of Muhammad's day to judge by the Injil. Was the Injil they had then reliable, or corrupted?"** | Q 5:47 (judge by it) and Q 4:157 (no crucifixion) | *Reliable:* it records the crucifixion, so the Qur'an denies what it confirmed. *Corrupted:* Allah commanded judging by a corrupt book, and the Qur'an confirmed it. *"The lost original":* then the command could not be obeyed. |
-| **Just the Facts.** **"Did the Gospels Christians held before Muhammad say Jesus was crucified?"** | The Qur'an's confirmation (Q 3:3; 5:46) and the manuscripts | *Yes:* the Qur'an confirmed books that teach the cross. *No:* Codex Sinaiticus (4th century) says otherwise. |
-| **Burden of proof (Columbo, step 2).** **"If the Qur'an confirms only the true parts, how do you know which parts are true without first assuming the Qur'an is right?"** | General confirmation and the question at issue | Any answer either names no test or assumes what is being tested. |
+| **Sibling Rivalry.** **"Q 5:47 tells the Christians of Muhammad's day to judge by the Injil. Was the Injil they had then reliable, or corrupted?"** | Q 5:47 (judge by it) and Q 4:157 (no crucifixion) | *Reliable:* it records the crucifixion, so the Qur'an denies what it confirmed. *Corrupted:* Allah commanded judging by a corrupt book, and the Qur'an confirmed it. *"The lost original," or hidden until the Mahdi (Shia):* then the command could not be obeyed. |
+| **Just the Facts.** **"Did the Gospels Christians held before Muhammad say Jesus was crucified and died?"** | The Qur'an's confirmation (Q 3:3; 5:46) and the manuscripts | *Yes:* the Qur'an confirmed books that teach his death on the cross. *No:* Codex Sinaiticus (4th century) says otherwise. *Recorded escape,* "he was put on the cross but survived" (Ahmadi; Response Bank row 35): then he takes the Gospels as witnesses, and they say he "gave up the ghost" (Mark 15:37), that the soldiers "saw that he was dead already" (John 19:33), and that Pilate had it confirmed by the centurion (Mark 15:44–45). Ask, "Which Gospel says he survived?" |
+| **Burden of proof (Columbo, step 2).** **"If the Qur'an confirms only the true parts, how do you know which parts are true without first assuming the Qur'an is right?"** | General confirmation and the question at issue | Any answer either names no test or assumes what is being tested. *Recorded escape,* "only an infallible Imam can sort true from corrupt" (Shia; Response Bank rows 32, 34): then the Christians whom Q 5:47 told to judge by the Injil could not obey, for no Imam had sorted it for them, and Q 7:157 says it was written "with them." Ask, "Was Allah commanding them to do what they could not do?" Scripture expects ordinary readers to know it (2 Tim. 3:15; Acts 17:11). |
 | **Sibling Rivalry.** **"Q 10:94 sends Muhammad, if in doubt, to those who read the Book before him. Would Allah send his prophet to a corrupted book for reassurance?"** | Q 10:94 and the corruption claim | *Yes:* Allah sends his prophet to falsehood. *No:* the Book they read was sound. *Recorded escape,* "it's only a data point, not the final judge" (Haqiqatjou): grant it, then ask, "On whether Jesus was crucified, what does that data point say?" The Gospels say he was (Matt. 27:35; John 19:18), so on that question it gives the doubter reason to doubt the Qur'an (Q 4:157). |
 
 ### B′. Their answers
@@ -184,8 +185,9 @@ Every common escape route either fails against the Qur'an's own words or makes t
 The Qur'an itself sends the Muslim to the Gospel, so take him there. The dilemma clears the ground; the Gospel is what we came to give.
 
 1. **Bridge from the flaw: use the door the Qur'an opens.** *If he concedes:* "Your book says to ask those who read the Book before you (Q 10:94) and to judge by the Injil (Q 5:47). May I show you what the Injil says about how God forgives? Shall we read it together?" *If he dodges:* park the point and give the reason for your hope (Methodology, "The bridge to Christ").
-2. **Start where he is at home.** Luke opens with Zechariah and Mary, both familiar from Q 3 and 19. John states its purpose: "that ye might believe that Jesus is the Christ, the Son of God; and that believing ye might have life through his name" (John 20:31).
+2. **Start where he is at home.** Luke opens with Zechariah and Mary, both familiar from Q 3 and 19. His own book calls Isa "a Word" from Allah (Q 3:45; 4:171); ask, "Shall we read what John says about the Word?" and read "In the beginning was the Word, and the Word was with God, and the Word was God… And the Word was made flesh" (John 1:1, 14). John states its purpose: "that ye might believe that Jesus is the Christ, the Son of God; and that believing ye might have life through his name" (John 20:31).
 3. **Let him meet Jesus there.** Jesus forgives sins on his own authority (Mark 2:5–12). He lays down his life and takes it up again (John 10:17–18). Thomas calls him "My Lord and my God" (John 20:28).
 4. **Show the Father who gives his Son.** The Qur'an says God is no one's father and does not love unbelievers (Q 5:18; 3:32). The Gospel says, "For God so loved the world, that he gave his only begotten Son" (John 3:16), and "while we were yet sinners, Christ died for us" (Rom. 5:8; Luke 6:35).
 5. **Offer assurance instead of the scales.** The Qur'an weighs deeds on scales at the judgment (Q 7:8–9; 21:47). In Christ, God is both just and the justifier (Rom. 3:26), so salvation is a gift, not a wage (Eph. 2:8–9): "that ye may know that ye have eternal life" (1 John 5:13).
-6. **Keep at it in love.** Pray for him (Rom. 10:1). Stay his friend after the argument. One plants, another waters, and God gives the growth (1 Cor. 3:6–7; 2 Tim. 2:25).
+6. **Count the cost together.** Don't hide it. To follow Jesus may cost him his family, as a Muslim who later believed said it would cost his (Response Bank row 59). Jesus warned of it and promised more: "He that loveth father or mother more than me is not worthy of me" (Matt. 10:37); whoever leaves family for his sake "shall receive an hundredfold now in this time… with persecutions; and in the world to come eternal life" (Mark 10:29–30; Luke 14:28).
+7. **Keep at it in love.** Offer to pray for him then and there, to Jesus by name, for the needs he names (Jas. 5:16), and invite him to ask Jesus himself to show who he is: "ye shall seek me, and find me, when ye shall search for me with all your heart" (Jer. 29:13; John 14:21). Pray for him (Rom. 10:1). Stay his friend after the argument. One plants, another waters, and God gives the growth (1 Cor. 3:6–7; 2 Tim. 2:25).

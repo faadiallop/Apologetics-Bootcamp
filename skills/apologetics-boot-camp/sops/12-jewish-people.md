@@ -93,7 +93,7 @@ The argument has three premises. Read every verse from the text itself, one prem
 - "For the transgression of my people was he stricken" (53:8). Just before, God calls Israel "my people" (52:4–6; also 51:16).
 - Israel is not innocent: "Ah sinful nation, a people laden with iniquity" (1:4); "all we like sheep have gone astray" (53:6); "there is not a just man upon earth, that doeth good, and sinneth not" (Eccl. 7:20).
 - The servant's task is "to bring Jacob again to him" and "to raise up the tribes of Jacob" (49:5–6), so he is distinct from the Israel he restores.
-- He is cut off, dies and is buried (53:8–9), yet "he shall prolong his days" (53:10): one person's death and life after it.
+- He is cut off, dies and is buried (53:8–9), yet "he shall prolong his days" (53:10): one person's death and life after it. *Recorded escape,* "'cut off out of the land of the living' means exile, not death" (Aish; Response Bank row 23): Jeremiah's enemies use the same words for a plot to kill him, "let us cut him off from the land of the living, that his name may be no more remembered" (Jer. 11:19), and the passage gives the servant "his grave" and says "he hath poured out his soul unto death" (Isa. 53:9, 12).
 
 #### Premise 3: Yeshua is the servant
 
@@ -161,14 +161,15 @@ Each answer either fails against the text or leaves the servant suffering innoce
 - Burying a secular Jew in Talmud quotations.
 - Saying "you killed Jesus." He laid down his life (John 10:18), and our sins put him there (Isa. 53:5).
 - Pressing for a decision when it will cost him his family. Plant, water, and pray.
+- Following him, pressing for a phone number, or a parting jab after he says no (Response Bank rows 36, 37, 40). Take the first no, leave the door open in a sentence, and go (Matt. 10:14; Col. 4:6).
 
 ### A′. Turn to Christ
 
 The passage ends in the servant's victory, and so should the conversation.
 
-1. **Bridge from the flaw.** *If he concedes:* "If the servant isn't Israel, who is he?" It is the eunuch's question (Acts 8:34); answer it as Philip did, beginning at this scripture. *If he dodges:* park the point and give the reason for your hope (Methodology, "The bridge to Christ").
+1. **Bridge from the flaw.** *If he concedes:* "If the servant isn't Israel, who is he?" It is the eunuch's question (Acts 8:34); answer it as Philip did, beginning at this scripture. *If he dodges:* park the point and give the reason for your hope (Methodology, "The bridge to Christ"). *If he says it isn't for a Jew* (Response Bank row 35): Yeshua is Israel's own Messiah, "salvation is of the Jews" (John 4:22), the gospel is "to the Jew first" (Rom. 1:16), and "many thousands of Jews" believed in the first church (Acts 21:20).
 2. **Read the fulfillment.** Read Luke 23–24, or Acts 8:26–39, where a reader of Isaiah 53 meets Yeshua.
 3. **Show the guilt offering.** "Behold the Lamb of God, which taketh away the sin of the world" (John 1:29). "By one offering he hath perfected for ever them that are sanctified" (Heb. 10:14).
-4. **Atonement with no temple.** The Torah ties atonement to blood on the altar (Lev. 17:11), and there has been no altar since AD 70. Yeshua "by his own blood… entered in once into the holy place, having obtained eternal redemption for us" (Heb. 9:12).
+4. **Atonement with no temple.** Open with a question: "When you pray on Yom Kippur, do you know you are forgiven?" Members answer, "we just pray" and "I only hope so" (Response Bank row 39; the coaching table). God promises more to those he forgives: "their sins and iniquities will I remember no more" (Heb. 10:17), "that ye may know that ye have eternal life" (1 John 5:13). The Torah ties atonement to blood on the altar (Lev. 17:11), and there has been no altar since AD 70. Yeshua "by his own blood… entered in once into the holy place, having obtained eternal redemption for us" (Heb. 9:12).
 5. **Count the cost together.** Yeshua warned that following him may divide families, and promised a hundredfold now (Matt. 10:34–37; Mark 10:29–30).
 6. **Keep at it in love.** Pray for him by name (Rom. 10:1). Leave him a copy of Isaiah 53 and the Gospel of Luke. God gives the growth (1 Cor. 3:6–7).
