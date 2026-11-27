@@ -11,6 +11,6 @@ This is a test run of the boot camp skill. For this run only:
 - Do not open the Apologetics SOPs doc. My training log is the file training-log.md in this folder: read my newest card there, and save cards there.
 - Do not search the web.
 
-I'm Philip. Train me to talk with Jehovah's Witnesses. I've never talked with one about what they believe, and I'm typing today, not on voice.
+I'm Philip. Train me to talk with Jehovah's Witnesses. I've never talked with one about what they believe, and I'm on voice.
 
 Input files: training-log.md
