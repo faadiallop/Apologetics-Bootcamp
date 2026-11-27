@@ -4,4 +4,4 @@ focus: trace
 weight: 1
 ---
 
-The introduction is short enough to say in about two minutes: no more than 350 words.
+Everything Philip hears in this first reply, the introduction and the offer of background included, is short enough to say in about two minutes: no more than 350 words.
