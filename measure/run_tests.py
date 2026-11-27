@@ -19,12 +19,21 @@ cannot be stopped partway. Needs ANTHROPIC_API_KEY and the anthropic package.
 
 This run does not test fetching from GitHub or saving with tools; a release still runs
 the measure as its README describes, for that.
+
+With --engine claude-code, the tests run through Claude Code's own runner
+(`claude plugin eval`) instead, on whatever Claude credential the machine has: in CI,
+the author's subscription token. The coach then reads and writes the test's files with
+tools, as in a real session, and Opus grades each statement three times. It costs more
+of the plan's usage than the API way costs in money, and the Batch API is not used.
+--root names the plugin to test (by default, this repo).
 """
 import argparse
 import json
 import os
 import re
+import subprocess
 import sys
+import tempfile
 import time
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -253,6 +262,45 @@ def run(rev, plan, cap, dry_run, label):
     return results
 
 
+def run_claude_code(root, plan, cap, label):
+    """The same as run(), through `claude plugin eval`. plan: [(test, coach model)]."""
+    counts = {}
+    for test, model in plan:
+        counts[(test, model)] = counts.get((test, model), 0) + 1
+    results, spent = [], 0.0
+    for (test, model), runs in counts.items():
+        left = cap - spent
+        if left <= 0:
+            results.append({"test": test, "coach": model, "verdicts": {}, "cost": 0.0, "error": "cap reached"})
+            continue
+        with tempfile.TemporaryDirectory() as tmp:
+            out = os.path.join(tmp, "result.json")
+            cmd = ["claude", "plugin", "eval", root, "--eval-dir", coverage.EVALS, "--case", test,
+                   "--trust-plugin", "--no-publish", "--ablation", "none", "--scaffold",
+                   "--allow-tools", "Write", "Edit", "--model", model, "--judge-model", "opus",
+                   "--runs", str(runs), "--threshold", "0", "--max-cost-usd", f"{left:.2f}",
+                   "--output-dir", os.path.join(tmp, "out"), "--report", os.path.join(tmp, "report.html"),
+                   "--json", out]
+            print(f"{label}: {test}, {runs} run(s) with {model}", flush=True)
+            subprocess.run(cmd, cwd=root, check=False)
+            if not os.path.exists(out):
+                results.append({"test": test, "coach": model, "verdicts": {}, "cost": 0.0, "error": "no result"})
+                continue
+            with open(out, encoding="utf-8") as f:
+                data = json.load(f)
+        spent += data.get("costUsd") or 0.0
+        for case in data.get("cases", []):
+            for one in case.get("arms", {}).get("with", []):
+                row = {"test": test, "coach": model, "cost": one.get("costUsd") or 0.0, "verdicts": {
+                    g["name"]: {"passes": bool(g["passed"]), "reason": g.get("explanation", "")}
+                    for g in one.get("graders", []) if g.get("scored", True)}}
+                if one.get("error"):
+                    row["error"] = one["error"][:300]
+                    row["verdicts"] = {}
+                results.append(row)
+    return results
+
+
 def verdicts(results):
     """{test: {statement: 'pass' | 'fail' | 'unsteady'}} under rule 7: all pass, or two fail."""
     seen = {}
@@ -314,6 +362,8 @@ def main():
             p.add_argument("--coaches", default="sonnet,sonnet,opus")
         else:
             p.add_argument("--baseline", required=True, help="a stored full run to compare with")
+        p.add_argument("--engine", choices=("api", "claude-code"), default="api")
+        p.add_argument("--root", default=coverage.ROOT, help="with --engine claude-code: the plugin to test")
     p = sub.add_parser("show")
     p.add_argument("file")
     args = parser.parse_args()
@@ -328,16 +378,24 @@ def main():
         print("No tests to run.")
         return 0
 
+    def go(plan, cap, dry_run, label):
+        if args.engine == "claude-code":
+            if dry_run:
+                print(f"{label}: {len(plan)} runs through Claude Code; the cap is ${cap:.2f}")
+                return None
+            return run_claude_code(args.root, plan, cap, label)
+        return run(args.rev, plan, cap, dry_run, label)
+
     if args.cmd == "run":
         plan = [(t, m) for t in tests for m in args.coaches.split(",")]
-        results = run(args.rev, plan, args.cap, args.dry_run, "full run")
+        results = go(plan, args.cap, args.dry_run, "full run")
         if results is not None:
             show(save(args.out, args.rev, "full run", results))
         return 0
 
     with open(args.baseline, encoding="utf-8") as f:
         base = json.load(f)["verdicts"]
-    first = run(args.rev, [(t, "sonnet") for t in tests], args.cap, args.dry_run, "screen")
+    first = go([(t, "sonnet") for t in tests], args.cap, args.dry_run, "screen")
     if first is None:
         return 0
     spent = sum(r["cost"] for r in first)
@@ -345,8 +403,8 @@ def main():
                      if base.get(r["test"], {}).get(s) != ("pass" if v["passes"] else "fail")})
     results = first
     if differ:
-        more = run(args.rev, [(t, m) for t in differ for m in ("sonnet", "opus")], args.cap - spent, False,
-                   "screen, again where it differs")
+        more = go([(t, m) for t in differ for m in ("sonnet", "opus")], args.cap - spent, False,
+                  "screen, again where it differs")
         results = first + more
     data = save(args.out, args.rev, "screen", results)
     now = data["verdicts"]
