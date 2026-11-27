@@ -223,3 +223,7 @@ The author asked for the skill to use the fixed pieces, and for one run in place
 **Quick check: those two tests, one Sonnet run each on the changed skill, with the test copies of the fixed pieces marked approved.** Each answer was the fixed piece word for word, the same text that passed 10 of 10 and 8 of 8 earlier today, so they were not graded again. Neither asked about voice. **Not run:** the other fifteen tests, Opus as the coach, and the live rounds; no test yet gives the coach a trainee who says he is typing.
 
 **Website.** `site/` now holds a Cloudflare Worker (branch `site/worker-step-1`): the coach on Sonnet, a router and the member on Haiku, spending limits for a $20 month, and a voice-only page. It has been deployed for the owner's own testing; no trainee has used it.
+
+## 2026-11-27: the weekly run is to be redone
+
+The author has decided to redo the weekly improvement run from the start. Until the new one is written, no weekly run is expected. Changes to this repo are now checked as `measure/PLAN.md` sets out, and agents push to `agent/...` branches, whose pull requests go to `next`.
