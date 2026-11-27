@@ -35,4 +35,4 @@ Add a line here only after reading it where it stands. A line that was meant to 
 - "Jacob venerated the top of Joseph's staff"
   An Orthodox objection, with the passage it appeals to.
 - "Christ is the image of God"
-  An Orthodox objection, with the passage it appeals to.
+  An Orthodox and Catholic objection, with the passage it appeals to.
