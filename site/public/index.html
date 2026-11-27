@@ -146,6 +146,8 @@ requestAnimationFrame(draw);
 
 function setMode(next) {
   mode = next;
+  // When training ends the screen may sleep again.
+  if (next === "idle" && wakeLock) { wakeLock.release().catch(() => {}); wakeLock = null; }
   $("state").textContent = { idle: "", thinking: "The coach is thinking.", speaking: "The coach is speaking.", listening: "The coach is listening." }[next];
 }
 
@@ -220,16 +222,30 @@ function say(text) {
         wordPush = Math.min(1, 0.55 + 0.06 * (e.charLength || 5));
       };
       // Only the piece now being spoken may move the coach on.
-      u.onend = u.onerror = () => { if (current === u) speakNext(); };
+      u.onend = () => { if (current === u) speakNext(); };
+      // A phone stops the voice when its screen goes off or the page is left. Then the piece
+      // that was cut is said again once the page is back, instead of being skipped.
+      u.onerror = () => { if (current === u) (document.hidden ? retryWhenShown : speakNext)(); };
       // If a browser stops without saying so, the coach doesn't wait for ever: after twice the
       // time the piece should take, and some grace for a voice that is slow to start, go on.
       timer = setTimeout(() => {
         if (current !== u) return;
         current = null;
         speechSynthesis.cancel();
-        speakNext();
+        (document.hidden ? retryWhenShown : speakNext)();
       }, 6000 + part.length * 150);
       speechSynthesis.speak(u);
+    };
+    const retryWhenShown = () => {
+      clearTimeout(timer);
+      current = null;
+      next--;
+      const shown = () => {
+        if (document.hidden) return;
+        document.removeEventListener("visibilitychange", shown);
+        speakNext();
+      };
+      document.addEventListener("visibilitychange", shown);
     };
     stopSpeaking = () => { current = null; speechSynthesis.cancel(); finish(); };
     speakNext();
@@ -311,6 +327,17 @@ function askForToken() {
   $("token").focus();
 }
 
+/* ---------- keeping the screen on ---------- */
+// A phone turns its screen off after a short while untouched, and Chrome on Android then stops
+// the coach's voice. Training is by ear, so nobody touches the screen; it is kept on instead.
+let wakeLock = null;
+async function keepScreenOn() {
+  if (!("wakeLock" in navigator) || document.hidden || (wakeLock && !wakeLock.released)) return;
+  try { wakeLock = await navigator.wakeLock.request("screen"); } catch { /* not allowed: carry on */ }
+}
+// The lock is let go whenever the page is hidden, so it is asked for again when the page is back.
+document.addEventListener("visibilitychange", () => { if (mode !== "idle") keepScreenOn(); });
+
 async function begin() {
   group = $("group").value;
   if (!group) return;
@@ -318,6 +345,7 @@ async function begin() {
   // This must happen inside the tap, or some browsers refuse to speak later.
   speechSynthesis.speak(new SpeechSynthesisUtterance(" "));
   $("choose").classList.add("gone");
+  keepScreenOn();
   setMode("thinking");
   await new Promise((r) => setTimeout(r, matchMedia("(prefers-reduced-motion: reduce)").matches ? 100 : 2400));
   converse(`I want to train to talk with ${GROUP_NAMES[group]}. I'm training by voice.`);
