@@ -4,7 +4,7 @@ Cards for each trainee, newest first.
 
 ## Samuel · Muslims (Islamic Dilemma)
 
-### Boot camp log · Nov 24, 2026 · second session (typed)
+### Boot camp log · Nov 24, 2026 · second session (voice)
 
 **Next: step 2, asking for his reasons. Not yet taught.**
 

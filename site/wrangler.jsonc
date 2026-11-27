@@ -1,0 +1,25 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "bootcamp-site",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-11-01",
+  // The test page. Anything under /api/ goes to the Worker.
+  "assets": { "directory": "./public" },
+  // The skill's Markdown files are bundled in as text.
+  "rules": [{ "type": "Text", "globs": ["**/*.md"], "fallthrough": true }],
+  "d1_databases": [
+    { "binding": "DB", "database_name": "bootcamp-site", "database_id": "3e28576c-7857-4272-b1ec-b3d1389379e8" }
+  ],
+  // Spending limits, in US dollars. Sized for $20 a month and five testers.
+  "vars": {
+    "USER_DAILY_USD": "0.50",
+    "USER_MONTHLY_USD": "3.50",
+    "SITE_DAILY_USD": "1.50",
+    "SITE_MONTHLY_USD": "20",
+    "SITE_TIGHTEN_AT_USD": "16",
+    "SESSION_USD": "0.60",
+    "SESSION_TURNS": "40",
+    "TURNS_PER_MINUTE": "6"
+  }
+  // Secrets, set with `wrangler.cmd secret put`: ANTHROPIC_API_KEY, OWNER_TOKEN
+}

@@ -213,3 +213,13 @@ The author asked for the skill to use the fixed pieces, and for one run in place
 **Also on this branch,** outside the skill: `site/prompts/` holds a router and a member prompt for a website that plays the member on a cheaper model. One run of the eight in-round tests with Haiku as router and member and Sonnet as coach scored 37 of 38; Haiku coaching alone scored 86 of 104 on all 17. The router was written by a hand that had seen these tests, so it needs the live rounds before trainees meet it.
 
 **Script checks after the changes:** all pass; `saved-skills` is skipped on this machine, which has no saved copies.
+
+## 2026-11-27: the training made voice only (at the author's direction, not by the loop)
+
+**Skill change.** The training is now by voice only. The coach no longer asks whether he will train by voice; a new paragraph in B.1 says he speaks and hears, nothing is read or written, and a trainee who says he is typing is asked to come back by voice. The offer of a written scorecard is gone, and when a card can't be saved the coach says its main points aloud where it used to hand him the card to paste in. Stamp `8afceae0`.
+
+**Measure changes** (a commit of their own, by the author's direction): two tests had trainees who typed, which the skill now turns away. `opens-for-a-beginner` (prompt and `case.yaml`) and `teaches-a-new-tactic-first` (prompt, `so-far.md` and the card's heading) now have them on voice. No statement, pass line or member's line was changed.
+
+**Quick check: those two tests, one Sonnet run each on the changed skill, with the test copies of the fixed pieces marked approved.** Each answer was the fixed piece word for word, the same text that passed 10 of 10 and 8 of 8 earlier today, so they were not graded again. Neither asked about voice. **Not run:** the other fifteen tests, Opus as the coach, and the live rounds; no test yet gives the coach a trainee who says he is typing.
+
+**Website.** `site/` now holds a Cloudflare Worker (branch `site/worker-step-1`): the coach on Sonnet, a router and the member on Haiku, spending limits for a $20 month, and a voice-only page. It has been deployed for the owner's own testing; no trainee has used it.

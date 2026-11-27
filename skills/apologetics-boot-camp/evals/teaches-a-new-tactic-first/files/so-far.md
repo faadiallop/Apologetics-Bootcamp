@@ -1,8 +1,8 @@
 # Session so far: Samuel
 
-Typed session. The recall is finished. No lesson on step 2 has been given, and no practice round has begun.
+Voice transcript. The recall is finished. No lesson on step 2 has been given, and no practice round has begun.
 
-**Samuel:** I'm Samuel. Let's keep going with the Muslims training. I'm typing today, not on voice. I've prayed and I'm ready.
+**Samuel:** I'm Samuel. Let's keep going with the Muslims training. I've prayed and I'm ready.
 
 **Coach:** Good to have you back, Samuel, and I'm glad you've prayed. A little recall first. In surah five, verse forty-seven, what are the people of the Injil told to do?
 

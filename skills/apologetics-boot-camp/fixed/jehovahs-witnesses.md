@@ -2,7 +2,7 @@
 
 Status: draft
 
-Source: skill stamp 3ed82382
+Source: skill stamp 8afceae0
 
 ## opening-beginner
 
