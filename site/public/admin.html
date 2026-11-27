@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Boot Camp: owner's page</title>
+<style>
+  :root { color-scheme: light dark; --navy: #04356A; --line: #8885; }
+  body { font: 16px/1.5 system-ui, sans-serif; max-width: 52rem; margin: 0 auto; padding: 1.25rem; }
+  h1 { font-size: 1.3rem; margin: 0 0 1rem; }
+  h2 { font-size: 1.05rem; margin: 1.75rem 0 .5rem; }
+  form { display: flex; gap: .5rem; flex-wrap: wrap; }
+  input, button { font: inherit; padding: .5rem .7rem; border: 1px solid var(--line); border-radius: .4rem; background: transparent; color: inherit; }
+  input { flex: 1; min-width: 12rem; }
+  button { cursor: pointer; }
+  button.main { background: var(--navy); border-color: var(--navy); color: #fff; }
+  button.stop { border-color: #b3261e; color: #b3261e; }
+  .wide { overflow-x: auto; }
+  table { border-collapse: collapse; width: 100%; font-variant-numeric: tabular-nums; }
+  th, td { text-align: left; padding: .45rem .6rem; border-bottom: 1px solid var(--line); white-space: nowrap; }
+  th { font-size: .8rem; opacity: .7; font-weight: 600; }
+  td.num, th.num { text-align: right; }
+  tr.off td { opacity: .5; }
+  #totals { display: grid; grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)); gap: .75rem; }
+  #totals div { border: 1px solid var(--line); border-radius: .5rem; padding: .6rem .8rem; }
+  #totals b { display: block; font-size: 1.3rem; }
+  #totals span { font-size: .85rem; opacity: .75; }
+  #code { margin-top: .75rem; border: 2px solid var(--navy); border-radius: .5rem; padding: .75rem 1rem; }
+  #code code { font-size: 1.3rem; letter-spacing: .05em; user-select: all; }
+  .paused { color: #b3261e; font-weight: 600; }
+  [hidden] { display: none !important; }
+</style>
+</head>
+<body>
+<h1>Apologetics Boot Camp: owner's page</h1>
+
+<form id="signin">
+  <input id="token" type="password" placeholder="Owner token" autocomplete="off" aria-label="Owner token">
+  <button class="main">Sign in</button>
+</form>
+
+<div id="app" hidden>
+  <div id="totals"></div>
+  <p><button id="pause" class="stop"></button> <span id="pausedNote" class="paused" hidden>Training is paused for everyone.</span></p>
+
+  <h2>Invite someone</h2>
+  <form id="invite">
+    <input id="name" placeholder="Their name" maxlength="80" aria-label="Name of the person to invite">
+    <button class="main">Create invite code</button>
+  </form>
+  <div id="code" hidden>
+    <p>Invite code for <b id="codeFor"></b>. Give it to them now: it is shown this once and cannot be shown again.</p>
+    <p><code id="codeText"></code> <button type="button" id="copy">Copy</button></p>
+    <p>They open <span id="siteAddress"></span> and enter the code once on their device.</p>
+  </div>
+
+  <h2>Who can train</h2>
+  <div class="wide">
+    <table>
+      <thead><tr><th>Name</th><th class="num">Today</th><th class="num">This month</th><th class="num">Sessions</th><th>Last active</th><th></th></tr></thead>
+      <tbody id="users"></tbody>
+    </table>
+  </div>
+</div>
+
+<script>
+const $ = (id) => document.getElementById(id);
+let token = sessionStorage.getItem("owner-token") || "";
+let paused = false;
+
+async function api(path, body) {
+  const res = await fetch(path, {
+    method: body ? "POST" : "GET",
+    headers: { authorization: "Bearer " + token, ...(body ? { "content-type": "application/json" } : {}) },
+    body: body ? JSON.stringify(body) : undefined,
+  });
+  return { ok: res.ok, status: res.status, data: await res.json().catch(() => ({})) };
+}
+
+const money = (n) => "$" + Number(n).toFixed(2);
+function cell(text, cls) { const td = document.createElement("td"); td.textContent = text; if (cls) td.className = cls; return td; }
+
+async function refresh() {
+  const [status, users] = await Promise.all([api("/api/status"), api("/api/admin/users")]);
+  if (!status.ok || !users.ok) return false;
+  const s = status.data.spent_usd, l = status.data.limits_usd;
+  paused = status.data.paused;
+  $("pause").textContent = paused ? "Resume training" : "Pause all training";
+  $("pausedNote").hidden = !paused;
+  $("totals").replaceChildren(...[
+    [money(s.site_month) + " of " + money(l.site_month), "the site, this month"],
+    [money(s.site_today) + " of " + money(l.site_today), "the site, today"],
+    [money(l.you_month) + " a month, " + money(l.you_today) + " a day", "each person's allowance"],
+  ].map(([big, small]) => { const d = document.createElement("div"); const b = document.createElement("b"); b.textContent = big; const sp = document.createElement("span"); sp.textContent = small; d.append(b, sp); return d; }));
+
+  $("users").replaceChildren(...users.data.users.map((u) => {
+    const tr = document.createElement("tr");
+    if (!u.active) tr.className = "off";
+    tr.append(
+      cell(u.name + (u.active ? "" : " (revoked)")),
+      cell(money(u.today_usd), "num"), cell(money(u.month_usd), "num"), cell(String(u.sessions_this_month), "num"),
+      cell(u.last_active ? new Date(u.last_active).toLocaleString() : "never"),
+    );
+    const td = document.createElement("td");
+    if (u.id !== "owner") {
+      const b = document.createElement("button");
+      b.textContent = u.active ? "Revoke" : "Restore";
+      if (u.active) b.className = "stop";
+      b.onclick = async () => { await api("/api/admin/users/active", { id: u.id, active: !u.active }); refresh(); };
+      td.append(b);
+    }
+    tr.append(td);
+    return tr;
+  }));
+  return true;
+}
+
+$("signin").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  token = $("token").value.trim();
+  if (await refresh()) { sessionStorage.setItem("owner-token", token); $("signin").hidden = true; $("app").hidden = false; }
+  else alert("That token was not accepted as the owner's.");
+});
+
+$("pause").addEventListener("click", async () => { await api("/api/admin/pause", { paused: !paused }); refresh(); });
+
+$("invite").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const { ok, data } = await api("/api/admin/users", { name: $("name").value });
+  if (!ok) return alert(data.error || "The invite could not be made.");
+  $("codeFor").textContent = data.name;
+  $("codeText").textContent = data.code;
+  $("siteAddress").textContent = location.origin;
+  $("code").hidden = false;
+  $("name").value = "";
+  refresh();
+});
+
+$("copy").addEventListener("click", () => navigator.clipboard.writeText($("codeText").textContent));
+
+if (token) refresh().then((ok) => { if (ok) { $("signin").hidden = true; $("app").hidden = false; } });
+</script>
+</body>
+</html>

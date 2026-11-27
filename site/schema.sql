@@ -44,3 +44,13 @@ CREATE TABLE IF NOT EXISTS cards (
   saved_at   INTEGER NOT NULL
 );
 CREATE INDEX IF NOT EXISTS cards_newest ON cards (user_id, grp, saved_at);
+
+-- The people who may train. The owner signs in with a secret of his own and has no row here.
+-- An invited trainee signs in with a code; only its SHA-256 hash is kept.
+CREATE TABLE IF NOT EXISTS users (
+  id         TEXT    PRIMARY KEY,
+  name       TEXT    NOT NULL,
+  code_hash  TEXT    NOT NULL UNIQUE,
+  active     INTEGER NOT NULL DEFAULT 1,
+  created_at INTEGER NOT NULL
+);
