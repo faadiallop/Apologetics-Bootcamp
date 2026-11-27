@@ -62,6 +62,6 @@ Each of `say`, `check` and `expect` is one line, with a blank line between them,
 7. **Nothing addressed to one trainee.** No names, no "as you said."
 8. **The author's thought-and-word rules apply** (`skills/thought-and-word-rules/`).
 
-## Not yet used by the skill
+## How the skill uses them
 
-`SKILL.md` does not name these files yet, so the coach still composes its openings and lessons. Once a group's file is approved, the author decides whether the skill tells the coach to say its pieces as written.
+Section B.5 of `SKILL.md` tells the coach to say a group's pieces as written, but only from a file marked `Status: approved`. While a file reads `Status: draft` the coach composes those parts itself, as before. So the author switches a group over by approving its file.
