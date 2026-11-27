@@ -46,7 +46,7 @@ Until both secrets are set, every request is refused. Then open the address `dep
 
 Open `/admin` on the site and sign in with the owner token. Type the person's name and choose "Create invite code". The code is shown once; the site keeps only its hash. Give the person the code and the site's address. He enters the code once on his device, picks a group, and trains by voice.
 
-The same page shows what each person has spent today and this month, lets you revoke or restore an invite, and pauses all training. Each person has his own allowance, sessions and training log.
+The same page shows what each person has spent today and this month, lets you revoke or restore an invite, and pauses all training. Under "Training log" it shows each person's sessions, the card the coach saved in each, and what was said. Under "Sign-ins" it lists the last hundred times a code was entered, accepted or refused; after twenty refusals in ten minutes from one place, that place is turned away for a while. Each person has his own allowance, sessions and training log.
 
 ## Pause everything
 
@@ -56,6 +56,10 @@ The owner's page has a "Pause all training" button. From a terminal:
 
 Set the value to `'0'` to resume.
 
+## Server logs
+
+The Worker's logs are kept by Cloudflare (`observability` in `wrangler.jsonc`). Each turn logs who, which session, which models were called, the cost, and any error. It never logs what was said. Read them in the Cloudflare dashboard under Workers & Pages, `bootcamp-site`, Logs, or watch them live with `wrangler.cmd tail bootcamp-site`.
+
 ## Check a change
 
 - `npm.cmd run typecheck`
@@ -64,6 +68,6 @@ Set the value to `'0'` to resume.
 
 ## Not built yet
 
-Email sign-in, email alerts at $10 and $16, a page where a trainee can read his own training log, serving approved fixed pieces with no model call, and streaming.
+Email sign-in, email alerts at $10 and $16, a page where a trainee can read his own training log, a way to delete a person's records, serving approved fixed pieces with no model call, and streaming.
 
 To run the site on this machine, give Wrangler a short folder for its local database, since the repo's own path may be too long for it: `wrangler.cmd dev --persist-to C:\wstate`, after `wrangler.cmd d1 execute bootcamp-site --local --persist-to C:\wstate --file=schema.sql`, with `OWNER_TOKEN` and `ANTHROPIC_API_KEY` in a `.dev.vars` file.

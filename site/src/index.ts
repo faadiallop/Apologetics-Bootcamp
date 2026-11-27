@@ -43,6 +43,56 @@ async function whoIs(request: Request, env: Env): Promise<User | null> {
   return row ? { id: row.id, name: row.name, owner: false } : null;
 }
 
+/** Where a request came from, as a short tag that can't be turned back into an address. */
+async function placeOf(request: Request, env: Env): Promise<{ country: string; tag: string }> {
+  const ip = request.headers.get("cf-connecting-ip") ?? "unknown";
+  const tag = (await hashCode(ip + "|" + (env.OWNER_TOKEN ?? ""))).slice(0, 10);
+  const country = (request as Request & { cf?: { country?: string } }).cf?.country ?? "";
+  return { country, tag };
+}
+
+const TRIES = 20;
+const TRIES_WINDOW = 10 * 60_000;
+
+/** Write down a refused code. Returns true when this place has guessed too often to be let try again yet. */
+async function refused(request: Request, env: Env): Promise<boolean> {
+  const { country, tag } = await placeOf(request, env);
+  const now = Date.now();
+  await env.DB.prepare("INSERT INTO signins (at, user_id, outcome, country, ip_tag) VALUES (?, NULL, 'refused', ?, ?)")
+    .bind(now, country, tag)
+    .run();
+  const recent = await env.DB.prepare("SELECT COUNT(*) AS n FROM signins WHERE outcome = 'refused' AND ip_tag = ? AND at > ?")
+    .bind(tag, now - TRIES_WINDOW)
+    .first<{ n: number }>();
+  console.warn(JSON.stringify({ event: "sign-in refused", place: tag, country, recent: recent?.n ?? 0 }));
+  return (recent?.n ?? 0) > TRIES;
+}
+
+async function signIn(request: Request, env: Env, user: User): Promise<Response> {
+  const { country, tag } = await placeOf(request, env);
+  await env.DB.prepare("INSERT INTO signins (at, user_id, outcome, country, ip_tag) VALUES (?, ?, ?, ?, ?)")
+    .bind(Date.now(), user.id, user.owner ? "owner" : "trainee", country, tag)
+    .run();
+  console.log(JSON.stringify({ event: "signed in", user: user.id, place: tag, country }));
+  return json({ name: user.name, owner: user.owner });
+}
+
+async function listSignins(env: Env): Promise<Response> {
+  const rows = await env.DB.prepare(
+    `SELECT s.at, s.outcome, s.country, s.ip_tag, u.name
+     FROM signins s LEFT JOIN users u ON u.id = s.user_id ORDER BY s.at DESC LIMIT 100`,
+  ).all<{ at: number; outcome: string; country: string | null; ip_tag: string | null; name: string | null }>();
+  return json({
+    signins: rows.results.map((r) => ({
+      at: r.at,
+      who: r.outcome === "refused" ? "Refused" : r.outcome === "owner" ? "Owner (you)" : (r.name ?? "A removed invite"),
+      refused: r.outcome === "refused",
+      country: r.country ?? "",
+      place: r.ip_tag ?? "",
+    })),
+  });
+}
+
 const day = (d: Date) => d.toISOString().slice(0, 10);
 
 async function killed(env: Env): Promise<boolean> {
@@ -112,7 +162,10 @@ async function turn(request: Request, env: Env, user: User): Promise<Response> {
 
   const limits = limitsFromEnv(env as Record<string, string | undefined>);
   const verdict = check(limits, await spendSoFar(env, user.id, now, { cost, turns }), daysLeftInMonth(now));
-  if (!verdict.ok) return json({ error: verdict.message, reason: verdict.reason, session_id: body?.session_id }, 429);
+  if (!verdict.ok) {
+    console.warn(JSON.stringify({ event: "limit reached", user: user.id, reason: verdict.reason }));
+    return json({ error: verdict.message, reason: verdict.reason, session_id: body?.session_id }, 429);
+  }
 
   const used: { role: string; model: string; usage: Usage; cost: number }[] = [];
   const models = makeModels(env.ANTHROPIC_API_KEY, group, (role, model, usage) =>
@@ -156,6 +209,18 @@ async function turn(request: Request, env: Env, user: User): Promise<Response> {
     }
   }
   if (writes.length) await env.DB.batch(writes);
+
+  // The server's log of a turn: who, which session, what it cost and what failed. Never what was said.
+  console.log(JSON.stringify({
+    event: result ? "turn" : "turn failed",
+    user: user.id,
+    session: id,
+    group,
+    route: result?.route?.route ?? (result ? "coach" : undefined),
+    calls: used.map((u) => u.role + ":" + u.model),
+    cost_usd: spent / 1_000_000,
+    error: failure instanceof Error ? failure.name + ": " + failure.message.slice(0, 300) : undefined,
+  }));
 
   if (!result) {
     if (failure instanceof Anthropic.RateLimitError) return json({ error: "The coach is busy. Try again in a moment." }, 503);
@@ -244,12 +309,54 @@ async function setActive(request: Request, env: Env): Promise<Response> {
   return json({ id: body.id, active: Boolean(body.active) });
 }
 
+/** One person's sessions, newest first, with the card each one saved. Owner only. */
+async function listSessions(env: Env, url: URL): Promise<Response> {
+  const user = url.searchParams.get("user") ?? "";
+  const rows = await env.DB.prepare(
+    `SELECT s.id, s.grp, s.turns, s.cost_micros, s.created_at, s.updated_at, c.body AS card
+     FROM sessions s LEFT JOIN cards c ON c.session_id = s.id
+     WHERE s.user_id = ? ORDER BY s.updated_at DESC LIMIT 100`,
+  )
+    .bind(user)
+    .all<{ id: string; grp: string; turns: number; cost_micros: number; created_at: number; updated_at: number; card: string | null }>();
+  return json({
+    sessions: rows.results.map((r) => ({
+      id: r.id,
+      group: GROUPS[r.grp]?.name ?? r.grp,
+      turns: r.turns,
+      cost_usd: Math.round(r.cost_micros / 10_000) / 100,
+      started: r.created_at,
+      last: r.updated_at,
+      card: r.card,
+    })),
+  });
+}
+
+/** One session's conversation, line by line. Owner only. */
+async function readSession(env: Env, url: URL): Promise<Response> {
+  const row = await env.DB.prepare("SELECT state FROM sessions WHERE id = ?")
+    .bind(url.searchParams.get("id") ?? "")
+    .first<{ state: string }>();
+  if (!row) return json({ error: "That session was not found." }, 404);
+  const state = JSON.parse(row.state) as Session;
+  // The site's own notes to the coach are left out: the trainee never said or heard them.
+  const lines = state.lines.map((l) => ({ speaker: l.speaker, text: l.text.replace(/\s*\[Site note, not said by the trainee:[\s\S]*\]$/, "") }));
+  return json({ lines });
+}
+
 export default {
   async fetch(request: Request, env: Env): Promise<Response> {
     const { pathname } = new URL(request.url);
     if (!pathname.startsWith("/api/")) return new Response("Not found", { status: 404 });
     const user = await whoIs(request, env);
-    if (!user) return json({ error: "Sign in first." }, 401);
+    if (!user) {
+      // A request with no code at all is not a guess, so only a refused code is written down.
+      if (request.headers.get("authorization") && (await refused(request, env)))
+        return json({ error: "Too many wrong codes from here. Wait ten minutes and try again." }, 429);
+      return json({ error: "Sign in first." }, 401);
+    }
+
+    if (pathname === "/api/signin" && request.method === "POST") return signIn(request, env, user);
 
     if (pathname === "/api/turn" && request.method === "POST") return turn(request, env, user);
     if (pathname === "/api/status" && request.method === "GET") return status(env, user);
@@ -259,6 +366,9 @@ export default {
       if (pathname === "/api/admin/users" && request.method === "GET") return listUsers(env);
       if (pathname === "/api/admin/users" && request.method === "POST") return invite(request, env);
       if (pathname === "/api/admin/users/active" && request.method === "POST") return setActive(request, env);
+      if (pathname === "/api/admin/signins" && request.method === "GET") return listSignins(env);
+      if (pathname === "/api/admin/sessions" && request.method === "GET") return listSessions(env, new URL(request.url));
+      if (pathname === "/api/admin/session" && request.method === "GET") return readSession(env, new URL(request.url));
       if (pathname === "/api/admin/pause" && request.method === "POST") {
         const body = (await request.json().catch(() => null)) as { paused?: boolean } | null;
         await env.DB.prepare("INSERT INTO settings (key, value) VALUES ('kill', ?1) ON CONFLICT(key) DO UPDATE SET value = ?1")

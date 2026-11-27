@@ -10,6 +10,8 @@
   "d1_databases": [
     { "binding": "DB", "database_name": "bootcamp-site", "database_id": "3e28576c-7857-4272-b1ec-b3d1389379e8" }
   ],
+  // Keep the Worker's logs in Cloudflare, so an error on the live site can be looked up.
+  "observability": { "enabled": true },
   // Spending limits, in US dollars. Sized for $20 a month and five testers.
   "vars": {
     "USER_DAILY_USD": "0.50",

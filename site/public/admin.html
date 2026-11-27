@@ -29,6 +29,12 @@
   #code { margin-top: .75rem; border: 2px solid var(--navy); border-radius: .5rem; padding: .75rem 1rem; }
   #code code { font-size: 1.3rem; letter-spacing: .05em; user-select: all; }
   .paused { color: #b3261e; font-weight: 600; }
+  #detail { border: 1px solid var(--line); border-radius: .5rem; padding: .25rem 1rem 1rem; margin-top: 1rem; }
+  #sessions button { margin: .15rem .3rem .15rem 0; }
+  pre.card { white-space: pre-wrap; overflow-wrap: anywhere; font: inherit; border-left: 3px solid var(--navy); padding-left: .8rem; margin: .5rem 0 1rem; }
+  .line { margin: 0 0 .7rem; white-space: pre-wrap; overflow-wrap: anywhere; }
+  .line b { display: block; font-size: .8rem; opacity: .7; }
+  .line.trainee { padding-left: 1.5rem; }
   [hidden] { display: none !important; }
 </style>
 </head>
@@ -62,6 +68,21 @@
       <tbody id="users"></tbody>
     </table>
   </div>
+
+  <h2>Sign-ins</h2>
+  <p>The last hundred times a code was entered. A run of refusals from one place means someone is guessing.</p>
+  <div class="wide">
+    <table>
+      <thead><tr><th>When</th><th>Who</th><th>Country</th><th>Place tag</th></tr></thead>
+      <tbody id="signins"></tbody>
+    </table>
+  </div>
+
+  <div id="detail" hidden>
+    <h2 id="detailName"></h2>
+    <div id="sessions"></div>
+    <div id="session"></div>
+  </div>
 </div>
 
 <script>
@@ -82,8 +103,13 @@ const money = (n) => "$" + Number(n).toFixed(2);
 function cell(text, cls) { const td = document.createElement("td"); td.textContent = text; if (cls) td.className = cls; return td; }
 
 async function refresh() {
-  const [status, users] = await Promise.all([api("/api/status"), api("/api/admin/users")]);
+  const [status, users, signins] = await Promise.all([api("/api/status"), api("/api/admin/users"), api("/api/admin/signins")]);
   if (!status.ok || !users.ok) return false;
+  $("signins").replaceChildren(...(signins.data.signins || []).map((s) => {
+    const tr = document.createElement("tr");
+    tr.append(cell(new Date(s.at).toLocaleString()), cell(s.who, s.refused ? "paused" : ""), cell(s.country), cell(s.place));
+    return tr;
+  }));
   const s = status.data.spent_usd, l = status.data.limits_usd;
   paused = status.data.paused;
   $("pause").textContent = paused ? "Resume training" : "Pause all training";
@@ -103,6 +129,10 @@ async function refresh() {
       cell(u.last_active ? new Date(u.last_active).toLocaleString() : "never"),
     );
     const td = document.createElement("td");
+    const view = document.createElement("button");
+    view.textContent = "Training log";
+    view.onclick = () => showPerson(u);
+    td.append(view, " ");
     if (u.id !== "owner") {
       const b = document.createElement("button");
       b.textContent = u.active ? "Revoke" : "Restore";
@@ -116,10 +146,42 @@ async function refresh() {
   return true;
 }
 
+async function showPerson(u) {
+  $("detail").hidden = false;
+  $("detailName").textContent = "Training log: " + u.name;
+  $("session").replaceChildren();
+  const { ok, data } = await api("/api/admin/sessions?user=" + encodeURIComponent(u.id));
+  if (!ok || !data.sessions.length) { $("sessions").textContent = "No sessions yet."; return; }
+  $("sessions").replaceChildren(...data.sessions.map((s) => {
+    const b = document.createElement("button");
+    b.textContent = `${new Date(s.started).toLocaleDateString()} · ${s.group} · ${s.turns} turns · ${money(s.cost_usd)}`;
+    b.onclick = () => showSession(s);
+    return b;
+  }));
+  showSession(data.sessions[0]);
+  $("detail").scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+async function showSession(s) {
+  const { ok, data } = await api("/api/admin/session?id=" + encodeURIComponent(s.id));
+  const parts = [];
+  const h1 = document.createElement("h2"); h1.textContent = "Card saved in this session"; parts.push(h1);
+  const card = document.createElement("pre"); card.className = "card"; card.textContent = s.card || "The coach saved no card in this session."; parts.push(card);
+  const h2 = document.createElement("h2"); h2.textContent = "What was said"; parts.push(h2);
+  const names = { trainee: "Trainee", coach: "Coach", member: "Member (role-play)" };
+  for (const l of ok ? data.lines : []) {
+    const p = document.createElement("p"); p.className = "line " + l.speaker;
+    const b = document.createElement("b"); b.textContent = names[l.speaker] || l.speaker;
+    p.append(b, document.createTextNode(l.text)); parts.push(p);
+  }
+  $("session").replaceChildren(...parts);
+}
+
 $("signin").addEventListener("submit", async (e) => {
   e.preventDefault();
   token = $("token").value.trim();
-  if (await refresh()) { sessionStorage.setItem("owner-token", token); $("signin").hidden = true; $("app").hidden = false; }
+  const entered = await api("/api/signin", {});
+  if (entered.ok && entered.data.owner && await refresh()) { sessionStorage.setItem("owner-token", token); $("signin").hidden = true; $("app").hidden = false; }
   else alert("That token was not accepted as the owner's.");
 });
 

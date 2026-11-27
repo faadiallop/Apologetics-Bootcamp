@@ -54,3 +54,15 @@ CREATE TABLE IF NOT EXISTS users (
   active     INTEGER NOT NULL DEFAULT 1,
   created_at INTEGER NOT NULL
 );
+
+-- A record of sign-ins: each time a code or token is entered and accepted, and each time one is refused.
+-- The address is kept only as a short tag, enough to see that tries came from one place.
+CREATE TABLE IF NOT EXISTS signins (
+  id      INTEGER PRIMARY KEY AUTOINCREMENT,
+  at      INTEGER NOT NULL,
+  user_id TEXT,              -- empty when the code was refused
+  outcome TEXT    NOT NULL,  -- owner, trainee or refused
+  country TEXT,
+  ip_tag  TEXT
+);
+CREATE INDEX IF NOT EXISTS signins_at ON signins (at);
