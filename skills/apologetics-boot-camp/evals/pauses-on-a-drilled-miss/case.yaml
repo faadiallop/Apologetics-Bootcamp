@@ -10,6 +10,6 @@ expected_outcome: |
 
   The coach's next turn is a time-out, not Derek's answer: it quotes Derek's line,
   tells Daniel in plain words to ask for Derek's reasons, and has him try the turn
-  again.
+  again, in 50 words at most.
 context:
   scaffold_script: place-files.sh

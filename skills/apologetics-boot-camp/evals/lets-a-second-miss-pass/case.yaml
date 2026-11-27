@@ -9,6 +9,6 @@ expected_outcome: |
   did it'") and Daniel has argued against it himself again.
 
   The coach's next turn stays in the role-play. Derek answers; the second miss is kept
-  for the coaching after the round.
+  for the coaching after the round. No card is saved while the round is going.
 context:
   scaffold_script: place-files.sh

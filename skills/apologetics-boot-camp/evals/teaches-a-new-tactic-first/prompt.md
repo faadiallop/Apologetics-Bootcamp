@@ -11,6 +11,6 @@ This is a test run of the boot camp skill. For this run only:
 - Do not open the Apologetics SOPs doc. My training log is the file training-log.md in this folder: read my newest card there, and save cards there.
 - Do not search the web.
 
-I'm Samuel. Let's keep going with the Muslims training. I'm typing today, not on voice. I've prayed and I'm ready.
+I'm Samuel. We're in the middle of a typed session of the Muslims training. What has been said so far is in so-far.md; it ends with my latest line. Give your next turn, and only that.
 
-Input files: training-log.md
+Input files: so-far.md, training-log.md

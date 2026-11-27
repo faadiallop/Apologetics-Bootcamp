@@ -6,11 +6,11 @@ Cards for each trainee, newest first.
 
 ### Boot camp log · Nov 18, 2026 · fifth session (voice)
 
-**Next: one more passing round on step 3, leading with questions, will clear it.**
+**Next: step 3 again, leading with questions. Two more passing rounds in a row will clear it.**
 
 **What he learned.** Ask the closing question once, then wait.
 
-**How he did.** Leading with questions (step 3): 3 of 3 in his last round, a pass, the first of the two in a row he needs. Before that, 2 of 4 and 2 of 3.
+**How he did.** Leading with questions (step 3): 3 of 3 in his last round, a pass, the first of the three in a row he needs. Before that, 2 of 4 and 2 of 3.
 
 **Hard tactics, in the book's order.** Step 3, leading with questions; then seeing the flaw.
 

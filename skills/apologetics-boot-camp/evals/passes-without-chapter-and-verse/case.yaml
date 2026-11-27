@@ -13,6 +13,7 @@ expected_outcome: |
   The coach gives him full marks for knowledge and tells him the check passed. It does
   not mark him down for the missing references, the round figures, or the garbled
   words. Because his last check was not a pass, this is the first of the two in a row
-  he needs, not the end of the stage.
+  he needs, not the end of the stage, and the card's "Next" line says the same check
+  comes once more.
 context:
   scaffold_script: place-files.sh

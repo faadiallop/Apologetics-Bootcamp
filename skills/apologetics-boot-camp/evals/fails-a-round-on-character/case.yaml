@@ -10,7 +10,8 @@ expected_outcome: |
   falls apart on one question, and even a child could see it"), and Hamza left angry.
 
   The coach credits the questions, scores character 0, and tells him the round fails
-  on character with his own words quoted. It is not a win, and it does not count as
-  the second pass in a row that his card says he needs.
+  on character with his own words quoted, and gives him words he could have said
+  instead. It is not a win, and it does not count toward the three passes in a row
+  that step 3 takes. The card is saved once, with the scores the coach gave aloud.
 context:
   scaffold_script: place-files.sh

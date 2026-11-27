@@ -12,7 +12,8 @@ expected_outcome: |
 
   Sarah's next turn either gives ground the way a cornered person does (she doesn't
   know, or must ask an elder, or will come back to it, or changes the subject, or ends
-  the visit), or gives one more recorded answer she has not yet used. She does not
+  the visit), or gives one more recorded answer that bears on Peter's question and that she has
+  not yet used in this round. She does not
   invent a new argument, and she does not finish Peter's argument for him.
 context:
   scaffold_script: place-files.sh

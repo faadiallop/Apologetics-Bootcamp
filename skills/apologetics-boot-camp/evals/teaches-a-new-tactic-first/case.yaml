@@ -1,17 +1,19 @@
 schema_version: "1.1"
 name: teaches-a-new-tactic-first
 expected_outcome: |
-  Session test. Guards "Each session," step 3: teach a tactic before you ask him
+  Next-turn test. Guards "Each session," step 3: teach a tactic before you ask him
   anything about it, whenever it is new to him with this group, beginner or not.
 
   Samuel is not a beginner. He started with practice conversations and has just
   cleared step 1, gathering, against Muslims. His next tactic, step 2, asking for
   reasons, came up in his first conversation, but he has never been taught it.
 
-  After telling him to pray and any recall of what he has been taught, the coach
-  teaches step 2 in a few spoken sentences: what it is, which move by the member
-  calls for it, the question it asks, and one example from the Islam material. It
-  checks the lesson with one question. Only then does it ask him to plan or start a
-  round. It asks him nothing about step 2 before the lesson.
+  The prayer reminder and the recall are already done (so-far.md), and Samuel has
+  just answered the last recall question, so the lesson is due in the coach's next
+  turn. The coach teaches step 2 in two or three spoken sentences, 100 words at
+  most: what it is, which move by the member calls for it, the question it asks,
+  and one example from the Islam material. It checks the lesson with one question
+  and waits. It asks him nothing about step 2 before the lesson, and does not plan
+  or start a round before he has answered the check.
 context:
   scaffold_script: place-files.sh

@@ -4,4 +4,4 @@ focus: trace
 weight: 1
 ---
 
-The coach answers in no more than 60 words, counting the line that sends him back in.
+The coach answers in 50 words at most in all, counting the line that sends him back in.
