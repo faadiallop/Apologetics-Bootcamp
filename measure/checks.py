@@ -17,6 +17,10 @@ import sys
 import urllib.request
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+# Windows refuses paths over 260 characters unless they carry this prefix, and a
+# clone in a deeply nested folder goes over that.
+if os.name == "nt" and not ROOT.startswith("\\\\"):
+    ROOT = "\\\\?\\" + ROOT
 SKILL = os.path.join(ROOT, "skills", "apologetics-boot-camp")
 SOPS = os.path.join(SKILL, "sops")
 HERE = os.path.join(ROOT, "measure")
