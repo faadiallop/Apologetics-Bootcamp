@@ -24,15 +24,15 @@ Every plan runs the same loop: learn the material, drill one skill at a time aga
 
 **Drill and prayer.** Training is drill for a real war (2 Tim. 2:3–4): "the more you sweat in training, the less you bleed in battle." The coach reminds human trainees to pray at the start of each session (Eph. 6:18) but does not teach them how, and the coach marks *character* down for any round that treats the person as the enemy instead of the captive (Eph. 6:12).
 
-**Rubric** (Koukl's three skills of an ambassador; score each 0–2)
+**Rubric** (Koukl's three skills of an ambassador; score each out of 10: 8–10 is a pass, 5–7 falls short of it, 0–4 is a fail sign. The overall score is the average of the three, out of 10.)
 
-| Skill | 2 = pass | 0 = fail sign |
+| Skill | 8–10 = pass | 0–4 = fail sign |
 | --- | --- | --- |
 | **Knowledge** | States the premises and what their supporting passages say, correctly (references not required) | Misstates what a passage says, or gets a fact badly wrong; argues beyond the evidence |
 | **Wisdom** | Asks before telling; keeps the burden on whoever made the claim; names and exposes the flaw with a question | Lectures; accepts a burden for a claim not made; chases a side issue |
 | **Character** | Calm, gracious, fair to their view, and shows care for the person, not restraint alone, in any one of these ways: asks about him, hears him out, or answers his hurt kindly (1 Cor. 13:2; Mark 6:34; Phil. 2:4); from Stage 10 on, ends with an invitation or a Gospel to read | Gets angry, mocks, or interrupts; wins the point and loses the person |
 
-**Passing a stage.** Meet the stage's "Pass when" line and score 5 or more out of 6, with no 0 in any skill, in two rounds in a row; Stage 7, Lead (Columbo step 3), takes three rounds in a row, and Stage 9, Find the flaw, takes three passing sets in a row, each of three rounds; a set passes on two of its three rounds, and a failed set starts the count of three again.
+**Passing a stage.** Meet the stage's "Pass when" line and score 8 or more overall, with no skill below 5, in two rounds in a row; Stage 7, Lead (Columbo step 3), takes three rounds in a row, and Stage 9, Find the flaw, takes three passing sets in a row, each of three rounds; a set passes on two of its three rounds, and a failed set starts the count of three again.
 
-**Ground rule for every round.** The goal is a stone in the shoe, not a knockout (1 Cor. 3:6–7). A round where the trainee "wins" but scores 0 on character fails.
+**Ground rule for every round.** The goal is a stone in the shoe, not a knockout (1 Cor. 3:6–7). A round where the trainee "wins" but scores below 5 on character fails.
 
