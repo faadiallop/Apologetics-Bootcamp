@@ -170,7 +170,7 @@ async function showSession(s) {
   const h2 = document.createElement("h2"); h2.textContent = "What was said"; parts.push(h2);
   const names = { trainee: "Trainee", coach: "Coach", member: "Member (role-play)" };
   if (ok && data.removed) {
-    const p = document.createElement("p"); p.textContent = "The conversation has been removed, as every conversation is once it is old enough. The card is kept."; parts.push(p);
+    const p = document.createElement("p"); p.textContent = "No conversation is kept for this session: either it was removed once it was old enough, or the card was brought in from a training log kept elsewhere."; parts.push(p);
   }
   for (const l of ok ? data.lines : []) {
     const p = document.createElement("p"); p.className = "line " + l.speaker;
