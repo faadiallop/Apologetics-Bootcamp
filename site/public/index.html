@@ -107,7 +107,7 @@ const GROUP_NAMES = { islam: "Muslims", "jehovahs-witnesses": "Jehovah's Witness
 let token = localStorage.getItem("owner-token") || "";
 let session = null, group = "";
 let mode = "idle";            // idle | thinking | speaking | listening
-let analyser = null, levels = null, recognition = null;
+let recognition = null;
 let lastWord = 0, wordPush = 0, wordsReported = false;
 
 /* ---------- the visualizer ---------- */
@@ -116,7 +116,8 @@ const fromCentre = [2, 1, 0, 1, 2];
 function draw(now) {
   const t = now / 1000;
   let want = [0.55, 0.55, 0.55, 0.55, 0.55];
-  if (mode === "idle") want = want.map((v, i) => v + 0.06 * Math.sin(t * 1.4 - fromCentre[i] * 0.7));
+  // The bars are the coach's voice. They rest while the trainee speaks.
+  if (mode === "idle" || mode === "listening") want = want.map((v, i) => v + 0.06 * Math.sin(t * 1.4 - fromCentre[i] * 0.7));
   if (mode === "thinking") want = want.map((_, i) => 0.3 + 0.25 * (0.5 + 0.5 * Math.sin(t * 4 - fromCentre[i] * 1.1)));
   if (mode === "speaking") {
     // The browser doesn't let a page hear its own voice, but it does say when each word
@@ -128,17 +129,6 @@ function draw(now) {
       const flutter = 0.75 + 0.25 * Math.sin(t * (17 + i * 5) + i * 1.9);
       return Math.min(1, 0.2 + push * flutter * (1 - fromCentre[i] * 0.12));
     });
-  }
-  if (mode === "listening") {
-    let heard = [0, 0, 0, 0, 0];
-    if (analyser) {
-      analyser.getByteFrequencyData(levels);
-      // Five bands of the voice's range, loudest low band in the middle bar.
-      const band = (from, to) => { let s = 0; for (let k = from; k < to; k++) s += levels[k]; return s / (to - from) / 255; };
-      const b = [band(2, 6), band(6, 12), band(12, 22), band(22, 40), band(40, 70)];
-      heard = [b[3], b[1], b[0], b[2], b[4]];
-    }
-    want = heard.map((v, i) => Math.min(1, 0.3 + v * 1.4 + 0.03 * Math.sin(t * 2 + i)));
   }
   for (let i = 0; i < 5; i++) {
     shown[i] += (want[i] - shown[i]) * (want[i] > shown[i] ? 0.35 : 0.14);
@@ -192,17 +182,6 @@ function say(text) {
 }
 
 /* ---------- listening ---------- */
-async function openMicrophone() {
-  if (analyser) return;
-  const stream = await navigator.mediaDevices.getUserMedia({ audio: { echoCancellation: true, noiseSuppression: true } });
-  const context = new (window.AudioContext || window.webkitAudioContext)();
-  analyser = context.createAnalyser();
-  analyser.fftSize = 256;
-  analyser.smoothingTimeConstant = 0.75;
-  levels = new Uint8Array(analyser.frequencyBinCount);
-  context.createMediaStreamSource(stream).connect(analyser);
-}
-
 function listen() {
   return new Promise((resolve, reject) => {
     setMode("listening");
@@ -273,9 +252,8 @@ function askForToken() {
 async function begin() {
   group = $("group").value;
   if (!group) return;
-  // These two must happen inside the tap, or some browsers refuse sound and the microphone later.
+  // This must happen inside the tap, or some browsers refuse to speak later.
   speechSynthesis.speak(new SpeechSynthesisUtterance(" "));
-  try { await openMicrophone(); } catch { /* the bars still move for the coach; listen() reports a blocked microphone */ }
   $("choose").classList.add("gone");
   setMode("thinking");
   await new Promise((r) => setTimeout(r, matchMedia("(prefers-reduced-motion: reduce)").matches ? 100 : 2400));
