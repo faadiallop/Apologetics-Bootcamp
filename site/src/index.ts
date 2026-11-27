@@ -150,6 +150,7 @@ async function turn(request: Request, env: Env, user: User): Promise<Response> {
       .bind(id, user.id)
       .first<{ grp: string; state: string; cost_micros: number; turns: number }>();
     if (!row) return json({ error: "That session was not found." }, 404);
+    if (!row.state) return json({ error: "That session has ended. Start a new one; your card carries your progress over." }, 410);
     group = row.grp;
     session = JSON.parse(row.state) as Session;
     cost = row.cost_micros;
@@ -255,6 +256,7 @@ async function status(env: Env, user: User): Promise<Response> {
       session: dollars(limits.sessionSpend),
     },
     session_turns: limits.sessionTurns,
+    keep_conversations_days: keepDays(env),
     groups: Object.fromEntries(Object.entries(GROUPS).map(([id, g]) => [id, g.name])),
   });
 }
@@ -338,10 +340,27 @@ async function readSession(env: Env, url: URL): Promise<Response> {
     .bind(url.searchParams.get("id") ?? "")
     .first<{ state: string }>();
   if (!row) return json({ error: "That session was not found." }, 404);
+  if (!row.state) return json({ lines: [], removed: true });
   const state = JSON.parse(row.state) as Session;
   // The site's own notes to the coach are left out: the trainee never said or heard them.
   const lines = state.lines.map((l) => ({ speaker: l.speaker, text: l.text.replace(/\s*\[Site note, not said by the trainee:[\s\S]*\]$/, "") }));
   return json({ lines });
+}
+
+const keepDays = (env: Env): number => {
+  const days = Number(env.KEEP_CONVERSATIONS_DAYS);
+  return Number.isFinite(days) && days > 0 ? days : 14;
+};
+
+/**
+ * Remove what was said in sessions that have been idle longer than the keeping time.
+ * The session's row stays, with its group, turns and cost, and so does its card.
+ */
+async function removeOldConversations(env: Env, now: number): Promise<number> {
+  const done = await env.DB.prepare("UPDATE sessions SET state = '' WHERE state != '' AND updated_at < ?")
+    .bind(now - keepDays(env) * 86_400_000)
+    .run();
+  return done.meta.changes ?? 0;
 }
 
 export default {
@@ -378,5 +397,10 @@ export default {
       }
     }
     return json({ error: "Not found." }, 404);
+  },
+
+  async scheduled(_controller: ScheduledController, env: Env): Promise<void> {
+    const removed = await removeOldConversations(env, Date.now());
+    console.log(JSON.stringify({ event: "old conversations removed", sessions: removed, kept_days: keepDays(env) }));
   },
 } satisfies ExportedHandler<Env>;

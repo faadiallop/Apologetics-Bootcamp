@@ -56,6 +56,10 @@ The owner's page has a "Pause all training" button. From a terminal:
 
 Set the value to `'0'` to resume.
 
+## What is kept, and for how long
+
+A trainee's card is kept, since it is how the coach remembers his progress. What was said in a session is removed 14 days after the session was last used (`KEEP_CONVERSATIONS_DAYS` in `wrangler.jsonc`), by a job that runs once a day. The session's group, number of turns and cost stay on record.
+
 ## Server logs
 
 The Worker's logs are kept by Cloudflare (`observability` in `wrangler.jsonc`). Each turn logs who, which session, which models were called, the cost, and any error. It never logs what was said. Read them in the Cloudflare dashboard under Workers & Pages, `bootcamp-site`, Logs, or watch them live with `wrangler.cmd tail bootcamp-site`.

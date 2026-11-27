@@ -169,6 +169,9 @@ async function showSession(s) {
   const card = document.createElement("pre"); card.className = "card"; card.textContent = s.card || "The coach saved no card in this session."; parts.push(card);
   const h2 = document.createElement("h2"); h2.textContent = "What was said"; parts.push(h2);
   const names = { trainee: "Trainee", coach: "Coach", member: "Member (role-play)" };
+  if (ok && data.removed) {
+    const p = document.createElement("p"); p.textContent = "The conversation has been removed, as every conversation is once it is old enough. The card is kept."; parts.push(p);
+  }
   for (const l of ok ? data.lines : []) {
     const p = document.createElement("p"); p.className = "line " + l.speaker;
     const b = document.createElement("b"); b.textContent = names[l.speaker] || l.speaker;

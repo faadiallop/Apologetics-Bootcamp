@@ -10,6 +10,8 @@
   "d1_databases": [
     { "binding": "DB", "database_name": "bootcamp-site", "database_id": "3e28576c-7857-4272-b1ec-b3d1389379e8" }
   ],
+  // Once a day, remove conversations older than KEEP_CONVERSATIONS_DAYS. The cards are kept.
+  "triggers": { "crons": ["17 3 * * *"] },
   // Keep the Worker's logs in Cloudflare, so an error on the live site can be looked up.
   "observability": { "enabled": true },
   // Spending limits, in US dollars. Sized for $20 a month and five testers.
@@ -21,7 +23,8 @@
     "SITE_TIGHTEN_AT_USD": "16",
     "SESSION_USD": "0.60",
     "SESSION_TURNS": "40",
-    "TURNS_PER_MINUTE": "6"
+    "TURNS_PER_MINUTE": "6",
+    "KEEP_CONVERSATIONS_DAYS": "14"
   }
   // Secrets, set with `wrangler.cmd secret put`: ANTHROPIC_API_KEY, OWNER_TOKEN
 }
