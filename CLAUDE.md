@@ -15,8 +15,9 @@ This repo is the true copy of the apologetics boot camp skill, its SOPs, and the
    | `11-jehovahs-witnesses.md` | Jehovah's Witnesses |
    | `12-jewish-people.md` | Jewish people |
    | `13-atheism.md` | Atheists |
-   | `20-response-bank.md`, then `20-response-bank-islam.md`, `20-response-bank-jehovahs-witnesses.md`, `20-response-bank-jewish-people.md`, `20-response-bank-atheism.md` | Response Bank (role-play) |
-   | `21-training-plans.md`, then `21-training-plans-islam.md`, `21-training-plans-jehovahs-witnesses.md`, `21-training-plans-jewish-people.md`, `21-training-plans-atheism.md` | Training Plans (role-play) |
+   | `14-icon-veneration.md` | Icon Veneration |
+   | `20-response-bank.md`, then `20-response-bank-islam.md`, `20-response-bank-jehovahs-witnesses.md`, `20-response-bank-jewish-people.md`, `20-response-bank-atheism.md`, `20-response-bank-icon-veneration.md` | Response Bank (role-play) |
+   | `21-training-plans.md`, then `21-training-plans-islam.md`, `21-training-plans-jehovahs-witnesses.md`, `21-training-plans-jewish-people.md`, `21-training-plans-atheism.md`, `21-training-plans-icon-veneration.md` | Training Plans (role-play) |
 
    The Response Bank and the Training Plans are each kept as one shared file and one file for each group, so that a training session loads only its own group's. Their tab holds those files joined in the order given. A new group gets its own two files, named after its SOP.
 

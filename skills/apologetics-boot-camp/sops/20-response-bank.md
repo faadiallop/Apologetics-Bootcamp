@@ -1,6 +1,6 @@
 # Response Bank
 
-Common responses each SOP meets, gathered online, for agents to use in role-play. Last gathered Nov 26, 2026 (debate transcripts for all four groups); Nov 25, 2026 (Borrowed Ground debates); Nov 23, 2026 (Borrowed Ground); Nov 22, 2026 (the rest).
+Common responses each SOP meets, gathered online, for agents to use in role-play. Last gathered Nov 26, 2026 (debate transcripts for all four groups; Icon Veneration, with YouTube arguments); Nov 25, 2026 (Borrowed Ground debates); Nov 23, 2026 (Borrowed Ground); Nov 22, 2026 (the rest).
 
 ## How agents use this bank
 
@@ -25,6 +25,10 @@ An agent playing the other side draws its answers from this bank, in that group'
 | Borrowed Ground | Ex-Christian | Raised in church, knows verses; left over suffering, unanswered prayer or hurt; guarded, sometimes grieving |
 | Borrowed Ground | Humanist chaplain | Jared Anderson's lines: right and wrong are "intersubjective," worked out in the cultural conversation; grants without flinching that nothing is absolutely wrong; "the victims have a say"; warm and pastoral; objects to being preached at |
 | Borrowed Ground | Seasoned debater | Dan Barker's lines: morality is "minimizing harm," logic "isn't a thing," Bible contradictions, unanswered prayer, God incoherent (FANG); friendly, practiced, quick with a joke |
+| Icon Veneration | Cradle Orthodox | Raised in the church; kisses icons from habit and love; "we venerate, we don't worship"; knows few verses; warm but quick to feel his family's faith is insulted |
+| Icon Veneration | Cradle Catholic | Raised with statues, candles and the crucifix; "we don't worship statues, they're reminders, like family photos"; knows the Catechism's line on veneration but few verses; puzzled that anyone objects |
+| Icon Veneration | Convert apologist | Former evangelical, Orthodox or Catholic, trained on YouTube; quotes Nicaea II, "honor passes to the prototype," the ark, the serpent and Rev. 3:9; turns the charge back on Protestant crosses and Bible films; may mock and steamroll |
+| Icon Veneration | Priest | Knows the Septuagint, the Fathers and the councils (and, if Catholic, Aquinas and Trent); cites the cherubim, the ark and Jacob's staff; appeals to the council's authority; calm and patient |
 
 **Rules for the role-player**
 

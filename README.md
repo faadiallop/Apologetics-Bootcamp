@@ -22,16 +22,19 @@ skills/
       11-jehovahs-witnesses.md       The Bread of Life
       12-jewish-people.md            The Suffering Servant
       13-atheism.md                  Borrowed Ground
+      14-icon-veneration.md          Icon Veneration
       20-response-bank.md            Personas and rules for role-play, shared by every group
       20-response-bank-islam.md      What members actually say, one file for each group
       20-response-bank-jehovahs-witnesses.md
       20-response-bank-jewish-people.md
       20-response-bank-atheism.md
+      20-response-bank-icon-veneration.md
       21-training-plans.md           How training works and the rubric, shared by every group
       21-training-plans-islam.md     Stage-by-stage drills and pass lines, one file for each group
       21-training-plans-jehovahs-witnesses.md
       21-training-plans-jewish-people.md
       21-training-plans-atheism.md
+      21-training-plans-icon-veneration.md
     VERSION                The stamp of SKILL.md, so a saved copy can tell whether it is current
   thought-and-word-rules/  Index of the rules below and how they fit together
   presupposition-rule/     Reason from Scripture; no neutral ground
