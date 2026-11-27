@@ -110,3 +110,52 @@ Faa made two changes on Nov 26, 2026. Neither was tested by a conversation test.
 **No name before the member's lines in role-play.** SKILL.md, under "Play the member as real people talk": name him once when setting up the conversation, then give each turn as his words alone, with no "Khalid:" label, since a name before every line breaks the scene; after a time out, "Back to Khalid" is enough. This went in with `b895c8a`, before this entry; it is recorded here.
 
 **Script checks after the changes:** all pass except `saved-skills`, which differs until the author saves the proposed update to his saved boot camp skill.
+
+## 2026-11-27: author's review of the tests, and four clarifications to the skill (made by hand, not by the loop)
+
+The author gave a written plan: fix the tests, then find why the skill fails them and fix it. Claude carried it out in an interactive session. Partway through, the author changed rule 7 of the measure (three runs: two Sonnet, one Opus) and asked for a single Sonnet run of the changed skill as a quick check. **So the result below is a quick check, not a pass under the measure.** The next weekly run's three-run test of `main` is the full check.
+
+**Where it started.** The author's run of Nov 27 on stamp `9d9b451d`, graded blind by Opus on the old 93 statements: Sonnet 83, Opus 86. Its files are not in the repo; the plan carried the graders' notes.
+
+**Test changes, each made at the author's direction** (commit "Measure: fix the tests after the run of Nov 27"; the message cites the line of SKILL.md behind each). 93 statements became 104.
+
+- `teaches-a-new-tactic-first`: the graded turn is now the one where the lesson is due. Before, both coaches rightly did the recall first, so the lesson never came in the turn that was graded. Lesson limit 100 words, not "about 120."
+- Limits now match the skill: a time-out is 50 words, not 60 (three tests); coaching after a round is 150 words, not 180 (seven tests); the argument is "one sentence," not "about one."
+- `pauses-on-a-drilled-miss`: new statement for two or three sentences after "Time out"; the cues "Time out," "Coach here" and "Back to Derek" are not counted as sentences.
+- `member-neither-invents-nor-folds/02`: a recorded answer must bear on the question and not repeat one already used.
+- `lets-a-second-miss-pass`, `no-pause-for-an-undrilled-miss`: no card saved in the middle of a round.
+- `fails-a-round-on-character`: the coach gives better words; and the test's own card said step 3 takes two passes in a row, where the skill says three. Corrected.
+- The six marking tests: one card for the session, its scores agreeing with what was said aloud, and a right "Next" line.
+- `notes-awkward-wording-without-marking-down`: the smoother wording is not presented as the round's one thing to change.
+- Not added: a statement that the member's reply gives a new chance at his tactic. The skill asks for three chances in a round, not one in every reply. For the author to decide.
+- Already done before this session: the stale "dialogue" line, and the crossed chance counted in `closes-when-he-crosses-early`.
+
+**Diagnosis.** A Sonnet run on `main` (stamp `e1c01a96`) with the corrected tests was read by Claude, not graded, since the author cut the baseline short. It showed the same slips as the Nov 27 run. All were of one kind: the rule was in the skill but hard to find or act on.
+
+| Slip | The answer's words | Why |
+| --- | --- | --- |
+| Crossing early: Sonnet stayed in character and never closed the round | "Well, I don't buy any of that, but I've got to log off now." | The rule sat in the middle of the long paragraph "The gospel comes after the method," and the list of when to leave character did not name it |
+| The smoother wording given as the thing to change | "One thing to change: your second question … worked, but it was long." | The skill gave the note right after "one thing to change" and did not say it is a different thing |
+| The member's next answer off the point (Nov 27: a repeat) | "a little flock and other sheep… aren't in union with him" | "the recorded escapes for it" did not say that "for it" means bearing on the question, or that a used answer is spent |
+| A card's "Next" line that misleads | "This is the second of the two checks in a row that it takes." | The skill said what to tell him after a first pass, but not how to write it on the card |
+
+**Skill changes** (one commit, stamp `209861b1`). No new rule, so no new Scripture was needed; each makes an existing rule plain.
+
+1. "If he crosses to Christ early" is now a short paragraph of its own: the member answers in one sentence, with no leaving line and no closing turns, and the coach steps out and coaches the round in the same turn. The list of when to leave character names it.
+2. The note on awkward wording "is a note on his wording, not the round's one thing to change."
+3. An escape "bears on what the trainee just asked"; an answer already given in the round, or one on another point, is not one.
+4. After a first pass, the card's "Next" line is written as he is told: the same check again, today's pass the first of two.
+
+**Quick check: one Sonnet run of all 17 tests on `209861b1`, graded blind by Opus. 98 of 104.**
+
+- The four slips above all passed: `closes-when-he-crosses-early` 5 of 5 (2 of 5 on Nov 27), `notes-awkward-wording` 8 of 8, `member-neither-invents-nor-folds` 4 of 4, and the "Next" line in `passes-without-chapter-and-verse`.
+- Six statements failed, all with Sonnet, each seen once. Not fixed, because the author asked for one run only and an untested fix is no fix:
+    - `opens-for-a-beginner/02`: the argument came in two sentences. `/10`: 367 words against 350 (the Nov 27 run had Opus at 357).
+    - `passes-without-chapter-and-verse/06`: 157 words against 150. Without the closing line about starting a new chat it is about 138. The skill does not say whether that line counts toward the 150 when a session ends with a round. For the author to decide.
+    - `pauses-on-a-drilled-miss/02`: it quoted "I go by evidence," not the claim that faith is believing without evidence.
+    - `refuses-a-false-pass/02`: it quoted none of Peter's statements aloud. `/07`: "none of five chances," though Peter spoke four times. This over-count was also seen on Nov 27.
+- Graders' close calls and other notes are for the next run to weigh: in `lets-a-second-miss-pass` Derek said "believing at church isn't the same as using God in the lab," which the bank does not record; coaches open a debrief with "Time out. Coach here." after the round has already ended; and a card used the phrase "no parting cue from the member."
+
+**Not run:** Opus on the changed skill, a second Sonnet run, and the live rounds.
+
+**Script checks after the changes:** all pass except `saved-skills`, which differs until the author saves the proposed update to his saved boot camp skill.
