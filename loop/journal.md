@@ -194,3 +194,22 @@ The author gave a written plan: fix the two statements that failed in every run 
 **Not run:** the live rounds. The runs used the response bank as it stood before `25b6719`, which added rows for every group while they ran.
 
 **Script checks after the changes:** all pass except `saved-skills`, which differs until the author saves the proposed copy.
+
+## 2026-11-27: fixed pieces, and two coaching lines made plain (at the author's direction, not by the loop)
+
+The author asked for the skill to use the fixed pieces, and for one run in place of the measure's three. **So the result below is a quick check, not a pass under the measure.** The next weekly run's three-run test of `main` is the full check.
+
+**Skill changes.** A new section B.5, "Say the fixed pieces as written": for each group, `skills/apologetics-boot-camp/fixed/` holds what every trainee hears the same way (the two openings, the background, the first telling of each lesson, the first teaching of each tactic). The coach says a piece as written, but only from a file marked `Status: approved`; from a draft, or with no file, it composes as before. All five files are drafts written by Opus, so on `main` the coach's behavior doesn't change until the author approves a file. `fixed/TO-CHECK.md` lists what the writers ask the author to look at.
+
+**Quick check: one Sonnet run of all 17 tests on the changed skill, graded blind by Opus. 102 of 104.** The test copies of the five files were marked approved, so that the new rule was exercised; the repo's copies stay drafts.
+
+- The two tests that reach the new rule passed every statement, each with the piece said word for word: `opens-for-a-beginner` 10 of 10 (the Jehovah's Witnesses opening for a beginner, 283 words) and `teaches-a-new-tactic-first` 8 of 8 (the Islam piece on asking for reasons).
+- Two statements failed, neither in changed text, and both already known as unsteady with Sonnet: `marks-missed-requests-for-reasons/03` (the coaching never said "not a pass" aloud) and `passes-without-chapter-and-verse/05` (it said a second pass clears the stage, but not "in a row").
+
+**Fix.** Two clauses in "A practice conversation, in voice": the coach says in plain words whether the round passed ("That's a pass," "Not a pass yet"), and after a first pass says it is "the first of two in a row." Both tests were run again once with Sonnet on the fixed skill: 7 of 7 and 7 of 7. The other fifteen tests were not rerun after the fix.
+
+**Not run:** Opus as the coach, a second Sonnet run, and the live rounds. No test yet checks a beginner's lessons served from the pieces over several turns (a missed check taught again another way); the live round `beginner-is-taught-before-tested` would.
+
+**Also on this branch,** outside the skill: `site/prompts/` holds a router and a member prompt for a website that plays the member on a cheaper model. One run of the eight in-round tests with Haiku as router and member and Sonnet as coach scored 37 of 38; Haiku coaching alone scored 86 of 104 on all 17. The router was written by a hand that had seen these tests, so it needs the live rounds before trainees meet it.
+
+**Script checks after the changes:** all pass; `saved-skills` is skipped on this machine, which has no saved copies.
