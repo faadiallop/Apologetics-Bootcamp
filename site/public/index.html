@@ -146,6 +146,8 @@ requestAnimationFrame(draw);
 
 function setMode(next) {
   mode = next;
+  // When training ends the screen may sleep again.
+  if (next === "idle" && wakeLock) { wakeLock.release().catch(() => {}); wakeLock = null; }
   $("state").textContent = { idle: "", thinking: "The coach is thinking.", speaking: "The coach is speaking.", listening: "The coach is listening." }[next];
 }
 
@@ -156,19 +158,58 @@ function pickVoice() {
 }
 speechSynthesis.getVoices();
 
+// Chrome cuts off any one utterance that runs past about fifteen seconds, and then never says
+// it has ended. So no piece is longer than this many characters, about ten seconds of speech.
+const LONGEST = 160;
+
+// Split a long sentence at its pauses (commas, semicolons, colons, dashes), and failing those,
+// between words, so that each piece is short enough to be spoken whole.
+function pieces(sentence) {
+  if (sentence.length <= LONGEST) return [sentence];
+  const out = [];
+  let rest = sentence;
+  while (rest.length > LONGEST) {
+    const head = rest.slice(0, LONGEST);
+    let cut = Math.max(head.lastIndexOf(", "), head.lastIndexOf("; "), head.lastIndexOf(": "), head.lastIndexOf(" — "), head.lastIndexOf(" - "));
+    if (cut < LONGEST / 3) cut = head.lastIndexOf(" ");
+    if (cut <= 0) cut = LONGEST - 1;
+    out.push(rest.slice(0, cut + 1).trim());
+    rest = rest.slice(cut + 1).trim();
+  }
+  if (rest) out.push(rest);
+  return out;
+}
+
+let stopSpeaking = null;   // set while the coach speaks; a tap on the bars calls it
+
 function say(text) {
   return new Promise((resolve) => {
     // Nothing is shown, so anything that is only for the eye is dropped before it is spoken.
     const clean = text.replace(/[*_#`>\[\]]/g, "").replace(/\s+/g, " ").trim();
-    // Long passages are spoken a sentence at a time; some browsers cut a long one short.
-    const parts = clean.match(/[^.!?…]+[.!?…]+["')”’]*|[^.!?…]+$/g) || [clean];
+    const sentences = clean.match(/[^.!?…]+[.!?…]+["')”’]*|[^.!?…]+$/g) || [clean];
+    const parts = sentences.map((x) => x.trim()).filter(Boolean).flatMap(pieces);
+    const voice = pickVoice();
     setMode("speaking");
     speechSynthesis.cancel();
-    let left = parts.length;
-    const done = () => { if (--left <= 0) resolve(); };
-    for (const part of parts) {
-      const u = new SpeechSynthesisUtterance(part.trim());
-      const voice = pickVoice();
+
+    // The pieces are spoken one after another, each started when the last has ended, so that
+    // one lost piece can't silence the rest. The piece being spoken is held here, because a
+    // browser may throw away an utterance nothing refers to, and its end is then never heard.
+    let next = 0, current = null, timer = 0, finished = false;
+    const finish = () => {
+      if (finished) return;
+      finished = true;
+      clearTimeout(timer);
+      current = null;
+      stopSpeaking = null;
+      resolve();
+    };
+    const speakNext = () => {
+      clearTimeout(timer);
+      if (finished) return;
+      if (next >= parts.length) return finish();
+      const part = parts[next++];
+      const u = (current = new SpeechSynthesisUtterance(part));
       if (voice) u.voice = voice;
       u.lang = voice ? voice.lang : "en-US";
       u.rate = 1;
@@ -180,10 +221,34 @@ function say(text) {
         // A longer word is a bigger push.
         wordPush = Math.min(1, 0.55 + 0.06 * (e.charLength || 5));
       };
-      u.onend = done;
-      u.onerror = done;
+      // Only the piece now being spoken may move the coach on.
+      u.onend = () => { if (current === u) speakNext(); };
+      // A phone stops the voice when its screen goes off or the page is left. Then the piece
+      // that was cut is said again once the page is back, instead of being skipped.
+      u.onerror = () => { if (current === u) (document.hidden ? retryWhenShown : speakNext)(); };
+      // If a browser stops without saying so, the coach doesn't wait for ever: after twice the
+      // time the piece should take, and some grace for a voice that is slow to start, go on.
+      timer = setTimeout(() => {
+        if (current !== u) return;
+        current = null;
+        speechSynthesis.cancel();
+        (document.hidden ? retryWhenShown : speakNext)();
+      }, 6000 + part.length * 150);
       speechSynthesis.speak(u);
-    }
+    };
+    const retryWhenShown = () => {
+      clearTimeout(timer);
+      current = null;
+      next--;
+      const shown = () => {
+        if (document.hidden) return;
+        document.removeEventListener("visibilitychange", shown);
+        speakNext();
+      };
+      document.addEventListener("visibilitychange", shown);
+    };
+    stopSpeaking = () => { current = null; speechSynthesis.cancel(); finish(); };
+    speakNext();
   });
 }
 
@@ -262,6 +327,17 @@ function askForToken() {
   $("token").focus();
 }
 
+/* ---------- keeping the screen on ---------- */
+// A phone turns its screen off after a short while untouched, and Chrome on Android then stops
+// the coach's voice. Training is by ear, so nobody touches the screen; it is kept on instead.
+let wakeLock = null;
+async function keepScreenOn() {
+  if (!("wakeLock" in navigator) || document.hidden || (wakeLock && !wakeLock.released)) return;
+  try { wakeLock = await navigator.wakeLock.request("screen"); } catch { /* not allowed: carry on */ }
+}
+// The lock is let go whenever the page is hidden, so it is asked for again when the page is back.
+document.addEventListener("visibilitychange", () => { if (mode !== "idle") keepScreenOn(); });
+
 async function begin() {
   group = $("group").value;
   if (!group) return;
@@ -269,6 +345,7 @@ async function begin() {
   // This must happen inside the tap, or some browsers refuse to speak later.
   speechSynthesis.speak(new SpeechSynthesisUtterance(" "));
   $("choose").classList.add("gone");
+  keepScreenOn();
   setMode("thinking");
   await new Promise((r) => setTimeout(r, matchMedia("(prefers-reduced-motion: reduce)").matches ? 100 : 2400));
   converse(`I want to train to talk with ${GROUP_NAMES[group]}. I'm training by voice.`);
@@ -277,7 +354,7 @@ async function begin() {
 $("group").addEventListener("change", begin);
 
 // A tap on the bars cuts the coach short and hands the turn to the trainee.
-$("voice").addEventListener("click", () => { if (mode === "speaking") speechSynthesis.cancel(); });
+$("voice").addEventListener("click", () => { if (mode === "speaking" && stopSpeaking) stopSpeaking(); });
 
 $("signin").addEventListener("submit", async (e) => {
   e.preventDefault();
