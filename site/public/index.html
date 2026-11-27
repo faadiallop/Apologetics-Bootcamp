@@ -56,6 +56,19 @@
   #refusal { flex: 1 1 100%; margin: .6rem 0 0; font-weight: 600; }
   #notice { flex: 1 1 100%; max-width: 34rem; margin: .75rem auto 0; font-size: .85rem; font-weight: 400; opacity: .85; }
   #signin button { background: transparent; color: var(--white); box-shadow: inset 0 0 0 2px var(--white); cursor: pointer; }
+  /* The microphone switch, bottom centre, shown while training. */
+  #mic {
+    position: fixed; left: 50%; bottom: max(1.5rem, env(safe-area-inset-bottom)); transform: translateX(-50%);
+    width: 3.75rem; height: 3.75rem; border-radius: 50%; border: 0; padding: .9rem; cursor: pointer;
+    background: transparent; color: var(--white); box-shadow: inset 0 0 0 2px var(--white);
+  }
+  #mic svg { width: 100%; height: 100%; display: block; }
+  #mic .slash { display: none; }
+  #mic[aria-pressed="true"] { background: var(--white); color: var(--blue); }
+  #mic[aria-pressed="true"] .slash { display: inline; }
+  #mic:focus-visible { outline: 3px solid var(--white); outline-offset: 4px; }
+  /* While the trainee's microphone is off and it is his turn, the bars dim: nobody is listening. */
+  body.waiting #voice { opacity: .45; }
   [hidden] { display: none !important; }
   .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
 
@@ -102,6 +115,13 @@
   <p id="ended" role="status" hidden></p>
   <p id="cannot" hidden>This browser can't listen. Open this page in Chrome, Edge or Safari.</p>
 </div>
+<button id="mic" type="button" aria-label="Turn off your microphone" aria-pressed="false" title="Microphone (M)" hidden>
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <rect x="9" y="2" width="6" height="12" rx="3"/>
+    <path d="M5 11a7 7 0 0 0 14 0M12 18v4M8 22h8"/>
+    <path class="slash" d="M3 3l18 18"/>
+  </svg>
+</button>
 <p id="state" class="sr" role="status"></p>
 
 <script>
@@ -112,7 +132,9 @@ const GROUP_NAMES = { islam: "Muslims", "jehovahs-witnesses": "Jehovah's Witness
 
 let token = localStorage.getItem("invite-code") || localStorage.getItem("owner-token") || "";
 let session = null, group = "";
-let mode = "idle";            // idle | thinking | speaking | listening
+let mode = "idle";            // idle | thinking | speaking | listening | waiting
+let micOn = true;             // the trainee can turn his microphone off and on while training
+let whenMicOn = null;         // set while it is his turn and his microphone is off
 let recognition = null;
 let lastWord = 0, wordPush = 0, wordsReported = false;
 
@@ -123,7 +145,7 @@ function draw(now) {
   const t = now / 1000;
   let want = [0.55, 0.55, 0.55, 0.55, 0.55];
   // The bars are the coach's voice. They rest while the trainee speaks.
-  if (mode === "idle" || mode === "listening") want = want.map((v, i) => v + 0.06 * Math.sin(t * 1.4 - fromCentre[i] * 0.7));
+  if (mode === "idle" || mode === "listening" || mode === "waiting") want = want.map((v, i) => v + 0.06 * Math.sin(t * 1.4 - fromCentre[i] * 0.7));
   if (mode === "thinking") want = want.map((_, i) => 0.3 + 0.25 * (0.5 + 0.5 * Math.sin(t * 4 - fromCentre[i] * 1.1)));
   if (mode === "speaking") {
     // The browser doesn't let a page hear its own voice, but it does say when each word
@@ -148,7 +170,11 @@ function setMode(next) {
   mode = next;
   // When training ends the screen may sleep again.
   if (next === "idle" && wakeLock) { wakeLock.release().catch(() => {}); wakeLock = null; }
-  $("state").textContent = { idle: "", thinking: "The coach is thinking.", speaking: "The coach is speaking.", listening: "The coach is listening." }[next];
+  if (next === "idle") { whenMicOn = null; micOn = true; $("mic").setAttribute("aria-pressed", "false"); $("mic").setAttribute("aria-label", "Turn off your microphone"); }
+  document.body.classList.toggle("waiting", next === "waiting");
+  // The microphone switch is there only while training.
+  $("mic").hidden = next === "idle";
+  $("state").textContent = { idle: "", thinking: "The coach is thinking.", speaking: "The coach is speaking.", listening: "The coach is listening.", waiting: "Your microphone is off. Turn it on to answer." }[next];
 }
 
 /* ---------- speaking ---------- */
@@ -255,6 +281,12 @@ function say(text) {
 /* ---------- listening ---------- */
 function listen() {
   return new Promise((resolve, reject) => {
+    // With the microphone off, the coach waits for the trainee to turn it back on.
+    if (!micOn) {
+      setMode("waiting");
+      whenMicOn = () => listen().then(resolve, reject);
+      return;
+    }
     setMode("listening");
     const r = (recognition = new Recognition());
     r.lang = "en-US";
@@ -264,6 +296,12 @@ function listen() {
     r.onresult = (e) => { heard = [...e.results].map((x) => x[0].transcript).join(" ").trim(); };
     r.onerror = (e) => { if (e.error !== "no-speech" && e.error !== "aborted") failed = e.error; };
     r.onend = () => {
+      // Turned off while listening: what was half heard is dropped, and the coach waits.
+      if (!micOn && mode === "listening") {
+        setMode("waiting");
+        whenMicOn = () => listen().then(resolve, reject);
+        return;
+      }
       if (mode !== "listening") return resolve(null);
       if (failed) return reject(new Error(failed));
       if (heard) return resolve(heard);
@@ -272,6 +310,28 @@ function listen() {
     r.start();
   });
 }
+
+// Turn the trainee's microphone off or on. Off, the browser stops listening at once; the coach
+// may finish what he is saying, and then waits. On, the coach listens again.
+function setMic(on) {
+  micOn = on;
+  $("mic").setAttribute("aria-pressed", String(!on));
+  $("mic").setAttribute("aria-label", on ? "Turn off your microphone" : "Turn on your microphone");
+  if (!on && mode === "listening" && recognition) recognition.abort();
+  if (on && whenMicOn) {
+    const go = whenMicOn;
+    whenMicOn = null;
+    go();
+  }
+  if (mode !== "waiting" && mode !== "idle") $("state").textContent = on ? "Your microphone is on." : "Your microphone is off.";
+}
+$("mic").addEventListener("click", () => setMic(!micOn));
+// On a keyboard, M does the same, unless he is typing.
+addEventListener("keydown", (e) => {
+  if (e.key.toLowerCase() !== "m" || e.ctrlKey || e.metaKey || e.altKey || mode === "idle") return;
+  if (e.target instanceof HTMLInputElement || e.target instanceof HTMLSelectElement) return;
+  setMic(!micOn);
+});
 
 /* ---------- the conversation ---------- */
 async function send(text) {
