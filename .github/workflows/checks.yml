@@ -47,3 +47,37 @@ jobs:
       - run: npm run typecheck
       - run: npm test
       - run: npm run check-bundle
+
+  tier:
+    name: Tier (report only)
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - uses: actions/cache@v4
+        with:
+          path: measure/.cache
+          key: kjv-f627b3c2
+      # Run the base branch's copy of the tier script, so a pull request cannot
+      # change how it is judged (PLAN.md, section 3). The first time, the base
+      # has no copy yet, so the pull request's own is used.
+      - name: Sort the change
+        env:
+          BASE: ${{ github.event.pull_request.base.sha }}
+          HEAD: ${{ github.event.pull_request.head.sha }}
+        run: |
+          src="$BASE"
+          git cat-file -e "$BASE:measure/gate.py" 2>/dev/null || src="$HEAD"
+          mkdir -p "$RUNNER_TEMP/gate"
+          git show "$src:measure/gate.py" > "$RUNNER_TEMP/gate/gate.py"
+          git show "$src:measure/checks.py" > "$RUNNER_TEMP/gate/checks.py"
+          git show "$src:measure/fixed_pieces.py" > "$RUNNER_TEMP/gate/fixed_pieces.py"
+          python3 measure/checks.py > /dev/null || true   # fetches the King James text once
+          # Judge only what the pull request adds, not what reached the base after it began.
+          from="$(git merge-base "$BASE" "$HEAD")"
+          GATE_REPO="$GITHUB_WORKSPACE" python3 "$RUNNER_TEMP/gate/gate.py" "$from" "$HEAD" | tee -a "$GITHUB_STEP_SUMMARY"

@@ -1,0 +1,49 @@
+# Opens a pull request in the agents' GitHub App's name when an agent pushes a
+# branch named agent/... (measure/PLAN.md, section 2). Claude's sessions push as
+# the author's own account, and GitHub does not let him approve his own pull
+# requests; a pull request opened by the App, he can.
+#
+# Needs, in the repo's settings: an environment named "agents", limited to
+# agent/* branches, holding the secret AGENTS_APP_PRIVATE_KEY and the variable
+# AGENTS_APP_ID. The App needs Contents (read) and Pull requests (read and write).
+name: agent pull request
+
+on:
+  push:
+    branches: ["agent/**"]
+
+permissions: {}
+
+jobs:
+  open:
+    runs-on: ubuntu-latest
+    environment: agents
+    steps:
+      - id: app
+        uses: actions/create-github-app-token@v1
+        with:
+          app-id: ${{ vars.AGENTS_APP_ID }}
+          private-key: ${{ secrets.AGENTS_APP_PRIVATE_KEY }}
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Open the pull request, unless one is open already
+        env:
+          GH_TOKEN: ${{ steps.app.outputs.token }}
+          BRANCH: ${{ github.ref_name }}
+        run: |
+          if [ -n "$(gh pr list --head "$BRANCH" --state open --json number --jq '.[].number')" ]; then
+            echo "A pull request for $BRANCH is already open."; exit 0
+          fi
+          base=next
+          git ls-remote --exit-code --heads origin next > /dev/null || base=main
+          git log -1 --format=%s > title.txt
+          {
+            echo "Opened for an agent from the branch \`$BRANCH\`. Its tier and checks are in the checks below; a Tier 2 change needs the author's approval (measure/PLAN.md, section 2)."
+            echo
+            echo "## Commits"
+            echo
+            git log --no-merges --format='- %s' "origin/$base..HEAD"
+          } > body.md
+          gh pr create --base "$base" --head "$BRANCH" --title "$(cat title.txt)" --body-file body.md

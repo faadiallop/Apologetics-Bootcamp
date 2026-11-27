@@ -104,6 +104,7 @@ A whole session between the coach and a simulated trainee who has planted habits
 - **Script checks:** `python3 measure/checks.py`. The first run fetches the King James text and checks it against a fixed checksum.
 - **Conversation tests:** with skill-creator, which runs each case on the copy under test and on the copy from `main`, then grades both. Or, from the repo, `claude plugin eval skills/apologetics-boot-camp --eval-dir measure/evals --allow-tools Write,Edit,Bash --scaffold`. Either way these are real model runs, counted as rule 7 says, with Opus as the grader.
 - **Live rounds:** by a run that can pass turns between a coach, a trainee and a grader.
+- **The tier of a change:** `python3 measure/gate.py BASE HEAD` sorts the change between two commits into a tier and lists what would stop it merging itself (`PLAN.md`, sections 2 and 3). CI runs it on every pull request and shows the result in the run's summary. For now it only reports.
 
 ## Changing the measure
 
