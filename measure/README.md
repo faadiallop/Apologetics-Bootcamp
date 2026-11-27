@@ -67,7 +67,7 @@ Each test hands the coach one moment and checks what it does next. Each is a fol
 1. **The weakness is real.** At least two independent pieces of evidence from real sessions or cards show it.
 2. **Another hand writes it.** A separate agent writes the test from the evidence and from the skill on `main`. It never sees the fix, and the agent that makes the fix does not read the test's statements until the result is settled.
 3. **It is no softer than the rest.** It has the same layout, invented names and words, and statements a grader can judge. It sets no pass line, changes nothing in how hard the member argues, and makes no doctrinal claim.
-4. **It fails first, then passes.** It fails on `main` in both runs, and it passes in both runs on the changed copy, which breaks no other test.
+4. **It fails first, then passes.** It fails on `main` with at least one of the two models (rule 7 under "Rules for every run"), and it passes with both on the changed copy, which breaks no other test.
 5. **It stays.** Once a test is added, no run changes or removes it. The author may rewrite or remove any of them.
 
 ### 3. Live rounds (`measure/live-rounds/`)
@@ -94,11 +94,12 @@ A whole session between the coach and a simulated trainee who has planted habits
 4. **Weigh old and new on the same tests.** A change is kept only if it does better than the copy on `main` and breaks nothing that passed.
 5. **Keep trainees out of this repo.** The repo is public. Trainees in the tests have invented names and words, and nothing is copied from the real training log (Prov. 11:13).
 6. **Never change the skill and the measure in one commit.** A commit that changes one leaves the other alone. A test added by the weekly run comes in a commit of its own, before the fix it was written for.
+7. **Run every test on both models.** Trainees may train with Sonnet or with Opus, so every conversation test and live round is run twice on the same copy: once with Sonnet as the coach and once with Opus. Report each model's score separately. A test passes only when it passes with both, and a change is kept only if it holds with both. The grader is Opus, whichever model coached, and is not told which model wrote the answer. On Nov 27, 2026, a slip on crossing to the gospel early showed up only with Sonnet; a run on one model would have missed it.
 
 ## Running it
 
 - **Script checks:** `python3 measure/checks.py`. The first run fetches the King James text and checks it against a fixed checksum.
-- **Conversation tests:** with skill-creator, which runs each case on the copy under test and on the copy from `main`, then grades both. Or, from `skills/apologetics-boot-camp/`, `claude plugin eval . --allow-tools Write,Edit,Bash --scaffold`. Either way these are real model runs.
+- **Conversation tests:** with skill-creator, which runs each case on the copy under test and on the copy from `main`, then grades both. Or, from `skills/apologetics-boot-camp/`, `claude plugin eval . --allow-tools Write,Edit,Bash --scaffold`. Either way these are real model runs. Run each case once with Sonnet and once with Opus as the coach (rule 7), with Opus as the grader.
 - **Live rounds:** by a run that can pass turns between a coach, a trainee and a grader.
 
 ## Changing the measure
