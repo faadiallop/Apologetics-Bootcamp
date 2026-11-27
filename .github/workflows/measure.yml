@@ -11,8 +11,17 @@
 # copy of this file and of measure/; the pull request's files are only read, as
 # the skill under test, never run.
 #
-# Needs: an environment named "measure", allowed for main and next, holding the
-# secret ANTHROPIC_API_KEY, and a spending limit on that key's workspace.
+# Needs: an environment named "measure", allowed for main and next, holding
+# either the secret ANTHROPIC_API_KEY (the API way: cheaper, through the Batch
+# API, with a spending limit on the key's workspace) or the secret
+# CLAUDE_CODE_OAUTH_TOKEN (the author's subscription, made with
+# `claude setup-token`; the tests then run through Claude Code's own runner).
+# The API key is used when both are there.
+#
+# With the subscription, a screen tests the pull request's skill against the
+# base branch's own tests and settings, so that no file a pull request wrote,
+# such as a test's setup script, runs beside the token. New tests in a pull
+# request are therefore first run at the next full run.
 name: measure
 
 on:
@@ -21,8 +30,8 @@ on:
   workflow_dispatch:
     inputs:
       cap:
-        description: "Most it may cost, in US dollars"
-        default: "15"
+        description: "Most it may cost, in US dollars (with the subscription, the usage it may use, priced as the API would)"
+        default: "40"
 
 permissions:
   contents: read
@@ -33,6 +42,7 @@ jobs:
     if: github.event_name == 'pull_request_target'
     name: Conversation tests (screen)
     runs-on: ubuntu-latest
+    timeout-minutes: 120
     environment: measure
     steps:
       - uses: actions/checkout@v4
@@ -73,11 +83,26 @@ jobs:
         if: steps.base.outputs.file != ''
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          HEAD: ${{ github.event.pull_request.head.sha }}
+          TESTS: ${{ steps.reach.outputs.tests }}
+          BASELINE: ${{ steps.base.outputs.file }}
         run: |
-          pip install -q anthropic
-          python3 measure/run_tests.py screen --rev "${{ github.event.pull_request.head.sha }}" \
-            --tests "${{ steps.reach.outputs.tests }}" --baseline "${{ steps.base.outputs.file }}" \
-            --out screen.json --cap 2 | tee -a "$GITHUB_STEP_SUMMARY"
+          if [ -n "$ANTHROPIC_API_KEY" ]; then
+            pip install -q anthropic
+            python3 measure/run_tests.py screen --rev "$HEAD" --tests "$TESTS" --baseline "$BASELINE" \
+              --out screen.json --cap 2 | tee -a "$GITHUB_STEP_SUMMARY"
+          else
+            npm install -g -s @anthropic-ai/claude-code
+            # The pull request's skill, with the base branch's tests and plugin settings.
+            root="$RUNNER_TEMP/under-test"
+            mkdir -p "$root"
+            git archive "$HEAD" skills | tar -x -C "$root"
+            cp -R .claude-plugin "$root/"
+            mkdir -p "$root/measure" && cp -R measure/evals "$root/measure/"
+            python3 measure/run_tests.py screen --engine claude-code --root "$root" --rev "$HEAD" --tests "$TESTS" \
+              --baseline "$BASELINE" --out screen.json --cap 5 | tee -a "$GITHUB_STEP_SUMMARY"
+          fi
       - uses: actions/upload-artifact@v4
         if: always() && hashFiles('screen.json') != ''
         with:
@@ -88,6 +113,7 @@ jobs:
     if: github.event_name == 'workflow_dispatch'
     name: Conversation tests (full run)
     runs-on: ubuntu-latest
+    timeout-minutes: 330
     environment: measure
     steps:
       - uses: actions/checkout@v4
@@ -100,10 +126,17 @@ jobs:
       - name: Full run
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           CAP: ${{ inputs.cap }}
         run: |
-          pip install -q anthropic
-          python3 measure/run_tests.py run --rev "$GITHUB_SHA" --out results.json --cap "$CAP" | tee -a "$GITHUB_STEP_SUMMARY"
+          if [ -n "$ANTHROPIC_API_KEY" ]; then
+            pip install -q anthropic
+            python3 measure/run_tests.py run --rev "$GITHUB_SHA" --out results.json --cap "$CAP" | tee -a "$GITHUB_STEP_SUMMARY"
+          else
+            npm install -g -s @anthropic-ai/claude-code
+            python3 measure/run_tests.py run --engine claude-code --rev "$GITHUB_SHA" --out results.json --cap "$CAP" \
+              | tee -a "$GITHUB_STEP_SUMMARY"
+          fi
       - uses: actions/upload-artifact@v4
         with:
           name: measure-results
