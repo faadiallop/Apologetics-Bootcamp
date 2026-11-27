@@ -10,11 +10,11 @@ Everything the skill needs is in this repo: the skill itself, the SOPs it trains
 .claude-plugin/
   plugin.json              Plugin manifest
   marketplace.json         Lets Claude and Claude Code install this repo as a plugin
-measure/                   The tests the boot camp skill is judged by; start with its README
+measure/                   The tests the boot camp skill is judged by, and the plan for checking every change; start with its README
+  evals/                   Conversation tests, one folder each
 skills/
   apologetics-boot-camp/
     SKILL.md               The boot camp: paths, lessons, role-play, scoring
-    evals/                 Conversation tests, one folder each
     sops/                  The material it trains from
       00-overview-and-template.md
       01-methodology-questioning-them-to-death.md

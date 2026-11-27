@@ -1,0 +1,49 @@
+# Build step 1 of measure/PLAN.md: run the script checks and the site checks on
+# every pull request and every push to main or next. No secrets are used yet.
+# When secrets are added (the test program, the name hashes), the jobs that use
+# them must run next's copy of the checks in a protected environment (PLAN.md,
+# section 3, "Keeping the checks honest").
+name: checks
+
+on:
+  pull_request:
+  push:
+    branches: [main, next]
+
+permissions:
+  contents: read
+
+jobs:
+  script-checks:
+    name: Script checks (measure/checks.py)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      # The King James text is fetched once and checked against its checksum.
+      - uses: actions/cache@v4
+        with:
+          path: measure/.cache
+          key: kjv-f627b3c2
+      # saved-skills is skipped here: CI has no saved copies of the skills.
+      - run: python3 measure/checks.py
+
+  site-checks:
+    name: Site checks (typecheck, tests, bundle)
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: site
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: site/package-lock.json
+      - run: npm ci --no-audit --no-fund
+      - run: npm run typecheck
+      - run: npm test
+      - run: npm run check-bundle
