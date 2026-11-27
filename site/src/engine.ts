@@ -34,7 +34,7 @@ export function newSession(card: string | null, today: string): SessionState & {
   return {
     lines: [],
     roundStart: null,
-    header: `[Site note, not said by the trainee: today is ${today}. He is typing, not speaking. ${cardText}]\n\n`,
+    header: `[Site note, not said by the trainee: today is ${today}. He is training by voice: he speaks, and your words are read aloud to him. ${cardText}]\n\n`,
   };
 }
 
