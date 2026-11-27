@@ -72,3 +72,24 @@ export function check(limits: Limits, spend: Spend, daysLeft: number): Verdict {
     return no("session", "This session has reached its limit. Start a new session; your card carries your progress over.");
   return { ok: true };
 }
+
+/** How much of an allowance may be used before the trainee is told it is nearly gone. */
+export const NEAR = 0.8;
+
+/**
+ * A sentence to say when this turn took the trainee past four fifths of an allowance.
+ * It is said once: only on the turn that crosses the line, not on every turn after it.
+ */
+export function nearing(limits: Limits, before: Spend, after: Spend): string | null {
+  const crossed = (was: number, now: number, limit: number) => limit > 0 && was < limit * NEAR && now >= limit * NEAR;
+  if (crossed(before.userMonth, after.userMonth, limits.userMonthly))
+    return "A note from the site: you have used most of your training allowance for this month.";
+  if (crossed(before.userDay, after.userDay, limits.userDaily))
+    return "A note from the site: you have used most of today's training allowance.";
+  if (
+    crossed(before.sessionSpend, after.sessionSpend, limits.sessionSpend) ||
+    crossed(before.sessionTurns, after.sessionTurns, limits.sessionTurns)
+  )
+    return "A note from the site: this session is close to its limit. When it ends, start a new one; your card carries your progress over.";
+  return null;
+}

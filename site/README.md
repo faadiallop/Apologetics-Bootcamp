@@ -27,6 +27,8 @@ Set in `wrangler.jsonc` under `vars`, in US dollars. They are sized for $20 a mo
 | One session | $0.60 or 40 turns |
 | Messages a minute | 6 |
 
+When a turn takes a person past four fifths of an allowance (the day's, the month's or the session's), the coach's voice tells him so, once. When a limit is reached, the reason is spoken and stays on the screen.
+
 Once the site has spent $16 in a month, the daily budget shrinks to what is left divided by the days left. The hard limit on the Anthropic workspace is the backstop behind all of these.
 
 ## Set up, once

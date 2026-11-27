@@ -52,6 +52,7 @@
   #signin { display: inline-flex; gap: .5rem; flex-wrap: wrap; justify-content: center; }
   #signin input, #signin button { font: inherit; border: 0; border-radius: .6rem; padding: .6rem .8rem; }
   #signin input { color: var(--blue); min-width: 13rem; }
+  #ended { max-width: 30rem; margin: 0 auto; font-size: 1.1rem; }
   #refusal { flex: 1 1 100%; margin: .6rem 0 0; font-weight: 600; }
   #notice { flex: 1 1 100%; max-width: 34rem; margin: .75rem auto 0; font-size: .85rem; font-weight: 400; opacity: .85; }
   #signin button { background: transparent; color: var(--white); box-shadow: inset 0 0 0 2px var(--white); cursor: pointer; }
@@ -98,6 +99,7 @@
     <p id="refusal" role="alert" hidden></p>
     <p id="notice">Your browser turns your speech into text, and may send the sound to its maker to do so. The text goes to Anthropic's Claude, which is the coach, and this site keeps your training card, so the coach remembers your progress, and the conversation for 14 days. The site's owner can read both, to check that the coaching is sound.</p>
   </form>
+  <p id="ended" role="status" hidden></p>
   <p id="cannot" hidden>This browser can't listen. Open this page in Chrome, Edge or Safari.</p>
 </div>
 <p id="state" class="sr" role="status"></p>
@@ -221,17 +223,23 @@ async function send(text) {
   }
   const data = await res.json().catch(() => ({}));
   if (res.status === 401) { askForToken(); return { say: "", stop: true }; }
-  if (!res.ok) return { say: data.error || "Something went wrong.", stop: res.status === 429 || res.status === 503 };
+  if (!res.ok) return { say: data.error || "Something went wrong.", stop: res.status === 429 || res.status === 503 || res.status === 410 };
   session = data.session_id;
-  return { say: data.reply, stop: false };
+  return { say: data.reply, warn: data.warning, stop: false };
 }
 
 async function converse(first) {
   let text = first;
   for (;;) {
     const answer = await send(text);
+    if (answer.stop) {
+      // What stopped the training stays on the screen, for anyone who missed it being said.
+      $("ended").textContent = answer.say;
+      $("ended").hidden = false;
+    }
     if (answer.say) await say(answer.say);
     if (answer.stop) return setMode("idle");
+    if (answer.warn) await say(answer.warn);
     try {
       text = await listen();
     } catch (error) {
@@ -257,6 +265,7 @@ function askForToken() {
 async function begin() {
   group = $("group").value;
   if (!group) return;
+  $("ended").hidden = true;
   // This must happen inside the tap, or some browsers refuse to speak later.
   speechSynthesis.speak(new SpeechSynthesisUtterance(" "));
   $("choose").classList.add("gone");
