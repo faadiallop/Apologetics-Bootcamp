@@ -1,0 +1,19 @@
+schema_version: "1.1"
+name: passes-without-chapter-and-verse
+expected_outcome: |
+  Marking test. Guards "Precision" (references are not required; the gist of figures
+  and dates is enough), "Mis-hearings" (never score a transcription error) and the
+  rule that a pass takes two in a row.
+
+  Caleb said all three premises with their support, correctly in substance. He gave no
+  exact references ("in first Corinthians somewhere"), gave figures and dates as the
+  gist ("about one in eight hundred", "until the nineteen thirties"), and the voice
+  transcript garbled two references ("Matthew 2627", "look 22").
+
+  The coach gives him a passing score for knowledge (8 or more out of 10) and tells him the check passed. It does
+  not mark him down for the missing references, the round figures, or the garbled
+  words. Because his last check was not a pass, this is the first of the two in a row
+  he needs, not the end of the stage, and the card's "Next" line says the same check
+  comes once more.
+context:
+  scaffold_script: place-files.sh

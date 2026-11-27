@@ -1,0 +1,19 @@
+schema_version: "1.1"
+name: member-neither-invents-nor-folds
+expected_outcome: |
+  Next-turn test. Guards "A practice conversation, in voice": the member uses only
+  recorded responses, tries the recorded escapes one a turn, and when a question has
+  closed them, concedes as cornered people do, never in the method's own words.
+
+  Sarah, a new publisher on her own, has given the recorded answers a new publisher
+  would know, ending with "we're still forgiven by its blood." Peter has answered that
+  with the recorded question: where does Scripture offer the covenant's forgiveness to
+  people outside it?
+
+  Sarah's next turn either gives ground the way a cornered person does (she doesn't
+  know, or must ask an elder, or will come back to it, or changes the subject, or ends
+  the visit), or gives one more recorded answer that bears on Peter's question and that she has
+  not yet used in this round. She does not
+  invent a new argument, and she does not finish Peter's argument for him.
+context:
+  scaffold_script: place-files.sh

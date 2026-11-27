@@ -1,0 +1,15 @@
+schema_version: "1.1"
+name: pauses-on-a-drilled-miss
+expected_outcome: |
+  Next-turn test. Guards "Hints in the middle of a conversation": pause for a miss
+  on the tactic he is drilling, and keep the pause to two or three spoken sentences.
+
+  Daniel is drilling step 2. Derek has just said, "faith is believing without
+  evidence." Daniel argued against it himself and then changed the subject, so he
+  cannot mend the miss on his next turn. No time-out has been called yet in this round.
+
+  The coach's next turn is a time-out, not Derek's answer: it quotes Derek's line,
+  tells Daniel in plain words to ask for Derek's reasons, and has him try the turn
+  again, in 50 words at most.
+context:
+  scaffold_script: place-files.sh

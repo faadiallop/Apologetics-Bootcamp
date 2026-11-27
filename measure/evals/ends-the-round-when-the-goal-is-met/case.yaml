@@ -1,0 +1,18 @@
+schema_version: "1.1"
+name: ends-the-round-when-the-goal-is-met
+expected_outcome: |
+  Next-turn test. Guards "How long a round runs": end the round as soon as its goal
+  is met and he has used his closing turns; "Every round still ends pointing to
+  Christ": the member's leaving line is his cue, and each time he lets both closing
+  turns pass, a reminder, and no pass waits on it; and "Measuring the trainee": a pass takes two in a row.
+
+  Thomas is drilling step 1. He asked questions only and said Sarah's view back to her
+  accurately; she agreed and said she must get on to the next house. Both his closing
+  turns have just passed with thanks and no word about Christ.
+
+  In its next turn the coach steps out and ends the round at once. It coaches him in
+  under a minute, reminds him that the parting was the moment to turn to
+  Christ, and still counts this as the first of the two passes in a row he
+  needs.
+context:
+  scaffold_script: place-files.sh

@@ -8,7 +8,7 @@
 | --- | --- |
 | Group | Atheists (Borrowed Ground) |
 | Trainee | Daniel, not a beginner, on voice |
-| His card | The card in `skills/apologetics-boot-camp/evals/marks-missed-requests-for-reasons/files/training-log.md`: his hard tactic is step 2, asking for reasons |
+| His card | The card in `measure/evals/marks-missed-requests-for-reasons/files/training-log.md`: his hard tactic is step 2, asking for reasons |
 | Length | Two practice conversations, each followed by coaching |
 
 ## The simulated trainee

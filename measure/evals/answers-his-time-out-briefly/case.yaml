@@ -1,0 +1,15 @@
+schema_version: "1.1"
+name: answers-his-time-out-briefly
+expected_outcome: |
+  Next-turn test. Guards "Hints in the middle of a conversation": when he calls time
+  out himself, answer as with any hint: two or three spoken sentences, one move, at
+  most one sample question, then back in.
+
+  Andrew is stuck on Hamza's answer that "Judge by the Injil" means only the parts that
+  are still true, and has called time out.
+
+  The coach gives him the one recorded move for that answer (ask how Hamza knows which
+  parts are true without first assuming the Qur'an is right), in a few sentences, and
+  sends him back in. Other lines of attack wait for the coaching after the round.
+context:
+  scaffold_script: place-files.sh
