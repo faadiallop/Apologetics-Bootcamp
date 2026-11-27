@@ -25,6 +25,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.abspath(os.environ.get("GATE_REPO") or os.path.dirname(HERE))
 sys.path.insert(0, HERE)
 import checks  # noqa: E402  (REF_RE, the reference pattern the script checks use)
+import coverage  # noqa: E402  (which tests a change reaches)
 
 SKILL_MD = "skills/apologetics-boot-camp/SKILL.md"
 VERSION = "skills/apologetics-boot-camp/VERSION"
@@ -324,8 +325,12 @@ def main():
         reasons.append("undoes one earlier commit exactly")
     else:
         tier = sort_change(base, head, files, reasons)
-    if tier == 1 and any(p == SKILL_MD for _, p in files):
-        holds.append("which tests this change reaches is not yet known (the coverage map comes in build step 3)")
+    skill_text = [p for _, p in files if p == SKILL_MD or p.startswith(("skills/apologetics-boot-camp/sops/",
+                                                                     "skills/apologetics-boot-camp/fixed/"))]
+    tests_reached = coverage.reached(base, head) if skill_text else {}
+    if tier == 1 and skill_text and not tests_reached:
+        tier = 2
+        reasons.append("the change reaches no conversation test, so nothing would check it (PLAN.md, section 4)")
     check_added(base, head, files, holds)
     check_test_layout(head, files, holds)
     if not args.no_script_checks:
@@ -337,6 +342,7 @@ def main():
         "why_this_tier": reasons,
         "holds": holds,
         "files": len(files),
+        "tests_reached": tests_reached,
         "note": "Observation only (build step 2): this verdict does not block or allow anything yet.",
     }
     if args.json:
@@ -347,6 +353,9 @@ def main():
         if reasons:
             print("**Why this tier**\n")
             print("\n".join(f"- {r}" for r in reasons) + "\n")
+        if tests_reached:
+            print(f"**Conversation tests this change reaches ({len(tests_reached)})**\n")
+            print("\n".join(f"- {t}: {'; '.join(w)}" for t, w in tests_reached.items()) + "\n")
         if holds:
             print("**What holds it**\n")
             print("\n".join(f"- {h}" for h in holds) + "\n")

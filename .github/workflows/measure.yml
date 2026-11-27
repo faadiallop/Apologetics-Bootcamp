@@ -1,0 +1,111 @@
+# Build step 3 of measure/PLAN.md: the conversation tests, run through the API.
+#
+# - On a pull request, a screen: the tests the change reaches, once with Sonnet,
+#   compared with the latest full run of the base branch (PLAN.md, section 4).
+# - By hand (Actions > measure > Run workflow, choosing the branch), a full run
+#   of that branch: every test three times, kept as this workflow's artifact
+#   for screens of pull requests to that branch to compare with.
+#
+# The API key is a secret, so a pull request must never run its own code beside
+# it. This workflow runs on pull_request_target, which uses the base branch's
+# copy of this file and of measure/; the pull request's files are only read, as
+# the skill under test, never run.
+#
+# Needs: an environment named "measure", allowed for main and next, holding the
+# secret ANTHROPIC_API_KEY, and a spending limit on that key's workspace.
+name: measure
+
+on:
+  pull_request_target:
+    types: [opened, synchronize, reopened]
+  workflow_dispatch:
+    inputs:
+      cap:
+        description: "Most it may cost, in US dollars"
+        default: "15"
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  screen:
+    if: github.event_name == 'pull_request_target'
+    name: Conversation tests (screen)
+    runs-on: ubuntu-latest
+    environment: measure
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - name: Fetch the pull request's commits, as data
+        run: git fetch -q origin "+refs/pull/${{ github.event.pull_request.number }}/head:refs/remotes/pr/head"
+      - name: Find the tests the change reaches
+        id: reach
+        env:
+          HEAD: ${{ github.event.pull_request.head.sha }}
+          BASE: ${{ github.event.pull_request.base.sha }}
+        run: |
+          from="$(git merge-base "$BASE" "$HEAD")"
+          tests="$(python3 measure/coverage.py "$from" "$HEAD" --json | python3 -c 'import json,sys; print(",".join(json.load(sys.stdin)))')"
+          echo "tests=$tests" >> "$GITHUB_OUTPUT"
+          if [ -z "$tests" ]; then echo "The change reaches no conversation test." >> "$GITHUB_STEP_SUMMARY"; fi
+      - name: Fetch the latest full run of the base branch
+        if: steps.reach.outputs.tests != ''
+        id: base
+        env:
+          GH_TOKEN: ${{ github.token }}
+          BRANCH: ${{ github.event.pull_request.base.ref }}
+        run: |
+          run_id="$(gh run list --repo "$GITHUB_REPOSITORY" --workflow measure.yml --branch "$BRANCH" \
+            --event workflow_dispatch --status success --limit 1 --json databaseId --jq '.[0].databaseId')"
+          if [ -z "$run_id" ]; then
+            echo "No full run of $BRANCH is stored yet, so there is nothing to compare with. Run the measure workflow by hand on $BRANCH first." >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+          gh run download "$run_id" --repo "$GITHUB_REPOSITORY" --name measure-results --dir baseline
+          echo "file=baseline/results.json" >> "$GITHUB_OUTPUT"
+      - name: Screen
+        if: steps.base.outputs.file != ''
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          pip install -q anthropic
+          python3 measure/run_tests.py screen --rev "${{ github.event.pull_request.head.sha }}" \
+            --tests "${{ steps.reach.outputs.tests }}" --baseline "${{ steps.base.outputs.file }}" \
+            --out screen.json --cap 2 | tee -a "$GITHUB_STEP_SUMMARY"
+      - uses: actions/upload-artifact@v4
+        if: always() && hashFiles('screen.json') != ''
+        with:
+          name: screen-results
+          path: screen.json
+
+  full:
+    if: github.event_name == 'workflow_dispatch'
+    name: Conversation tests (full run)
+    runs-on: ubuntu-latest
+    environment: measure
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - name: Full run
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          CAP: ${{ inputs.cap }}
+        run: |
+          pip install -q anthropic
+          python3 measure/run_tests.py run --rev "$GITHUB_SHA" --out results.json --cap "$CAP" | tee -a "$GITHUB_STEP_SUMMARY"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: measure-results
+          path: results.json
+          retention-days: 90

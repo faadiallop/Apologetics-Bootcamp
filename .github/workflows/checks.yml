@@ -77,6 +77,8 @@ jobs:
           git show "$src:measure/gate.py" > "$RUNNER_TEMP/gate/gate.py"
           git show "$src:measure/checks.py" > "$RUNNER_TEMP/gate/checks.py"
           git show "$src:measure/fixed_pieces.py" > "$RUNNER_TEMP/gate/fixed_pieces.py"
+          git show "$src:measure/coverage.py" > "$RUNNER_TEMP/gate/coverage.py" 2>/dev/null \
+            || git show "$HEAD:measure/coverage.py" > "$RUNNER_TEMP/gate/coverage.py"
           python3 measure/checks.py > /dev/null || true   # fetches the King James text once
           # Judge only what the pull request adds, not what reached the base after it began.
           from="$(git merge-base "$BASE" "$HEAD")"
