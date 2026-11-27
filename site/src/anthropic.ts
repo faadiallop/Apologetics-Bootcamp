@@ -73,6 +73,9 @@ export function makeModels(apiKey: string, groupId: string, record: Record): Mod
           model: COACH_MODEL,
           max_tokens: 4000,
           output_config: { effort: "low" },
+          // The conversation so far is cached as well, up to its last message, so each turn pays
+          // full price only for what is new. A long card at the head of a session is paid for once.
+          cache_control: { type: "ephemeral" },
           system: [cached(shared), cached(own)],
           tools: TOOLS,
           messages,
