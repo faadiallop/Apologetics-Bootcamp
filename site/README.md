@@ -14,6 +14,10 @@ The Worker holds the Anthropic key. The browser never sees it. For each message 
 
 The skill's files are bundled in when the Worker is built (`src/materials.ts`), so a change to the skill reaches the site at the next deploy. A group's fixed pieces are included only once its file is marked approved.
 
+## Turning the microphone off
+
+While training, a microphone button sits at the bottom of the screen (or press M on a keyboard). Off, the browser stops listening at once and anything half heard is dropped; the coach finishes what he is saying, then waits, with the bars dimmed, until the microphone is turned back on.
+
 ## Limits
 
 Set in `wrangler.jsonc` under `vars`, in US dollars. They are sized for $20 a month and five testers.
