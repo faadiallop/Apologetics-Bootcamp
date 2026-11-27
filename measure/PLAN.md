@@ -38,11 +38,11 @@ The checking code is in `measure/` and `.github/`, so it is Tier 2: no one grade
 
 A change takes the highest tier of anything in it. These also go to Tier 2: a change over the size cap; one that changes both `skills/` and `measure/` (rule 6 of the measure); and a Tier 1 change to the skill that reaches no test (section 4), since nothing would then check it.
 
-**The author's own sign-off.** GitHub does not let a person approve his own pull request, so the agents open theirs from a separate GitHub account or app. The author approves a Tier 2 change by approving or merging that PR. His own changes are Tier 2 by being his: he merges them himself.
+**The author's own sign-off.** GitHub does not let a person approve his own pull request, and Claude's cloud sessions push and open pull requests as the author's own account. So the agents' pull requests are opened by a GitHub App, "bootcamp-agents": an agent pushes its work to a branch named `agent/...`, and a workflow holding the App's key opens the pull request in the App's name. The App can write branches and pull requests, but cannot change `.github/` (it has no permission over workflows) and cannot update `main`. The author approves a Tier 2 change by approving the App's pull request. His own changes are Tier 2 by being his: he merges them himself, as a bypass of the branch rules on `main`. A second App, used only by the release (section 7), is the only other thing allowed to update `main`.
 
 ## 3. The checks, cheapest first
 
-**A. May this PR merge itself at all?** It comes from the agents' account (section 2); a PR from anyone else, or from a fork, never merges itself. No history was rewritten. A secret scan finds nothing. It is under the size cap and makes one change.
+**A. May this PR merge itself at all?** It was opened by the agents' App (section 2); a PR from anyone else, or from a fork, never merges itself. No history was rewritten. A secret scan finds nothing. It is under the size cap and makes one change.
 
 **Keeping the checks honest.** A PR could change the CI or the checks themselves to let itself through, or to read the secrets CI holds (the API key, the name hashes). So the checks always run from `next`'s copy of `.github/` and `measure/`, never the PR's; and the jobs that need a secret run only in a protected GitHub environment that a PR's own code cannot reach.
 
@@ -154,7 +154,7 @@ Trainees are not told that an agent reads their sessions (the author's decision)
 5. **After `main` moves:** check that the stamp the coach fetches is the new one; deploy the site once its bundle check passes; and a scheduled Claude session does what `CLAUDE.md` requires: it updates the *Apologetics SOPs* doc, and proposes each changed skill as a card for the author to save (a card needs his hand). It reports anything it could not do.
 6. **If anything fails after release,** `main` moves back to the last good release, and the author is told.
 
-Only the release run can move `main`: a branch rule in GitHub forbids every other push to it.
+Only the release App and the author can move `main`: a branch rule in GitHub forbids every other update to it.
 
 ## 8. Where the files live
 
@@ -162,7 +162,7 @@ Only the release run can move `main`: a branch rule in GitHub forbids every othe
 
 ## 9. What the author does himself
 
-- In GitHub's settings: protect `main` and `next` (section 7), create the agents' account or app (section 2), and set up the protected environment for CI's secrets (section 3).
+- In GitHub's settings: protect `main` and `next` (section 7); create the agents' App and, at step 4, the release App (section 2); and set up the protected environments that hold their keys and CI's other secrets (section 3).
 - Set a spending limit on the Anthropic workspace the tests use.
 - Read each release summary when he can, and reply "hold" to stop one.
 - Approve or merge Tier 2 changes, approve each new script check's code once, and review added tests when convenient.
