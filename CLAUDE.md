@@ -25,6 +25,10 @@ This repo is the true copy of the apologetics boot camp skill, its SOPs, and the
 
 Tell the user if either copy couldn't be updated, and why.
 
+## After you open a pull request
+
+Watch it, and handle its checks and review comments, without asking first.
+
 ## When you change the boot camp's SKILL.md
 
 Run `python3 measure/checks.py --stamp` before you commit, and commit `skills/apologetics-boot-camp/VERSION` with it. The stamp lets a saved copy of the skill tell from one short line whether it is current, so it need not fetch the whole of SKILL.md at the start of every session.
