@@ -27,7 +27,7 @@ ROOT = os.path.abspath(os.environ.get("GATE_REPO") or os.path.dirname(HERE))
 HOLD_HOURS = 48
 # What the site bundles when it is built (PLAN.md, section 7, "Deploying the site").
 SITE_PATHS = ("site/", "skills/apologetics-boot-camp/SKILL.md", "skills/apologetics-boot-camp/sops/",
-              "skills/apologetics-boot-camp/fixed/", "skills/thought-and-word-rules/")
+              "skills/apologetics-boot-camp/fixed/")
 SCHEMA = "site/schema.sql"
 MARK = "<!-- release {sha} from {base} -->"
 MARK_RE = re.compile(r"<!-- release ([0-9a-f]{40}) from ([0-9a-f]{40}) -->")

@@ -4,7 +4,7 @@ The plan for checking each change to this repo well enough that it can merge wit
 
 ## 1. Merging is not publishing
 
-The skill tells every coach to fetch `SKILL.md`, the thought-and-word rules, `sops/` and `fixed/` from the `main` branch at the start of each session (`SKILL.md`, "Always use the GitHub copy"). Saved copies on phones do the same: when `main`'s `VERSION` differs from their own stamp, they fetch `main`'s `SKILL.md` and follow it. So whatever is on `main` reaches every trainee in his next session.
+The skill tells every coach to fetch `SKILL.md`, `sops/` and `fixed/` from the `main` branch at the start of each session (`SKILL.md`, "Always use the GitHub copy"). Saved copies on phones do the same: when `main`'s `VERSION` differs from their own stamp, they fetch `main`'s `SKILL.md` and follow it. So whatever is on `main` reaches every trainee in his next session.
 
 So **`main` becomes the release branch, and changes merge into a branch called `next`.** Nothing reaches `main` except through a release (section 7), and every link in the skill, and every saved copy already on a phone, keeps working unchanged. This does what the `live` tag in the first draft was for, without changing a URL.
 
@@ -30,7 +30,7 @@ Tier 2 includes:
 - all of `sops/` except the member's-words rows above, and all of `fixed/` and `site/prompts/`;
 - any response bank row drawn from trainee logs, and any reply in a row;
 - anything already in `measure/`, including a pass line and these rules;
-- the rule skills, `writing-dialogue`, `CLAUDE.md` and `README.md`;
+- `writing-dialogue`, `CLAUDE.md` and `README.md`;
 - on the site: `src/index.ts`, `src/anthropic.ts`, `src/auth.ts`, `src/quota.ts`, `src/pricing.ts`, `public/admin.html`, `schema.sql`, `package.json`, `package-lock.json` and all of `wrangler.jsonc`, since these hold the money, the sign-ins and the data;
 - `.github/`, which holds the CI and the list of protected files.
 

@@ -3,7 +3,7 @@
 // so the model's cache can be shared between them.
 
 import skill from "../../skills/apologetics-boot-camp/SKILL.md";
-import rules from "../../skills/thought-and-word-rules/SKILL.md";
+import rules from "../prompts/thought-and-word-rules.md";
 import methodology from "../../skills/apologetics-boot-camp/sops/01-methodology-questioning-them-to-death.md";
 import bank from "../../skills/apologetics-boot-camp/sops/20-response-bank.md";
 import plans from "../../skills/apologetics-boot-camp/sops/21-training-plans.md";
