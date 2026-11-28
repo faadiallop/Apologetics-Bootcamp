@@ -95,6 +95,14 @@ The Worker's logs are kept by Cloudflare (`observability` in `wrangler.jsonc`). 
 - `npm.cmd test` (limits, prices, invite codes, and who speaks when; no model is called)
 - `npm.cmd run check-bundle` (builds the Worker without deploying it)
 
+## Train on it as a trainee would
+
+`rounds/run.mjs` runs a private copy of the site (its own empty database), opens its page in a real browser, signs in with a fresh invite, picks a group and trains for a few turns. Only the microphone and the voice are stood in for: a Claude Code agent plays the trainee from the round's instructions (`rounds/short-round.md`), and a second one grades the transcript. It also checks, without a model, that every turn was answered and spoken, that the cost was recorded and stayed within the cap, and that the owner's page shows the session.
+
+It is paid for, so it never runs on a schedule or a pull request. It runs at a release that changes what the site bundles, and by hand from Actions, "site round" (`.github/workflows/site-round.yml`). The site's replies use the author's personal key, `SITE_TEST_ANTHROPIC_API_KEY`, never the site's own, and every spending limit of the copy is set to the cap (`--cap`, $1 unless told otherwise). The trainee and the grader run on the author's subscription, `CLAUDE_CODE_OAUTH_TOKEN`. Both secrets live in the `measure` environment.
+
+On this machine, from `site`, with `claude` signed in: `cd rounds; npm.cmd install; npx.cmd playwright install chromium; cd ..`, then `node rounds/run.mjs --cap 0.5`, with `SITE_TEST_ANTHROPIC_API_KEY` set in the terminal.
+
 ## Not built yet
 
 Email sign-in, email alerts at $10 and $16, a page where a trainee can read his own training log, a way to delete a person's records, serving approved fixed pieces with no model call, and streaming.
