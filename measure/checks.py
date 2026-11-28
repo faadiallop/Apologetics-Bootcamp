@@ -459,28 +459,6 @@ def check_saved_skills(report, saved_dir):
         report.add("INSPECT", "saved-skills", "skills in the repo with no saved copy here", notes)
 
 
-# The site bundles a copy of the thought-and-word rules index; the true copy is in
-# faadiallop/foundations. A copy that has fallen behind is reported, not failed: bringing it
-# up changes what the coach is given, so it is a change of its own, with its own tests.
-RULES_COPY = os.path.join(ROOT, "site", "prompts", "thought-and-word-rules.md")
-RULES_URL = ("https://raw.githubusercontent.com/faadiallop/foundations/main/"
-             "plugins/thought-and-word/skills/thought-and-word-rules/SKILL.md")
-
-
-def check_rules_copy(report):
-    try:
-        with urllib.request.urlopen(RULES_URL, timeout=30) as resp:
-            true_copy = resp.read().decode("utf-8")
-    except Exception as err:
-        report.add("SKIP", "rules-copy", f"could not read the true copy of the rules index: {err}")
-        return
-    if read(RULES_COPY).strip() == true_copy.strip():
-        report.add("PASS", "rules-copy", "the site's copy of the rules index matches faadiallop/foundations")
-    else:
-        report.add("INSPECT", "rules-copy", "the site's copy of the rules index is behind faadiallop/foundations",
-                   [f"make {rel(RULES_COPY)} match {RULES_URL}"])
-
-
 # The stamp lets a saved copy of the skill tell, from one short line on GitHub,
 # whether it is still current, without fetching the whole of SKILL.md again.
 STAMP_RE = re.compile(r"(This copy's stamp is `)([0-9a-f]{8})(`)")
@@ -569,7 +547,6 @@ def main():
     check_named_files(report)
     check_rows_and_personas(report)
     check_saved_skills(report, args.saved)
-    check_rules_copy(report)
     check_stamp(report)
     check_fixed(report)
     check_length(report)

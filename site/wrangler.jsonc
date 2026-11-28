@@ -2,6 +2,8 @@
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "bootcamp-site",
   "main": "src/index.ts",
+  // Before every build, fetch the thought-and-word rules index the coach is given.
+  "build": { "command": "node scripts/fetch-rules.mjs" },
   "compatibility_date": "2026-11-01",
   // The test page. Anything under /api/ goes to the Worker.
   "assets": { "directory": "./public" },
