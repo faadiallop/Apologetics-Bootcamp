@@ -2,6 +2,17 @@
 
 This repo is the true copy of the apologetics boot camp skill, its SOPs, and the thought-and-word rule skills. Two other copies must match it, and they fall behind unless they are updated with each release.
 
+## When the author says to release now
+
+A release waits 48 hours for the author to read its summary, unless the author comments `go` on its issue (`measure/PLAN.md`, section 7). When the author tells you to release now, do this, and never move `main` or deploy the site by hand:
+
+1. **Find the release.** Look for an open issue labelled `release`. If there is none, start the release workflow by hand (`gh workflow run release.yml --ref main`), wait for that run to finish, and use the issue it opens. If the run fails, stop and tell the author why.
+2. **Read the summary.** If any check or conversation test failed, or the site round failed, stop and tell the author what failed. Release only on the author's answer.
+3. **Release.** Comment exactly `go` on the issue, and nothing else: the release counts only a comment that is that one word, from the author's account. Then start the release workflow by hand again.
+4. **Watch it to the end.** Wait for that run to finish, then tell the author that `main` has moved, whether the site was deployed, and whether the live site passed its check. If the release stopped for a database change, or put `main` and the site back, say so and give the reason from the run's log and the issue.
+
+Then do what the next section requires.
+
 ## After a release moves `main`
 
 Changes merge into `next`, and reach `main` only through a release (`measure/PLAN.md`, section 7). The copies follow `main`, not `next`, so update them when a release has moved `main` (the release closes its issue, labelled `release`, saying so), not when you push to `next`. Compare `main` with the commit the copies were last brought up to, which is named in the last such issue's "Copies updated" comment, and then:
