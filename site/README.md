@@ -18,6 +18,24 @@ The skill's files are bundled in when the Worker is built (`src/materials.ts`), 
 
 While training, a microphone button sits at the bottom of the screen (or press M on a keyboard). Off, the browser stops listening at once and anything half heard is dropped; the coach finishes what he is saying, then waits, with the bars dimmed, until the microphone is turned back on.
 
+## When training ends
+
+The coach never ends a training on its own; it goes on, round after round, until one of these stops it:
+
+| What stops it | What the trainee sees | Can he start again? |
+| --- | --- | --- |
+| He taps End, at the top right | "You ended the training" | Yes, at once |
+| His allowance for the day or the month is used up | "Today's (or this month's) allowance is used up", with the local time it renews | No, until it renews |
+| The site's budget for the day or the month is used up | "Training is closed for today (or this month)", with when it opens | No, until it opens |
+| The owner pauses training | "Training is paused" | No, until the owner resumes it |
+| The session reaches $0.60 or 40 turns | "This session reached its limit" | Yes, as a new session |
+| The session was cleared after 14 days idle | "That session has ended" | Yes, as a new session |
+| More than six messages in a minute | "That was too fast for the site" | Yes, after a minute |
+| Anthropic's service is overloaded | "The coach is busy" | Yes, after a moment |
+| The microphone is blocked, or fails | "The microphone is blocked" or "The coach couldn't hear you" | Yes, once it works |
+
+The coach says the reason aloud, and the group sheet comes back with it at the top. When he can't start again, the groups are greyed out. The foot of the sheet shows how much of his allowance is left, today's or this month's, whichever is less. A new session starts from his newest card, so rounds he finished carry over; a round cut off part-way is not saved.
+
 ## Limits
 
 Set in `wrangler.jsonc` under `vars`, in US dollars. They are sized for $20 a month and five testers.
@@ -31,7 +49,7 @@ Set in `wrangler.jsonc` under `vars`, in US dollars. They are sized for $20 a mo
 | One session | $0.60 or 40 turns |
 | Messages a minute | 6 |
 
-When a turn takes a person past four fifths of an allowance (the day's, the month's or the session's), the coach's voice tells him so, once. When a limit is reached, the reason is spoken and stays on the screen.
+When a turn takes a person past four fifths of an allowance (the day's, the month's or the session's), the coach's voice tells him so, once. While training, a note under the bars stays up after that. When a limit is reached, see [When training ends](#when-training-ends).
 
 Once the site has spent $16 in a month, the daily budget shrinks to what is left divided by the days left. The hard limit on the Anthropic workspace is the backstop behind all of these.
 

@@ -6,34 +6,51 @@
 <meta name="robots" content="noindex">
 <title>Boot Camp: owner's page</title>
 <style>
-  :root { color-scheme: light dark; --navy: #04356A; --line: #8885; }
-  body { font: 16px/1.5 system-ui, sans-serif; max-width: 52rem; margin: 0 auto; padding: 1.25rem; }
-  h1 { font-size: 1.3rem; margin: 0 0 1rem; }
-  h2 { font-size: 1.05rem; margin: 1.75rem 0 .5rem; }
+  /* The same blue, white and rounded panels as the training page. */
+  :root {
+    --navy: #04356A; --page: #F1F5FA; --panel: #fff; --ink: #0B2545; --soft: #5A6F88; --line: #E3E9F1; --red: #B42318;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --page: #061A33; --panel: #0B2A50; --ink: #E8EFF8; --soft: #9DB2CC; --line: #1E4573; color-scheme: dark; }
+  }
+  * { box-sizing: border-box; }
+  body { font: 16px/1.5 system-ui, sans-serif; margin: 0; background: var(--page); color: var(--ink); }
+  h1 {
+    margin: 0 0 1.5rem; padding: 1.1rem max(1.25rem, calc((100vw - 52rem) / 2 + 1.25rem));
+    background: var(--navy); color: #fff; font-size: 1.15rem; font-weight: 650;
+  }
+  body > form, #app { max-width: 52rem; margin: 0 auto; padding: 0 1.25rem 2rem; }
+  h2 { font-size: 1.05rem; margin: 2rem 0 .6rem; }
+  p { color: var(--soft); }
   form { display: flex; gap: .5rem; flex-wrap: wrap; }
-  input, button { font: inherit; padding: .5rem .7rem; border: 1px solid var(--line); border-radius: .4rem; background: transparent; color: inherit; }
+  input, button { font: inherit; padding: .6rem .85rem; border: 1.5px solid var(--line); border-radius: .75rem; background: var(--panel); color: inherit; }
   input { flex: 1; min-width: 12rem; }
-  button { cursor: pointer; }
+  input:focus-visible { outline: 0; border-color: var(--navy); box-shadow: 0 0 0 4px #04356A22; }
+  button { cursor: pointer; font-weight: 600; }
   button.main { background: var(--navy); border-color: var(--navy); color: #fff; }
-  button.stop { border-color: #b3261e; color: #b3261e; }
-  .wide { overflow-x: auto; }
+  button.stop { border-color: var(--red); color: var(--red); }
+  .wide { overflow-x: auto; background: var(--panel); border: 1px solid var(--line); border-radius: 1rem; }
   table { border-collapse: collapse; width: 100%; font-variant-numeric: tabular-nums; }
-  th, td { text-align: left; padding: .45rem .6rem; border-bottom: 1px solid var(--line); white-space: nowrap; }
-  th { font-size: .8rem; opacity: .7; font-weight: 600; }
+  th, td { text-align: left; padding: .6rem .8rem; border-bottom: 1px solid var(--line); white-space: nowrap; }
+  tbody tr:last-child td { border-bottom: 0; }
+  th { font-size: .8rem; color: var(--soft); font-weight: 600; }
   td.num, th.num { text-align: right; }
+  td button { padding: .3rem .7rem; font-size: .9rem; margin-right: .3rem; }
   tr.off td { opacity: .5; }
   #totals { display: grid; grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)); gap: .75rem; }
-  #totals div { border: 1px solid var(--line); border-radius: .5rem; padding: .6rem .8rem; }
-  #totals b { display: block; font-size: 1.3rem; }
-  #totals span { font-size: .85rem; opacity: .75; }
-  #code { margin-top: .75rem; border: 2px solid var(--navy); border-radius: .5rem; padding: .75rem 1rem; }
+  #totals div { background: var(--panel); border: 1px solid var(--line); border-radius: 1rem; padding: .8rem 1rem; }
+  #totals b { display: block; font-size: 1.35rem; }
+  #totals span { font-size: .85rem; color: var(--soft); }
+  #code { margin-top: .75rem; background: var(--panel); border: 2px solid var(--navy); border-radius: 1rem; padding: .75rem 1rem; }
+  #code p { color: inherit; }
   #code code { font-size: 1.3rem; letter-spacing: .05em; user-select: all; }
-  .paused { color: #b3261e; font-weight: 600; }
-  #detail { border: 1px solid var(--line); border-radius: .5rem; padding: .25rem 1rem 1rem; margin-top: 1rem; }
+  .paused { color: var(--red); font-weight: 600; }
+  #detail { background: var(--panel); border: 1px solid var(--line); border-radius: 1rem; padding: .25rem 1rem 1rem; margin-top: 1.5rem; }
   #sessions button { margin: .15rem .3rem .15rem 0; }
   pre.card { white-space: pre-wrap; overflow-wrap: anywhere; font: inherit; border-left: 3px solid var(--navy); padding-left: .8rem; margin: .5rem 0 1rem; }
   .line { margin: 0 0 .7rem; white-space: pre-wrap; overflow-wrap: anywhere; }
-  .line b { display: block; font-size: .8rem; opacity: .7; }
+  .line b { display: block; font-size: .8rem; color: var(--soft); }
   .line.trainee { padding-left: 1.5rem; }
   [hidden] { display: none !important; }
 </style>
