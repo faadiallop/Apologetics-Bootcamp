@@ -112,10 +112,24 @@ jobs:
       ref: ${{ needs.look.outputs.sha }}
     secrets: inherit
 
+  # One short training on the site, paid for by the author's personal key, and only when
+  # the release changes what the site bundles (site-round.yml). Its result goes in the
+  # summary; a failed round does not stop the summary, so the author can hold the release.
+  site-round:
+    needs: [look, checks]
+    if: needs.look.outputs.prepare == 'true'
+    uses: ./.github/workflows/site-round.yml
+    with:
+      ref: ${{ needs.look.outputs.sha }}
+      base: ${{ needs.look.outputs.base }}
+    secrets: inherit
+
   announce:
     name: Send the author the summary
-    needs: [look, checks, measure]
-    if: needs.look.outputs.prepare == 'true'
+    needs: [look, checks, measure, site-round]
+    if: >-
+      !cancelled() && needs.look.outputs.prepare == 'true'
+      && needs.checks.result == 'success' && needs.measure.result == 'success'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -130,14 +144,25 @@ jobs:
         with:
           name: measure-results
           path: measure-results
+      - uses: actions/download-artifact@v4
+        continue-on-error: true
+        with:
+          name: site-round
+          path: site-round
       - env:
           GH_TOKEN: ${{ github.token }}
           SHA: ${{ needs.look.outputs.sha }}
           BASE: ${{ needs.look.outputs.base }}
+          ROUND: ${{ needs.site-round.result }}
         run: |
           git fetch -q origin main next
           # Run main's copy of the scripts, reading the release's commits as data.
           python3 measure/release.py summary "$BASE" "$SHA" --measure measure-results/results.json > body.md
+          if [ -s site-round/site-round.md ]; then
+            { echo; cat site-round/site-round.md; } >> body.md
+          elif [ "$ROUND" != "success" ]; then
+            { echo; echo "## Site round"; echo; echo "The site round did not finish ($ROUND); see this run's log."; } >> body.md
+          fi
           title="Release $(git log -1 --format=%cs "$SHA"): main to ${SHA:0:8}"
           gh issue create --repo "$GITHUB_REPOSITORY" --label release --assignee "$AUTHOR" \
             --title "$title" --body-file body.md

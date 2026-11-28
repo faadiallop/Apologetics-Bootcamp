@@ -1,0 +1,103 @@
+# The site round (site/rounds/): one short training on a private copy of the site, used in a
+# real browser as a trainee uses it, with the site's real models. It is paid for, so it never
+# runs on a schedule or on a pull request:
+#
+# - By hand (Actions > site round > Run workflow, on main or next).
+# - From the release (release.yml), on the commit it is about to release, and only when that
+#   release changes what the site bundles. Its result goes in the release's summary.
+#
+# Who pays: the site's own replies use SITE_TEST_ANTHROPIC_API_KEY, the author's personal key,
+# never the site's, and the copy's spending limits are all set to the cap. The trainee and the
+# grader run through Claude Code on the author's subscription (CLAUDE_CODE_OAUTH_TOKEN).
+# Without both secrets in the "measure" environment, it says so and passes.
+#
+# The secrets are only ever beside main's or next's own code: this workflow has no pull
+# request trigger, and the measure environment should be limited to main and next.
+name: site round
+
+on:
+  workflow_dispatch:
+    inputs:
+      cap:
+        description: "Most the site's replies may cost, in US dollars"
+        default: "1"
+      turns:
+        description: "Most trainee turns (blank: the round's own number)"
+        default: ""
+  workflow_call:
+    inputs:
+      ref:
+        type: string
+        required: true
+      base:
+        description: "Run only if the site's bundle changed since this commit"
+        type: string
+        default: ""
+      cap:
+        type: string
+        default: "1"
+
+permissions:
+  contents: read
+
+jobs:
+  round:
+    name: Site round
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    environment: measure
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.ref || '' }}
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Decide whether to run
+        id: go
+        env:
+          KEY: ${{ secrets.SITE_TEST_ANTHROPIC_API_KEY }}
+          TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          BASE: ${{ inputs.base }}
+          REF: ${{ inputs.ref || github.sha }}
+        run: |
+          if [ -z "$KEY" ] || [ -z "$TOKEN" ]; then
+            echo "Site round not run: the measure environment needs both SITE_TEST_ANTHROPIC_API_KEY and CLAUDE_CODE_OAUTH_TOKEN." \
+              | tee -a "$GITHUB_STEP_SUMMARY" | tee site-round.md
+            exit 0
+          fi
+          if [ -n "$BASE" ] && [ "$(python3 measure/release.py site "$BASE" "$REF")" = "none" ]; then
+            echo "Site round not run: this release changes nothing the site bundles." | tee -a "$GITHUB_STEP_SUMMARY" | tee site-round.md
+            exit 0
+          fi
+          echo "run=true" >> "$GITHUB_OUTPUT"
+      - uses: actions/setup-node@v4
+        if: steps.go.outputs.run
+        with:
+          node-version: "22"
+      - name: Install the site, the browser and Claude Code
+        if: steps.go.outputs.run
+        run: |
+          (cd site && npm ci --no-audit --no-fund)
+          (cd site/rounds && npm ci --no-audit --no-fund && npx playwright install --with-deps chromium)
+          npm install -g -s @anthropic-ai/claude-code
+      - name: Train
+        if: steps.go.outputs.run
+        working-directory: site
+        env:
+          SITE_TEST_ANTHROPIC_API_KEY: ${{ secrets.SITE_TEST_ANTHROPIC_API_KEY }}
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          CAP: ${{ inputs.cap || '1' }}
+          TURNS: ${{ inputs.turns }}
+        run: |
+          set -o pipefail
+          node rounds/run.mjs --cap "$CAP" ${TURNS:+--turns "$TURNS"} --out ../site-round.json \
+            | tee ../site-round.md | tee -a "$GITHUB_STEP_SUMMARY"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: site-round
+          path: |
+            site-round.md
+            site-round.json
+          if-no-files-found: ignore
+          retention-days: 90
