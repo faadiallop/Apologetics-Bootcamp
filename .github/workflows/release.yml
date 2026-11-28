@@ -1,0 +1,243 @@
+# Build step 4 of measure/PLAN.md: the release, from next to main (section 7).
+#
+# Once a day:
+# - If a release is waiting (an open issue labelled "release"), it goes once it
+#   has waited 48 hours, unless the author has commented "hold" on it. Going
+#   means: move main to its commit, check the stamp the coach fetches, deploy the
+#   site if the release changes what the site bundles, and check the live site.
+#   If any of that fails, the site and main both go back, and the issue says so.
+# - If none is waiting and next has moved past main, it fixes on next's latest
+#   commit, runs every script check, the site checks and the full measure on it,
+#   and opens the issue: the one summary the author is sent.
+#
+# The scheduled run uses main's copy of this file, so the release is judged by
+# the last release's checks, never by what it brings in.
+#
+# Needs, in the repo's settings (PLAN.md, section 9):
+# - an environment named "release", allowed for main only, holding the variable
+#   RELEASE_APP_ID and the secret RELEASE_APP_PRIVATE_KEY (the release App: it
+#   needs Contents read and write, and must be allowed past main's branch rule,
+#   force pushes included, so that it can move main back), and the secrets
+#   CLOUDFLARE_API_TOKEN (able to deploy this one Worker) and CLOUDFLARE_ACCOUNT_ID;
+# - the "measure" environment allowed for main as well, for the full measure.
+# Until the release App is set up, the run stops before moving main and says so.
+name: release
+
+on:
+  schedule:
+    - cron: "41 13 * * *"
+  workflow_dispatch:
+
+concurrency:
+  group: release
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+  issues: write
+  actions: read   # measure.yml asks for it, and a called workflow gets no more than this
+
+env:
+  SITE_URL: https://bootcamp-site.bootcamp-site.workers.dev
+  AUTHOR: faadiallop
+
+jobs:
+  look:
+    name: Look for a waiting release
+    runs-on: ubuntu-latest
+    outputs:
+      issue: ${{ steps.look.outputs.issue }}
+      decision: ${{ steps.look.outputs.decision }}
+      sha: ${{ steps.look.outputs.sha }}
+      base: ${{ steps.look.outputs.base }}
+      prepare: ${{ steps.look.outputs.prepare }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - id: look
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git fetch -q origin main next
+          gh label create release --repo "$GITHUB_REPOSITORY" --color 5319e7 \
+            --description "A release waiting to move main (measure/PLAN.md, section 7)" 2>/dev/null || true
+          issue="$(gh issue list --repo "$GITHUB_REPOSITORY" --label release --state open --limit 1 --json number --jq '.[0].number')"
+          if [ -n "$issue" ]; then
+            gh issue view "$issue" --repo "$GITHUB_REPOSITORY" --json body,createdAt,comments > issue.json
+            read -r sha base < <(python3 measure/release.py mark "$(jq -r .body issue.json)")
+            jq .comments issue.json > comments.json
+            decision="$(python3 measure/release.py decide "$(jq -r .createdAt issue.json)" comments.json "$AUTHOR")"
+            echo "Release #$issue ($sha): $decision" | tee -a "$GITHUB_STEP_SUMMARY"
+            { echo "issue=$issue"; echo "decision=$decision"; echo "sha=$sha"; echo "base=$base"; } >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          main="$(git rev-parse origin/main)"; next="$(git rev-parse origin/next)"
+          if [ "$main" = "$next" ] || git merge-base --is-ancestor origin/next origin/main; then
+            echo "next has nothing main lacks; no release." | tee -a "$GITHUB_STEP_SUMMARY"; exit 0
+          fi
+          if ! git merge-base --is-ancestor origin/main origin/next; then
+            echo "main has commits next lacks, so main cannot simply move forward. Bring next up to main first." \
+              | tee -a "$GITHUB_STEP_SUMMARY"; exit 1
+          fi
+          # A release the author closed without a change since is not offered again.
+          if gh issue list --repo "$GITHUB_REPOSITORY" --label release --state closed --limit 30 --json body \
+               --jq '.[].body' | grep -q "<!-- release $next "; then
+            echo "The release of $next was closed; waiting for next to change." | tee -a "$GITHUB_STEP_SUMMARY"; exit 0
+          fi
+          { echo "prepare=true"; echo "sha=$next"; echo "base=$main"; } >> "$GITHUB_OUTPUT"
+
+  # ---------------------------------------------------------------- prepare
+
+  checks:
+    needs: look
+    if: needs.look.outputs.prepare == 'true'
+    uses: ./.github/workflows/checks.yml
+    with:
+      ref: ${{ needs.look.outputs.sha }}
+
+  measure:
+    needs: [look, checks]
+    if: needs.look.outputs.prepare == 'true'
+    uses: ./.github/workflows/measure.yml
+    with:
+      ref: ${{ needs.look.outputs.sha }}
+    secrets: inherit
+
+  announce:
+    name: Send the author the summary
+    needs: [look, checks, measure]
+    if: needs.look.outputs.prepare == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - uses: actions/download-artifact@v4
+        continue-on-error: true
+        with:
+          name: measure-results
+          path: measure-results
+      - env:
+          GH_TOKEN: ${{ github.token }}
+          SHA: ${{ needs.look.outputs.sha }}
+          BASE: ${{ needs.look.outputs.base }}
+        run: |
+          git fetch -q origin main next
+          # Run main's copy of the scripts, reading the release's commits as data.
+          python3 measure/release.py summary "$BASE" "$SHA" --measure measure-results/results.json > body.md
+          title="Release $(git log -1 --format=%cs "$SHA"): main to ${SHA:0:8}"
+          gh issue create --repo "$GITHUB_REPOSITORY" --label release --assignee "$AUTHOR" \
+            --title "$title" --body-file body.md
+          cat body.md >> "$GITHUB_STEP_SUMMARY"
+
+  # ---------------------------------------------------------------- publish
+
+  publish:
+    name: Move main, deploy the site, and check both
+    needs: look
+    if: needs.look.outputs.decision == 'go'
+    runs-on: ubuntu-latest
+    environment: release
+    env:
+      SHA: ${{ needs.look.outputs.sha }}
+      BASE: ${{ needs.look.outputs.base }}
+      ISSUE: ${{ needs.look.outputs.issue }}
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - name: Check that the release App is set up
+        env:
+          APP_ID: ${{ vars.RELEASE_APP_ID }}
+        run: |
+          if [ -z "$APP_ID" ]; then
+            msg="The release is ready to go, but the release App is not set up yet (measure/PLAN.md, section 9), so main was not moved. It will try again tomorrow."
+            echo "$msg" >> "$GITHUB_STEP_SUMMARY"
+            gh issue comment "$ISSUE" --repo "$GITHUB_REPOSITORY" --body "$msg"
+            exit 1
+          fi
+      - id: app
+        uses: actions/create-github-app-token@v1
+        with:
+          app-id: ${{ vars.RELEASE_APP_ID }}
+          private-key: ${{ secrets.RELEASE_APP_PRIVATE_KEY }}
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ needs.look.outputs.sha }}
+          fetch-depth: 0
+          token: ${{ steps.app.outputs.token }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - name: Move main
+        id: move
+        run: |
+          git fetch -q origin main
+          if [ "$(git rev-parse origin/main)" != "$BASE" ]; then
+            msg="main moved since this release was prepared, so it was not released. Close this issue; tomorrow's run prepares a new one."
+            gh issue comment "$ISSUE" --repo "$GITHUB_REPOSITORY" --body "$msg"; echo "$msg"; exit 1
+          fi
+          git push origin "$SHA:refs/heads/main"
+      - name: Check the stamp the coach fetches
+        run: |
+          want="$(git show "$SHA:skills/apologetics-boot-camp/VERSION" | tr -d '[:space:]')"
+          for i in $(seq 1 20); do
+            got="$(curl -fsS "https://raw.githubusercontent.com/$GITHUB_REPOSITORY/main/skills/apologetics-boot-camp/VERSION?$i" | tr -d '[:space:]' || true)"
+            [ "$got" = "$want" ] && { echo "The stamp on main is $got."; exit 0; }
+            sleep 30
+          done
+          echo "The stamp on main reads '$got', not '$want'."; exit 1
+      - name: Decide whether the site deploys
+        id: site
+        run: echo "site=$(python3 measure/release.py site "$BASE" "$SHA")" >> "$GITHUB_OUTPUT"
+      - name: Ask the author to change the database
+        if: steps.site.outputs.site == 'schema'
+        run: |
+          gh issue comment "$ISSUE" --repo "$GITHUB_REPOSITORY" --body "main has moved. The database changes in this release, so the site was not deployed. Apply \`site/schema.sql\` and deploy by hand, as \`site/README.md\` says."
+      - uses: actions/setup-node@v4
+        if: steps.site.outputs.site == 'deploy'
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: site/package-lock.json
+      - name: Deploy the site
+        id: deploy
+        if: steps.site.outputs.site == 'deploy'
+        working-directory: site
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          npm ci --no-audit --no-fund
+          npx wrangler deploy --message "release ${SHA:0:8}"
+      - name: Check the live site
+        if: steps.site.outputs.site == 'deploy'
+        run: |
+          sleep 20
+          page="$(curl -s -o /dev/null -w '%{http_code}' "$SITE_URL/")"
+          refused="$(curl -s -o /dev/null -w '%{http_code}' "$SITE_URL/api/status")"
+          echo "Page: $page (want 200). Status with no sign-in: $refused (want 401)."
+          [ "$page" = 200 ] && [ "$refused" = 401 ]
+      # Only a deploy that went through is rolled back; one that failed left the old version live.
+      - name: Put the site back
+        if: failure() && steps.deploy.outcome == 'success'
+        working-directory: site
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: npx wrangler rollback --message "release ${SHA:0:8} failed its check" -y
+      - name: Put main back
+        if: failure() && steps.move.outcome == 'success'
+        run: git push --force-with-lease="main:$SHA" origin "$BASE:refs/heads/main"
+      - name: Tell the author it failed
+        if: failure() && steps.move.outcome == 'success'
+        run: |
+          gh issue comment "$ISSUE" --repo "$GITHUB_REPOSITORY" --body "The release failed after main moved, so main is back at \`${BASE:0:8}\` and the site at its last version. The run: $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
+      - name: Close the release
+        run: |
+          gh issue close "$ISSUE" --repo "$GITHUB_REPOSITORY" --reason completed \
+            --comment "Released: main is at \`${SHA:0:8}\`. Site: ${{ steps.site.outputs.site }}. The saved skills and the SOPs doc are brought up to main next (CLAUDE.md)."

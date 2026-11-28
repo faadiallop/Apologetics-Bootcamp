@@ -12,7 +12,7 @@ The Worker holds the Anthropic key. The browser never sees it. For each message 
     - inside a round, a small **router** (Haiku) reads the round so far and chooses: the **member** (Haiku) answers, or the coach is called back for a hint or to close the round;
 3. records what each call cost, from the token counts the API reports, and saves the session and the trainee's card.
 
-The skill's files are bundled in when the Worker is built (`src/materials.ts`), so a change to the skill reaches the site at the next deploy. A group's fixed pieces are included only once its file is marked approved.
+The skill's files are bundled in when the Worker is built (`src/materials.ts`), so a change to the skill reaches the site at the next deploy. Each release deploys the site from `main` by itself (`.github/workflows/release.yml`), once the `release` environment holds a Cloudflare token; a deploy by hand, as below, still works. A group's fixed pieces are included only once its file is marked approved.
 
 ## Turning the microphone off
 
