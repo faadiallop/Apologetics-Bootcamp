@@ -1,9 +1,10 @@
-// The skill's own files, bundled into the Worker when it is built. Nothing is
-// fetched at run time, and the text is the same for every trainee of a group,
+// The skill's own files and the rules index, bundled into the Worker when it is
+// built. Nothing is fetched at run time, and the text is the same for every trainee of a group,
 // so the model's cache can be shared between them.
 
 import skill from "../../skills/apologetics-boot-camp/SKILL.md";
-import rules from "../prompts/thought-and-word-rules.md";
+// Fetched from faadiallop/foundations when the site is built (scripts/fetch-rules.mjs).
+import rules from "../fetched/thought-and-word-rules.md";
 import methodology from "../../skills/apologetics-boot-camp/sops/01-methodology-questioning-them-to-death.md";
 import bank from "../../skills/apologetics-boot-camp/sops/20-response-bank.md";
 import plans from "../../skills/apologetics-boot-camp/sops/21-training-plans.md";

@@ -2,3 +2,4 @@ node_modules/
 .wrangler/
 .dry-run/
 .dev.vars
+fetched/

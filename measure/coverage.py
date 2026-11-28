@@ -14,12 +14,14 @@ A test's part is read from its case.yaml, from the quoted name in "Guards
 list item. A test that quotes no part is listed under OVERRIDES by hand.
 """
 import argparse
+import functools
 import glob
 import json
 import os
 import re
 import subprocess
 import sys
+import urllib.request
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.abspath(os.environ.get("GATE_REPO") or os.path.dirname(HERE))
@@ -27,8 +29,10 @@ EVALS = "measure/evals"
 SKILL_MD = "skills/apologetics-boot-camp/SKILL.md"
 SOPS = "skills/apologetics-boot-camp/sops/"
 FIXED = "skills/apologetics-boot-camp/fixed/"
-# The site's copy of the thought-and-word rules index (the true copy is in faadiallop/foundations).
-RULES = "site/prompts/thought-and-word-rules.md"
+# The thought-and-word rules index the coach is given. Its true copy is in faadiallop/foundations;
+# the site fetches the same address when it is built (site/scripts/fetch-rules.mjs).
+RULES_URL = ("https://raw.githubusercontent.com/faadiallop/foundations/main/"
+             "plugins/thought-and-word/skills/thought-and-word-rules/SKILL.md")
 
 # Words that show which group a test's conversation is with, and the file names of that group.
 GROUPS = {
@@ -40,14 +44,20 @@ GROUPS = {
 }
 # Files every group's training reads, so a change to them reaches every test.
 SHARED = {SOPS + "00-overview-and-template.md", SOPS + "01-methodology-questioning-them-to-death.md",
-          SOPS + "20-response-bank.md", SOPS + "21-training-plans.md",
-          RULES}
+          SOPS + "20-response-bank.md", SOPS + "21-training-plans.md"}
 # Tests whose case.yaml names its part without quoting it: the words to look for in SKILL.md.
 OVERRIDES = {"steamroller-steps-in-order": ["steamroller"]}
 
 
 def git(*args):
     return subprocess.run(["git", *args], cwd=ROOT, capture_output=True, text=True, check=True).stdout
+
+
+@functools.lru_cache(maxsize=None)
+def rules_index():
+    """The rules index as it now stands in foundations. No revision of this repo holds it."""
+    with urllib.request.urlopen(RULES_URL, timeout=30) as resp:
+        return resp.read().decode("utf-8")
 
 
 def read(path, rev=None):

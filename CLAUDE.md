@@ -50,5 +50,5 @@ Run `python3 measure/checks.py --stamp` before you commit, and commit `skills/ap
 
 ## Writing here
 
-- Apply the user's thought-and-word rules. Their true copy is the `thought-and-word` plugin of the GitHub repo faadiallop/foundations; change them there, never here. The site bundles a copy of their index, `site/prompts/thought-and-word-rules.md`. When `measure/checks.py` reports it behind (`rules-copy`), open a pull request that makes it match.
+- Apply the user's thought-and-word rules. Their true copy is the `thought-and-word` plugin of the GitHub repo faadiallop/foundations; change them there, never here. The site and the conversation tests fetch their index from there when they run, so a change to the rules reaches the coach at the site's next deploy, with no pull request here.
 - Quote Scripture from the King James Version, checked word for word.
