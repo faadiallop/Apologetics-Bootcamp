@@ -9,6 +9,12 @@ on:
   pull_request:
   push:
     branches: [main, next]
+  # The release (release.yml) runs these on the commit it is about to release.
+  workflow_call:
+    inputs:
+      ref:
+        type: string
+        required: true
 
 permissions:
   contents: read
@@ -19,6 +25,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.ref || '' }}
       - uses: actions/setup-python@v5
         with:
           python-version: "3.13"
@@ -38,6 +46,8 @@ jobs:
         working-directory: site
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.ref || '' }}
       - uses: actions/setup-node@v4
         with:
           node-version: "22"
