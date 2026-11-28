@@ -117,18 +117,7 @@
   #low { position: fixed; left: 0; right: 0; top: calc(50% + min(23vh, 8.5rem) + 3.2rem); margin: 0 auto; width: max-content; max-width: calc(100% - 2rem);
     font-size: .85rem; padding: .35rem .8rem; border-radius: 1rem; background: #C7770033; box-shadow: inset 0 0 0 1px #F0B45C88; text-align: center; }
 
-  /* The microphone switch, bottom centre, shown while training. */
-  #mic {
-    position: fixed; left: 50%; bottom: max(1.5rem, env(safe-area-inset-bottom)); transform: translateX(-50%);
-    width: 3.75rem; height: 3.75rem; border-radius: 50%; border: 0; padding: .9rem; cursor: pointer;
-    background: transparent; color: var(--white); box-shadow: inset 0 0 0 2px var(--white);
-  }
-  #mic svg { width: 100%; height: 100%; display: block; }
-  #mic .slash { display: none; }
-  #mic[aria-pressed="true"] { background: var(--white); color: var(--blue); }
-  #mic[aria-pressed="true"] .slash { display: inline; }
-  #mic:focus-visible { outline: 3px solid var(--white); outline-offset: 4px; }
-  /* While the trainee's microphone is off and it is his turn, the bars dim: nobody is listening. */
+  /* While listening is paused, the bars dim: nobody is listening. */
   body.waiting #voice { opacity: .45; }
   [hidden] { display: none !important; }
   .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
@@ -188,13 +177,6 @@
 <div id="note">
   <p id="cannot" hidden>This browser can't listen. Open this page in Chrome, Edge or Safari.</p>
 </div>
-<button id="mic" type="button" aria-label="Turn off your microphone" aria-pressed="false" title="Microphone (M)" hidden>
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-    <rect x="9" y="2" width="6" height="12" rx="3"/>
-    <path d="M5 11a7 7 0 0 0 14 0M12 18v4M8 22h8"/>
-    <path class="slash" d="M3 3l18 18"/>
-  </svg>
-</button>
 <p id="state" class="sr" role="status"></p>
 
 <script>
@@ -207,8 +189,8 @@ let token = localStorage.getItem("invite-code") || localStorage.getItem("owner-t
 let session = null, group = "";
 let run = 0;                  // counts trainings begun; a training that is no longer the current one stops
 let mode = "idle";            // idle | thinking | speaking | listening | waiting
-let micOn = true;             // the trainee can turn his microphone off and on while training
-let whenMicOn = null;         // set while it is his turn and his microphone is off
+let micOn = true;             // false while the trainee has paused listening
+let whenMicOn = null;         // set while it is his turn and listening is paused
 let recognition = null;
 let lastWord = 0, wordPush = 0, wordsReported = false;
 
@@ -244,14 +226,14 @@ function setMode(next) {
   mode = next;
   // When training ends the screen may sleep again.
   if (next === "idle" && wakeLock) { wakeLock.release().catch(() => {}); wakeLock = null; }
-  if (next === "idle") { whenMicOn = null; micOn = true; $("mic").setAttribute("aria-pressed", "false"); $("mic").setAttribute("aria-label", "Turn off your microphone"); }
+  if (next === "idle") { whenMicOn = null; micOn = true; }
   document.body.classList.toggle("waiting", next === "waiting");
-  // The microphone switch is there only while training.
-  $("mic").hidden = next === "idle";
   $("bar").hidden = next === "idle";
   if (next === "idle") $("low").hidden = true;
-  $("caption").textContent = { idle: "", thinking: "Thinking…", speaking: "Tap the bars to interrupt", listening: "Your turn. Speak now.", waiting: "Your microphone is off" }[next];
-  $("state").textContent = { idle: "", thinking: "The coach is thinking.", speaking: "The coach is speaking.", listening: "The coach is listening.", waiting: "Your microphone is off. Turn it on to answer." }[next];
+  // The caption says what a tap on the bars will do next; the bars' label says the same to a screen reader.
+  $("caption").textContent = { idle: "", thinking: "Thinking…", speaking: "Tap the bars to interrupt", listening: "Speak now. Tap the bars to pause", waiting: "Paused. Tap the bars to resume" }[next];
+  $("voice").setAttribute("aria-label", { idle: "The coach's voice", thinking: "The coach is thinking", speaking: "Interrupt the coach", listening: "Pause listening", waiting: "Resume listening" }[next]);
+  $("state").textContent = { idle: "", thinking: "The coach is thinking.", speaking: "The coach is speaking.", listening: "The coach is listening.", waiting: "Paused. The coach is not listening." }[next];
 }
 
 /* ---------- speaking ---------- */
@@ -358,7 +340,7 @@ function say(text) {
 /* ---------- listening ---------- */
 function listen() {
   return new Promise((resolve, reject) => {
-    // With the microphone off, the coach waits for the trainee to turn it back on.
+    // While listening is paused, the coach waits for the trainee to resume it.
     if (!micOn) {
       setMode("waiting");
       whenMicOn = () => listen().then(resolve, reject);
@@ -373,7 +355,7 @@ function listen() {
     r.onresult = (e) => { heard = [...e.results].map((x) => x[0].transcript).join(" ").trim(); };
     r.onerror = (e) => { if (e.error !== "no-speech" && e.error !== "aborted") failed = e.error; };
     r.onend = () => {
-      // Turned off while listening: what was half heard is dropped, and the coach waits.
+      // Paused while listening: what was half heard is dropped, and the coach waits.
       if (!micOn && mode === "listening") {
         setMode("waiting");
         whenMicOn = () => listen().then(resolve, reject);
@@ -388,26 +370,33 @@ function listen() {
   });
 }
 
-// Turn the trainee's microphone off or on. Off, the browser stops listening at once; the coach
-// may finish what he is saying, and then waits. On, the coach listens again.
+// Pause listening, or resume it. Paused, the browser stops listening at once and the coach waits.
 function setMic(on) {
   micOn = on;
-  $("mic").setAttribute("aria-pressed", String(!on));
-  $("mic").setAttribute("aria-label", on ? "Turn off your microphone" : "Turn on your microphone");
   if (!on && mode === "listening" && recognition) recognition.abort();
   if (on && whenMicOn) {
     const go = whenMicOn;
     whenMicOn = null;
     go();
   }
-  if (mode !== "waiting" && mode !== "idle") $("state").textContent = on ? "Your microphone is on." : "Your microphone is off.";
 }
-$("mic").addEventListener("click", () => setMic(!micOn));
-// On a keyboard, M does the same, unless he is typing.
+
+// The one control while training: a tap on the bars does the next thing, and the caption says what.
+// While the coach speaks it cuts him short and listens; while listening it pauses; while paused it
+// listens again. While he is thinking it does nothing.
+function tap() {
+  if (mode === "speaking" && stopSpeaking) stopSpeaking();
+  else if (mode === "listening") setMic(false);
+  else if (mode === "waiting") setMic(true);
+}
+$("voice").addEventListener("click", tap);
+// On a keyboard, the space bar does the same, unless a button or the code box has the focus,
+// where it already presses that.
 addEventListener("keydown", (e) => {
-  if (e.key.toLowerCase() !== "m" || e.ctrlKey || e.metaKey || e.altKey || mode === "idle") return;
-  if (e.target instanceof HTMLInputElement) return;
-  setMic(!micOn);
+  if (e.key !== " " || e.ctrlKey || e.metaKey || e.altKey || mode === "idle") return;
+  if (e.target instanceof HTMLInputElement || e.target instanceof HTMLButtonElement) return;
+  e.preventDefault();
+  tap();
 });
 
 /* ---------- the conversation ---------- */
@@ -597,8 +586,6 @@ $("groups").addEventListener("click", (e) => {
 });
 $("end").addEventListener("click", () => finish("ended"));
 
-// A tap on the bars cuts the coach short and hands the turn to the trainee.
-$("voice").addEventListener("click", () => { if (mode === "speaking" && stopSpeaking) stopSpeaking(); });
 
 $("signin").addEventListener("submit", async (e) => {
   e.preventDefault();

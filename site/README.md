@@ -14,9 +14,18 @@ The Worker holds the Anthropic key. The browser never sees it. For each message 
 
 The skill's files are bundled in when the Worker is built (`src/materials.ts`), so a change to the skill reaches the site at the next deploy. Each release deploys the site from `main` by itself (`.github/workflows/release.yml`), once the `release` environment holds a Cloudflare token; a deploy by hand, as below, still works. A group's fixed pieces are included only once its file is marked approved.
 
-## Turning the microphone off
+## Tapping the bars
 
-While training, a microphone button sits at the bottom of the screen (or press M on a keyboard). Off, the browser stops listening at once and anything half heard is dropped; the coach finishes what he is saying, then waits, with the bars dimmed, until the microphone is turned back on.
+While training, the bars are the only control besides End. A tap does the next thing, and the caption under the bars says what that is:
+
+| What is happening | What a tap does | Caption |
+| --- | --- | --- |
+| The coach is speaking | Cuts him short and listens | "Tap the bars to interrupt" |
+| The coach is listening | Pauses: the browser stops listening at once and anything half heard is dropped; the bars dim | "Speak now. Tap the bars to pause" |
+| Paused | Listens again | "Paused. Tap the bars to resume" |
+| The coach is thinking | Nothing | "Thinking…" |
+
+What the coach had left to say when he was cut short is not spoken again; the trainee can ask him to repeat it. On a keyboard, the space bar does the same as a tap.
 
 ## When training ends
 
