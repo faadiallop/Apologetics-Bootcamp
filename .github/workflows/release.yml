@@ -1,14 +1,17 @@
 # Build step 4 of measure/PLAN.md: the release, from next to main (section 7).
 #
-# Once a day:
+# Once a day, a run that makes no model calls:
 # - If a release is waiting (an open issue labelled "release"), it goes once it
 #   has waited 48 hours, unless the author has commented "hold" on it. Going
 #   means: move main to its commit, check the stamp the coach fetches, deploy the
 #   site if the release changes what the site bundles, and check the live site.
 #   If any of that fails, the site and main both go back, and the issue says so.
-# - If none is waiting and next has moved past main, it fixes on next's latest
-#   commit, runs every script check, the site checks and the full measure on it,
-#   and opens the issue: the one summary the author is sent.
+# - If none is waiting and next has moved past main, then on Mondays only (or
+#   when started by hand), it fixes on next's latest commit, runs every script
+#   check, the site checks and the full measure on it, and opens the issue: the
+#   one summary the author is sent. The full measure is what costs, so releases
+#   are weekly: prepared on Monday, out on Wednesday or Thursday, once the
+#   48 hours have passed.
 #
 # The scheduled run uses main's copy of this file, so the release is judged by
 # the last release's checks, never by what it brings in.
@@ -80,6 +83,10 @@ jobs:
           if ! git merge-base --is-ancestor origin/main origin/next; then
             echo "main has commits next lacks, so main cannot simply move forward. Bring next up to main first." \
               | tee -a "$GITHUB_STEP_SUMMARY"; exit 1
+          fi
+          # The full measure costs, so a release is prepared once a week: on Mondays, or when started by hand.
+          if [ "$GITHUB_EVENT_NAME" = schedule ] && [ "$(date -u +%u)" != 1 ]; then
+            echo "next has changed; the release is prepared on Monday." | tee -a "$GITHUB_STEP_SUMMARY"; exit 0
           fi
           # A release the author closed without a change since is not offered again.
           if gh issue list --repo "$GITHUB_REPOSITORY" --label release --state closed --limit 30 --json body \
