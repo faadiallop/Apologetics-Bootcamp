@@ -424,7 +424,7 @@ async function send(text) {
     return { say: "I couldn't reach the site. Check your connection.", stop: false };
   }
   const data = await res.json().catch(() => ({}));
-  if (res.status === 401) { askForToken(); return { say: "", stop: true, signedOut: true }; }
+  if (res.status === 401) { askForToken("Your invite code is no longer accepted. Ask the person who invited you for a new one."); return { say: "", stop: true, signedOut: true }; }
   if (!res.ok) return { say: data.error || "Something went wrong.", stop: res.status === 429 || res.status === 503 || res.status === 410, reason: data.reason };
   session = data.session_id;
   return { say: data.reply, warn: data.warning, stop: false };
@@ -548,7 +548,8 @@ function showLow(warning) {
   $("low").hidden = false;
 }
 
-function askForToken() {
+// Shown with a reason when a code that worked is refused part-way: the owner revoked the invite.
+function askForToken(reason) {
   run++;
   if (stopSpeaking) stopSpeaking();
   localStorage.removeItem("owner-token");
@@ -556,6 +557,8 @@ function askForToken() {
   token = "";
   setMode("idle");
   $("signin").hidden = false;
+  $("refusal").textContent = reason || "";
+  $("refusal").hidden = !reason;
   $("choose").classList.add("gone");
   $("token").focus();
 }

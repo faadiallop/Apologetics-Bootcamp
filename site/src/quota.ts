@@ -7,7 +7,6 @@ export interface Limits {
   siteMonthly: number;
   /** Once the site has spent this much in the month, the daily budget shrinks to make the rest last. */
   tightenAt: number;
-  sessionSpend: number;
   sessionTurns: number;
   turnsPerMinute: number;
 }
@@ -17,7 +16,6 @@ export interface Spend {
   userMonth: number;
   siteDay: number;
   siteMonth: number;
-  sessionSpend: number;
   sessionTurns: number;
   turnsLastMinute: number;
 }
@@ -37,7 +35,6 @@ export function limitsFromEnv(env: Record<string, string | undefined>): Limits {
     siteDaily: usd(num("SITE_DAILY_USD", 1.5)),
     siteMonthly: usd(num("SITE_MONTHLY_USD", 20)),
     tightenAt: usd(num("SITE_TIGHTEN_AT_USD", 16)),
-    sessionSpend: usd(num("SESSION_USD", 0.6)),
     sessionTurns: num("SESSION_TURNS", 40),
     turnsPerMinute: num("TURNS_PER_MINUTE", 6),
   };
@@ -68,7 +65,7 @@ export function check(limits: Limits, spend: Spend, daysLeft: number): Verdict {
     return no("user-month", "You've used your training allowance for this month.");
   if (spend.userDay >= limits.userDaily)
     return no("user-day", "You've used today's training allowance. Come back tomorrow; your card is saved.");
-  if (spend.sessionTurns >= limits.sessionTurns || spend.sessionSpend >= limits.sessionSpend)
+  if (spend.sessionTurns >= limits.sessionTurns)
     return no("session", "This session has reached its limit. Start a new session; your card carries your progress over.");
   return { ok: true };
 }
@@ -86,10 +83,7 @@ export function nearing(limits: Limits, before: Spend, after: Spend): string | n
     return "A note from the site: you have used most of your training allowance for this month.";
   if (crossed(before.userDay, after.userDay, limits.userDaily))
     return "A note from the site: you have used most of today's training allowance.";
-  if (
-    crossed(before.sessionSpend, after.sessionSpend, limits.sessionSpend) ||
-    crossed(before.sessionTurns, after.sessionTurns, limits.sessionTurns)
-  )
+  if (crossed(before.sessionTurns, after.sessionTurns, limits.sessionTurns))
     return "A note from the site: this session is close to its limit. When it ends, start a new one; your card carries your progress over.";
   return null;
 }

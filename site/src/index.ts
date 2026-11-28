@@ -100,7 +100,7 @@ async function killed(env: Env): Promise<boolean> {
   return row?.value === "1";
 }
 
-async function spendSoFar(env: Env, user: string, now: Date, session: { cost: number; turns: number }): Promise<Spend> {
+async function spendSoFar(env: Env, user: string, now: Date, sessionTurns: number): Promise<Spend> {
   const today = day(now);
   const totals = await env.DB.prepare(
     `SELECT
@@ -112,15 +112,14 @@ async function spendSoFar(env: Env, user: string, now: Date, session: { cost: nu
      FROM usage WHERE day >= ?3`,
   )
     .bind(user, today, today.slice(0, 8) + "01", now.getTime() - 60_000)
-    .first<Omit<Spend, "sessionSpend" | "sessionTurns">>();
+    .first<Omit<Spend, "sessionTurns">>();
   return {
     userDay: totals?.userDay ?? 0,
     userMonth: totals?.userMonth ?? 0,
     siteDay: totals?.siteDay ?? 0,
     siteMonth: totals?.siteMonth ?? 0,
     turnsLastMinute: totals?.turnsLastMinute ?? 0,
-    sessionSpend: session.cost,
-    sessionTurns: session.turns,
+    sessionTurns,
   };
 }
 
@@ -142,18 +141,16 @@ async function turn(request: Request, env: Env, user: User): Promise<Response> {
   let id = body?.session_id;
   let group = body?.group ?? "";
   let session: Session;
-  let cost = 0;
   let turns = 0;
 
   if (id) {
-    const row = await env.DB.prepare("SELECT grp, state, cost_micros, turns FROM sessions WHERE id = ? AND user_id = ?")
+    const row = await env.DB.prepare("SELECT grp, state, turns FROM sessions WHERE id = ? AND user_id = ?")
       .bind(id, user.id)
-      .first<{ grp: string; state: string; cost_micros: number; turns: number }>();
+      .first<{ grp: string; state: string; turns: number }>();
     if (!row) return json({ error: "That session was not found." }, 404);
     if (!row.state) return json({ error: "That session has ended. Start a new one; your card carries your progress over.", reason: "expired" }, 410);
     group = row.grp;
     session = JSON.parse(row.state) as Session;
-    cost = row.cost_micros;
     turns = row.turns;
   } else {
     if (!GROUPS[group]) return json({ error: "Choose a group first.", groups: Object.keys(GROUPS) }, 400);
@@ -162,7 +159,7 @@ async function turn(request: Request, env: Env, user: User): Promise<Response> {
   }
 
   const limits = limitsFromEnv(env as Record<string, string | undefined>);
-  const before = await spendSoFar(env, user.id, now, { cost, turns });
+  const before = await spendSoFar(env, user.id, now, turns);
   const verdict = check(limits, before, daysLeftInMonth(now));
   if (!verdict.ok) {
     console.warn(JSON.stringify({ event: "limit reached", user: user.id, reason: verdict.reason }));
@@ -241,7 +238,6 @@ async function turn(request: Request, env: Env, user: User): Promise<Response> {
       ...before,
       userDay: before.userDay + spent,
       userMonth: before.userMonth + spent,
-      sessionSpend: before.sessionSpend + spent,
       sessionTurns: before.sessionTurns + 1,
     }),
   });
@@ -250,7 +246,7 @@ async function turn(request: Request, env: Env, user: User): Promise<Response> {
 async function status(env: Env, user: User): Promise<Response> {
   const now = new Date();
   const limits = limitsFromEnv(env as Record<string, string | undefined>);
-  const spend = await spendSoFar(env, user.id, now, { cost: 0, turns: 0 });
+  const spend = await spendSoFar(env, user.id, now, 0);
   const dollars = (micros: number) => Math.round(micros / 10_000) / 100;
   return json({
     name: user.name,
@@ -262,7 +258,6 @@ async function status(env: Env, user: User): Promise<Response> {
       you_month: dollars(limits.userMonthly),
       site_today: dollars(siteDailyAllowance(limits, spend.siteMonth, daysLeftInMonth(now))),
       site_month: dollars(limits.siteMonthly),
-      session: dollars(limits.sessionSpend),
     },
     session_turns: limits.sessionTurns,
     keep_conversations_days: keepDays(env),
