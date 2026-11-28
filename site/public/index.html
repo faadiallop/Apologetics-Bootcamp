@@ -52,9 +52,10 @@
   .sub { margin: 0 0 1rem; color: var(--grey); font-size: .95rem; font-weight: 400; }
   .sheet button, .sheet input, .sheet summary { font: inherit; color: inherit; }
   .sheet :focus-visible { outline: 3px solid var(--blue); outline-offset: 2px; }
-  /* While a sheet is up, the bars dim, shrink and rise above it. */
+  /* While a sheet is up, the bars dim, shrink and rise into the space above it,
+     centred there with the same margin above and below (see placeVoice). */
   #voice { transition: transform var(--fade) ease, opacity var(--fade) ease; }
-  body:has(.sheet:not(.gone):not([hidden])) #voice { opacity: .45; transform: translateY(-24vh) scale(.7); }
+  body:has(.sheet:not(.gone):not([hidden])) #voice { opacity: .45; transform: translateY(var(--lift, -24vh)) scale(var(--shrink, .7)); }
 
   #groups { list-style: none; margin: 0 -.25rem; padding: 0; overflow-y: auto; overscroll-behavior: contain; }
   #groups li + li { border-top: 1px solid var(--line); }
@@ -239,6 +240,30 @@ function draw(now) {
   requestAnimationFrame(draw);
 }
 requestAnimationFrame(draw);
+
+// While a sheet is up, the bars sit in the space above it. They are centred there, a little
+// high, as the eye reads the middle; they keep at least 2rem from the top and from the sheet,
+// and shrink no larger than .7 of their full size. The sheet's height changes with what it
+// shows, so the place is worked out again whenever a sheet appears, goes or changes size.
+function placeVoice() {
+  const sheet = [...document.querySelectorAll(".sheet")].find((s) => !s.hidden && !s.classList.contains("gone"));
+  if (!sheet) return;
+  const voice = $("voice"), rem = parseFloat(getComputedStyle(document.documentElement).fontSize);
+  const room = sheet.offsetTop;                    // from the top of the screen to the top of the sheet
+  const margin = Math.max(2 * rem, room * 0.12);
+  const seen = voice.offsetHeight * 0.62;          // how tall the bars stand at rest
+  const shrink = Math.max(0.35, Math.min(0.7, (room - 2 * margin) / seen));
+  const centre = room * 0.48;
+  document.body.style.setProperty("--shrink", shrink.toFixed(3));
+  document.body.style.setProperty("--lift", Math.round(centre - innerHeight / 2) + "px");
+}
+const sheetWatch = new ResizeObserver(placeVoice);
+document.querySelectorAll(".sheet").forEach((s) => {
+  sheetWatch.observe(s);
+  new MutationObserver(placeVoice).observe(s, { attributes: true, attributeFilter: ["class", "hidden"] });
+});
+addEventListener("resize", placeVoice);
+placeVoice();
 
 function setMode(next) {
   mode = next;
