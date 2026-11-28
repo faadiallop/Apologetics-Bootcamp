@@ -29,6 +29,8 @@ Tell the user if either copy couldn't be updated, and why.
 
 Watch it, and handle its checks and review comments, without asking first.
 
+Merge your own pull requests into `next` once every check passes. Leave `main` to releases.
+
 ## When you change the boot camp's SKILL.md
 
 Run `python3 measure/checks.py --stamp` before you commit, and commit `skills/apologetics-boot-camp/VERSION` with it. The stamp lets a saved copy of the skill tell from one short line whether it is current, so it need not fetch the whole of SKILL.md at the start of every session.
