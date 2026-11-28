@@ -7,7 +7,7 @@
 <meta name="theme-color" content="#04356A">
 <title>Apologetics Boot Camp</title>
 <style>
-  :root { --blue: #04356A; --white: #fff; --fade: 2.4s; }
+  :root { --blue: #04356A; --white: #fff; --grey: #5A6F88; --line: #E3E9F1; --mist: #F1F5FA; --warm: #FDF1EE; --red: #B42318; --amber: #C77700; --fade: 2.4s; }
   * { box-sizing: border-box; }
   html, body { height: 100%; margin: 0; }
   body {
@@ -31,31 +31,92 @@
   #voice i:nth-child(2), #voice i:nth-child(4) { --h: .70; }
   #voice i:nth-child(3) { --h: 1; }
 
-  /* The choice, top right: the words, the menu, and the hand that points at it. */
-  #choose {
-    position: fixed; top: max(1.25rem, env(safe-area-inset-top)); right: max(1.25rem, env(safe-area-inset-right));
-    display: grid; grid-template-columns: auto auto; align-items: center; justify-items: end; gap: .6rem .5rem;
-    transition: opacity var(--fade) ease, transform var(--fade) ease;
+  /* The sheets: white panels that rise from the bottom, one to sign in and one to choose a group.
+     The group list scrolls inside its sheet, so more groups can be added. */
+  .sheet {
+    position: fixed; left: 0; right: 0; bottom: 0; margin: 0 auto; max-width: 32rem; max-height: 60vh;
+    display: flex; flex-direction: column;
+    background: var(--white); color: var(--blue); border-radius: 1.75rem 1.75rem 0 0;
+    padding: .6rem 1.25rem max(1.75rem, env(safe-area-inset-bottom)); box-shadow: 0 -.75rem 2.5rem #0004;
+    transition: transform var(--fade) ease;
   }
-  #choose.gone { opacity: 0; transform: translateY(-1.5rem); pointer-events: none; }
-  #choose label { grid-column: 1 / -1; font-size: 1.15rem; text-align: right; white-space: nowrap; }
-  #hand { width: 5.5rem; height: auto; animation: nudge 1.5s ease-in-out infinite; }
-  @keyframes nudge { 50% { transform: translateX(.45rem); } }
-  select {
-    font: inherit; color: var(--blue); background: var(--white); border: 0; border-radius: .6rem;
-    padding: .65rem .8rem; min-width: 12rem; cursor: pointer;
+  .sheet.gone { transform: translateY(110%); pointer-events: none; }
+  .grab { flex: none; width: 2.5rem; height: .3rem; border-radius: 1rem; background: #C9D3E0; margin: 0 auto 1.1rem; }
+  /* On a wide screen the sheet floats as a card above the foot of the page. */
+  @media (min-width: 48rem) and (min-height: 36rem) {
+    .sheet { bottom: 6vh; border-radius: 1.75rem; padding-bottom: 1.5rem; }
+    .sheet.gone { transform: translateY(calc(100% + 6vh)); }
+    .grab { visibility: hidden; margin-bottom: .4rem; }
   }
-  select:focus-visible { outline: 3px solid var(--white); outline-offset: 3px; }
+  .sheet h2 { font-size: 1.4rem; margin: 0 0 .25rem; }
+  .sub { margin: 0 0 1rem; color: var(--grey); font-size: .95rem; font-weight: 400; }
+  .sheet button, .sheet input, .sheet summary { font: inherit; color: inherit; }
+  .sheet :focus-visible { outline: 3px solid var(--blue); outline-offset: 2px; }
+  /* While a sheet is up, the bars dim, shrink and rise above it. */
+  #voice { transition: transform var(--fade) ease, opacity var(--fade) ease; }
+  body:has(.sheet:not(.gone):not([hidden])) #voice { opacity: .45; transform: translateY(-24vh) scale(.7); }
+
+  #groups { list-style: none; margin: 0 -.25rem; padding: 0; overflow-y: auto; overscroll-behavior: contain; }
+  #groups li + li { border-top: 1px solid var(--line); }
+  #groups button {
+    width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+    padding: 1.05rem .5rem; background: none; border: 0; border-radius: .75rem; text-align: left; font-size: 1.1rem; cursor: pointer;
+  }
+  #groups button:hover { background: var(--mist); }
+  #groups button[aria-disabled="true"] { opacity: .4; cursor: not-allowed; }
+  #groups button[aria-disabled="true"]:hover { background: none; }
+  #groups svg, #notice summary svg, #why svg { flex: none; width: 1.15rem; height: 1.15rem; color: var(--grey); }
 
   /* The few words the page must show: sign-in, and a browser that can't listen. */
   #note { position: fixed; left: 0; right: 0; bottom: max(1.5rem, env(safe-area-inset-bottom)); text-align: center; padding: 0 1.25rem; }
-  #signin { display: inline-flex; gap: .5rem; flex-wrap: wrap; justify-content: center; }
-  #signin input, #signin button { font: inherit; border: 0; border-radius: .6rem; padding: .6rem .8rem; }
-  #signin input { color: var(--blue); min-width: 13rem; }
-  #ended { max-width: 30rem; margin: 0 auto; font-size: 1.1rem; }
-  #refusal { flex: 1 1 100%; margin: .6rem 0 0; font-weight: 600; }
-  #notice { flex: 1 1 100%; max-width: 34rem; margin: .75rem auto 0; font-size: .85rem; font-weight: 400; opacity: .85; }
-  #signin button { background: transparent; color: var(--white); box-shadow: inset 0 0 0 2px var(--white); cursor: pointer; }
+  #token {
+    width: 100%; border: 1.5px solid var(--line); border-radius: .9rem; padding: .9rem 1rem; background: var(--white);
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; letter-spacing: .06em; text-transform: uppercase;
+  }
+  #token::placeholder { font-family: system-ui, sans-serif; letter-spacing: 0; text-transform: none; }
+  #token:focus-visible { outline: 0; border-color: var(--blue); box-shadow: 0 0 0 4px var(--mist); }
+  #signin > button { margin-top: .75rem; width: 100%; border: 0; border-radius: .9rem; padding: .95rem; background: var(--blue); color: var(--white); font-weight: 650; cursor: pointer; }
+  #refusal { margin: .6rem .15rem 0; color: var(--red); font-size: .95rem; font-weight: 600; }
+  /* Why the last training stopped, shown at the top of the group sheet. */
+  #why { display: flex; gap: .75rem; align-items: flex-start; margin: 0 0 .9rem; padding: .85rem .9rem; border-radius: .9rem; background: var(--mist); font-size: .95rem; }
+  #why.shut { background: var(--warm); }
+  #why.shut svg { color: var(--red); }
+  #why b { display: block; }
+  #why span { color: #22405F; font-weight: 400; }
+  /* How much of the trainee's allowance is left, at the foot of the group sheet. */
+  #allow { flex: none; margin-top: .9rem; padding-top: .9rem; border-top: 1px solid var(--line); font-size: .85rem; color: var(--grey); }
+  #allow div:first-child { display: flex; justify-content: space-between; margin-bottom: .45rem; }
+  #allow b { color: var(--blue); }
+  .meter { height: .45rem; border-radius: 1rem; background: var(--line); overflow: hidden; }
+  .meter i { display: block; height: 100%; width: var(--left, 100%); border-radius: inherit; background: var(--blue); transition: width .4s ease; }
+  #allow.low .meter i { background: var(--amber); }
+  #allow.out .meter i { width: 0; }
+  #allow.out b { color: var(--red); }
+
+  /* What happens to what is said: folded, and opened in place. */
+  #notice { margin-top: 1.1rem; border-radius: .9rem; background: var(--mist); }
+  #notice summary { display: flex; align-items: center; gap: .75rem; padding: .9rem; font-size: .95rem; font-weight: 600; cursor: pointer; list-style: none; }
+  #notice summary::-webkit-details-marker { display: none; }
+  #notice summary span { flex: 1; }
+  #notice .chev { transition: transform .2s ease; }
+  #notice[open] .chev { transform: rotate(90deg); }
+  #notice p { margin: 0; padding: 0 .9rem .95rem 2.8rem; font-size: .95rem; font-weight: 400; color: #22405F; }
+  /* While training: which group, and a way to end it, along the top. */
+  #bar {
+    position: fixed; top: 0; left: 0; right: 0; display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+    padding: max(1rem, env(safe-area-inset-top)) max(1rem, env(safe-area-inset-right)) 0 max(1rem, env(safe-area-inset-left));
+  }
+  #bar span { font-size: .9rem; padding: .45rem .85rem; border-radius: 1rem; background: #ffffff1f; }
+  #end { font: inherit; font-size: .95rem; color: var(--white); background: none; border: 0; border-radius: 1rem; padding: .45rem .85rem; box-shadow: inset 0 0 0 1.5px #fff8; cursor: pointer; }
+  #end:focus-visible { outline: 3px solid var(--white); outline-offset: 3px; }
+  /* Under the bars: whose turn it is, in a word or two. */
+  #caption {
+    position: fixed; left: 0; right: 0; top: calc(50% + min(23vh, 8.5rem) + 1rem); margin: 0; padding: 0 1rem;
+    text-align: center; font-size: 1rem; opacity: .8; pointer-events: none;
+  }
+  #low { position: fixed; left: 0; right: 0; top: calc(50% + min(23vh, 8.5rem) + 3.2rem); margin: 0 auto; width: max-content; max-width: calc(100% - 2rem);
+    font-size: .85rem; padding: .35rem .8rem; border-radius: 1rem; background: #C7770033; box-shadow: inset 0 0 0 1px #F0B45C88; text-align: center; }
+
   /* The microphone switch, bottom centre, shown while training. */
   #mic {
     position: fixed; left: 50%; bottom: max(1.5rem, env(safe-area-inset-bottom)); transform: translateX(-50%);
@@ -74,7 +135,6 @@
 
   @media (prefers-reduced-motion: reduce) {
     :root { --fade: .01s; }
-    #hand { animation: none; }
   }
 </style>
 </head>
@@ -84,35 +144,48 @@
   <i></i><i></i><i></i><i></i><i></i>
 </button>
 
-<div id="choose">
-  <label for="group">Select what you want training on</label>
-  <!-- A plain cartoon glove, drawn for this page. -->
-  <svg id="hand" viewBox="0 0 120 70" aria-hidden="true">
-    <g fill="#fff" stroke="#04356A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
-      <rect x="3" y="20" width="22" height="34" rx="7"/>
-      <path d="M24 20h28c5-9 20-10 22-2h34a8 8 0 0 1 0 16H80c8 1 8 11 0 12 6 2 5 11-2 11H38c-7 0-11-2-14-5z"/>
-      <path d="M80 34H62M80 46H64" fill="none"/>
-      <path d="M34 28v20M42 27v22M50 28v20" fill="none" stroke-width="2.5"/>
-    </g>
-  </svg>
-  <select id="group">
-    <option value="" selected disabled>Choose one…</option>
-    <option value="islam">Islam</option>
-    <option value="jehovahs-witnesses">Jehovah's Witnesses</option>
-    <option value="jewish-people">Judaism</option>
-    <option value="atheism">Atheism</option>
-    <option value="icon-veneration">Icon veneration</option>
-  </select>
-</div>
+<section id="choose" class="sheet" aria-labelledby="choose-title">
+  <div class="grab" aria-hidden="true"></div>
+  <h2 id="choose-title">Choose your training</h2>
+  <p class="sub">The coach will play someone from the group you pick.</p>
+  <div id="why" role="status" hidden>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.01"/></svg>
+    <div><b id="why-title"></b><span id="why-text"></span></div>
+  </div>
+  <ul id="groups">
+    <li><button type="button" data-group="islam">Islam <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button></li>
+    <li><button type="button" data-group="jehovahs-witnesses">Jehovah's Witnesses <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button></li>
+    <li><button type="button" data-group="jewish-people">Judaism <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button></li>
+    <li><button type="button" data-group="atheism">Atheism <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button></li>
+    <li><button type="button" data-group="icon-veneration">Icon veneration <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button></li>
+  </ul>
+  <div id="allow" hidden>
+    <div><span id="allow-label">Today's allowance</span><b id="allow-left"></b></div>
+    <div class="meter"><i></i></div>
+  </div>
+</section>
+
+<form id="signin" class="sheet" hidden>
+  <div class="grab" aria-hidden="true"></div>
+  <h2>Sign in</h2>
+  <p class="sub">Enter your invite code to train with the AI coach.</p>
+  <input id="token" type="text" placeholder="Invite code" autocomplete="off" autocapitalize="characters" autocorrect="off" spellcheck="false" aria-label="Invite code">
+  <button>Continue</button>
+  <p id="refusal" role="alert" hidden></p>
+  <details id="notice">
+    <summary><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.01"/></svg><span>Where your words go</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></summary>
+    <p>This site keeps your progress, and your conversations for 14 days. Its owner may read both, only to improve the coaching.</p>
+  </details>
+</form>
+
+<header id="bar" hidden>
+  <span id="training-on"></span>
+  <button id="end" type="button">End</button>
+</header>
+<p id="caption" aria-hidden="true"></p>
+<p id="low" role="status" hidden></p>
 
 <div id="note">
-  <form id="signin" hidden>
-    <input id="token" type="password" placeholder="Invite code" autocomplete="off" aria-label="Invite code">
-    <button>Sign in</button>
-    <p id="refusal" role="alert" hidden></p>
-    <p id="notice">Your browser turns your speech into text, and may send the sound to its maker to do so. The text goes to Anthropic's Claude, which is the coach, and this site keeps your training card, so the coach remembers your progress, and the conversation for 14 days. The site's owner can read both, to check that the coaching is sound.</p>
-  </form>
-  <p id="ended" role="status" hidden></p>
   <p id="cannot" hidden>This browser can't listen. Open this page in Chrome, Edge or Safari.</p>
 </div>
 <button id="mic" type="button" aria-label="Turn off your microphone" aria-pressed="false" title="Microphone (M)" hidden>
@@ -132,6 +205,7 @@ const GROUP_NAMES = { islam: "Muslims", "jehovahs-witnesses": "Jehovah's Witness
 
 let token = localStorage.getItem("invite-code") || localStorage.getItem("owner-token") || "";
 let session = null, group = "";
+let run = 0;                  // counts trainings begun; a training that is no longer the current one stops
 let mode = "idle";            // idle | thinking | speaking | listening | waiting
 let micOn = true;             // the trainee can turn his microphone off and on while training
 let whenMicOn = null;         // set while it is his turn and his microphone is off
@@ -174,6 +248,9 @@ function setMode(next) {
   document.body.classList.toggle("waiting", next === "waiting");
   // The microphone switch is there only while training.
   $("mic").hidden = next === "idle";
+  $("bar").hidden = next === "idle";
+  if (next === "idle") $("low").hidden = true;
+  $("caption").textContent = { idle: "", thinking: "Thinking…", speaking: "Tap the bars to interrupt", listening: "Your turn. Speak now.", waiting: "Your microphone is off" }[next];
   $("state").textContent = { idle: "", thinking: "The coach is thinking.", speaking: "The coach is speaking.", listening: "The coach is listening.", waiting: "Your microphone is off. Turn it on to answer." }[next];
 }
 
@@ -329,7 +406,7 @@ $("mic").addEventListener("click", () => setMic(!micOn));
 // On a keyboard, M does the same, unless he is typing.
 addEventListener("keydown", (e) => {
   if (e.key.toLowerCase() !== "m" || e.ctrlKey || e.metaKey || e.altKey || mode === "idle") return;
-  if (e.target instanceof HTMLInputElement || e.target instanceof HTMLSelectElement) return;
+  if (e.target instanceof HTMLInputElement) return;
   setMic(!micOn);
 });
 
@@ -347,37 +424,133 @@ async function send(text) {
     return { say: "I couldn't reach the site. Check your connection.", stop: false };
   }
   const data = await res.json().catch(() => ({}));
-  if (res.status === 401) { askForToken(); return { say: "", stop: true }; }
-  if (!res.ok) return { say: data.error || "Something went wrong.", stop: res.status === 429 || res.status === 503 || res.status === 410 };
+  if (res.status === 401) { askForToken(); return { say: "", stop: true, signedOut: true }; }
+  if (!res.ok) return { say: data.error || "Something went wrong.", stop: res.status === 429 || res.status === 503 || res.status === 410, reason: data.reason };
   session = data.session_id;
   return { say: data.reply, warn: data.warning, stop: false };
 }
 
-async function converse(first) {
+async function converse(first, mine) {
+  const current = () => mine === run;
   let text = first;
   for (;;) {
     const answer = await send(text);
-    if (answer.stop) {
-      // What stopped the training stays on the screen, for anyone who missed it being said.
-      $("ended").textContent = answer.say;
-      $("ended").hidden = false;
-    }
+    if (!current() || answer.signedOut) return;
     if (answer.say) await say(answer.say);
-    if (answer.stop) return setMode("idle");
-    if (answer.warn) await say(answer.warn);
+    if (!current()) return;
+    if (answer.stop) return finish(answer.reason, answer.say);
+    if (answer.warn) {
+      showLow(answer.warn);
+      await say(answer.warn);
+      if (!current()) return;
+    }
     try {
       text = await listen();
     } catch (error) {
-      await say(error.message === "not-allowed" || error.message === "service-not-allowed"
-        ? "I need the microphone to hear you. Allow it for this page, then reload."
-        : "I couldn't hear you just then. Reload the page to try again.");
-      return setMode("idle");
+      const blocked = error.message === "not-allowed" || error.message === "service-not-allowed";
+      await say(blocked
+        ? "I need the microphone to hear you. Allow it for this page, then pick a group again."
+        : "I couldn't hear you just then. Pick a group to try again.");
+      return finish(blocked ? "mic" : "unheard");
     }
-    if (text === null) return;
+    if (text === null || !current()) return;
   }
 }
 
+/* ---------- when training stops ---------- */
+// Training goes on until the trainee ends it, or the site stops it: an allowance or budget is used
+// up, the owner pauses training, the coach is busy, or the microphone fails. Whatever stopped it is
+// shown at the top of the group sheet, which comes back so he can start again when he may.
+const nextDay = () => { const n = new Date(); return new Date(Date.UTC(n.getUTCFullYear(), n.getUTCMonth(), n.getUTCDate() + 1)); };
+const nextMonth = () => { const n = new Date(); return new Date(Date.UTC(n.getUTCFullYear(), n.getUTCMonth() + 1, 1)); };
+// The allowances renew at midnight UTC, which is shown in the trainee's own time.
+const at = (d) => d.toLocaleTimeString([], { hour: "numeric", minute: "2-digit" });
+const on = (d) => d.toLocaleDateString([], { month: "long", day: "numeric" }) + " at " + at(d);
+const SAVED = "Rounds you finished are saved on your card.";
+const ENDINGS = {
+  "user-day": () => ["Today's allowance is used up", `It renews at ${at(nextDay())}. ${SAVED}`, true],
+  "user-month": () => ["This month's allowance is used up", `It renews on ${on(nextMonth())}. ${SAVED}`, true],
+  "site-day": () => ["Training is closed for today", `The site has used today's budget. It opens again at ${at(nextDay())}.`, true],
+  "site-month": () => ["Training is closed for this month", `The site has used this month's budget. It opens again on ${on(nextMonth())}.`, true],
+  paused: () => ["Training is paused", "The site's owner has paused training for everyone. Try again later.", true],
+  session: () => ["This session reached its limit", `Pick a group to start a new one. ${SAVED}`, false],
+  expired: () => ["That session has ended", `Pick a group to start a new one. ${SAVED}`, false],
+  rate: () => ["That was too fast for the site", "Wait a minute, then pick a group to start again.", false],
+  busy: () => ["The coach is busy", "Wait a moment, then pick a group to start again.", false],
+  mic: () => ["The microphone is blocked", "Allow it for this page, then pick a group.", false],
+  unheard: () => ["The coach couldn't hear you", "Pick a group to try again.", false],
+  ended: () => ["You ended the training", `${SAVED} Pick a group to start again.`, false],
+};
+
+function finish(reason, said) {
+  run++;
+  session = null;
+  if (stopSpeaking) stopSpeaking();
+  if (recognition) recognition.abort();
+  setMode("idle");
+  const [title, text, shut] = ENDINGS[reason] ? ENDINGS[reason]() : ["Training stopped", said || "Pick a group to start again.", false];
+  showChoose({ title, text, shut });
+}
+
+// The group sheet, with why the last training stopped, if it did.
+function showChoose(why) {
+  $("why").hidden = !why;
+  if (why) {
+    $("why-title").textContent = why.title;
+    $("why-text").textContent = why.text;
+    $("why").classList.toggle("shut", why.shut);
+  }
+  lockGroups(Boolean(why && why.shut));
+  $("choose").classList.remove("gone");
+  refreshAllowance();
+}
+
+function lockGroups(shut) {
+  for (const b of document.querySelectorAll("#groups button")) b.setAttribute("aria-disabled", String(shut));
+}
+
+// How much of his allowance is left: the smaller of today's and this month's.
+async function refreshAllowance() {
+  const res = await fetch("/api/status", { headers: { authorization: "Bearer " + token } }).catch(() => null);
+  const data = res && res.ok ? await res.json().catch(() => null) : null;
+  if (!data || !data.spent_usd || !data.limits_usd) return;
+  const { spent_usd: spent, limits_usd: limit } = data;
+  const left = (used, of) => (of > 0 ? Math.max(0, 1 - used / of) : 1);
+  const day = left(spent.you_today, limit.you_today), month = left(spent.you_month, limit.you_month);
+  const fraction = Math.min(day, month);
+  $("allow-label").textContent = month < day ? "This month's allowance" : "Today's allowance";
+  $("allow-left").textContent = fraction <= 0 ? "Used up" : Math.round(fraction * 100) + "% left";
+  $("allow").style.setProperty("--left", (fraction * 100).toFixed(1) + "%");
+  $("allow").classList.toggle("low", fraction > 0 && fraction < 0.2);
+  $("allow").classList.toggle("out", fraction <= 0);
+  $("allow").hidden = false;
+  // Found shut before he even tries: say why, and keep the groups closed.
+  const shutBy = data.paused ? "paused"
+    : spent.site_month >= limit.site_month ? "site-month"
+    : spent.site_today >= limit.site_today ? "site-day"
+    : month <= 0 ? "user-month"
+    : day <= 0 ? "user-day" : null;
+  if (shutBy && (!$("why").classList.contains("shut") || $("why").hidden)) {
+    const [title, text] = ENDINGS[shutBy]();
+    $("why-title").textContent = title;
+    $("why-text").textContent = text;
+    $("why").classList.add("shut");
+    $("why").hidden = false;
+    lockGroups(true);
+  }
+}
+
+// Shown while training, once he has used most of an allowance.
+function showLow(warning) {
+  $("low").textContent = /this month/.test(warning) ? "Most of this month's allowance is used"
+    : /today/.test(warning) ? "Most of today's allowance is used"
+    : "This session is near its limit";
+  $("low").hidden = false;
+}
+
 function askForToken() {
+  run++;
+  if (stopSpeaking) stopSpeaking();
   localStorage.removeItem("owner-token");
   localStorage.removeItem("invite-code");
   token = "";
@@ -398,20 +571,28 @@ async function keepScreenOn() {
 // The lock is let go whenever the page is hidden, so it is asked for again when the page is back.
 document.addEventListener("visibilitychange", () => { if (mode !== "idle") keepScreenOn(); });
 
-async function begin() {
-  group = $("group").value;
-  if (!group) return;
-  $("ended").hidden = true;
+async function begin(row) {
+  if (row.getAttribute("aria-disabled") === "true") return;
+  group = row.dataset.group;
+  const mine = ++run;
+  session = null;
+  $("why").hidden = true;
+  $("training-on").textContent = row.textContent.trim();
   // This must happen inside the tap, or some browsers refuse to speak later.
   speechSynthesis.speak(new SpeechSynthesisUtterance(" "));
   $("choose").classList.add("gone");
   keepScreenOn();
   setMode("thinking");
   await new Promise((r) => setTimeout(r, matchMedia("(prefers-reduced-motion: reduce)").matches ? 100 : 2400));
-  converse(`I want to train to talk with ${GROUP_NAMES[group]}. I'm training by voice.`);
+  if (mine !== run) return;
+  converse(`I want to train to talk with ${GROUP_NAMES[group]}. I'm training by voice.`, mine);
 }
 
-$("group").addEventListener("change", begin);
+$("groups").addEventListener("click", (e) => {
+  const row = e.target.closest("button[data-group]");
+  if (row) begin(row);
+});
+$("end").addEventListener("click", () => finish("ended"));
 
 // A tap on the bars cuts the coach short and hands the turn to the trainee.
 $("voice").addEventListener("click", () => { if (mode === "speaking" && stopSpeaking) stopSpeaking(); });
@@ -434,12 +615,12 @@ $("signin").addEventListener("submit", async (e) => {
   $("signin").hidden = true;
   $("token").value = "";
   session = null;
-  $("group").value = "";
-  $("choose").classList.remove("gone");
+  showChoose(null);
 });
 
 if (!Recognition || !("speechSynthesis" in window)) { $("cannot").hidden = false; $("choose").classList.add("gone"); }
 else if (!token) askForToken();
+else showChoose(null);
 addEventListener("pagehide", () => speechSynthesis.cancel());
 </script>
 </body>

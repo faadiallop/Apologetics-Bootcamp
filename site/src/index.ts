@@ -136,7 +136,7 @@ async function turn(request: Request, env: Env, user: User): Promise<Response> {
   const text = (body?.text ?? "").trim();
   if (!text) return json({ error: "Say something first." }, 400);
   if (text.length > MAX_MESSAGE) return json({ error: `Keep a message under ${MAX_MESSAGE} characters.` }, 400);
-  if (await killed(env)) return json({ error: "Training is paused for now." }, 503);
+  if (await killed(env)) return json({ error: "Training is paused for now.", reason: "paused" }, 503);
 
   const now = new Date();
   let id = body?.session_id;
@@ -150,7 +150,7 @@ async function turn(request: Request, env: Env, user: User): Promise<Response> {
       .bind(id, user.id)
       .first<{ grp: string; state: string; cost_micros: number; turns: number }>();
     if (!row) return json({ error: "That session was not found." }, 404);
-    if (!row.state) return json({ error: "That session has ended. Start a new one; your card carries your progress over." }, 410);
+    if (!row.state) return json({ error: "That session has ended. Start a new one; your card carries your progress over.", reason: "expired" }, 410);
     group = row.grp;
     session = JSON.parse(row.state) as Session;
     cost = row.cost_micros;
@@ -225,7 +225,7 @@ async function turn(request: Request, env: Env, user: User): Promise<Response> {
   }));
 
   if (!result) {
-    if (failure instanceof Anthropic.RateLimitError) return json({ error: "The coach is busy. Try again in a moment." }, 503);
+    if (failure instanceof Anthropic.RateLimitError) return json({ error: "The coach is busy. Try again in a moment.", reason: "busy" }, 503);
     if (failure instanceof Anthropic.AuthenticationError) return json({ error: "The site's key was refused." }, 500);
     if (failure instanceof Anthropic.APIError) return json({ error: `The coach could not answer (${failure.status}).` }, 502);
     throw failure;
