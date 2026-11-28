@@ -37,7 +37,6 @@ skills/
       21-training-plans-icon-veneration.md
     fixed/                 Drafts of what every trainee hears the same way (openings, lessons), one file for each group; the coach says a group's pieces as written once its file is approved
     VERSION                The stamp of SKILL.md, so a saved copy can tell whether it is current
-  writing-dialogue/        Work out a piece of writing with the user in dialogue
 ```
 
 ## Install
@@ -51,7 +50,7 @@ In Claude Code, run:
 /plugin install apologetics-boot-camp@apologetics-bootcamp
 ```
 
-This installs both skills together. For the thought-and-word rules as skills, also add the `faadiallop/foundations` marketplace and install its `thought-and-word` plugin; without it, the coach reads the rules from GitHub. To get changes as they land, open `/plugin`, go to **Marketplaces**, select this one, and choose **Enable auto-update**; or update by hand with `/plugin marketplace update apologetics-bootcamp`.
+This installs the boot camp skill. For the thought-and-word rules as a skill, also add the `faadiallop/foundations` marketplace and install its `thought-and-word` plugin; without it, the coach reads the rules from GitHub. To get changes as they land, open `/plugin`, go to **Marketplaces**, select this one, and choose **Enable auto-update**; or update by hand with `/plugin marketplace update apologetics-bootcamp`.
 
 ### Claude on the web, the desktop app, or Cowork
 

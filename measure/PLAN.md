@@ -30,7 +30,7 @@ Tier 2 includes:
 - all of `sops/` except the member's-words rows above, and all of `fixed/` and `site/prompts/`;
 - any response bank row drawn from trainee logs, and any reply in a row;
 - anything already in `measure/`, including a pass line and these rules;
-- `writing-dialogue`, `CLAUDE.md` and `README.md`;
+- `CLAUDE.md` and `README.md`;
 - on the site: `src/index.ts`, `src/anthropic.ts`, `src/auth.ts`, `src/quota.ts`, `src/pricing.ts`, `public/admin.html`, `schema.sql`, `package.json`, `package-lock.json` and all of `wrangler.jsonc`, since these hold the money, the sign-ins and the data;
 - `.github/`, which holds the CI and the list of protected files.
 
