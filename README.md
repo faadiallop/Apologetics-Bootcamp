@@ -2,7 +2,7 @@
 
 A Claude skill that trains a Christian, from beginner up, to bring Muslims, Jehovah's Witnesses, Jewish people, atheists, or members of any false religion or cult, to Christ. It explains the method, teaches a beginner each part before testing it, drills in spoken role-play, coaches after each conversation, and keeps going until the trainee can do it himself and teach someone else.
 
-Everything the skill needs is in this repo: the skill itself, the SOPs it trains from, and the writing-and-thinking rule skills it applies when it coaches.
+The skill and the SOPs it trains from are in this repo. The thought-and-word rules it applies when it coaches are kept in [faadiallop/foundations](https://github.com/faadiallop/foundations), in the `thought-and-word` plugin.
 
 ## What's inside
 
@@ -37,13 +37,6 @@ skills/
       21-training-plans-icon-veneration.md
     fixed/                 Drafts of what every trainee hears the same way (openings, lessons), one file for each group; the coach says a group's pieces as written once its file is approved
     VERSION                The stamp of SKILL.md, so a saved copy can tell whether it is current
-  thought-and-word-rules/  Index of the rules below and how they fit together
-  presupposition-rule/     Reason from Scripture; no neutral ground
-  witness-rule/            Every claim needs two or three witnesses
-  teachers-rule/           Argue from the user's chosen teachers, under Scripture
-  plainness-rule/          Be understood on the first reading
-  economy-rule/            Every word must serve the reader
-  chiasm-rule/             Prefer chiastic structure where the material allows
   writing-dialogue/        Work out a piece of writing with the user in dialogue
 ```
 
@@ -58,7 +51,7 @@ In Claude Code, run:
 /plugin install apologetics-boot-camp@apologetics-bootcamp
 ```
 
-This installs all nine skills together. To get changes as they land, open `/plugin`, go to **Marketplaces**, select this one, and choose **Enable auto-update**; or update by hand with `/plugin marketplace update apologetics-bootcamp`.
+This installs both skills together. For the thought-and-word rules as skills, also add the `faadiallop/foundations` marketplace and install its `thought-and-word` plugin; without it, the coach reads the rules from GitHub. To get changes as they land, open `/plugin`, go to **Marketplaces**, select this one, and choose **Enable auto-update**; or update by hand with `/plugin marketplace update apologetics-bootcamp`.
 
 ### Claude on the web, the desktop app, or Cowork
 

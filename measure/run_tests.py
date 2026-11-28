@@ -98,7 +98,7 @@ def coach_system(rev, group):
     shared = ("You are the coach of the apologetics boot camp. The skill and its materials follow; "
               "follow the skill." +
               file_block("SKILL.md", coverage.read(f"{SKILL_DIR}/SKILL.md", rev)) +
-              file_block("thought-and-word-rules/SKILL.md", coverage.read("skills/thought-and-word-rules/SKILL.md", rev)) +
+              file_block("thought-and-word-rules/SKILL.md", coverage.read(coverage.RULES, rev)) +
               file_block("sops/00-overview-and-template.md", coverage.read(sops + "00-overview-and-template.md", rev)) +
               file_block("sops/01-methodology-questioning-them-to-death.md",
                          coverage.read(sops + "01-methodology-questioning-them-to-death.md", rev)) +

@@ -27,6 +27,8 @@ EVALS = "measure/evals"
 SKILL_MD = "skills/apologetics-boot-camp/SKILL.md"
 SOPS = "skills/apologetics-boot-camp/sops/"
 FIXED = "skills/apologetics-boot-camp/fixed/"
+# The site's copy of the thought-and-word rules index (the true copy is in faadiallop/foundations).
+RULES = "site/prompts/thought-and-word-rules.md"
 
 # Words that show which group a test's conversation is with, and the file names of that group.
 GROUPS = {
@@ -39,7 +41,7 @@ GROUPS = {
 # Files every group's training reads, so a change to them reaches every test.
 SHARED = {SOPS + "00-overview-and-template.md", SOPS + "01-methodology-questioning-them-to-death.md",
           SOPS + "20-response-bank.md", SOPS + "21-training-plans.md",
-          "skills/thought-and-word-rules/SKILL.md"}
+          RULES}
 # Tests whose case.yaml names its part without quoting it: the words to look for in SKILL.md.
 OVERRIDES = {"steamroller-steps-in-order": ["steamroller"]}
 

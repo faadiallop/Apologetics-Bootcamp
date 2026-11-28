@@ -60,7 +60,7 @@ Each of `say`, `check` and `expect` is one line, with a blank line between them,
 5. **Keep two words apart.** "Jehovah's Witnesses" or "JWs" for the group; never "witnesses" for evidence.
 6. **The opening reminds him to pray** in one sentence; it does not pray for him.
 7. **Nothing addressed to one trainee.** No names, no "as you said."
-8. **The author's thought-and-word rules apply** (`skills/thought-and-word-rules/`).
+8. **The author's thought-and-word rules apply** (the `thought-and-word` plugin of the GitHub repo faadiallop/foundations).
 
 ## How the skill uses them
 

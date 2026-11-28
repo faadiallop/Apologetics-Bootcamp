@@ -1,6 +1,6 @@
 # Working in this repo
 
-This repo is the true copy of the apologetics boot camp skill, its SOPs, and the thought-and-word rule skills. Two other copies must match it, and they fall behind unless they are updated with each release.
+This repo is the true copy of the apologetics boot camp skill and its SOPs. Two other copies must match it, and they fall behind unless they are updated with each release.
 
 ## When the author says to release now
 
@@ -50,5 +50,5 @@ Run `python3 measure/checks.py --stamp` before you commit, and commit `skills/ap
 
 ## Writing here
 
-- Apply the user's thought-and-word rules (`skills/thought-and-word-rules/`).
+- Apply the user's thought-and-word rules. Their true copy is the `thought-and-word` plugin of the GitHub repo faadiallop/foundations; change them there, never here. The site bundles a copy of their index, `site/prompts/thought-and-word-rules.md`. When `measure/checks.py` reports it behind (`rules-copy`), open a pull request that makes it match.
 - Quote Scripture from the King James Version, checked word for word.
